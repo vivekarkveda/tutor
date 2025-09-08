@@ -1,0 +1,9 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq4/480p15/partial_movie_files/PythagorasSquares/1185818338_3451808049_223132457.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq4/480p15/partial_movie_files/PythagorasSquares/624642324_4217992463_3201852105.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq4/480p15/partial_movie_files/PythagorasSquares/624642324_1279473467_3553211500.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq4/480p15/partial_movie_files/PythagorasSquares/624642324_4217992463_542463847.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq4/480p15/partial_movie_files/PythagorasSquares/624642324_1379130694_874151903.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq4/480p15/partial_movie_files/PythagorasSquares/624642324_4217992463_1531757090.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq4/480p15/partial_movie_files/PythagorasSquares/624642324_1734434618_3966979592.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq4/480p15/partial_movie_files/PythagorasSquares/624642324_206138768_2811902265.mp4'

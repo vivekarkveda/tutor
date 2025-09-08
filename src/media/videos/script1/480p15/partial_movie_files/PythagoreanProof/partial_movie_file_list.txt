@@ -1,0 +1,12 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script1/480p15/partial_movie_files/PythagoreanProof/1185818338_1035604501_223132457.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script1/480p15/partial_movie_files/PythagoreanProof/624642324_2552855209_2973334652.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script1/480p15/partial_movie_files/PythagoreanProof/624642324_2899427747_1733462989.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script1/480p15/partial_movie_files/PythagoreanProof/624642324_206138768_2621366342.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script1/480p15/partial_movie_files/PythagoreanProof/624642324_3889662146_3462547551.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script1/480p15/partial_movie_files/PythagoreanProof/624642324_2552855209_2677268351.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script1/480p15/partial_movie_files/PythagoreanProof/624642324_1877094703_315106460.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script1/480p15/partial_movie_files/PythagoreanProof/624642324_2552855209_2292751787.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script1/480p15/partial_movie_files/PythagoreanProof/624642324_4096741224_1568862014.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script1/480p15/partial_movie_files/PythagoreanProof/624642324_2552855209_3816753531.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script1/480p15/partial_movie_files/PythagoreanProof/624642324_2552855209_1571694478.mp4'
