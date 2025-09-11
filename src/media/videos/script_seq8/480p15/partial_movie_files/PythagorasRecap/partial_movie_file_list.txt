@@ -1,0 +1,9 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq8/480p15/partial_movie_files/PythagorasRecap/1185818338_3003286046_223132457.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq8/480p15/partial_movie_files/PythagorasRecap/624642324_39927140_2925394787.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq8/480p15/partial_movie_files/PythagorasRecap/624642324_2272809582_2925394787.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq8/480p15/partial_movie_files/PythagorasRecap/624642324_3394500337_205692107.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq8/480p15/partial_movie_files/PythagorasRecap/624642324_2098395497_601240157.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq8/480p15/partial_movie_files/PythagorasRecap/624642324_2552855209_690777844.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq8/480p15/partial_movie_files/PythagorasRecap/624642324_3829052488_1784813457.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq8/480p15/partial_movie_files/PythagorasRecap/624642324_2844360058_765598162.mp4'

@@ -1,7 +1,7 @@
 # This file is used internally by FFMPEG.
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq3/480p15/partial_movie_files/PythagorasEquation/1185818338_1768255611_223132457.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq3/480p15/partial_movie_files/PythagorasEquation/624642324_2844360058_857995905.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq3/480p15/partial_movie_files/PythagorasEquation/624642324_2930568352_2221980286.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq3/480p15/partial_movie_files/PythagorasEquation/624642324_4217992463_2128196289.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq3/480p15/partial_movie_files/PythagorasEquation/624642324_2479749758_1627541241.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq3/480p15/partial_movie_files/PythagorasEquation/624642324_2552855209_2575917089.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq3/480p15/partial_movie_files/PythagorasEquation/1185818338_977243209_223132457.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq3/480p15/partial_movie_files/PythagorasEquation/624642324_3079503272_3269815208.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq3/480p15/partial_movie_files/PythagorasEquation/624642324_1314570397_4183894059.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq3/480p15/partial_movie_files/PythagorasEquation/624642324_459452676_1341177604.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq3/480p15/partial_movie_files/PythagorasEquation/624642324_3839351747_2313803174.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq3/480p15/partial_movie_files/PythagorasEquation/624642324_1797655766_2632477745.mp4'

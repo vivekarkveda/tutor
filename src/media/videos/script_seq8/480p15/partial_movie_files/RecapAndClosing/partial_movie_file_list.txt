@@ -1,0 +1,13 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq8/480p15/partial_movie_files/RecapAndClosing/1185818338_2654290441_223132457.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq8/480p15/partial_movie_files/RecapAndClosing/624642324_4217992463_1194597240.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq8/480p15/partial_movie_files/RecapAndClosing/624642324_3408746744_1601460451.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq8/480p15/partial_movie_files/RecapAndClosing/624642324_3887551173_1601460451.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq8/480p15/partial_movie_files/RecapAndClosing/624642324_374491852_1601460451.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq8/480p15/partial_movie_files/RecapAndClosing/624642324_3887551173_1601460451.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq8/480p15/partial_movie_files/RecapAndClosing/624642324_4217992463_3865084223.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq8/480p15/partial_movie_files/RecapAndClosing/624642324_1590296272_2190552246.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq8/480p15/partial_movie_files/RecapAndClosing/624642324_2844360058_3600136332.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq8/480p15/partial_movie_files/RecapAndClosing/624642324_686517312_2018118340.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq8/480p15/partial_movie_files/RecapAndClosing/624642324_1157744304_3282659717.mp4'
+file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq8/480p15/partial_movie_files/RecapAndClosing/624642324_2844360058_3574312100.mp4'
