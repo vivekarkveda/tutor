@@ -62,4 +62,4 @@ class FileFetcherFactory:
         py_files = [f.as_posix() for f in Path(latest_folder).rglob("*.py")]
         txt_files = [f.as_posix() for f in Path(latest_folder).rglob("*.txt")]
 
-        return {"py_files": py_files, "txt_files": txt_files}
+        return [{"py_files": py_files, "txt_files": txt_files},latest_folder]

@@ -7,6 +7,8 @@ from parsers.base_handler import InputHandlerFactory
 from file_fetcher_factory import FileFetcherFactory
 from processor.process_factory import ProcessFactory
 from saver_factory import SaverFactory
+from table_gen import Table_gen
+
 
 
 async def run_in_executor(executor, func, *args):
@@ -35,12 +37,16 @@ def prepare_files(run_from: str, generate_new_files: bool, file_types):
 # --- Core pipeline ---
 async def process_pipeline(generated_files, video: str, audio: str, run_from: str):
     with ThreadPoolExecutor() as executor:
-        video_callable = ProcessFactory.get_processor(video, generated_files)
-        audio_callable = ProcessFactory.get_processor(audio, generated_files)
+        video_callable = ProcessFactory.get_processor(video, generated_files[0])
+        print("video_callable",generated_files[1])
+        audio_callable = ProcessFactory.get_processor(audio, generated_files[0])
+
+       
 
         video_task = asyncio.create_task(run_in_executor(executor, video_callable))
         audio_task = asyncio.create_task(run_in_executor(executor, audio_callable))
         video_bytes_list, audio_bytes_list = await asyncio.gather(video_task, audio_task)
+        Table_gen.table_generator(generated_files, video_bytes_list, audio_bytes_list)
 
     final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
 

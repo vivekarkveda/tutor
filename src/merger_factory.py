@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 from tempfile import NamedTemporaryFile
 import subprocess
+from config import Settings
 
 debugging=Settings.debugging
 
