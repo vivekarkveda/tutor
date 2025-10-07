@@ -1,6 +1,7 @@
 # C:\Vivek_Main\tutter\src\file_fetcher_factory.py
 from pathlib import Path
 from parsers.base_handler import InputHandlerFactory  # <-- JsonHandler & PostgresHandler
+from logger import pipeline_logger, validation_logger
 
 
 class FileFetcherFactory:
@@ -44,7 +45,8 @@ class FileFetcherFactory:
             generated_files = handler.handle(query)
 
         else:
-            raise ValueError(f"❌ Invalid handler type: {handler_type}")
+            validation_logger.error(f"❌ Invalid handler type: {handler_type}")
+            raise ValueError(f"Invalid handler type: {handler_type}")
 
         return generated_files
 

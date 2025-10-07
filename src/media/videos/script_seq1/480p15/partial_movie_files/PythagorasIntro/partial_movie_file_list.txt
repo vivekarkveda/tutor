@@ -1,7 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq1/480p15/partial_movie_files/PythagorasIntro/1185818338_2778258248_223132457.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq1/480p15/partial_movie_files/PythagorasIntro/624642324_4217992463_4098031587.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq1/480p15/partial_movie_files/PythagorasIntro/624642324_782204734_4118262602.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq1/480p15/partial_movie_files/PythagorasIntro/624642324_2844360058_3847573737.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq1/480p15/partial_movie_files/PythagorasIntro/624642324_736241748_241956472.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq1/480p15/partial_movie_files/PythagorasIntro/624642324_4217992463_3278671325.mp4'

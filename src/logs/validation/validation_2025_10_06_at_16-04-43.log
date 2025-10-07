@@ -1,0 +1,4 @@
+[2025-10-06 16:04:58] [ERROR] ❌ Error generating audio for script_seq1.txt: name 'self' is not defined
+[2025-10-06 16:04:58] [ERROR] ❌ Error generating audio for script_seq2.txt: name 'self' is not defined
+[2025-10-06 16:04:58] [ERROR] ❌ Error generating audio for script_seq3.txt: name 'self' is not defined
+[2025-10-06 16:04:58] [ERROR] ❌ Error generating audio for script_seq4.txt: name 'self' is not defined

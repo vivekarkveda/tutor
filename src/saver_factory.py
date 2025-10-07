@@ -2,6 +2,7 @@
 import os
 import psycopg2
 from pathlib import Path
+from logger import pipeline_logger, validation_logger
 
 
 class BaseSaver:
@@ -24,7 +25,7 @@ class LocalSaver(BaseSaver):
         with open(output_path, "wb") as f:
             f.write(video_bytes)
 
-        print(f"✅ Final video saved locally at: {output_path}")
+        pipeline_logger.info(f"✅ Final video saved locally at: {output_path}")
         return str(output_path)
 
 
@@ -66,7 +67,7 @@ class PostgresSaver(BaseSaver):
         cursor.close()
         conn.close()
 
-        print(f"✅ Final video saved in PostgreSQL table '{table}' as {filename}")
+        pipeline_logger.info(f"✅ Final video saved in PostgreSQL table '{table}' as {filename}")
         return f"postgres://{db_credentials['host']}:{db_credentials['port']}/{db_credentials['dbname']}/{table}/{filename}"
 
 

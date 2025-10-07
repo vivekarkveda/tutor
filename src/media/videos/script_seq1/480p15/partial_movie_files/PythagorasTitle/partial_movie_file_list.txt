@@ -1,8 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:C:/Vivek_Main/tutter/src/media/videos/script_seq1/480p15/partial_movie_files/PythagorasTitle/1185818338_2626941691_223132457.mp4'
-file 'file:C:/Vivek_Main/tutter/src/media/videos/script_seq1/480p15/partial_movie_files/PythagorasTitle/624642324_1839128356_2201281822.mp4'
-file 'file:C:/Vivek_Main/tutter/src/media/videos/script_seq1/480p15/partial_movie_files/PythagorasTitle/624642324_126976739_4014514361.mp4'
-file 'file:C:/Vivek_Main/tutter/src/media/videos/script_seq1/480p15/partial_movie_files/PythagorasTitle/624642324_2408024828_728546344.mp4'
-file 'file:C:/Vivek_Main/tutter/src/media/videos/script_seq1/480p15/partial_movie_files/PythagorasTitle/624642324_2408024828_2069205936.mp4'
-file 'file:C:/Vivek_Main/tutter/src/media/videos/script_seq1/480p15/partial_movie_files/PythagorasTitle/624642324_2818395873_903745871.mp4'
-file 'file:C:/Vivek_Main/tutter/src/media/videos/script_seq1/480p15/partial_movie_files/PythagorasTitle/624642324_1839128356_3968961708.mp4'

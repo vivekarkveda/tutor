@@ -1,9 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:C:/Vivek_Main/tutter/src/media/videos/script_seq4/480p15/partial_movie_files/PythagorasStep4/1185818338_2535686399_223132457.mp4'
-file 'file:C:/Vivek_Main/tutter/src/media/videos/script_seq4/480p15/partial_movie_files/PythagorasStep4/624642324_3201849554_2077834098.mp4'
-file 'file:C:/Vivek_Main/tutter/src/media/videos/script_seq4/480p15/partial_movie_files/PythagorasStep4/624642324_3805325319_15138514.mp4'
-file 'file:C:/Vivek_Main/tutter/src/media/videos/script_seq4/480p15/partial_movie_files/PythagorasStep4/624642324_3201849554_243783240.mp4'
-file 'file:C:/Vivek_Main/tutter/src/media/videos/script_seq4/480p15/partial_movie_files/PythagorasStep4/624642324_3034143981_2601402235.mp4'
-file 'file:C:/Vivek_Main/tutter/src/media/videos/script_seq4/480p15/partial_movie_files/PythagorasStep4/624642324_3201849554_2110672140.mp4'
-file 'file:C:/Vivek_Main/tutter/src/media/videos/script_seq4/480p15/partial_movie_files/PythagorasStep4/624642324_580284192_3694999790.mp4'
-file 'file:C:/Vivek_Main/tutter/src/media/videos/script_seq4/480p15/partial_movie_files/PythagorasStep4/624642324_1839128356_1652684204.mp4'

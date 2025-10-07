@@ -3,13 +3,13 @@ import os
 import subprocess
 import re
 from pathlib import Path
+from logger import pipeline_logger, validation_logger
 
 
 class VideoFactory:
     """Runs Manim scripts and loads video bytes in memory."""
 
     @staticmethod
-    
     def run_manim_on_files(generated_files):
         video_bytes_list = []
 
@@ -17,10 +17,10 @@ class VideoFactory:
         base_media_dir = os.path.join(project_root, "media", "videos")
 
         for file in generated_files["py_files"]:
-            print(f"🎬 Running Manim on {file} ...")
+            pipeline_logger.info(f"🎬 Running Manim on {file} ...")
             result = subprocess.run(["poetry", "run", "manim", "-ql", file])
             if result.returncode != 0:
-                print(f"❌ Error running Manim on {file}")
+                pipeline_logger.error(f"❌ Error running Manim on {file}")
                 continue
 
             # Extract Scene class
@@ -28,7 +28,7 @@ class VideoFactory:
                 content = f.read()
             match = re.search(r"class\s+(\w+)\(Scene\)", content)
             if not match:
-                print(f"⚠️ No Scene class found in {file}")
+                validation_logger.warning(f"⚠️ No Scene class found in {file}")
                 continue
             scene_name = match.group(1)
 
@@ -40,9 +40,9 @@ class VideoFactory:
                 found_files = list(Path(base_media_dir).rglob(f"{scene_name}.mp4"))
                 if found_files:
                     video_path = str(found_files[0])
-                    print(f"🔍 Found video at: {video_path}")
+                    pipeline_logger.info(f"🔍 Found video at: {video_path}")
                 else:
-                    print(f"⚠️ Could not locate video for {file}")
+                    validation_logger.warning(f"⚠️ Could not locate video for {file}")
                     continue
 
             # Read video bytes

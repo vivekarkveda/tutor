@@ -1,0 +1,4 @@
+[2025-10-06 15:59:43] [ERROR] ❌ Error generating audio for script_seq1.txt: a bytes-like object is required, not 'Tensor'
+[2025-10-06 15:59:50] [ERROR] ❌ Error generating audio for script_seq2.txt: a bytes-like object is required, not 'Tensor'
+[2025-10-06 15:59:54] [ERROR] ❌ Error generating audio for script_seq3.txt: a bytes-like object is required, not 'Tensor'
+[2025-10-06 15:59:57] [ERROR] ❌ Error generating audio for script_seq4.txt: a bytes-like object is required, not 'Tensor'

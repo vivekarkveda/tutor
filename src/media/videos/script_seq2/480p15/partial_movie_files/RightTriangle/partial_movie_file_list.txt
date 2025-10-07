@@ -1,7 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq2/480p15/partial_movie_files/RightTriangle/1185818338_2662923243_223132457.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq2/480p15/partial_movie_files/RightTriangle/624642324_1692278623_2631904328.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq2/480p15/partial_movie_files/RightTriangle/624642324_785061040_717099100.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq2/480p15/partial_movie_files/RightTriangle/624642324_2592270589_195895688.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq2/480p15/partial_movie_files/RightTriangle/624642324_3327871097_867974561.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq2/480p15/partial_movie_files/RightTriangle/624642324_4217992463_3163434969.mp4'

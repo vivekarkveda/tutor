@@ -2,6 +2,7 @@
 from gtts import gTTS
 from io import BytesIO
 from pathlib import Path
+from logger import pipeline_logger, validation_logger
 
 
 class AudioFactory:
@@ -16,7 +17,7 @@ class AudioFactory:
             with open(txt_file, "r", encoding="utf-8") as f:
                 text = f.read().strip()
             if not text:
-                print(f"⚠️ Skipping empty file: {txt_file}")
+                validation_logger.warning(f"⚠️ Skipping empty file: {txt_file}")
                 continue
 
             tts = gTTS(text=text, lang="en")
@@ -25,7 +26,7 @@ class AudioFactory:
             mp3_fp.seek(0)
             audio_bytes_list.append(mp3_fp.read())
 
-            print(f"✅ Generated audio for: {txt_path.name} (in memory)")
+            pipeline_logger.info(f"✅ Generated audio for: {txt_path.name} (in memory)")
 
-        print(f"🎵 Total audio files generated: {len(audio_bytes_list)}")
+        pipeline_logger.info(f"🎵 Total audio files generated: {len(audio_bytes_list)}")
         return audio_bytes_list

@@ -5,7 +5,7 @@ class Settings:
     RUN_FROM = "local" 
     GENERATE_NEW_FILES = False
     VIDEO_PROCESSOR = "manim"
-    AUDIO_PROCESSOR = "tts"
+    AUDIO_PROCESSOR = "kokoro"
     FILE_TYPES = ["py", "txt"]
 
 
@@ -15,9 +15,9 @@ class Settings:
     POSTGRES = {
         "host": "localhost",
         "port": 5432,
-        "user": "postgres",
-        "password": "your_password",
-        "dbname": "your_db",
+        "user": "vivek",
+        "password": "8811",
+        "dbname": "airlines_flights_data",
         "table": "videos",
     }
 

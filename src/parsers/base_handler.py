@@ -3,6 +3,7 @@ from pathlib import Path
 from datetime import datetime
 from abc import ABC, abstractmethod
 import psycopg2
+from logger import pipeline_logger, validation_logger
 
 
 class InputHandler(ABC):
@@ -27,11 +28,11 @@ class InputHandler(ABC):
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         base_path = self.BASE_INPUT_PATH / f"{base_name}_{timestamp}"
         base_path.mkdir(parents=True, exist_ok=True)
-        print("file_types:", file_types)
+        pipeline_logger.debug(f"file_types: {file_types}")
 
         # Dict like {"py_files": [], "txt_files": [], "json_files": []}
         generated_files = {f"{ft}_files": [] for ft in file_types}
-        print("generated_files:", generated_files)
+        pipeline_logger.debug(f"generated_files: {generated_files}")
  
         for item in data:
             seq = item["script_seq"]
@@ -55,9 +56,9 @@ class InputHandler(ABC):
 
                 file_path.write_text(content, encoding="utf-8")
                 generated_files[f"{ft}_files"].append(str(file_path))
-                print(f"✅ Created {ft.upper()} file: {file_path}")
+                pipeline_logger.info(f"✅ Created {ft.upper()} file: {file_path}")
 
-        print("🎉 All files generated inside:", base_path)
+        pipeline_logger.info(f"🎉 All files generated inside: {base_path}")
         return generated_files
 
 
@@ -68,7 +69,7 @@ class JsonHandler(InputHandler):
         self.credentials = credentials
 
     def handle(self, json_file: str,file_types):
-        print("📝 Generating Python and TXT files from JSON:", json_file)
+        pipeline_logger.info(f"📝 Generating Python and TXT files from JSON: {json_file}")
         with open(json_file, "r", encoding="utf-8") as f:
             data = json.load(f)
         return self._generate_files(data, Path(json_file).stem,file_types)
@@ -105,7 +106,7 @@ class PostgresHandler(InputHandler):
         cursor.close()
         conn.close()
 
-        print("📝 Generating Python and TXT files from Postgres data")
+        pipeline_logger.info("📝 Generating Python and TXT files from Postgres data")
         return self._generate_files(data, "postgres_input",file_types)
 
 

@@ -8,6 +8,7 @@ from file_fetcher_factory import FileFetcherFactory
 from processor.process_factory import ProcessFactory
 from saver_factory import SaverFactory
 from table_gen import Table_gen
+from logger import pipeline_logger, validation_logger
 
 
 
@@ -38,11 +39,8 @@ def prepare_files(run_from: str, generate_new_files: bool, file_types):
 async def process_pipeline(generated_files, video: str, audio: str, run_from: str):
     with ThreadPoolExecutor() as executor:
         video_callable = ProcessFactory.get_processor(video, generated_files[0])
-        print("video_callable",generated_files[1])
+        pipeline_logger.info(f"video callable prepared for: {generated_files[1]}")
         audio_callable = ProcessFactory.get_processor(audio, generated_files[0])
-
-       
-
         video_task = asyncio.create_task(run_in_executor(executor, video_callable))
         audio_task = asyncio.create_task(run_in_executor(executor, audio_callable))
         video_bytes_list, audio_bytes_list = await asyncio.gather(video_task, audio_task)
@@ -61,7 +59,7 @@ async def process_pipeline(generated_files, video: str, audio: str, run_from: st
     )
 
 
-    print(f"🎉 Final video saved at: {output_path}")
+    pipeline_logger.info(f"🎉 Final video saved at: {output_path}")
     return output_path
 
 
@@ -76,8 +74,8 @@ async def main():
         Settings.RUN_FROM,
     )
 
-    print(f"🎉 Pipeline completed! Final video saved at: {output_path}")
-    print(f"📝 Process history: {ProcessFactory.get_state()}")
+    pipeline_logger.info(f"🎉 Pipeline completed! Final video saved at: {output_path}")
+    pipeline_logger.info(f"📝 Process history: {ProcessFactory.get_state()}")
 
 
 if __name__ == "__main__":

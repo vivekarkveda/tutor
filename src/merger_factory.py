@@ -3,6 +3,7 @@ from pathlib import Path
 from tempfile import NamedTemporaryFile
 import subprocess
 from config import Settings
+from logger import pipeline_logger, validation_logger
 
 debugging=Settings.debugging
 
@@ -18,7 +19,7 @@ class MergerFactory:
             Pads audio with silence if shorter than video.
             Returns merged video as bytes (no file saved).
             """
-            print("Malay")
+            pipeline_logger.debug("merge_video_with_audio called in debugging mode")
             v_temp_path = a_temp_path = out_temp_path = None
             try:
                 with NamedTemporaryFile(delete=False, suffix=".mp4") as v_temp, \
@@ -44,13 +45,13 @@ class MergerFactory:
 
                 result = subprocess.run(ffmpeg_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 if result.returncode != 0:
-                    print(f"❌ Error merging video {idx}:\n{result.stderr.decode()}")
+                    validation_logger.error(f"❌ Error merging video {idx}:\n{result.stderr.decode()}")
                     return None
 
                 with open(out_temp_path, "rb") as f:
                     merged_bytes = f.read()
 
-                print(f"✅ Merged video {idx} returned as bytes")
+                pipeline_logger.info(f"✅ Merged video {idx} returned as bytes")
                 return merged_bytes
 
             finally:
@@ -65,11 +66,11 @@ class MergerFactory:
             Returns the final concatenated video as bytes.
             """
             if not video_bytes_list:
-                print("⚠️ No videos to concatenate.")
+                validation_logger.warning("⚠️ No videos to concatenate.")
                 return None
 
             if len(video_bytes_list) == 1:
-                print("🎬 Single video returned as bytes (no concatenation needed)")
+                pipeline_logger.info("🎬 Single video returned as bytes (no concatenation needed)")
                 return video_bytes_list[0]
 
             # Write all input videos to temporary files
@@ -103,13 +104,13 @@ class MergerFactory:
 
                 result = subprocess.run(ffmpeg_concat_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 if result.returncode != 0:
-                    print(f"❌ Error concatenating videos:\n{result.stderr.decode()}")
+                    validation_logger.error(f"❌ Error concatenating videos:\n{result.stderr.decode()}")
                     return None
 
                 with open(final_output_path, "rb") as f:
                     final_bytes = f.read()
 
-                print("🎬 Final concatenated MP4 video returned as bytes")
+                pipeline_logger.info("🎬 Final concatenated MP4 video returned as bytes")
                 return final_bytes
 
             finally:
@@ -156,13 +157,13 @@ class MergerFactory:
 
                     result = subprocess.run(ffmpeg_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                     if result.returncode != 0:
-                        print(f"❌ Error merging video {pair_idx}:\n{result.stderr.decode()}")
+                        validation_logger.error(f"❌ Error merging video {pair_idx}:\n{result.stderr.decode()}")
                         continue
 
                     with open(out_temp_path, "rb") as f:
                         merged_videos_bytes.append(f.read())
 
-                    print(f"✅ Merged video {pair_idx} returned as bytes")
+                    pipeline_logger.info(f"✅ Merged video {pair_idx} returned as bytes")
 
                 finally:
                     for path in [v_temp_path, a_temp_path, out_temp_path]:
@@ -171,11 +172,11 @@ class MergerFactory:
 
             # ---- Concat step (if more than one) ----
             if not merged_videos_bytes:
-                print("⚠️ No merged videos to process.")
+                validation_logger.warning("⚠️ No merged videos to process.")
                 return None
 
             if len(merged_videos_bytes) == 1:
-                print("🎬 Only one merged video, returning directly.")
+                pipeline_logger.info("🎬 Only one merged video, returning directly.")
                 return merged_videos_bytes[0]
 
             temp_video_paths = []
@@ -210,13 +211,13 @@ class MergerFactory:
 
                 result = subprocess.run(ffmpeg_concat_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 if result.returncode != 0:
-                    print(f"❌ Error concatenating merged videos:\n{result.stderr.decode()}")
+                    validation_logger.error(f"❌ Error concatenating merged videos:\n{result.stderr.decode()}")
                     return None
 
                 with open(final_output_path, "rb") as f:
                     final_bytes = f.read()
 
-                print("🎬 Final merged+concatenated MP4 returned as bytes")
+                pipeline_logger.info("🎬 Final merged+concatenated MP4 returned as bytes")
                 return final_bytes
 
             finally:

@@ -1,8 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq6/480p15/partial_movie_files/NumericalExample/1185818338_3341477996_223132457.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq6/480p15/partial_movie_files/NumericalExample/624642324_316620560_1560774269.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq6/480p15/partial_movie_files/NumericalExample/624642324_2091584812_2515149335.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq6/480p15/partial_movie_files/NumericalExample/624642324_3927391947_2515149335.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq6/480p15/partial_movie_files/NumericalExample/624642324_3049780408_2515149335.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq6/480p15/partial_movie_files/NumericalExample/624642324_525056629_1638916.mp4'
-file 'file:C:/Vivek_Main/Manim_project/Manin_main/src/media/videos/script_seq6/480p15/partial_movie_files/NumericalExample/624642324_2844360058_4085409383.mp4'
