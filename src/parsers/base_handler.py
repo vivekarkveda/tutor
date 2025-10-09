@@ -9,10 +9,10 @@ from logger import pipeline_logger, validation_logger
 class InputHandler(ABC):
     """Abstract base for input handlers."""
 
-    BASE_INPUT_PATH = Path(r"C:\Vivek_Main\Manim_project\inputbox")
+    BASE_INPUT_PATH = Path(r"D:\DemoScriptFolder")
 
     def __init__(self):
-        self.credentials = None
+        self.credentials = None 
 
     @abstractmethod
     def set_credentials(self, credentials: dict):

@@ -1,0 +1,19 @@
+[2025-10-07 15:58:19] [INFO] video callable prepared for: D:\DemoScriptFolder\script_20250916_115236
+[2025-10-07 15:58:19] [INFO] 🎬 Running Manim on D:/DemoScriptFolder/script_20250916_115236/script_seq1/script_seq1.py ...
+[2025-10-07 15:59:14] [INFO] ✅ Generated full audio for: script_seq1.txt (in memory)
+[2025-10-07 15:59:16] [INFO] 🎬 Running Manim on D:/DemoScriptFolder/script_20250916_115236/script_seq2/script_seq2.py ...
+[2025-10-07 15:59:44] [INFO] 🎬 Running Manim on D:/DemoScriptFolder/script_20250916_115236/script_seq3/script_seq3.py ...
+[2025-10-07 16:00:12] [INFO] ✅ Generated full audio for: script_seq2.txt (in memory)
+[2025-10-07 16:00:31] [INFO] 🎬 Running Manim on D:/DemoScriptFolder/script_20250916_115236/script_seq4/script_seq4.py ...
+[2025-10-07 16:01:06] [INFO] ✅ Generated full audio for: script_seq3.txt (in memory)
+[2025-10-07 16:02:04] [INFO] ✅ Generated full audio for: script_seq4.txt (in memory)
+[2025-10-07 16:02:04] [INFO] 🎵 Total audio files generated: 4
+[2025-10-07 16:02:06] [INFO] ✅ Merged video 1 returned as bytes
+[2025-10-07 16:02:07] [INFO] ✅ Merged video 2 returned as bytes
+[2025-10-07 16:02:09] [INFO] ✅ Merged video 3 returned as bytes
+[2025-10-07 16:02:10] [INFO] ✅ Merged video 4 returned as bytes
+[2025-10-07 16:02:18] [INFO] 🎬 Final merged+concatenated MP4 returned as bytes
+[2025-10-07 16:02:18] [INFO] ✅ Final video saved locally at: D:\project2\tutter\src\output\final_video_20251007_160218.mp4
+[2025-10-07 16:02:18] [INFO] 🎉 Final video saved at: D:\project2\tutter\src\output\final_video_20251007_160218.mp4
+[2025-10-07 16:02:18] [INFO] 🎉 Pipeline completed! Final video saved at: D:\project2\tutter\src\output\final_video_20251007_160218.mp4
+[2025-10-07 16:02:18] [INFO] 📝 Process history: ['manim', 'kokoro']

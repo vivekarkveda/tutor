@@ -7,7 +7,7 @@ from logger import pipeline_logger, validation_logger
 class FileFetcherFactory:
     """Factory for fetching generated files from local JSON or Postgres."""
 
-    BASE_INPUT_PATH = Path(r"C:\Vivek_Main\Manim_project\inputbox")
+    BASE_INPUT_PATH = Path(r"D:\DemoScriptFolder")
     BASE_JSON_PATH = Path(r"C:\Vivek_Main\Manim_project\jsonfiles\Pythagoras.json")
 
     @staticmethod

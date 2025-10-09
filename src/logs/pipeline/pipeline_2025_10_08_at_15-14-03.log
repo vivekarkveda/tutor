@@ -1,0 +1,35 @@
+[2025-10-08 15:14:25] [INFO] 📁 Output directory ensured: D:\project2\tutter\src\output\Videos
+[2025-10-08 15:14:25] [INFO] 🎬 Running Manim on D:/DemoScriptFolder/script_20250916_115236/script_seq1/script_seq1.py ...
+[2025-10-08 15:14:54] [INFO] 💾 Saved video to: D:\project2\tutter\src\output\Videos\script_20250916_115236_script_seq1_ScriptStep1.mp4
+[2025-10-08 15:14:54] [INFO] 🎬 Running Manim on D:/DemoScriptFolder/script_20250916_115236/script_seq2/script_seq2.py ...
+[2025-10-08 15:15:11] [INFO] ✅ Generated full audio for: script_seq1.txt (in memory)
+[2025-10-08 15:15:20] [INFO] 💾 Saved video to: D:\project2\tutter\src\output\Videos\script_20250916_115236_script_seq2_ScriptStep2.mp4
+[2025-10-08 15:15:20] [INFO] 🎬 Running Manim on D:/DemoScriptFolder/script_20250916_115236/script_seq3/script_seq3.py ...
+[2025-10-08 15:15:43] [INFO] ✅ Generated full audio for: script_seq2.txt (in memory)
+[2025-10-08 15:16:02] [INFO] 💾 Saved video to: D:\project2\tutter\src\output\Videos\script_20250916_115236_script_seq3_ScriptStep3.mp4
+[2025-10-08 15:16:02] [INFO] 🎬 Running Manim on D:/DemoScriptFolder/script_20250916_115236/script_seq4/script_seq4.py ...
+[2025-10-08 15:16:35] [INFO] 💾 Saved video to: D:\project2\tutter\src\output\Videos\script_20250916_115236_script_seq4_ScriptStep4.mp4
+[2025-10-08 15:16:39] [INFO] ✅ Generated full audio for: script_seq3.txt (in memory)
+[2025-10-08 15:17:12] [INFO] ✅ Generated full audio for: script_seq4.txt (in memory)
+[2025-10-08 15:17:12] [INFO] 🎵 Total audio files generated: 4
+[2025-10-08 15:17:12] [INFO] ✅ Video saved at: D:\project2\tutter\src\output\Videos\script_1_20251008_151712.mp4
+[2025-10-08 15:17:12] [INFO] ✅ Audio saved at: D:\project2\tutter\src\output\Audios\script_1_20251008_151712.mp3
+[2025-10-08 15:17:12] [INFO] 🎬 Script 1 video saved at: D:\project2\tutter\src\output\Videos\script_1_20251008_151712.mp4
+[2025-10-08 15:17:12] [INFO] 🎵 Script 1 audio saved at: D:\project2\tutter\src\output\Audios\script_1_20251008_151712.mp3
+[2025-10-08 15:17:12] [INFO] ✅ Video saved at: D:\project2\tutter\src\output\Videos\script_2_20251008_151712.mp4
+[2025-10-08 15:17:12] [INFO] ✅ Audio saved at: D:\project2\tutter\src\output\Audios\script_2_20251008_151712.mp3
+[2025-10-08 15:17:12] [INFO] 🎬 Script 2 video saved at: D:\project2\tutter\src\output\Videos\script_2_20251008_151712.mp4
+[2025-10-08 15:17:12] [INFO] 🎵 Script 2 audio saved at: D:\project2\tutter\src\output\Audios\script_2_20251008_151712.mp3
+[2025-10-08 15:17:12] [INFO] ✅ Video saved at: D:\project2\tutter\src\output\Videos\script_3_20251008_151712.mp4
+[2025-10-08 15:17:12] [INFO] ✅ Audio saved at: D:\project2\tutter\src\output\Audios\script_3_20251008_151712.mp3
+[2025-10-08 15:17:12] [INFO] 🎬 Script 3 video saved at: D:\project2\tutter\src\output\Videos\script_3_20251008_151712.mp4
+[2025-10-08 15:17:12] [INFO] 🎵 Script 3 audio saved at: D:\project2\tutter\src\output\Audios\script_3_20251008_151712.mp3
+[2025-10-08 15:17:12] [INFO] ✅ Video saved at: D:\project2\tutter\src\output\Videos\script_4_20251008_151712.mp4
+[2025-10-08 15:17:12] [INFO] ✅ Audio saved at: D:\project2\tutter\src\output\Audios\script_4_20251008_151712.mp3
+[2025-10-08 15:17:12] [INFO] 🎬 Script 4 video saved at: D:\project2\tutter\src\output\Videos\script_4_20251008_151712.mp4
+[2025-10-08 15:17:12] [INFO] 🎵 Script 4 audio saved at: D:\project2\tutter\src\output\Audios\script_4_20251008_151712.mp3
+[2025-10-08 15:17:15] [INFO] ✅ Merged video 1 returned as bytes
+[2025-10-08 15:17:17] [INFO] ✅ Merged video 2 returned as bytes
+[2025-10-08 15:17:19] [INFO] ✅ Merged video 3 returned as bytes
+[2025-10-08 15:17:21] [INFO] ✅ Merged video 4 returned as bytes
+[2025-10-08 15:17:37] [INFO] 🎬 Final merged+concatenated MP4 returned as bytes

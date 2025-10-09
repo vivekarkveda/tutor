@@ -9,15 +9,15 @@ class Settings:
     FILE_TYPES = ["py", "txt"]
 
 
-    JSON_FILE_PATH = Path(r"C:\Vivek_Main\Manim_project\jsonfiles\Pythagoras.json")
+    JSON_FILE_PATH = Path(r"D:\tests\script.json")
 
 
     POSTGRES = {
         "host": "localhost",
         "port": 5432,
-        "user": "vivek",
-        "password": "8811",
-        "dbname": "airlines_flights_data",
+        "user": "Mayank",
+        "password": "yourpassword",
+        "dbname": "my_database",
         "table": "videos",
     }
 

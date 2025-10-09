@@ -1,0 +1,28 @@
+[2025-10-08 15:02:56] [INFO] Video callable prepared for: D:\DemoScriptFolder\script_20250916_115236
+[2025-10-08 15:02:56] [INFO] 📁 Output directory ensured: D:\project2\tutter\src\output\Videos
+[2025-10-08 15:02:56] [INFO] 🎬 Running Manim on D:/DemoScriptFolder/script_20250916_115236/script_seq1/script_seq1.py ...
+[2025-10-08 15:03:26] [INFO] 💾 Saved video to: D:\project2\tutter\src\output\Videos\script_20250916_115236_script_seq1_ScriptStep1.mp4
+[2025-10-08 15:03:26] [INFO] 🎬 Running Manim on D:/DemoScriptFolder/script_20250916_115236/script_seq2/script_seq2.py ...
+[2025-10-08 15:03:43] [INFO] ✅ Generated full audio for: script_seq1.txt (in memory)
+[2025-10-08 15:03:50] [INFO] 💾 Saved video to: D:\project2\tutter\src\output\Videos\script_20250916_115236_script_seq2_ScriptStep2.mp4
+[2025-10-08 15:03:50] [INFO] 🎬 Running Manim on D:/DemoScriptFolder/script_20250916_115236/script_seq3/script_seq3.py ...
+[2025-10-08 15:04:14] [INFO] ✅ Generated full audio for: script_seq2.txt (in memory)
+[2025-10-08 15:04:28] [INFO] 💾 Saved video to: D:\project2\tutter\src\output\Videos\script_20250916_115236_script_seq3_ScriptStep3.mp4
+[2025-10-08 15:04:28] [INFO] 🎬 Running Manim on D:/DemoScriptFolder/script_20250916_115236/script_seq4/script_seq4.py ...
+[2025-10-08 15:04:59] [INFO] 💾 Saved video to: D:\project2\tutter\src\output\Videos\script_20250916_115236_script_seq4_ScriptStep4.mp4
+[2025-10-08 15:05:06] [INFO] ✅ Generated full audio for: script_seq3.txt (in memory)
+[2025-10-08 15:05:39] [INFO] ✅ Generated full audio for: script_seq4.txt (in memory)
+[2025-10-08 15:05:39] [INFO] 🎵 Total audio files generated: 4
+[2025-10-08 15:05:41] [INFO] ✅ Merged video 1 returned as bytes
+[2025-10-08 15:05:43] [INFO] ✅ Merged video 2 returned as bytes
+[2025-10-08 15:05:44] [INFO] ✅ Merged video 3 returned as bytes
+[2025-10-08 15:05:46] [INFO] ✅ Merged video 4 returned as bytes
+[2025-10-08 15:06:00] [INFO] 🎬 Final merged+concatenated MP4 returned as bytes
+[2025-10-08 15:06:00] [INFO] ✅ Final video saved locally at: D:\project2\tutter\src\output\final_video_20251008_150600.mp4
+[2025-10-08 15:06:00] [INFO] ✅ Video saved at: D:\project2\tutter\src\output\Videos\final_video_20251008_150600.mp4
+[2025-10-08 15:06:00] [INFO] ✅ Audio saved at: D:\project2\tutter\src\output\Audios\final_video_20251008_150600.mp3
+[2025-10-08 15:06:00] [INFO] 🎉 Final video saved at: D:\project2\tutter\src\output\final_video_20251008_150600.mp4
+[2025-10-08 15:06:00] [INFO] 🎉 Video also saved at: D:\project2\tutter\src\output\Videos\final_video_20251008_150600.mp4
+[2025-10-08 15:06:00] [INFO] 🎉 Audio saved at: D:\project2\tutter\src\output\Audios\final_video_20251008_150600.mp3
+[2025-10-08 15:06:00] [INFO] 🎉 Pipeline completed! Final video saved at: D:\project2\tutter\src\output\final_video_20251008_150600.mp4
+[2025-10-08 15:06:00] [INFO] 📝 Process history: ['manim', 'kokoro']
