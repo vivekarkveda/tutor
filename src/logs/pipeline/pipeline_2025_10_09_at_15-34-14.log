@@ -1,0 +1,39 @@
+[2025-10-09 15:34:25] [INFO] video callable prepared for: C:\Vivek_Main\Manim_project\inputbox\Pythagoras_20251003_165430
+[2025-10-09 15:34:25] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/Pythagoras_20251003_165430/script_seq1/script_seq1.py ...
+[2025-10-09 15:34:25] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\Pythagoras_20251003_165430\script_seq1
+[2025-10-09 15:34:46] [INFO] 🔍 Found video at: C:\Vivek_Main\tutter\src\media\videos\Pythagoras_20251003_165430\script_seq1\videos\script_seq1\480p15\ArithmeticProgressionScene.mp4
+[2025-10-09 15:34:46] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/Pythagoras_20251003_165430/script_seq2/script_seq2.py ...
+[2025-10-09 15:34:46] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\Pythagoras_20251003_165430\script_seq2
+[2025-10-09 15:34:49] [DEBUG] ✅ Generated full audio for: script_seq1.txt (in memory)
+[2025-10-09 15:35:14] [DEBUG] ✅ Generated full audio for: script_seq2.txt (in memory)
+[2025-10-09 15:35:34] [DEBUG] ✅ Generated full audio for: script_seq3.txt (in memory)
+[2025-10-09 15:35:39] [INFO] 🔍 Found video at: C:\Vivek_Main\tutter\src\media\videos\Pythagoras_20251003_165430\script_seq2\videos\script_seq2\480p15\NthTermAP.mp4
+[2025-10-09 15:35:39] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/Pythagoras_20251003_165430/script_seq3/script_seq3.py ...
+[2025-10-09 15:35:39] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\Pythagoras_20251003_165430\script_seq3
+[2025-10-09 15:36:00] [DEBUG] ✅ Generated full audio for: script_seq4.txt (in memory)
+[2025-10-09 15:36:00] [DEBUG] Audio bytes count: 4
+[2025-10-09 15:36:04] [INFO] 🔍 Found video at: C:\Vivek_Main\tutter\src\media\videos\Pythagoras_20251003_165430\script_seq3\videos\script_seq3\480p15\TenthTermExample.mp4
+[2025-10-09 15:36:04] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/Pythagoras_20251003_165430/script_seq4/script_seq4.py ...
+[2025-10-09 15:36:04] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\Pythagoras_20251003_165430\script_seq4
+[2025-10-09 15:36:24] [INFO] 🔍 Found video at: C:\Vivek_Main\tutter\src\media\videos\Pythagoras_20251003_165430\script_seq4\videos\script_seq4\480p15\NthTermApplications.mp4
+[2025-10-09 15:36:24] [INFO] 🎬 Video saved at: C:\Vivek_Main\tutter\src\output\Video\Pythagoras_20251003_165430_script_seq1.mp4
+[2025-10-09 15:36:24] [INFO] 🎵 Audio saved at: C:\Vivek_Main\tutter\src\output\Audio\Pythagoras_20251003_165430_script_seq1.mp3
+[2025-10-09 15:36:24] [INFO] 🎬 Video saved at: C:\Vivek_Main\tutter\src\output\Video\Pythagoras_20251003_165430_script_seq2.mp4
+[2025-10-09 15:36:24] [INFO] 🎵 Audio saved at: C:\Vivek_Main\tutter\src\output\Audio\Pythagoras_20251003_165430_script_seq2.mp3
+[2025-10-09 15:36:24] [INFO] 🎬 Video saved at: C:\Vivek_Main\tutter\src\output\Video\Pythagoras_20251003_165430_script_seq3.mp4
+[2025-10-09 15:36:24] [INFO] 🎵 Audio saved at: C:\Vivek_Main\tutter\src\output\Audio\Pythagoras_20251003_165430_script_seq3.mp3
+[2025-10-09 15:36:24] [INFO] 🎬 Video saved at: C:\Vivek_Main\tutter\src\output\Video\Pythagoras_20251003_165430_script_seq4.mp4
+[2025-10-09 15:36:24] [INFO] 🎵 Audio saved at: C:\Vivek_Main\tutter\src\output\Audio\Pythagoras_20251003_165430_script_seq4.mp3
+[2025-10-09 15:36:24] [INFO] ✅ Inserted record Pythagoras_20251003_165430_20251009_KJJ2EA with paths
+[2025-10-09 15:36:24] [INFO] ✅ Inserted record Pythagoras_20251003_165430_20251009_7NXGJO with paths
+[2025-10-09 15:36:24] [INFO] ✅ Inserted record Pythagoras_20251003_165430_20251009_8HKQKE with paths
+[2025-10-09 15:36:24] [INFO] ✅ Inserted record Pythagoras_20251003_165430_20251009_RKQHGG with paths
+[2025-10-09 15:36:26] [INFO] ✅ Merged video 1 returned as bytes
+[2025-10-09 15:36:27] [INFO] ✅ Merged video 2 returned as bytes
+[2025-10-09 15:36:27] [INFO] ✅ Merged video 3 returned as bytes
+[2025-10-09 15:36:27] [INFO] ✅ Merged video 4 returned as bytes
+[2025-10-09 15:36:30] [INFO] 🎬 Final merged+concatenated MP4 returned as bytes
+[2025-10-09 15:36:30] [INFO] ✅ Final video saved locally at: C:\Vivek_Main\tutter\src\output\final_video_20251009_153630.mp4
+[2025-10-09 15:36:30] [INFO] 🎉 Final video saved at: C:\Vivek_Main\tutter\src\output\final_video_20251009_153630.mp4
+[2025-10-09 15:36:30] [INFO] 🎉 Pipeline completed! Final video saved at: C:\Vivek_Main\tutter\src\output\final_video_20251009_153630.mp4
+[2025-10-09 15:36:30] [INFO] 📝 Process history: ['manim', 'kokoro']

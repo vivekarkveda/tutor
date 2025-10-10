@@ -11,7 +11,6 @@ from table_gen import Table_gen
 from logger import pipeline_logger, validation_logger
 
 
-
 async def run_in_executor(executor, func, *args):
     loop = asyncio.get_event_loop()
     return await loop.run_in_executor(executor, func, *args)
@@ -44,8 +43,14 @@ async def process_pipeline(generated_files, video: str, audio: str, run_from: st
         video_task = asyncio.create_task(run_in_executor(executor, video_callable))
         audio_task = asyncio.create_task(run_in_executor(executor, audio_callable))
         video_bytes_list, audio_bytes_list = await asyncio.gather(video_task, audio_task)
-        Table_gen.table_generator(generated_files, video_bytes_list, audio_bytes_list)
+        
 
+    # --- Save each script step using SaverFactory ---
+    PathList = SaverFactory.save_all_script_media(video_bytes_list, audio_bytes_list,generated_files)
+    print(PathList)
+    Table_gen.table_generator(generated_files,PathList)
+
+    # --- Merge final video/audio ---
     final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -58,14 +63,12 @@ async def process_pipeline(generated_files, video: str, audio: str, run_from: st
         db_credentials=Settings.POSTGRES if run_from == "postgres" else None
     )
 
-
     pipeline_logger.info(f"🎉 Final video saved at: {output_path}")
     return output_path
 
 
 async def main():
     generated_files = prepare_files(Settings.RUN_FROM, Settings.GENERATE_NEW_FILES, Settings.FILE_TYPES)
-
 
     output_path = await process_pipeline(
         generated_files,

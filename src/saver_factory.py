@@ -1,8 +1,7 @@
-# saver_factory.py
 import os
 import psycopg2
 from pathlib import Path
-from logger import pipeline_logger, validation_logger
+from logger import pipeline_logger
 
 
 class BaseSaver:
@@ -73,7 +72,7 @@ class PostgresSaver(BaseSaver):
 
 # --- Factory Handler ---
 class SaverFactory:
-    """Factory that decides with if/else which saver to use."""
+    """Factory that decides which saver to use and handles custom saves."""
 
     @staticmethod
     def save_final_video(video_bytes: bytes, filename: str, save_to: str, db_credentials=None):
@@ -85,3 +84,57 @@ class SaverFactory:
             raise ValueError(f"❌ Unsupported save_to type: {save_to}")
 
         return saver.save(video_bytes, filename, db_credentials)
+
+    # --- New method: save all script step media ---
+    @staticmethod
+    def save_all_script_media(video_bytes_list, audio_bytes_list, generated_files):
+        """
+        Saves each script step video/audio into fixed output paths:
+        Videos -> D:\project2\tutter\src\output\Videos
+        Audios -> D:\project2\tutter\src\output\Audios
+        Naming: <parent_folder_name>_script_seq<seq>.mp4/.mp3
+        Returns: (list_of_video_paths, list_of_audio_paths)
+        """
+
+        videos_dir = Path(r"C:\Vivek_Main\tutter\src\output\Video")
+        audios_dir = Path(r"C:\Vivek_Main\tutter\src\output\Audio")
+        videos_dir.mkdir(parents=True, exist_ok=True)
+        audios_dir.mkdir(parents=True, exist_ok=True)
+
+        # Extract parent folder name from generated_files
+        parent_folder_path = generated_files[1]
+        parent_folder_name = parent_folder_path.name  # e.g. "script_20250916_115236"
+
+        video_paths = []
+        audio_paths = []
+
+        for idx, (v_bytes, a_bytes) in enumerate(zip(video_bytes_list, audio_bytes_list), start=1):
+            # ✅ Correct naming
+            video_filename = f"{parent_folder_name}_script_seq{idx}.mp4"
+            audio_filename = f"{parent_folder_name}_script_seq{idx}.mp3"
+
+            video_path = videos_dir / video_filename
+            audio_path = audios_dir / audio_filename
+
+            # Save video/audio bytes if not empty
+            if v_bytes:
+                with open(video_path, "wb") as f:
+                    f.write(v_bytes)
+                pipeline_logger.info(f"🎬 Video saved at: {video_path}")
+                video_paths.append(str(video_path))
+            else:
+                pipeline_logger.warning(f"⚠ Video bytes for step {idx} are empty, file not saved.")
+
+            if a_bytes:
+                with open(audio_path, "wb") as f:
+                    f.write(a_bytes)
+                pipeline_logger.info(f"🎵 Audio saved at: {audio_path}")
+                audio_paths.append(str(audio_path))
+            else:
+                pipeline_logger.warning(f"⚠ Audio bytes for step {idx} are empty, file not saved.")
+
+        print("📁 Videos saved to:", video_paths)
+        print("📁 Audios saved to:", audio_paths)
+
+        # ✅ Return arrays of full paths
+        return [{"video_paths":video_paths}, {"audio_paths":audio_paths}]

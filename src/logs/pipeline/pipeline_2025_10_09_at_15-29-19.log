@@ -1,0 +1,34 @@
+[2025-10-09 15:29:29] [INFO] video callable prepared for: C:\Vivek_Main\Manim_project\inputbox\Pythagoras_20251003_165430
+[2025-10-09 15:29:29] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/Pythagoras_20251003_165430/script_seq1/script_seq1.py ...
+[2025-10-09 15:29:29] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\Pythagoras_20251003_165430\script_seq1
+[2025-10-09 15:29:52] [INFO] 🔍 Found video at: C:\Vivek_Main\tutter\src\media\videos\Pythagoras_20251003_165430\script_seq1\videos\script_seq1\480p15\ArithmeticProgressionScene.mp4
+[2025-10-09 15:29:52] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/Pythagoras_20251003_165430/script_seq2/script_seq2.py ...
+[2025-10-09 15:29:53] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\Pythagoras_20251003_165430\script_seq2
+[2025-10-09 15:30:46] [INFO] 🔍 Found video at: C:\Vivek_Main\tutter\src\media\videos\Pythagoras_20251003_165430\script_seq2\videos\script_seq2\480p15\NthTermAP.mp4
+[2025-10-09 15:30:46] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/Pythagoras_20251003_165430/script_seq3/script_seq3.py ...
+[2025-10-09 15:30:46] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\Pythagoras_20251003_165430\script_seq3
+[2025-10-09 15:31:11] [INFO] 🔍 Found video at: C:\Vivek_Main\tutter\src\media\videos\Pythagoras_20251003_165430\script_seq3\videos\script_seq3\480p15\TenthTermExample.mp4
+[2025-10-09 15:31:11] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/Pythagoras_20251003_165430/script_seq4/script_seq4.py ...
+[2025-10-09 15:31:11] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\Pythagoras_20251003_165430\script_seq4
+[2025-10-09 15:31:32] [INFO] 🔍 Found video at: C:\Vivek_Main\tutter\src\media\videos\Pythagoras_20251003_165430\script_seq4\videos\script_seq4\480p15\NthTermApplications.mp4
+[2025-10-09 15:31:32] [INFO] 🎬 Video saved at: C:\Vivek_Main\tutter\src\output\Video\Pythagoras_20251003_165430_script_seq1.mp4
+[2025-10-09 15:31:32] [INFO] 🎵 Audio saved at: C:\Vivek_Main\tutter\src\output\Audio\Pythagoras_20251003_165430_script_seq1.mp3
+[2025-10-09 15:31:32] [INFO] 🎬 Video saved at: C:\Vivek_Main\tutter\src\output\Video\Pythagoras_20251003_165430_script_seq2.mp4
+[2025-10-09 15:31:32] [INFO] 🎵 Audio saved at: C:\Vivek_Main\tutter\src\output\Audio\Pythagoras_20251003_165430_script_seq2.mp3
+[2025-10-09 15:31:32] [INFO] 🎬 Video saved at: C:\Vivek_Main\tutter\src\output\Video\Pythagoras_20251003_165430_script_seq3.mp4
+[2025-10-09 15:31:32] [INFO] 🎵 Audio saved at: C:\Vivek_Main\tutter\src\output\Audio\Pythagoras_20251003_165430_script_seq3.mp3
+[2025-10-09 15:31:32] [INFO] 🎬 Video saved at: C:\Vivek_Main\tutter\src\output\Video\Pythagoras_20251003_165430_script_seq4.mp4
+[2025-10-09 15:31:32] [INFO] 🎵 Audio saved at: C:\Vivek_Main\tutter\src\output\Audio\Pythagoras_20251003_165430_script_seq4.mp3
+[2025-10-09 15:31:32] [INFO] ✅ Inserted record Pythagoras_20251003_165430_20251009_6HFJRE with paths
+[2025-10-09 15:31:32] [INFO] ✅ Inserted record Pythagoras_20251003_165430_20251009_O0NK26 with paths
+[2025-10-09 15:31:32] [INFO] ✅ Inserted record Pythagoras_20251003_165430_20251009_E77FZL with paths
+[2025-10-09 15:31:32] [INFO] ✅ Inserted record Pythagoras_20251003_165430_20251009_PRMCZ6 with paths
+[2025-10-09 15:31:34] [INFO] ✅ Merged video 1 returned as bytes
+[2025-10-09 15:31:35] [INFO] ✅ Merged video 2 returned as bytes
+[2025-10-09 15:31:35] [INFO] ✅ Merged video 3 returned as bytes
+[2025-10-09 15:31:36] [INFO] ✅ Merged video 4 returned as bytes
+[2025-10-09 15:31:39] [INFO] 🎬 Final merged+concatenated MP4 returned as bytes
+[2025-10-09 15:31:39] [INFO] ✅ Final video saved locally at: C:\Vivek_Main\tutter\src\output\final_video_20251009_153139.mp4
+[2025-10-09 15:31:39] [INFO] 🎉 Final video saved at: C:\Vivek_Main\tutter\src\output\final_video_20251009_153139.mp4
+[2025-10-09 15:31:39] [INFO] 🎉 Pipeline completed! Final video saved at: C:\Vivek_Main\tutter\src\output\final_video_20251009_153139.mp4
+[2025-10-09 15:31:39] [INFO] 📝 Process history: ['manim', 'kokoro']

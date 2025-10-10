@@ -46,10 +46,10 @@ class AudioFactory:
                     buffer.seek(0)
                     audio_bytes_list.append(buffer.read())
 
-                pipeline_logger.info(f"✅ Generated full audio for: {txt_path.name} (in memory)")
+                pipeline_logger.debug(f"✅ Generated full audio for: {txt_path.name} (in memory)")
 
             except Exception as e:
                 validation_logger.error(f"❌ Error generating audio for {txt_path.name}: {e}")
 
-        pipeline_logger.info(f"🎵 Total audio files generated: {len(audio_bytes_list)}")
+        pipeline_logger.debug(f"Audio bytes count: {len(audio_bytes_list)}")
         return audio_bytes_list
