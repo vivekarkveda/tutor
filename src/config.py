@@ -9,7 +9,8 @@ class Settings:
     FILE_TYPES = ["py", "txt"]
 
 
-    JSON_FILE_PATH = Path(r"C:\Vivek_Main\Manim_project\jsonfiles\Pythagoras.json")
+    JSON_FILE_PATH = Path(r"C:\Vivek_Main\Manim_project\jsonfiles\script1.json")
+    TEMP_GENERATED_FOLDER = Path(r"C:\Vivek_Main\Temp_Data")
 
 
     POSTGRES = {

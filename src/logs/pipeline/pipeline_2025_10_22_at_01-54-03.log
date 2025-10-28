@@ -1,0 +1,9 @@
+[2025-10-22 01:54:19] [DEBUG] 🧮 File: script_seq1.py | video_factory Words: 223 | Approx. GPT Tokens: 297
+[2025-10-22 01:55:01] [DEBUG] ✅ Generated full audio for: script_seq1.txt (in memory)
+[2025-10-22 01:55:33] [DEBUG] 🧮 File: script_seq2.py | video_factory Words: 238 | Approx. GPT Tokens: 317
+[2025-10-22 01:55:50] [DEBUG] ✅ Generated full audio for: script_seq2.txt (in memory)
+[2025-10-22 01:56:39] [DEBUG] ✅ Generated full audio for: script_seq3.txt (in memory)
+[2025-10-22 01:57:26] [DEBUG] ✅ Generated full audio for: script_seq4.txt (in memory)
+[2025-10-22 01:57:26] [DEBUG] Audio bytes count: 4
+[2025-10-22 01:57:41] [DEBUG] 🧮 File: script_seq3.py | video_factory Words: 337 | Approx. GPT Tokens: 449
+[2025-10-22 01:58:45] [DEBUG] 🧮 File: script_seq4.py | video_factory Words: 336 | Approx. GPT Tokens: 448

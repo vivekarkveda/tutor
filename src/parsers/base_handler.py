@@ -1,3 +1,4 @@
+# src/processor/input_handler.py
 import json
 from pathlib import Path
 from datetime import datetime
@@ -19,7 +20,7 @@ class InputHandler(ABC):
         pass
 
     @abstractmethod
-    def handle(self, data,file_types=None):
+    def handle(self, data, file_types=None):
         pass
 
     # ✅ Common folder/file generation logic moved here
@@ -33,7 +34,10 @@ class InputHandler(ABC):
         # Dict like {"py_files": [], "txt_files": [], "json_files": []}
         generated_files = {f"{ft}_files": [] for ft in file_types}
         pipeline_logger.debug(f"generated_files: {generated_files}")
- 
+
+        total_words = 0
+        total_tokens = 0
+
         for item in data:
             seq = item["script_seq"]
             script_for_manim = item["script_for_manim"]
@@ -51,15 +55,50 @@ class InputHandler(ABC):
                 elif ft == "txt":
                     content = script_voice_over
                 else:
-                    # fallback: save both parts as JSON-like structure
+                    # fallback: save both parts as plain text
                     content = f"{script_for_manim}\n\n{script_voice_over}"
 
-                file_path.write_text(content, encoding="utf-8")
-                generated_files[f"{ft}_files"].append(str(file_path))
+                if isinstance(content, (dict, list)):
+                    file_path.write_text(json.dumps(content, indent=2, ensure_ascii=False), encoding="utf-8")
+                else:
+                    file_path.write_text(str(content), encoding="utf-8")
+
+                # 🔍 Count words + estimate GPT tokens
+                word_count, token_count = self.count_words_in_file(file_path)
+                total_words += word_count
+                total_tokens += token_count
+
+                msg = (
+                    f"🧮 File: {file_path.name} | "
+                    f"base_handler Words: {word_count} | Approx. GPT Tokens: {token_count}"
+                )
+                print(msg)
+                pipeline_logger.debug(msg)
                 pipeline_logger.info(f"✅ Created {ft.upper()} file: {file_path}")
+
+        summary = (
+            f"🎯 Total Words: {total_words} | "
+            f"Approx. Total GPT Tokens: {total_tokens}"
+        )
+        print("\n" + summary)
+        pipeline_logger.info(summary)
 
         pipeline_logger.info(f"🎉 All files generated inside: {base_path}")
         return generated_files
+
+    # 🧮 Helper to count words + estimate GPT tokens
+    @staticmethod
+    def count_words_in_file(file_path: Path):
+        """Counts the number of words and approximates GPT tokens in a file."""
+        try:
+            content = Path(file_path).read_text(encoding="utf-8")
+            words = content.split()
+            word_count = len(words)
+            approx_tokens = int(word_count / 0.75)  # 1 token ≈ 0.75 words
+            return word_count, approx_tokens
+        except Exception as e:
+            validation_logger.error(f"❌ Failed to count words in {file_path}: {e}")
+            return 0, 0
 
 
 class JsonHandler(InputHandler):
@@ -68,11 +107,11 @@ class JsonHandler(InputHandler):
     def set_credentials(self, credentials: dict):
         self.credentials = credentials
 
-    def handle(self, json_file: str,file_types):
+    def handle(self, json_file: str, file_types):
         pipeline_logger.info(f"📝 Generating Python and TXT files from JSON: {json_file}")
         with open(json_file, "r", encoding="utf-8") as f:
             data = json.load(f)
-        return self._generate_files(data, Path(json_file).stem,file_types)
+        return self._generate_files(data, Path(json_file).stem, file_types)
 
 
 class PostgresHandler(InputHandler):
@@ -85,7 +124,7 @@ class PostgresHandler(InputHandler):
         """
         self.credentials = credentials
 
-    def handle(self, query: str,file_types):
+    def handle(self, query: str, file_types):
         if not self.credentials:
             raise ValueError("❌ No DB credentials set for PostgresHandler")
 
@@ -107,7 +146,7 @@ class PostgresHandler(InputHandler):
         conn.close()
 
         pipeline_logger.info("📝 Generating Python and TXT files from Postgres data")
-        return self._generate_files(data, "postgres_input",file_types)
+        return self._generate_files(data, "postgres_input", file_types)
 
 
 class InputHandlerFactory:

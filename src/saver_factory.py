@@ -85,13 +85,13 @@ class SaverFactory:
 
         return saver.save(video_bytes, filename, db_credentials)
 
-    # --- New method: save all script step media ---
+        # --- New method: save all script step media ---
     @staticmethod
     def save_all_script_media(video_bytes_list, audio_bytes_list, generated_files):
         """
         Saves each script step video/audio into fixed output paths:
-        Videos -> D:\project2\tutter\src\output\Videos
-        Audios -> D:\project2\tutter\src\output\Audios
+        Videos -> C:\Vivek_Main\tutter\src\output\Video
+        Audios -> C:\Vivek_Main\tutter\src\output\Audio
         Naming: <parent_folder_name>_script_seq<seq>.mp4/.mp3
         Returns: (list_of_video_paths, list_of_audio_paths)
         """
@@ -101,22 +101,31 @@ class SaverFactory:
         videos_dir.mkdir(parents=True, exist_ok=True)
         audios_dir.mkdir(parents=True, exist_ok=True)
 
-        # Extract parent folder name from generated_files
-        parent_folder_path = generated_files[1]
-        parent_folder_name = parent_folder_path.name  # e.g. "script_20250916_115236"
+        # ✅ Safely detect parent folder name
+        try:
+            # If dict format → use first py_file path to infer parent folder
+            if isinstance(generated_files, dict):
+                first_py = generated_files["py_files"][0]
+                parent_folder_path = Path(first_py).parent.parent  # e.g. .../input_data_20251010_121145
+                parent_folder_name = parent_folder_path.name
+            else:
+                # If list format → old behavior
+                parent_folder_path = Path(generated_files[1])
+                parent_folder_name = parent_folder_path.name
+        except Exception as e:
+            parent_folder_name = f"unknown_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+            pipeline_logger.warning(f"⚠ Could not detect parent folder name, defaulting to {parent_folder_name}. Error: {e}")
 
         video_paths = []
         audio_paths = []
 
         for idx, (v_bytes, a_bytes) in enumerate(zip(video_bytes_list, audio_bytes_list), start=1):
-            # ✅ Correct naming
             video_filename = f"{parent_folder_name}_script_seq{idx}.mp4"
             audio_filename = f"{parent_folder_name}_script_seq{idx}.mp3"
 
             video_path = videos_dir / video_filename
             audio_path = audios_dir / audio_filename
 
-            # Save video/audio bytes if not empty
             if v_bytes:
                 with open(video_path, "wb") as f:
                     f.write(v_bytes)
@@ -136,5 +145,4 @@ class SaverFactory:
         print("📁 Videos saved to:", video_paths)
         print("📁 Audios saved to:", audio_paths)
 
-        # ✅ Return arrays of full paths
-        return [{"video_paths":video_paths}, {"audio_paths":audio_paths}]
+        return [{"video_paths": video_paths}, {"audio_paths": audio_paths}]

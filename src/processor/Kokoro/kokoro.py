@@ -52,4 +52,5 @@ class AudioFactory:
                 validation_logger.error(f"❌ Error generating audio for {txt_path.name}: {e}")
 
         pipeline_logger.debug(f"Audio bytes count: {len(audio_bytes_list)}")
+        print("audio_bytes_list", len(audio_bytes_list))
         return audio_bytes_list

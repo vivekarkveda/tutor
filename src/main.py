@@ -40,15 +40,17 @@ async def process_pipeline(generated_files, video: str, audio: str, run_from: st
         video_callable = ProcessFactory.get_processor(video, generated_files[0])
         pipeline_logger.info(f"video callable prepared for: {generated_files[1]}")
         audio_callable = ProcessFactory.get_processor(audio, generated_files[0])
+
         video_task = asyncio.create_task(run_in_executor(executor, video_callable))
         audio_task = asyncio.create_task(run_in_executor(executor, audio_callable))
         video_bytes_list, audio_bytes_list = await asyncio.gather(video_task, audio_task)
-        
+    print("generated_files",generated_files)
 
-    # --- Save each script step using SaverFactory ---
-    PathList = SaverFactory.save_all_script_media(video_bytes_list, audio_bytes_list,generated_files)
-    print(PathList)
-    Table_gen.table_generator(generated_files,PathList)
+    # ✅ Only pass the dict part (generated_files[0])
+    PathList = SaverFactory.save_all_script_media(video_bytes_list, audio_bytes_list, generated_files)
+    print("PathList =>", PathList)
+
+    Table_gen.table_generator(generated_files, PathList)
 
     # --- Merge final video/audio ---
     final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
@@ -65,6 +67,7 @@ async def process_pipeline(generated_files, video: str, audio: str, run_from: st
 
     pipeline_logger.info(f"🎉 Final video saved at: {output_path}")
     return output_path
+
 
 
 async def main():
