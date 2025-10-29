@@ -25,3 +25,5 @@ class Settings:
     SCRIPT_QUERY = "SELECT script_seq, script_for_manim, script_voice_over FROM scripts_table;"
 
     debugging = False
+    COHERE_API_KEY = "ItjCVeX2H4je76T4Az0yQGnjISqZhD3IrKWj6ebq"
+    BASE_INPUT_ROOT = "C:\Vivek_Main\Manim_project\inputbox"

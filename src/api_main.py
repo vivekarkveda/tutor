@@ -77,11 +77,10 @@ async def search(topic: str = Query(..., description="The topic to generate scri
             api_key=API_KEY
         )
 
-        # === Step 1: Generate JSON script ===
         script_json = generator.generate_script(topic)
         print("\n📝 Raw Script From Cohere:\n", script_json)
 
-        # === Step 2: Clean Markdown-style fences ===
+
         cleaned_json = (
             script_json.strip()
             .removeprefix("```json")
@@ -91,7 +90,7 @@ async def search(topic: str = Query(..., description="The topic to generate scri
             .strip()
         )
 
-        # === Step 3: Parse into a valid list ===
+
         try:
             parsed_json = json.loads(cleaned_json)
         except json.JSONDecodeError as je:
@@ -100,7 +99,6 @@ async def search(topic: str = Query(..., description="The topic to generate scri
                 detail=f"Generated script is not valid JSON. Error: {je}"
             )
 
-        # === Step 4: Send to internal APIs ===
         api_generate = "http://127.0.0.1:8000/generate-files-api"
         api_generator = "http://127.0.0.1:8000/Generator"
         headers = {"Content-Type": "application/json"}
@@ -108,21 +106,20 @@ async def search(topic: str = Query(..., description="The topic to generate scri
         print("\n🚀 Sending script to /generate-files-api and /Generator...\n")
 
         async with httpx.AsyncClient(timeout=180) as client:
-            # Run both in parallel for efficiency
+
             gen_task = client.post(api_generate, headers=headers, json=parsed_json)
             code_task = client.post(api_generator, headers=headers, json=parsed_json)
             responses = await asyncio.gather(gen_task, code_task, return_exceptions=True)
 
-        # === Step 5: Handle responses ===
+
         gen_resp, code_resp = responses
 
-        # Handle generation errors separately
+
         if isinstance(gen_resp, Exception):
             raise HTTPException(status_code=500, detail=f"/generate-files-api failed: {str(gen_resp)}")
         if isinstance(code_resp, Exception):
             raise HTTPException(status_code=500, detail=f"/Generator failed: {str(code_resp)}")
 
-        # Parse responses
         if gen_resp.status_code != 200:
             raise HTTPException(status_code=gen_resp.status_code, detail=f"/generate-files-api: {gen_resp.text}")
         if code_resp.status_code != 200:
@@ -199,7 +196,6 @@ async def generate_code_endpoint(input_data: List[Dict]):
     try:
         print("\n🧠 Starting Manim Code Generation...\n")
 
-        # Step 1 — Generate Manim code
         generator = CodeGenerator(API_KEY)
         result = generator.generate_code(input_data)
 

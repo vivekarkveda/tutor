@@ -16,13 +16,11 @@ class CodeGenerator:
         result = []
 
         for obj in input_data:
-            # Extract values from JSON object
             script_seq = obj.get("script_seq", "Unknown_Seq")
             script_for_manim = obj.get("script_for_manim", [])
             script_voice_over = obj.get("script_voice_over", [])
             script_length = obj.get("script_length", 30)
 
-            # === Build Prompt ===
             prompt = f"""
 You are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python). 
 Your goal is to turn a provided topic script into a visually clear, accurate, and fully executable Python animation that communicates concepts step-by-step.
