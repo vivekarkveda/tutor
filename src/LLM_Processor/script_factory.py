@@ -1,6 +1,4 @@
-from fastapi import FastAPI, Query
 import cohere
-import requests
 from abc import ABC, abstractmethod
 
 

@@ -12,6 +12,9 @@ from config import Settings
 from logger import pipeline_logger
 from main import prepare_files, process_pipeline
 from LLM_Processor.script_factory import ScriptGeneratorFactory
+from LLM_Processor.codeGen_factory import CodeGenerator
+
+topicName = ""
 
 
 # ================================================================
@@ -62,32 +65,33 @@ async def send_to_internal_api(url: str, json_data: str) -> Dict:
 @app.post("/search")
 async def search(topic: str = Query(..., description="The topic to generate script for")):
     """
-    Generate storytelling + animation script for a given topic,
-    then automatically hit /generate-files-api with the generated JSON body.
-    Example: POST http://127.0.0.1:8000/search?topic=pythagoras
+    1️⃣ Generate storytelling JSON script from Cohere.
+    2️⃣ Send to /generate-files-api to create base files.
+    3️⃣ Send to /Generator to create Manim Python scripts.
+    4️⃣ Return combined structured response.
     """
     try:
-        # Step 1: Create generator via factory
+        print(f"\n🧠 Generating script for topic: {topic}")
         generator = ScriptGeneratorFactory.get_generator(
             generator_type="cohere",
             api_key=API_KEY
         )
 
-        # Step 2: Generate JSON script
+        # === Step 1: Generate JSON script ===
         script_json = generator.generate_script(topic)
-        print("\n📝 Raw Script From Cohere:\n")
-        print(script_json)
+        print("\n📝 Raw Script From Cohere:\n", script_json)
 
-        # 🧹 Step 3: Clean markdown fences and stray characters
+        # === Step 2: Clean Markdown-style fences ===
         cleaned_json = (
             script_json.strip()
-            .removeprefix("```json").removeprefix("```JSON")
+            .removeprefix("```json")
+            .removeprefix("```JSON")
             .removeprefix("```")
             .removesuffix("```")
             .strip()
         )
 
-        # Step 4: Try parsing into a real JSON object
+        # === Step 3: Parse into a valid list ===
         try:
             parsed_json = json.loads(cleaned_json)
         except json.JSONDecodeError as je:
@@ -96,32 +100,53 @@ async def search(topic: str = Query(..., description="The topic to generate scri
                 detail=f"Generated script is not valid JSON. Error: {je}"
             )
 
-        # Step 5: Automatically send to /generate-files-api
-        api_url = "http://127.0.0.1:8000/generate-files-api"
+        # === Step 4: Send to internal APIs ===
+        api_generate = "http://127.0.0.1:8000/generate-files-api"
+        api_generator = "http://127.0.0.1:8000/Generator"
         headers = {"Content-Type": "application/json"}
 
-        print("\n🚀 Sending cleaned script to /generate-files-api ...\n")
+        print("\n🚀 Sending script to /generate-files-api and /Generator...\n")
 
-        async with httpx.AsyncClient() as client:
-            response = await client.post(api_url, headers=headers, json=parsed_json)
+        async with httpx.AsyncClient(timeout=180) as client:
+            # Run both in parallel for efficiency
+            gen_task = client.post(api_generate, headers=headers, json=parsed_json)
+            code_task = client.post(api_generator, headers=headers, json=parsed_json)
+            responses = await asyncio.gather(gen_task, code_task, return_exceptions=True)
 
-        if response.status_code == 200:
-            print("🎬 Successfully sent to /generate-files-api!")
-            file_response = response.json()
-        else:
-            print(f"⚠️ Failed to send script: {response.status_code}")
-            file_response = {"error": response.text}
+        # === Step 5: Handle responses ===
+        gen_resp, code_resp = responses
 
-        # Step 6: Return combined result
+        # Handle generation errors separately
+        if isinstance(gen_resp, Exception):
+            raise HTTPException(status_code=500, detail=f"/generate-files-api failed: {str(gen_resp)}")
+        if isinstance(code_resp, Exception):
+            raise HTTPException(status_code=500, detail=f"/Generator failed: {str(code_resp)}")
+
+        # Parse responses
+        if gen_resp.status_code != 200:
+            raise HTTPException(status_code=gen_resp.status_code, detail=f"/generate-files-api: {gen_resp.text}")
+        if code_resp.status_code != 200:
+            raise HTTPException(status_code=code_resp.status_code, detail=f"/Generator: {code_resp.text}")
+
+        file_response = gen_resp.json()
+        code_response = code_resp.json()
+
+        print("\n✅ Pipeline completed successfully!\n")
+
         return {
             "status": "success",
             "topic": topic,
             "script": parsed_json,
-            "file_generation": file_response
+            "file_generation": file_response,
+            "manim_code_generation": code_response
         }
 
+    except HTTPException as e:
+        print(f"⚠️ HTTPException in /search: {e.detail}")
+        raise e
+
     except Exception as e:
-        print(f"❌ Error in /search endpoint: {e}")
+        print(f"❌ Unexpected Error in /search: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
 
@@ -164,13 +189,75 @@ async def generate_files_endpoint(input_data: List[Dict]):
 class ScriptData(RootModel[List[Dict[str, str]]]):
     pass
 
+@app.post("/Generator")
+async def generate_code_endpoint(input_data: List[Dict]):
+    """
+    Accepts a list of script objects (output from /search),
+    generates Manim Python code for each script sequence,
+    and automatically writes them to disk using /write-scripts.
+    """
+    try:
+        print("\n🧠 Starting Manim Code Generation...\n")
+
+        # Step 1 — Generate Manim code
+        generator = CodeGenerator(API_KEY)
+        result = generator.generate_code(input_data)
+
+        print("\n🎬 Generated Manim Code Results:\n")
+        for item in result:
+            for k, v in item.items():
+                print(f"\n{k}:\n{v}\n{'-'*80}")
+
+        # Step 2 — Send the generated scripts to /write-scripts
+        write_api = "http://127.0.0.1:8000/write-scripts"
+        headers = {"Content-Type": "application/json"}
+
+        print("\n📝 Sending generated scripts to /write-scripts ...\n")
+
+        async with httpx.AsyncClient(timeout=120) as client:
+            write_response = await client.post(write_api, headers=headers, json=result)
+
+        if write_response.status_code != 200:
+            print(f"⚠️ /write-scripts failed: {write_response.status_code}")
+            raise HTTPException(
+                status_code=write_response.status_code,
+                detail=f"/write-scripts failed: {write_response.text}",
+            )
+
+        print("✅ Successfully wrote all scripts to disk.\n")
+
+        # Step 3 — Combine all results and return
+        write_result = write_response.json()
+
+        return {
+            "status": "success",
+            "generated_scripts": result,
+            "write_result": write_result,
+        }
+
+    except HTTPException as e:
+        print(f"⚠️ HTTPException in /Generator: {e.detail}")
+        raise e
+    except Exception as e:
+        print(f"❌ Error in /Generator endpoint: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+
+    
+    
 
 @app.post("/write-scripts")
-def write_scripts(data: ScriptData):
-    """Writes each script file into its respective folder."""
+async def write_scripts(data: ScriptData):
+    """
+    Writes each script file into its respective folder,
+    then automatically triggers /generate-videos-api to render the final video.
+    """
     try:
         latest_folder = get_latest_input_folder(BASE_INPUT_ROOT)
+        print(f"\n📁 Writing scripts to latest input folder: {latest_folder}\n")
 
+        # Step 1️⃣ — Write all scripts to files
         for item in data.root:
             for folder_name, content in item.items():
                 folder = latest_folder / folder_name
@@ -181,16 +268,40 @@ def write_scripts(data: ScriptData):
                 file_path.write_text(decoded_script, encoding="utf-8")
 
                 pipeline_logger.info(f"✅ Script written: {file_path}")
+                print(f"✅ Saved: {file_path}")
 
+        # Step 2️⃣ — Automatically call /generate-videos-api
+        generate_api = "http://127.0.0.1:8000/generate-videos-api"
+        headers = {"Content-Type": "application/json"}
+        payload = {"path": str(latest_folder)}
+
+        print(f"\n🎬 Triggering video generation for: {latest_folder}\n")
+
+        async with httpx.AsyncClient(timeout=300) as client:
+            response = await client.post(generate_api, headers=headers, json=payload)
+
+        if response.status_code != 200:
+            print(f"⚠️ /generate-videos-api failed: {response.status_code}")
+            raise HTTPException(
+                status_code=response.status_code,
+                detail=f"/generate-videos-api failed: {response.text}",
+            )
+
+        video_result = response.json()
+        print(f"✅ Video generated successfully: {video_result.get('final_video', 'unknown')}")
+
+        # Step 3️⃣ — Return combined result
         return {
             "status": "success",
-            "message": "Scripts written successfully.",
+            "message": "Scripts written successfully and video generated.",
             "target_directory": str(latest_folder),
+            "video_result": video_result,
         }
 
     except Exception as e:
-        pipeline_logger.exception("❌ Error writing scripts")
+        pipeline_logger.exception("❌ Error writing scripts or generating video")
         raise HTTPException(status_code=500, detail=str(e))
+
 
 
 # ================================================================

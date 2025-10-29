@@ -1,0 +1,10 @@
+[2025-10-28 17:54:48] [DEBUG] file_types: ['py', 'txt']
+[2025-10-28 17:54:48] [DEBUG] generated_files: {'py_files': [], 'txt_files': []}
+[2025-10-28 17:54:48] [DEBUG] 🧮 File: script_seq1.py | base_handler Words: 133 | Approx. GPT Tokens: 177
+[2025-10-28 17:54:48] [DEBUG] 🧮 File: script_seq1.txt | base_handler Words: 86 | Approx. GPT Tokens: 114
+[2025-10-28 17:54:48] [DEBUG] 🧮 File: script_seq2.py | base_handler Words: 155 | Approx. GPT Tokens: 206
+[2025-10-28 17:54:48] [DEBUG] 🧮 File: script_seq2.txt | base_handler Words: 85 | Approx. GPT Tokens: 113
+[2025-10-28 17:54:48] [DEBUG] 🧮 File: script_seq3.py | base_handler Words: 156 | Approx. GPT Tokens: 208
+[2025-10-28 17:54:48] [DEBUG] 🧮 File: script_seq3.txt | base_handler Words: 85 | Approx. GPT Tokens: 113
+[2025-10-28 17:54:48] [DEBUG] 🧮 File: script_seq4.py | base_handler Words: 131 | Approx. GPT Tokens: 174
+[2025-10-28 17:54:48] [DEBUG] 🧮 File: script_seq4.txt | base_handler Words: 75 | Approx. GPT Tokens: 100
