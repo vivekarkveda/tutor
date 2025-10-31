@@ -3,10 +3,11 @@ from video_pipeline.utils import async_post
 from LLM_Processor.script_factory import ScriptGeneratorFactory
 from logger import pipeline_logger
 import asyncio, json
+from config import Settings
 
 router = APIRouter(prefix="", tags=["Script Generation"])
 
-API_KEY = "ItjCVeX2H4je76T4Az0yQGnjISqZhD3IrKWj6ebq"
+API_KEY = Settings.API_KEY
 
 @router.post("/search")
 async def search(topic: str = Query(..., description="Topic for script generation")):
@@ -24,8 +25,8 @@ async def search(topic: str = Query(..., description="Topic for script generatio
 
         parsed_json = json.loads(cleaned)
 
-        gen_url = "http://127.0.0.1:8000/generate-files-api"
-        code_url = "http://127.0.0.1:8000/Generator"
+        gen_url = Settings.IP_ADDRESS +"/generate-files-api"
+        code_url = Settings.IP_ADDRESS +"/Generator"
 
         gen_task = async_post(gen_url, parsed_json)
         code_task = async_post(code_url, parsed_json)

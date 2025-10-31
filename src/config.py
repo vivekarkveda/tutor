@@ -27,3 +27,6 @@ class Settings:
     debugging = False
     COHERE_API_KEY = "ItjCVeX2H4je76T4Az0yQGnjISqZhD3IrKWj6ebq"
     BASE_INPUT_ROOT = "C:\Vivek_Main\Manim_project\inputbox"
+    IP_ADDRESS= "http://127.0.0.1:8000"
+
+    API_KEY="ItjCVeX2H4je76T4Az0yQGnjISqZhD3IrKWj6ebq"
