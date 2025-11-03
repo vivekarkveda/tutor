@@ -32,9 +32,29 @@ class AudioFactory:
 
                 # ✅ Collect *all* generated audio chunks
                 for _, _, audio in generator:
-                    if isinstance(audio, torch.Tensor):
-                        audio = audio.detach().cpu().numpy()
-                    all_audio_chunks.append(audio)
+                    try:
+                        # --- Convert Torch tensors safely
+                        if isinstance(audio, torch.Tensor):
+                            audio = audio.detach().cpu().numpy()
+
+                        # --- Append to chunk list
+                        all_audio_chunks.append(audio)
+
+                    except Exception as e:
+                        import traceback
+                        error_trace = traceback.format_exc()
+
+                        pipeline_logger.error(
+                            f"\n❌ Error while processing audio chunk in generator loop:\n"
+                            f"──────────────────────────────────────────────\n"
+                            f"Exception: {e}\n"
+                            f"Traceback:\n{error_trace}\n"
+                            f"──────────────────────────────────────────────", extra={"part_name": "KokoroAudioFactory"}
+                        )
+                        validation_logger.error(f"❌ Audio processing error: {e}")
+                        print(f"⚠️ Error in audio generation: {e}")
+                        continue  # Skip this chunk, keep processing others
+
 
                 # ✅ Concatenate all chunks together
                 if all_audio_chunks:
@@ -49,7 +69,7 @@ class AudioFactory:
                 pipeline_logger.debug(f"✅ Generated full audio for: {txt_path.name} (in memory)")
 
             except Exception as e:
-                validation_logger.error(f"❌ Error generating audio for {txt_path.name}: {e}")
+                validation_logger.error(f"❌ Error generating audio for {txt_path.name}: {e}", extra={"part_name": "KokoroAudioFactory"})
 
         pipeline_logger.debug(f"Audio bytes count: {len(audio_bytes_list)}")
         print("audio_bytes_list", len(audio_bytes_list))

@@ -127,6 +127,12 @@ class MergerFactory:
             Returns final video as bytes.
             """
             if len(video_bytes_list) != len(audio_bytes_list):
+                # Log to PostgreSQL and console
+                pipeline_logger.error(
+                    "❌ Video and audio lists must have the same length",
+                    extra={"part_name": "MergerFactory"}
+                )
+                # Also raise an explicit error for control flow
                 raise ValueError("Video and audio lists must have the same length")
 
             merged_videos_bytes = []
@@ -236,6 +242,11 @@ class MergerFactory:
         if debugging:
 
             if len(video_bytes_list) != len(audio_bytes_list):
+                pipeline_logger.error(
+                    "❌ Video and audio lists must have the same length",
+                    extra={"part_name": "MergerFactory"}
+                )
+
                 raise ValueError("Video and audio lists must have the same length")
 
             merged_videos_bytes = []

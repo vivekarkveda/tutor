@@ -56,13 +56,33 @@ class VideoFactory:
             os.makedirs(custom_media_dir, exist_ok=True)
 
             # --- Run Manim with this custom output path
-            result = subprocess.run([
-                "poetry", "run", "manim", "-ql", file,
-                "--media_dir", custom_media_dir
-            ])
+            # --- Run Manim with this custom output path and capture all output
+            result = subprocess.run(
+                [
+                    "poetry", "run", "manim", "-ql", file,
+                    "--media_dir", custom_media_dir
+                ],
+                capture_output=True,  # capture stdout + stderr
+                text=True  # decode output as text
+            )
 
+            # --- Handle Manim failure
             if result.returncode != 0:
-                pipeline_logger.error(f"❌ Error running Manim on {file}")
+                error_output = result.stderr.strip()
+                stdout_output = result.stdout.strip()
+
+                # Combine both for context
+                full_error_log = (
+                    f"\n❌ Error running Manim on {file}\n"
+                    f"──────────────────────────────────────────────\n"
+                    f"STDERR:\n{error_output or '(no stderr)'}\n\n"
+                    f"STDOUT:\n{stdout_output or '(no stdout)'}\n"
+                    f"──────────────────────────────────────────────\n"
+                )
+
+                # Log the full captured output
+                pipeline_logger.error(full_error_log, extra={"part_name": "ManimRenderer"})
+                print(full_error_log)  # optional: still see it in terminal
                 continue
 
             # --- Try to extract Scene class name (supporting Scene, ThreeDScene, etc.)

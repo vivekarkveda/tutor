@@ -16,7 +16,7 @@ async def generate_code_endpoint(input_data: List[Dict]):
         result = generator.generate_code(input_data)
         pipeline_logger.info("🎬 Generated Manim Code Successfully")
 
-        write_url = Settings.IP_ADDRESS +"/write-scripts"
+        write_url = f"{Settings.IP_ADDRESS }/write-scripts"
         write_result = await async_post(write_url, result, timeout=120)
 
         return {

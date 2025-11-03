@@ -4,7 +4,6 @@ from typing import List, Dict
 from pathlib import Path
 from video_pipeline.utils import async_post, latest_input_folder
 from logger import pipeline_logger
-from config import Settings
 
 router = APIRouter(prefix="", tags=["Write Scripts"])
 BASE_INPUT_ROOT = Path(r"C:\Vivek_Main\Manim_project\inputbox")
@@ -24,7 +23,7 @@ async def write_scripts(data: ScriptData):
                 pipeline_logger.info(f"✅ Script written: {file_path}")
 
         # Trigger video generation
-        video_url = Settings.IP_ADDRESS +"/generate-videos-api"
+        video_url = "http://127.0.0.1:8000/generate-videos-api"
         video_result = await async_post(video_url, {"path": str(folder)}, timeout=300)
 
         return {

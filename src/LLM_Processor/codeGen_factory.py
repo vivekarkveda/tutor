@@ -113,7 +113,4 @@ Generate the FULL Manim Python code that:
             result.append({f"script_seq{script_seq}": manim_code})
         return result
 
-React
-
-Reply
 
