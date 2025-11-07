@@ -22,7 +22,7 @@ topicName = ""
 # ================================================================
 app = FastAPI(title="🎬 Video Processing Pipeline API")
 API_KEY = "ItjCVeX2H4je76T4Az0yQGnjISqZhD3IrKWj6ebq"
-BASE_INPUT_ROOT = Path(r"C:\Vivek_Main\Manim_project\inputbox")
+BASE_INPUT_PATH = Settings.BASE_INPUT_PATH
 
 
 # ================================================================
@@ -250,7 +250,7 @@ async def write_scripts(data: ScriptData):
     then automatically triggers /generate-videos-api to render the final video.
     """
     try:
-        latest_folder = get_latest_input_folder(BASE_INPUT_ROOT)
+        latest_folder = get_latest_input_folder(BASE_INPUT_PATH)
         print(f"\n📁 Writing scripts to latest input folder: {latest_folder}\n")
 
         # Step 1️⃣ — Write all scripts to files
@@ -311,7 +311,7 @@ class VideoRequest(BaseModel):
 async def generate_videos_endpoint(request: VideoRequest):
     """Generates final videos from latest or given input_data folder."""
     try:
-        input_path = Path(request.path) if request.path else get_latest_input_folder(BASE_INPUT_ROOT)
+        input_path = Path(request.path) if request.path else get_latest_input_folder(BASE_INPUT_PATH)
         if not input_path.exists():
             raise HTTPException(status_code=404, detail=f"Path not found: {input_path}")
 

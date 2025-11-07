@@ -2,13 +2,14 @@
 from pathlib import Path
 from parsers.base_handler import InputHandlerFactory  # <-- JsonHandler & PostgresHandler
 from logger import pipeline_logger, validation_logger
+from config import Settings
 
 
 class FileFetcherFactory:
     """Factory for fetching generated files from local JSON or Postgres."""
 
-    BASE_INPUT_PATH = Path(r"C:\Vivek_Main\Manim_project\inputbox")
-    BASE_JSON_PATH = Path(r"C:\Vivek_Main\Manim_project\jsonfiles\Pythagoras.json")
+    BASE_INPUT_PATH = Settings.BASE_INPUT_PATH
+    # BASE_JSON_PATH = Path(r"C:\Vivek_Main\Manim_project\jsonfiles\Pythagoras.json")
 
     @staticmethod
     def _get_latest_folder(base_path: Path):

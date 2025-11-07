@@ -5,12 +5,13 @@ from datetime import datetime
 from abc import ABC, abstractmethod
 import psycopg2
 from logger import pipeline_logger, validation_logger
+from config import Settings
 
 
 class InputHandler(ABC):
     """Abstract base for input handlers."""
 
-    BASE_INPUT_PATH = Path(r"C:\Vivek_Main\Manim_project\inputbox")
+    BASE_INPUT_PATH = Settings.BASE_INPUT_PATH
 
     def __init__(self):
         self.credentials = None

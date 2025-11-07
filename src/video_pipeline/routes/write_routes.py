@@ -4,16 +4,17 @@ from typing import List, Dict
 from pathlib import Path
 from video_pipeline.utils import async_post, latest_input_folder
 from logger import pipeline_logger
+from config import Settings
 
 router = APIRouter(prefix="", tags=["Write Scripts"])
-BASE_INPUT_ROOT = Path(r"C:\Vivek_Main\Manim_project\inputbox")
+BASE_INPUT_PATH = Settings.BASE_INPUT_PATH
 
 class ScriptData(RootModel[List[Dict[str, str]]]): pass
 
 @router.post("/write-scripts")
 async def write_scripts(data: ScriptData):
     try:
-        folder = latest_input_folder(BASE_INPUT_ROOT)
+        folder = latest_input_folder(BASE_INPUT_PATH)
         for item in data.root:
             for name, content in item.items():
                 target = folder / name

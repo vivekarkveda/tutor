@@ -13,7 +13,7 @@ from video_pipeline.utils import async_post, latest_input_folder, save_temp_json
 
 router = APIRouter()
 API_KEY = "ItjCVeX2H4je76T4Az0yQGnjISqZhD3IrKWj6ebq"
-BASE_INPUT_ROOT = Path(r"C:\Vivek_Main\Manim_project\inputbox")
+BASE_INPUT_PATH = Settings.BASE_INPUT_PATH
 
 # ================================================================
 # 1️⃣ /search — Generate Script + Trigger Rest
@@ -97,7 +97,7 @@ class ScriptData(RootModel[List[Dict[str, str]]]): pass
 @router.post("/write-scripts")
 async def write_scripts(data: ScriptData):
     try:
-        folder = latest_input_folder(BASE_INPUT_ROOT)
+        folder = latest_input_folder(BASE_INPUT_PATH)
         for item in data.root:
             for name, content in item.items():
                 target = folder / name
@@ -125,7 +125,7 @@ class VideoRequest(BaseModel):
 @router.post("/generate-videos-api")
 async def generate_videos_endpoint(request: VideoRequest):
     try:
-        input_path = Path(request.path) if request.path else latest_input_folder(BASE_INPUT_ROOT)
+        input_path = Path(request.path) if request.path else latest_input_folder(BASE_INPUT_PATH)
         if not input_path.exists():
             raise HTTPException(status_code=404, detail=f"Path not found: {input_path}")
 

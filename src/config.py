@@ -9,8 +9,12 @@ class Settings:
     FILE_TYPES = ["py", "txt"]
 
 
-    JSON_FILE_PATH = Path(r"C:\Vivek_Main\Manim_project\jsonfiles\script1.json")
+    # JSON_FILE_PATH = Path(r"C:\Vivek_Main\Manim_project\jsonfiles\script1.json")
     TEMP_GENERATED_FOLDER = Path(r"C:\Vivek_Main\Temp_Data")
+    BASE_INPUT_PATH = Path(r"C:\Vivek_Main\Manim_project\inputbox")
+
+    LOCAL_VIDEO_DIR = Path(r"C:\ArkMalay\Framework\tutor\output\Videos")
+    LOCAL_AUDIO_DIR = Path(r"C:\ArkMalay\Framework\tutor\output\Audios")
 
 
     POSTGRES = {
@@ -26,7 +30,6 @@ class Settings:
 
     debugging = False
     COHERE_API_KEY = "ItjCVeX2H4je76T4Az0yQGnjISqZhD3IrKWj6ebq"
-    BASE_INPUT_ROOT = "C:\Vivek_Main\Manim_project\inputbox"
     IP_ADDRESS= "http://127.0.0.1:8000"
 
     API_KEY="ItjCVeX2H4je76T4Az0yQGnjISqZhD3IrKWj6ebq"

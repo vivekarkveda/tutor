@@ -8,7 +8,7 @@ from main import process_pipeline
 from logger import pipeline_logger
 
 router = APIRouter(prefix="", tags=["Video Generation"])
-BASE_INPUT_ROOT = Path(r"C:\Vivek_Main\Manim_project\inputbox")
+BASE_INPUT_PATH = Settings.BASE_INPUT_PATH
 
 class VideoRequest(BaseModel):
     path: Optional[str] = None
@@ -17,7 +17,7 @@ class VideoRequest(BaseModel):
 async def generate_videos_endpoint(request: VideoRequest):
     """Generate final video from latest or specified folder."""
     try:
-        input_path = Path(request.path) if request.path else latest_input_folder(BASE_INPUT_ROOT)
+        input_path = Path(request.path) if request.path else latest_input_folder(BASE_INPUT_PATH)
         if not input_path.exists():
             raise HTTPException(status_code=404, detail=f"Path not found: {input_path}")
 

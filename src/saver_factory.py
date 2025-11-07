@@ -2,6 +2,8 @@ import os
 import psycopg2
 from pathlib import Path
 from logger import pipeline_logger
+import datetime
+from config import Settings
 
 
 class BaseSaver:
@@ -96,8 +98,8 @@ class SaverFactory:
         Returns: (list_of_video_paths, list_of_audio_paths)
         """
 
-        videos_dir = Path(r"C:\Vivek_Main\tutter\src\output\Video")
-        audios_dir = Path(r"C:\Vivek_Main\tutter\src\output\Audio")
+        videos_dir = Settings.LOCAL_VIDEO_DIR
+        audios_dir = Settings.LOCAL_AUDIO_DIR
         videos_dir.mkdir(parents=True, exist_ok=True)
         audios_dir.mkdir(parents=True, exist_ok=True)
 
