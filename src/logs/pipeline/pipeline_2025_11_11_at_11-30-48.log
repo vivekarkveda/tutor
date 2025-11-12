@@ -1,0 +1,33 @@
+[2025-11-11 11:32:15] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\video_routes.py", line 32, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\main.py", line 40, in process_pipeline
+    run_script_data_process()
+  File "C:\Vivek_Main\tutter\src\Artifacts\artifacts.py", line 139, in run_script_data_process
+    data = handler.load_files()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\Artifacts\artifacts.py", line 48, in load_files
+    with open(json_file, "r", encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Vivek_Main\\Temp_Data\\ae1d00c8-8a33-4381-839a-61e55299df37_20251111_113214\\input_data.json'
+[2025-11-11 11:32:15] [ERROR] ❌ HTTP 500: {"detail":"[Errno 2] No such file or directory: 'C:\\\\Vivek_Main\\\\Temp_Data\\\\ae1d00c8-8a33-4381-839a-61e55299df37_20251111_113214\\\\input_data.json'"}
+[2025-11-11 11:32:15] [ERROR] ❌ Error writing scripts
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\write_routes.py", line 37, in write_scripts
+    video_result = await async_post(video_url, {"path": str(folder),"unique_id":data.unique_id}, timeout=300)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"[Errno 2] No such file or directory: 'C:\\\\Vivek_Main\\\\Temp_Data\\\\ae1d00c8-8a33-4381-839a-61e55299df37_20251111_113214\\\\input_data.json'"}
+[2025-11-11 11:32:16] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"[Errno 2] No such file or directory: 'C:\\\\\\\\Vivek_Main\\\\\\\\Temp_Data\\\\\\\\ae1d00c8-8a33-4381-839a-61e55299df37_20251111_113214\\\\\\\\input_data.json'\"}"}
+[2025-11-11 11:32:16] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\generator_routes.py", line 25, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: {\"detail\":\"[Errno 2] No such file or directory: 'C:\\\\\\\\Vivek_Main\\\\\\\\Temp_Data\\\\\\\\ae1d00c8-8a33-4381-839a-61e55299df37_20251111_113214\\\\\\\\input_data.json'\"}"}
+[2025-11-11 11:32:16] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: {\\\"detail\\\":\\\"[Errno 2] No such file or directory: 'C:\\\\\\\\\\\\\\\\Vivek_Main\\\\\\\\\\\\\\\\Temp_Data\\\\\\\\\\\\\\\\ae1d00c8-8a33-4381-839a-61e55299df37_20251111_113214\\\\\\\\\\\\\\\\input_data.json'\\\"}\"}"}

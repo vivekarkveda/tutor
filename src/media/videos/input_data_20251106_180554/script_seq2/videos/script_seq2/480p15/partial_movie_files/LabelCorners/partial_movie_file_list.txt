@@ -1,0 +1,13 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_180554/script_seq2/videos/script_seq2/480p15/partial_movie_files/LabelCorners/1185818338_4143410313_2181954856.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_180554/script_seq2/videos/script_seq2/480p15/partial_movie_files/LabelCorners/624642324_3394500337_2472307963.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_180554/script_seq2/videos/script_seq2/480p15/partial_movie_files/LabelCorners/624642324_1960578637_2321860862.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_180554/script_seq2/videos/script_seq2/480p15/partial_movie_files/LabelCorners/624642324_3394500337_3065373739.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_180554/script_seq2/videos/script_seq2/480p15/partial_movie_files/LabelCorners/624642324_1335975877_1594416418.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_180554/script_seq2/videos/script_seq2/480p15/partial_movie_files/LabelCorners/624642324_3394500337_2378871105.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_180554/script_seq2/videos/script_seq2/480p15/partial_movie_files/LabelCorners/624642324_4126371076_627991863.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_180554/script_seq2/videos/script_seq2/480p15/partial_movie_files/LabelCorners/624642324_3394500337_4176801263.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_180554/script_seq2/videos/script_seq2/480p15/partial_movie_files/LabelCorners/624642324_703743120_1151013935.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_180554/script_seq2/videos/script_seq2/480p15/partial_movie_files/LabelCorners/624642324_3394500337_1543660776.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_180554/script_seq2/videos/script_seq2/480p15/partial_movie_files/LabelCorners/624642324_438048050_3104937083.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_180554/script_seq2/videos/script_seq2/480p15/partial_movie_files/LabelCorners/624642324_2844360058_542914699.mp4'

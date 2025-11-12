@@ -1,0 +1,199 @@
+[2025-11-06 15:44:40] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251106_154347/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Vivek_Main\tutter\.venv\Scripts\manim.exe\__main__.py", line 7, in <module>
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\click\core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\click\core.py", line 1082, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\click\core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\click\core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\click\core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py", line 121, in render
+    for SceneClass in scene_classes_from_file(file):
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\utils\module_ops.py", line 167, in scene_classes_from_file
+    module = get_module(file_path)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\utils\module_ops.py", line 67, in get_module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Vivek_Main\Manim_project\inputbox\input_data_20251106_154347\script_seq1\script_seq1.py", line 39
+    Hereâ\x80\x99s an alternative cursor implementation using `Arrow`:
+         ^
+SyntaxError: invalid non-printable character U+0080
+
+STDOUT:
+Manim Community v0.19.0
+──────────────────────────────────────────────
+
+[2025-11-06 15:44:50] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251106_154347/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\input_data_20251106_154347\script_seq2 |
+| \script_seq2.py:7 in construct                                              |
+|                                                                             |
+|    4     def construct(self):                                               |
+|    5         # Start with the square and question marks from Scene 1        |
+|    6         square = Square(side_length=4, color=BLUE)                     |
+| >  7         question_marks = [                                             |
+|    8             Text("?", font_size=48).move_to(square.get_corner(i))      |
+|    9             for i in range(4)                                          |
+|   10         ]                                                              |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\input_data_20251106_154347\script_seq2 |
+| \script_seq2.py:8 in <listcomp>                                             |
+|                                                                             |
+|    5         # Start with the square and question marks from Scene 1        |
+|    6         square = Square(side_length=4, color=BLUE)                     |
+|    7         question_marks = [                                             |
+| >  8             Text("?", font_size=48).move_to(square.get_corner(i))      |
+|    9             for i in range(4)                                          |
+|   10         ]                                                              |
+|   11         self.add(square, *question_marks)                              |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\mobject\mobject.py:2091  |
+| in get_corner                                                               |
+|                                                                             |
+|   2088                                                                      |
+|   2089     def get_corner(self, direction: Vector3D) -> Point3D:            |
+|   2090         """Get corner Point3Ds for certain direction."""             |
+| > 2091         return self.get_critical_point(direction)                    |
+|   2092                                                                      |
+|   2093     def get_center(self) -> Point3D:                                 |
+|   2094         """Get center Point3Ds"""                                    |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\mobject\mobject.py:2079  |
+| in get_critical_point                                                       |
+|                                                                             |
+|   2076             result[dim] = self.get_extremum_along_dim(               |
+|   2077                 all_points,                                          |
+|   2078                 dim=dim,                                             |
+| > 2079                 key=direction[dim],                                  |
+|   2080             )                                                        |
+|   2081         return result                                                |
+|   2082                                                                      |
++-----------------------------------------------------------------------------+
+TypeError: 'int' object is not subscriptable
+
+STDOUT:
+Manim Community v0.19.0
+──────────────────────────────────────────────
+
+[2025-11-06 15:44:57] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251106_154347/script_seq3/script_seq3.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Vivek_Main\tutter\.venv\Scripts\manim.exe\__main__.py", line 7, in <module>
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\click\core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\click\core.py", line 1082, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\click\core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\click\core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\click\core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py", line 121, in render
+    for SceneClass in scene_classes_from_file(file):
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\utils\module_ops.py", line 167, in scene_classes_from_file
+    module = get_module(file_path)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\utils\module_ops.py", line 67, in get_module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Vivek_Main\Manim_project\inputbox\input_data_20251106_154347\script_seq3\script_seq3.py", line 51
+    **Note:** Replace `"student.svg"` and `"book.svg"` with actual paths to SVG files representing a student and a book, respectively. If you don't have these files, you can use `Text` or `Dot` as placeholders.
+                                                                                                                                                 ^
+SyntaxError: unterminated string literal (detected at line 51)
+
+STDOUT:
+Manim Community v0.19.0
+──────────────────────────────────────────────
+
+[2025-11-06 15:45:44] [ERROR] ❌ Video and audio lists must have the same length
+[2025-11-06 15:45:44] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\video_routes.py", line 31, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\main.py", line 56, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\merger_factory.py", line 261, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\merger_factory.py", line 136, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-06 15:45:44] [ERROR] ❌ HTTP 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-06 15:45:44] [ERROR] ❌ Error writing scripts
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\write_routes.py", line 27, in write_scripts
+    video_result = await async_post(video_url, {"path": str(folder)}, timeout=300)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 14, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-06 15:45:44] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-06 15:45:44] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\generator_routes.py", line 20, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 14, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-06 15:45:44] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: {\\\"detail\\\":\\\"Video and audio lists must have the same length\\\"}\"}"}

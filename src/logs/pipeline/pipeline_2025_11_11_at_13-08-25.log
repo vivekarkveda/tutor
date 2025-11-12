@@ -1,0 +1,5 @@
+[2025-11-11 13:08:52] [ERROR] ❌ Unexpected error in /search endpoint
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\search_routes.py", line 58, in search
+    transaction(unique_id, topic=topic, full_prompt=full_prompt)
+TypeError: transaction() missing 2 required positional arguments: 'cleaned_script' and 'filegenration'

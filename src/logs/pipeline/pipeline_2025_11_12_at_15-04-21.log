@@ -1,0 +1,73 @@
+[2025-11-12 15:05:52] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/6ca6fe9b-5c5a-4273-843b-bc8e86db8e1c_20251112_150542/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Vivek_Main\tutter\.venv\Scripts\manim.exe\__main__.py", line 4, in <module>
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\__init__.py", line 13, in <module>
+    from ._config import *
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\_config\__init__.py", line 11, in <module>
+    from .logger_utils import make_logger
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\_config\logger_utils.py", line 23, in <module>
+    from rich.console import Console
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\rich\console.py", line 44, in <module>
+    from ._log_render import FormatTimeCallable, LogRender
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\rich\_log_render.py", line 5, in <module>
+    from .text import Text, TextType
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\rich\text.py", line 25, in <module>
+    from .control import strip_control_codes
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1032, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1131, in get_data
+KeyboardInterrupt
+^C
+
+STDOUT:
+(no stdout)
+──────────────────────────────────────────────
+
+[2025-11-12 15:06:04] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/6ca6fe9b-5c5a-4273-843b-bc8e86db8e1c_20251112_150542/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\vivek_vslen2j\AppData\Roaming\Python\Scripts\poetry.exe\__main__.py", line 2, in <module>
+  File "C:\Users\vivek_vslen2j\AppData\Roaming\pypoetry\venv\Lib\site-packages\poetry\console\application.py", line 26, in <module>
+object address  : 00000157F042CE80
+object refcount : 3
+object type     : 00007FFBECF2A380
+object type name: KeyboardInterrupt
+object repr     : KeyboardInterrupt()
+lost sys.stderr
+
+STDOUT:
+(no stdout)
+──────────────────────────────────────────────
+
+[2025-11-12 15:06:04] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/6ca6fe9b-5c5a-4273-843b-bc8e86db8e1c_20251112_150542/script_seq3/script_seq3.py
+──────────────────────────────────────────────
+STDERR:
+(no stderr)
+
+STDOUT:
+(no stdout)
+──────────────────────────────────────────────
+
+[2025-11-12 15:06:05] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/6ca6fe9b-5c5a-4273-843b-bc8e86db8e1c_20251112_150542/script_seq4/script_seq4.py
+──────────────────────────────────────────────
+STDERR:
+(no stderr)
+
+STDOUT:
+(no stdout)
+──────────────────────────────────────────────
+

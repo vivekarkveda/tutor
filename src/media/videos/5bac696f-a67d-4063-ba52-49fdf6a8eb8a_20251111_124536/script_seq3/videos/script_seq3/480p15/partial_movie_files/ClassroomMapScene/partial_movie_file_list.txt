@@ -1,0 +1,10 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Vivek_Main/tutter/src/media/videos/5bac696f-a67d-4063-ba52-49fdf6a8eb8a_20251111_124536/script_seq3/videos/script_seq3/480p15/partial_movie_files/ClassroomMapScene/1185818338_2453283931_223132457.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/5bac696f-a67d-4063-ba52-49fdf6a8eb8a_20251111_124536/script_seq3/videos/script_seq3/480p15/partial_movie_files/ClassroomMapScene/624642324_1303585853_520640601.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/5bac696f-a67d-4063-ba52-49fdf6a8eb8a_20251111_124536/script_seq3/videos/script_seq3/480p15/partial_movie_files/ClassroomMapScene/624642324_1841058934_2438132147.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/5bac696f-a67d-4063-ba52-49fdf6a8eb8a_20251111_124536/script_seq3/videos/script_seq3/480p15/partial_movie_files/ClassroomMapScene/624642324_2105752378_4051673273.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/5bac696f-a67d-4063-ba52-49fdf6a8eb8a_20251111_124536/script_seq3/videos/script_seq3/480p15/partial_movie_files/ClassroomMapScene/624642324_1292576565_4051673273.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/5bac696f-a67d-4063-ba52-49fdf6a8eb8a_20251111_124536/script_seq3/videos/script_seq3/480p15/partial_movie_files/ClassroomMapScene/624642324_3371020835_4051673273.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/5bac696f-a67d-4063-ba52-49fdf6a8eb8a_20251111_124536/script_seq3/videos/script_seq3/480p15/partial_movie_files/ClassroomMapScene/624642324_237762004_4051673273.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/5bac696f-a67d-4063-ba52-49fdf6a8eb8a_20251111_124536/script_seq3/videos/script_seq3/480p15/partial_movie_files/ClassroomMapScene/624642324_3678926057_4051673273.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/5bac696f-a67d-4063-ba52-49fdf6a8eb8a_20251111_124536/script_seq3/videos/script_seq3/480p15/partial_movie_files/ClassroomMapScene/624642324_2668005715_867291154.mp4'

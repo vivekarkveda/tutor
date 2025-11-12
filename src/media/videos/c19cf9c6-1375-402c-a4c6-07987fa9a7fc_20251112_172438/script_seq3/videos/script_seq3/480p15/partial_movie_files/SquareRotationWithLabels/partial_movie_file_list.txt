@@ -1,0 +1,4 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Vivek_Main/tutter/src/media/videos/c19cf9c6-1375-402c-a4c6-07987fa9a7fc_20251112_172438/script_seq3/videos/script_seq3/480p15/partial_movie_files/SquareRotationWithLabels/1185818338_1037217793_3155162709.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/c19cf9c6-1375-402c-a4c6-07987fa9a7fc_20251112_172438/script_seq3/videos/script_seq3/480p15/partial_movie_files/SquareRotationWithLabels/624642324_1451566423_1495670476.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/c19cf9c6-1375-402c-a4c6-07987fa9a7fc_20251112_172438/script_seq3/videos/script_seq3/480p15/partial_movie_files/SquareRotationWithLabels/624642324_2844360058_2935357030.mp4'

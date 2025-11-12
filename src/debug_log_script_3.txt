@@ -1,0 +1,157 @@
+=== FINAL PROMPT SENT ===
+
+
+You are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).
+Your goal is to turn a provided topic script into a visually clear, accurate, and fully executable Python animation that communicates concepts step-by-step.
+Follow these CRITICAL INSTRUCTIONS exactly as described:
+...
+Now, based on the following structured input:
+CATALOG: {catalog}
+SCRIPT_SEQ: 3
+SCRIPT_FOR_MANIM: [
+  "Start with the square and labels from Scene 2.",
+  "Fade in a real-life example: a classroom seating chart represented as a square grid.",
+  "Label the corners of the grid 'A', 'B', 'C', 'D' as in the square.",
+  "Animate a student icon moving from corner 'A' to 'B', then to 'C', and finally to 'D'.",
+  "Highlight each corner as the student reaches it.",
+  "Zoom out to show the entire grid with labeled corners."
+]
+SCRIPT_VOICE_OVER: [
+  "Let\u2019s apply this concept to a real-life example: a classroom seating chart.",
+  "Imagine the classroom layout as a square grid, with corners labeled 'A', 'B', 'C', and 'D'.",
+  "A student starts at corner 'A' and moves to 'B', then to 'C', and finally to 'D'.",
+  "Each corner label helps us track the student\u2019s position accurately.",
+  "This is how labels at square corners can be practically used in everyday scenarios."
+]
+SCRIPT_LENGTH: 45
+Generate the FULL Manim Python code that:
+- Follows all layout, geometry, boundary, and animation rules.
+- Produces a step-by-step educational animation.
+- Uses correct scaling and non-overlapping text.
+- Is self-contained and executable without errors.
+- Returns ONLY valid Python code (no explanations or Markdown formatting).
+:pushpin: Previous Code (for continuity):
+import numpy as np
+
+class RotatingSquare(Scene):
+    def construct(self):
+        # Initialize objects from previous scene
+        self.title = Text("Labels at Square Corners: Class 10 English", font_size=72).to_edge(UP)
+        self.square = Square(fill_opacity=0.8, fill_color=BLUE_D)
+        self.square.move_to(DOWN)
+        self.dots = [Dot(point=corner, color=color) for corner, color in zip(self.square.get_corners(), [RED, GREEN, YELLOW, PURPLE])]
+        self.labels = VGroup(*[Text(label, font_size=36).next_to(dot, RIGHT) for label, dot in zip('ABCD', self.dots)])
+
+        # Start with the square and labels from Scene 1
+        self.play(FadeIn(self.square), Write(self.labels))
+        self.wait()
+
+        # Animate the square rotating 90 degrees clockwise
+        rotation_angle = 90 * DEGREES
+        new_square = self.square.copy().rotate(rotation_angle)
+        new_dots = [dot.copy().move_to(new_square.get_corner(corner)) for corner, dot in zip(range(4), self.dots)]
+        new_labels = VGroup(*[label.copy().next_to(dot, RIGHT) for label, dot in zip(self.labels, new_dots)])
+
+        self.play(
+            Rotate(self.square, rotation_angle),
+            Transform(self.dots, new_dots),
+            Transform(self.labels, new_labels),
+            run_time=2
+        )
+
+        # Highlight new top-left corner label 'B' briefly
+        self.play(FlashAround(self.labels[1]), run_time=1)
+        self.wait(0.5)
+
+        # Repeat rotation and label adjustment for another 90 degrees
+        rotation_angle = 90 * DEGREES
+        new_square = new_square.copy().rotate(rotation_angle)
+        new_dots = [dot.copy().move_to(new_square.get_corner(corner)) for corner, dot in zip(range(4), new_dots)]
+        new_labels = VGroup(*[label.copy().next_to(dot, RIGHT) for label, dot in zip(new_labels, new_dots)])
+
+        self.play(
+            Rotate(new_square, rotation_angle),
+            Transform(new_dots, new_dots),  # Keep dots in place
+            Transform(new_labels, new_labels),
+            run_time=2
+        )
+        self.play(FlashAround(new_labels[2]), run_time=1)
+        self.wait(0.5)
+
+        # Final rotation and highlight 'D'
+        rotation_angle = 90 * DEGREES
+        final_square = new_square.copy().rotate(rotation_angle)
+        final_dots = [dot.copy().move_to(final_square.get_corner(corner)) for corner, dot in zip(range(4), new_dots)]
+        final_labels = VGroup(*[label.copy().next_to(dot, RIGHT) for label, dot in zip(new_labels, final_dots)])
+
+        self.play(
+            Rotate(final_square, rotation_angle),
+            Transform(final_dots, final_dots),
+            Transform(final_labels, final_labels),
+            run_time=2
+        )
+        self.play(FlashAround(final_labels[3]), run_time=1)
+        self.wait()
+
+        # Return to original position with 'A' highlighted
+        self.play(
+            Rotate(self.square, -360 * DEGREES),
+            Transform(self.dots, self.dots),
+            Transform(self.labels, self.labels),
+            run_time=3
+        )
+        self.play(FlashAround(self.labels[0]), run_time=1)
+        self.wait()
+
+# Run the animation
+RotatingSquare().render()
+
+
+=== GENERATED CODE ===
+
+```python
+import numpy as np
+
+class ClassroomSeatingChart(Scene):
+    def construct(self):
+        # Initialize objects from previous scene
+        self.title = Text("Labels at Square Corners: Real-Life Example", font_size=72).to_edge(UP)
+        self.square = Square(fill_opacity=0.6, fill_color=GREY_BROWN)
+        self.square.move_to(ORIGIN)
+        self.dots = [Dot(point=corner, color=color, radius=0.1) for corner, color in zip(self.square.get_corners(), [RED, GREEN, BLUE, YELLOW])]
+        self.labels = VGroup(*[Text(label, font_size=36).next_to(dot, RIGHT) for label, dot in zip('ABCD', self.dots)])
+
+        # Start with the square and labels from Scene 2
+        self.play(FadeIn(self.square), Write(self.labels))
+        self.wait()
+
+        # Fade in real-life example: classroom seating chart
+        classroom_grid = Square(fill_opacity=0.3, fill_color=GREEN, side_length=6).shift(DOWN * 2)
+        classroom_labels = VGroup(*[Text(label, font_size=24).next_to(classroom_grid.get_corner(corner), RIGHT) for label, corner in zip('ABCD', range(4))])
+        student_icon = Circle(color=RED, fill_opacity=1).scale(0.1)
+
+        self.play(FadeIn(classroom_grid), Write(classroom_labels))
+        self.wait()
+
+        # Animate student movement and highlight corners
+        student_path = [classroom_grid.get_corner(i) for i in range(4)]
+        self.play(
+            MoveAlongPath(student_icon, student_path),
+            *[Flash(classroom_labels[i], flash_radius=0.2) for i in range(4)],
+            run_time=4
+        )
+
+        # Zoom out to show the entire grid with labeled corners
+        full_grid = classroom_grid.copy().scale(1.5).shift(UP)
+        full_labels = VGroup(*[Text(label, font_size=30).next_to(full_grid.get_corner(corner), RIGHT) for label, corner in zip('ABCD', range(4))])
+
+        self.play(
+            Transform(classroom_grid, full_grid),
+            Transform(classroom_labels, full_labels),
+            run_time=2
+        )
+        self.wait()
+
+# Run the animation
+ClassroomSeatingChart().render()
+```

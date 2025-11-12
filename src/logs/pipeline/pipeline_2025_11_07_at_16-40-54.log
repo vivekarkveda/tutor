@@ -1,0 +1,154 @@
+[2025-11-07 16:42:16] [INFO] Transaction ID a25d495d-a786-468c-9152-1ca11281d0d7
+[2025-11-07 16:42:16] [INFO] 🧠 Generating script for topic='Labels placed correctly at square corners', class='10'
+[2025-11-07 16:42:17] [INFO] prompt 
+You are an expert in storytelling and Manim Community Edition animation design.
+Your task:
+Generate a JSON script that describes the full video in a step-by-step, highly detailed way.
+Each scene/sequence should have a flexible length between 25 to 45 seconds.
+You can break the video into multiple sequences/scenes if needed to explain the concept clearly.
+Narration and animations must be tightly synchronized:
+Step i in "script_for_manim" must align exactly with step i in "script_voice_over".
+Ensure pacing: narration should match animation timing naturally.
+"script_length" should reflect the realistic duration of each scene.
+
+Each JSON object must include:
+- "script_seq" → scene number.
+- "script_for_manim" → array of detailed English animation steps (no Manim code).
+- "script_voice_over" → array of narration lines aligned step-by-step with visuals.
+- "script_length" → approximate duration of the scene (25–45 seconds).
+
+Rules:
+- Use descriptive English for visuals (no code).
+- Narration must align with visuals.
+- Describe each animation step precisely.
+- Break complex ideas into smaller, smooth transitions.
+- Maintain consistent references between scenes.
+- Scene 1: Introduction
+- Scene 2: Concept Demonstration
+- Scene 3: Application/Example
+- Scene 4: Recap/Closing
+📌 Continuity Rule: The last frame of a scene becomes the first frame of the next.
+
+Output format:
+Return only a valid JSON array (no extra text).
+
+📌 Topic: Labels placed correctly at square corners for class 10 in English language
+
+[2025-11-07 16:42:26] [INFO] script ```json
+[
+  {
+    "script_seq": 1,
+    "script_for_manim": [
+      "Start with a blank canvas.",
+      "Fade in a large, centered title: 'Labels at Square Corners'.",
+      "Below the title, animate a simple square with four distinct corners.",
+      "Place a question mark at each corner, fading in one by one.",
+      "Zoom out slightly to show the entire square with question marks.",
+      "End with a cursor pointing to the square, ready for the next scene."
+    ],
+    "script_voice_over": [
+      "Welcome to our lesson on placing labels correctly at square corners.",
+      "Today, we’ll explore how to identify and label each corner of a square accurately.",
+      "Here’s a square with four corners, each marked with a question mark.",
+      "By the end of this video, you’ll know exactly how to label these corners.",
+      "Let’s begin!"
+    ],
+    "script_length": 30
+  },
+  {
+    "script_seq": 2,
+    "script_for_manim": [
+      "Start with the square and question marks from Scene 1.",
+      "Replace the top-left question mark with 'A', fading it in.",
+      "Draw an arrow pointing to 'A' with the label 'Top-Left Corner'.",
+      "Repeat for the top-right corner: replace '?' with 'B' and label it 'Top-Right Corner'.",
+      "Repeat for the bottom-right corner: replace '?' with 'C' and label it 'Bottom-Right Corner'.",
+      "Repeat for the bottom-left corner: replace '?' with 'D' and label it 'Bottom-Left Corner'.",
+      "Highlight all labels briefly, then zoom out to show the fully labeled square."
+    ],
+    "script_voice_over": [
+      "Let’s start labeling the corners of the square.",
+      "The top-left corner is labeled 'A'.",
+      "Next, the top-right corner is labeled 'B'.",
+      "Moving to the bottom-right corner, we label it 'C'.",
+      "Finally, the bottom-left corner is labeled 'D'.",
+      "Now, all corners are correctly labeled."
+    ],
+    "script_length": 35
+  },
+  {
+    "script_seq": 3,
+    "script_for_manim": [
+      "Start with the fully labeled square from Scene 2.",
+      "Animate a smaller square inside the larger one, with its corners aligned.",
+      "Label the inner square’s corners as '1', '2', '3', and '4' in the same order as the outer square.",
+      "Draw connecting lines from 'A' to '1', 'B' to '2', 'C' to '3', and 'D' to '4'.",
+      "Highlight the connections briefly.",
+      "Zoom out to show both squares with labels and connections."
+    ],
+    "script_voice_over": [
+      "Now, let’s apply this to a practical example.",
+      "Imagine a smaller square inside the larger one.",
+      "We’ll label its corners as '1', '2', '3', and '4', matching the outer square’s order.",
+      "Notice how 'A' connects to '1', 'B' to '2', and so on.",
+      "This ensures consistency in labeling nested shapes."
+    ],
+    "script_length": 40
+  },
+  {
+    "script_seq": 4,
+    "script_for_manim": [
+      "Start with the final frame from Scene 3, showing both squares and labels.",
+      "Fade out the inner square and its labels, leaving only the outer square.",
+      "Highlight each corner label ('A', 'B', 'C', 'D') one by one.",
+      "End with a checkmark appearing beside the square, indicating completion.",
+      "Fade in closing text: 'You’ve mastered labeling square corners!'"
+    ],
+    "script_voice_over": [
+      "To recap, we’ve learned how to label the corners of a square accurately.",
+      "Starting with 'A' at the top-left and ending with 'D' at the bottom-left.",
+      "We also applied this to a nested square, ensuring consistent labeling.",
+      "Great job! You’ve mastered labeling square corners.",
+      "Thank you for watching!"
+    ],
+    "script_length": 35
+  }
+]
+```
+[2025-11-07 16:42:26] [INFO] 🚀 Sending generated script to /generate-files-api and /Generator ...
+[2025-11-07 16:43:14] [INFO] prompt_data
+[2025-11-07 16:43:14] [INFO] results
+[2025-11-07 16:43:14] [INFO] 🎬 Generated Manim Code Successfully
+[2025-11-07 16:43:15] [INFO] 📄 JSON saved at C:\Vivek_Main\Temp_Data\a25d495d-a786-468c-9152-1ca11281d0d7_20251107_164315\a25d495d-a786-468c-9152-1ca11281d0d7.json
+[2025-11-07 16:43:15] [INFO] 📝 Generating Python and TXT files from JSON: C:\Vivek_Main\Temp_Data\a25d495d-a786-468c-9152-1ca11281d0d7_20251107_164315\a25d495d-a786-468c-9152-1ca11281d0d7.json
+[2025-11-07 16:43:15] [INFO] ✅ Created PY file: C:\Vivek_Main\Manim_project\inputbox\a25d495d-a786-468c-9152-1ca11281d0d7_20251107_164315\script_seq1\script_seq1.py
+[2025-11-07 16:43:15] [INFO] ✅ Created TXT file: C:\Vivek_Main\Manim_project\inputbox\a25d495d-a786-468c-9152-1ca11281d0d7_20251107_164315\script_seq1\script_seq1.txt
+[2025-11-07 16:43:15] [INFO] ✅ Created PY file: C:\Vivek_Main\Manim_project\inputbox\a25d495d-a786-468c-9152-1ca11281d0d7_20251107_164315\script_seq2\script_seq2.py
+[2025-11-07 16:43:15] [INFO] ✅ Created TXT file: C:\Vivek_Main\Manim_project\inputbox\a25d495d-a786-468c-9152-1ca11281d0d7_20251107_164315\script_seq2\script_seq2.txt
+[2025-11-07 16:43:15] [INFO] ✅ Created PY file: C:\Vivek_Main\Manim_project\inputbox\a25d495d-a786-468c-9152-1ca11281d0d7_20251107_164315\script_seq3\script_seq3.py
+[2025-11-07 16:43:15] [INFO] ✅ Created TXT file: C:\Vivek_Main\Manim_project\inputbox\a25d495d-a786-468c-9152-1ca11281d0d7_20251107_164315\script_seq3\script_seq3.txt
+[2025-11-07 16:43:15] [INFO] ✅ Created PY file: C:\Vivek_Main\Manim_project\inputbox\a25d495d-a786-468c-9152-1ca11281d0d7_20251107_164315\script_seq4\script_seq4.py
+[2025-11-07 16:43:15] [INFO] ✅ Created TXT file: C:\Vivek_Main\Manim_project\inputbox\a25d495d-a786-468c-9152-1ca11281d0d7_20251107_164315\script_seq4\script_seq4.txt
+[2025-11-07 16:43:15] [INFO] 🎯 Total Words: 671 | Approx. Total GPT Tokens: 892
+[2025-11-07 16:43:15] [INFO] 🎉 All files generated inside: C:\Vivek_Main\Manim_project\inputbox\a25d495d-a786-468c-9152-1ca11281d0d7_20251107_164315
+[2025-11-07 16:43:15] [INFO] ✅ Script written: C:\Vivek_Main\Manim_project\inputbox\input_data_20251107_121502\script_seq1\script_seq1.py
+[2025-11-07 16:43:15] [INFO] ✅ Script written: C:\Vivek_Main\Manim_project\inputbox\input_data_20251107_121502\script_seq2\script_seq2.py
+[2025-11-07 16:43:15] [INFO] ✅ Script written: C:\Vivek_Main\Manim_project\inputbox\input_data_20251107_121502\script_seq3\script_seq3.py
+[2025-11-07 16:43:15] [INFO] ✅ Script written: C:\Vivek_Main\Manim_project\inputbox\input_data_20251107_121502\script_seq4\script_seq4.py
+[2025-11-07 16:43:15] [INFO] ✅ Script written:
+[2025-11-07 16:43:15] [INFO] ✅ Script written: C:\Vivek_Main\Manim_project\inputbox\input_data_20251107_121502\script_seq4\script_seq4.py
+[2025-11-07 16:43:16] [INFO] video callable prepared for: C:\Vivek_Main\Manim_project\inputbox\input_data_20251107_121502
+[2025-11-07 16:43:16] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251107_121502/script_seq1/script_seq1.py ...
+[2025-11-07 16:43:16] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\input_data_20251107_121502\script_seq1
+[2025-11-07 16:43:28] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251107_121502/script_seq2/script_seq2.py ...
+[2025-11-07 16:43:28] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\input_data_20251107_121502\script_seq2
+[2025-11-07 16:43:44] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251107_121502/script_seq3/script_seq3.py ...
+[2025-11-07 16:43:44] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\input_data_20251107_121502\script_seq3
+[2025-11-07 16:44:29] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251107_121502/script_seq4/script_seq4.py ...
+[2025-11-07 16:44:29] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\input_data_20251107_121502\script_seq4
+[2025-11-07 16:44:52] [INFO] ✅ Total words: 905 | Approx. GPT tokens: 1206 | Total videos collected: 0
+[2025-11-07 16:45:10] [INFO] ✅ Inserted record input_data_20251107_121502_20251107_E2WR0E with paths
+[2025-11-07 16:45:10] [INFO] ✅ Inserted record input_data_20251107_121502_20251107_2UEFXA with paths
+[2025-11-07 16:45:10] [INFO] ✅ Inserted record input_data_20251107_121502_20251107_8X019N with paths
+[2025-11-07 16:45:10] [INFO] ✅ Inserted record input_data_20251107_121502_20251107_RWB3SP with paths
+[2025-11-07 16:45:10] [INFO] video generation unseccessfull

@@ -1,0 +1,109 @@
+[2025-11-06 18:02:29] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251106_180209/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Vivek_Main\tutter\.venv\Scripts\manim.exe\__main__.py", line 4, in <module>
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\__init__.py", line 13, in <module>
+    from ._config import *
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\_config\__init__.py", line 12, in <module>
+    from .utils import ManimConfig, ManimFrame, make_config_parser
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\_config\utils.py", line 31, in <module>
+    from manim.utils.color import ManimColor
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\utils\color\__init__.py", line 55, in <module>
+    from . import AS2700, BS381, DVIPSNAMES, SVGNAMES, X11, XKCD
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\utils\color\AS2700.py", line 29, in <module>
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\utils\color\core.py", line 100, in <module>
+    from ...utils.space_ops import normalize
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\utils\space_ops.py", line 11, in <module>
+    from scipy.spatial.transform import Rotation
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\scipy\spatial\__init__.py", line 112, in <module>
+    from ._qhull import *
+  File "scipy/spatial/_qhull.pyx", line 1, in init scipy.spatial._qhull
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\scipy\linalg\__init__.py", line 203, in <module>
+    from ._misc import *
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\scipy\linalg\_misc.py", line 4, in <module>
+    from .lapack import get_lapack_funcs
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1032, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1130, in get_data
+KeyboardInterrupt
+^C
+
+STDOUT:
+(no stdout)
+──────────────────────────────────────────────
+
+[2025-11-06 18:02:30] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251106_180209/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\vivek_vslen2j\AppData\Roaming\Python\Scripts\poetry.exe\__main__.py", line 2, in <module>
+    from poetry.console.application import main
+  File "C:\Users\vivek_vslen2j\AppData\Roaming\pypoetry\venv\Lib\site-packages\poetry\console\application.py", line 4, in <module>
+    import logging
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 26, in <module>
+    import sys, os, time, io, re, traceback, warnings, weakref, collections.abc
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1118, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1217, in get_data
+KeyboardInterrupt
+
+STDOUT:
+(no stdout)
+──────────────────────────────────────────────
+
+[2025-11-06 18:02:30] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251106_180209/script_seq3/script_seq3.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\vivek_vslen2j\AppData\Roaming\Python\Scripts\poetry.exe\__main__.py", line 2, in <module>
+    from poetry.console.application import main
+  File "C:\Users\vivek_vslen2j\AppData\Roaming\pypoetry\venv\Lib\site-packages\poetry\console\application.py", line 26, in <module>
+    from poetry.utils.helpers import directory
+  File "C:\Users\vivek_vslen2j\AppData\Roaming\pypoetry\venv\Lib\site-packages\poetry\utils\helpers.py", line 23, in <module>
+    from requests.exceptions import ChunkedEncodingError
+  File "C:\Users\vivek_vslen2j\AppData\Roaming\pypoetry\venv\Lib\site-packages\requests\__init__.py", line 43, in <module>
+    import urllib3
+  File "C:\Users\vivek_vslen2j\AppData\Roaming\pypoetry\venv\Lib\site-packages\urllib3\__init__.py", line 18, in <module>
+    from .connectionpool import HTTPConnectionPool, HTTPSConnectionPool, connection_from_url
+  File "C:\Users\vivek_vslen2j\AppData\Roaming\pypoetry\venv\Lib\site-packages\urllib3\connectionpool.py", line 15, in <module>
+    from ._request_methods import RequestMethods
+  File "C:\Users\vivek_vslen2j\AppData\Roaming\pypoetry\venv\Lib\site-packages\urllib3\_request_methods.py", line 9, in <module>
+    from .filepost import _TYPE_FIELDS, encode_multipart_formdata
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1118, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1218, in get_data
+KeyboardInterrupt
+
+STDOUT:
+(no stdout)
+──────────────────────────────────────────────
+
+[2025-11-06 18:02:31] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251106_180209/script_seq4/script_seq4.py
+──────────────────────────────────────────────
+STDERR:
+(no stderr)
+
+STDOUT:
+(no stdout)
+──────────────────────────────────────────────
+

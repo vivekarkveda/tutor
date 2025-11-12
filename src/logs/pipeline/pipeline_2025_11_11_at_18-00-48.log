@@ -1,0 +1,27 @@
+[2025-11-11 18:04:58] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\video_routes.py", line 34, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\main.py", line 42, in process_pipeline
+    run_script_data_process()
+TypeError: run_script_data_process() missing 1 required positional argument: 'unique_id'
+[2025-11-11 18:04:58] [ERROR] ❌ HTTP 500: {"detail":"run_script_data_process() missing 1 required positional argument: 'unique_id'"}
+[2025-11-11 18:04:58] [ERROR] ❌ Error writing scripts
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\write_routes.py", line 40, in write_scripts
+    video_result = await async_post(video_url, {"path": str(folder),"unique_id":data.unique_id}, timeout=300)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"run_script_data_process() missing 1 required positional argument: 'unique_id'"}
+[2025-11-11 18:04:59] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"run_script_data_process() missing 1 required positional argument: 'unique_id'\"}"}
+[2025-11-11 18:04:59] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\generator_routes.py", line 28, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: {\"detail\":\"run_script_data_process() missing 1 required positional argument: 'unique_id'\"}"}
+[2025-11-11 18:04:59] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: {\\\"detail\\\":\\\"run_script_data_process() missing 1 required positional argument: 'unique_id'\\\"}\"}"}

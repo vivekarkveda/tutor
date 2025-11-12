@@ -1,0 +1,38 @@
+[2025-11-12 13:28:18] [ERROR] ❌ HTTP 500: {"detail":"'JsonHandler' object has no attribute '_generate_files'"}
+[2025-11-12 13:28:18] [ERROR] ❌ Error writing scripts
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\write_routes.py", line 25, in write_scripts
+    folder = latest_input_folder(BASE_INPUT_ROOT , data.unique_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 22, in latest_input_folder
+    raise FileNotFoundError(f"No {pattern} found in {base_dir}")
+FileNotFoundError: No 4f3f0744-d6b5-4180-8acc-af036fa67b72 found in C:\Vivek_Main\Manim_project\inputbox
+[2025-11-12 13:28:19] [ERROR] ❌ HTTP 500: {"detail":"No 4f3f0744-d6b5-4180-8acc-af036fa67b72 found in C:\\Vivek_Main\\Manim_project\\inputbox"}
+[2025-11-12 13:28:19] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\generator_routes.py", line 30, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"No 4f3f0744-d6b5-4180-8acc-af036fa67b72 found in C:\\Vivek_Main\\Manim_project\\inputbox"}
+[2025-11-12 13:28:19] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"No 4f3f0744-d6b5-4180-8acc-af036fa67b72 found in C:\\\\Vivek_Main\\\\Manim_project\\\\inputbox\"}"}
+[2025-11-12 13:32:29] [ERROR] ❌ HTTP 500: {"detail":"'JsonHandler' object has no attribute '_generate_files'"}
+[2025-11-12 13:32:30] [ERROR] ❌ Error writing scripts
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\write_routes.py", line 25, in write_scripts
+    folder = latest_input_folder(BASE_INPUT_ROOT , data.unique_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 22, in latest_input_folder
+    raise FileNotFoundError(f"No {pattern} found in {base_dir}")
+FileNotFoundError: No b0dd9286-f2ba-4d09-b861-3d46120922db found in C:\Vivek_Main\Manim_project\inputbox
+[2025-11-12 13:32:30] [ERROR] ❌ HTTP 500: {"detail":"No b0dd9286-f2ba-4d09-b861-3d46120922db found in C:\\Vivek_Main\\Manim_project\\inputbox"}
+[2025-11-12 13:32:30] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\generator_routes.py", line 30, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"No b0dd9286-f2ba-4d09-b861-3d46120922db found in C:\\Vivek_Main\\Manim_project\\inputbox"}
+[2025-11-12 13:32:30] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"No b0dd9286-f2ba-4d09-b861-3d46120922db found in C:\\\\Vivek_Main\\\\Manim_project\\\\inputbox\"}"}

@@ -1,0 +1,111 @@
+[2025-11-10 14:22:07] [INFO] a6af2ae4-3f53-40bb-ad9b-da69e07c3f27
+[2025-11-10 14:22:07] [INFO] 🧠 Generating script for topic='Labels placed correctly at square corners', class='10'
+[2025-11-10 14:22:08] [INFO] 
+You are an expert in storytelling and Manim Community Edition animation design.
+Your task:
+Generate a JSON script that describes the full video in a step-by-step, highly detailed way.
+Each scene/sequence should have a flexible length between 25 to 45 seconds.
+You can break the video into multiple sequences/scenes if needed to explain the concept clearly.
+Narration and animations must be tightly synchronized:
+Step i in "script_for_manim" must align exactly with step i in "script_voice_over".
+Ensure pacing: narration should match animation timing naturally.
+"script_length" should reflect the realistic duration of each scene.
+
+Each JSON object must include:
+- "script_seq" → scene number.
+- "script_for_manim" → array of detailed English animation steps (no Manim code).
+- "script_voice_over" → array of narration lines aligned step-by-step with visuals.
+- "script_length" → approximate duration of the scene (25–45 seconds).
+
+Rules:
+- Use descriptive English for visuals (no code).
+- Narration must align with visuals.
+- Describe each animation step precisely.
+- Break complex ideas into smaller, smooth transitions.
+- Maintain consistent references between scenes.
+- Scene 1: Introduction
+- Scene 2: Concept Demonstration
+- Scene 3: Application/Example
+- Scene 4: Recap/Closing
+📌 Continuity Rule: The last frame of a scene becomes the first frame of the next.
+
+Output format:
+Return only a valid JSON array (no extra text).
+
+📌 Topic: Labels placed correctly at square corners for class 10 in English language
+
+[2025-11-10 14:22:18] [INFO] ```json
+[
+  {
+    "script_seq": 1,
+    "script_for_manim": [
+      "Start with a blank canvas.",
+      "Fade in a large, centered title: 'Labels at Square Corners: Class 10 English'.",
+      "Zoom out slightly to reveal a simple square shape below the title.",
+      "Animate four small, empty label boxes appearing at each corner of the square, initially overlapping the corners.",
+      "Move each label box outward smoothly to its correct position at the square's corners."
+    ],
+    "script_voice_over": [
+      "Welcome to today’s lesson on placing labels correctly at square corners for Class 10 English.",
+      "Understanding how to position labels accurately is essential for clear communication in diagrams and illustrations.",
+      "Let’s start by visualizing a square and the labels at its corners.",
+      "Here, we have a square, and these are the labels placed at its corners.",
+      "Notice how each label is positioned just outside the corner, ensuring clarity and readability."
+    ],
+    "script_length": 35
+  },
+  {
+    "script_seq": 2,
+    "script_for_manim": [
+      "Zoom in on one corner of the square, highlighting the label.",
+      "Animate the label shifting slightly inward, overlapping the corner, to show incorrect placement.",
+      "Shift the label outward to its correct position, emphasizing the difference.",
+      "Repeat this process for the remaining three corners, one at a time.",
+      "End with all labels correctly placed, and a checkmark appears next to each label."
+    ],
+    "script_voice_over": [
+      "Let’s focus on one corner. If the label overlaps the corner, it becomes unclear and unprofessional.",
+      "By moving the label just outside the corner, we ensure it’s easily readable.",
+      "Let’s apply this to the other corners as well.",
+      "Each label should be placed just outside its respective corner for consistency.",
+      "Now, all labels are correctly positioned, making the square and its labels clear and organized."
+    ],
+    "script_length": 40
+  },
+  {
+    "script_seq": 3,
+    "script_for_manim": [
+      "Fade out the square and labels, transitioning to a new scene with a map of a classroom.",
+      "Highlight four desks in the classroom, each representing a square corner.",
+      "Animate labels appearing at the corners of each desk, correctly positioned.",
+      "Zoom in on one desk to show the label in detail, then zoom out to show all desks.",
+      "End with a text overlay: 'Real-World Application: Classroom Organization'."
+    ],
+    "script_voice_over": [
+      "Now, let’s see how this concept applies in a real-world scenario, like organizing a classroom.",
+      "Imagine each desk as a corner of a square, and labels representing student names or subjects.",
+      "By placing labels correctly at the corners of each desk, we create a neat and organized environment.",
+      "This ensures that information is easily accessible and understandable.",
+      "This is just one example of how proper label placement can enhance clarity in everyday situations."
+    ],
+    "script_length": 35
+  },
+  {
+    "script_seq": 4,
+    "script_for_manim": [
+      "Return to the original square with correctly placed labels.",
+      "Animate the square and labels shrinking and moving to the center of the screen.",
+      "Fade in a concluding text: 'Key Takeaway: Labels at corners enhance clarity and professionalism'.",
+      "End with a final zoom out, showing the entire scene with a subtle fade to black."
+    ],
+    "script_voice_over": [
+      "To recap, placing labels correctly at square corners is a simple yet powerful skill.",
+      "It ensures clarity, readability, and a professional appearance in diagrams and real-world applications.",
+      "Remember, each label should be positioned just outside its respective corner for the best results.",
+      "Thank you for watching, and keep practicing this essential skill in your Class 10 English studies.",
+      "Goodbye!"
+    ],
+    "script_length": 30
+  }
+]
+```

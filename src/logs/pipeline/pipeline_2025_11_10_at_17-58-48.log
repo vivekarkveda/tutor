@@ -1,0 +1,146 @@
+[2025-11-10 18:00:16] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251107_121502/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  27%|##6       | 4/15 [00:00<00:00, 34.57it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  53%|#####3    | 8/15 [00:00<00:00, 23.33it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  80%|########  | 12/15 [00:00<00:00, 25.86it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')): 100%|##########| 15/15 [00:00<00:00, 26.53it/s]
+                                                                                                                        
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\input_data_20251107_121502\script_seq1 |
+| \script_seq1.py:21 in construct                                             |
+|                                                                             |
+|   18             axis_config={"stroke_color": LIGHT_GRAY},                  |
+|   19             background_line_style={"stroke_color": LIGHT_GRAY, "stroke |
+|   20         )                                                              |
+| > 21         self.play(FadeIn(grid), self.camera.frame.animate.scale(1.5).m |
+|   22         self.wait(1)                                                   |
+|   23                                                                        |
+|   24         # Animate a square appearing in the center, with its corners h |
++-----------------------------------------------------------------------------+
+AttributeError: 'Camera' object has no attribute 'frame'
+^C
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/10/25 18:00:14] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251107_121502\script_se                         
+                             q1\videos\script_seq1\480                         
+                             p15\partial_movie_files\S                         
+                             quareCornersScene\9318326                         
+                             50_984622512_223132457.mp                         
+                             4'                                                
+[11/10/25 18:00:15] INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251107_121502\script_se                         
+                             q1\videos\script_seq1\480                         
+                             p15\partial_movie_files\S                         
+                             quareCornersScene\1905288                         
+                             516_1436906429_3629667627                         
+                             .mp4'
+──────────────────────────────────────────────
+
+[2025-11-10 18:00:17] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251107_121502/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\vivek_vslen2j\AppData\Roaming\Python\Scripts\poetry.exe\__main__.py", line 2, in <module>
+  File "C:\Users\vivek_vslen2j\AppData\Roaming\pypoetry\venv\Lib\site-packages\poetry\console\application.py", line 12, in <module>
+    from cleo._utils import find_similar_names
+  File "C:\Users\vivek_vslen2j\AppData\Roaming\pypoetry\venv\Lib\site-packages\cleo\_utils.py", line 5, in <module>
+    from dataclasses import dataclass
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python313\Lib\dataclasses.py", line 5, in <module>
+    import inspect
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python313\Lib\inspect.py", line 145, in <module>
+    import ast
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python313\Lib\ast.py", line 25, in <module>
+    from _ast import *
+  File "<frozen importlib._bootstrap>", line 1357, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 418, in __enter__
+  File "<frozen importlib._bootstrap>", line 310, in acquire
+KeyboardInterrupt
+
+STDOUT:
+(no stdout)
+──────────────────────────────────────────────
+
+[2025-11-10 18:00:18] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251107_121502/script_seq3/script_seq3.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 191, in _run_module_as_main
+  File "<frozen runpy>", line 240, in _get_main_module_details
+  File "<frozen runpy>", line 131, in _get_module_details
+  File "<frozen importlib.util>", line 100, in find_spec
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1559, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1533, in _get_spec
+  File "<frozen zipimport>", line 111, in find_spec
+  File "<frozen importlib._bootstrap>", line 675, in spec_from_loader
+  File "<frozen importlib._bootstrap_external>", line 853, in spec_from_file_location
+  File "<frozen zipimport>", line 170, in get_filename
+  File "<frozen zipimport>", line 791, in _get_module_code
+  File "<frozen zipimport>", line 720, in _compile_source
+KeyboardInterrupt
+
+STDOUT:
+(no stdout)
+──────────────────────────────────────────────
+
+[2025-11-10 18:00:18] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251107_121502/script_seq4/script_seq4.py
+──────────────────────────────────────────────
+STDERR:
+Could not import runpy module
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen runpy>", line 14, in <module>
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1118, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1217, in get_data
+KeyboardInterrupt
+
+STDOUT:
+(no stdout)
+──────────────────────────────────────────────
+

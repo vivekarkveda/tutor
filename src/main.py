@@ -9,6 +9,10 @@ from processor.process_factory import ProcessFactory
 from saver_factory import SaverFactory
 from table_gen import Table_gen
 from logger import pipeline_logger, validation_logger
+from Artifacts.artifacts import run_script_data_process
+from Transaction.transaction_handler import transaction
+from Transaction.excepetion import exception
+import traceback
 
 
 async def run_in_executor(executor, func, *args):
@@ -16,10 +20,11 @@ async def run_in_executor(executor, func, *args):
     return await loop.run_in_executor(executor, func, *args)
 
 
-def prepare_files(run_from: str, generate_new_files: bool, file_types):
+def prepare_files(run_from: str, generate_new_files: bool, file_types, unique_id:str ):
     """Either generate new files or fetch latest existing."""
+    print("unique_id main",unique_id)
     if generate_new_files:
-        handler = InputHandlerFactory.get_input_handler(run_from)
+        handler = InputHandlerFactory.get_input_handler(run_from, unique_id)
 
         if run_from == "local":
             return handler.handle(Settings.JSON_FILE_PATH, file_types)
@@ -35,7 +40,7 @@ def prepare_files(run_from: str, generate_new_files: bool, file_types):
 
 
 # --- Core pipeline ---
-async def process_pipeline(generated_files, video: str, audio: str, run_from: str):
+async def process_pipeline(generated_files, video: str, audio: str, run_from: str,unique_id:str):
     with ThreadPoolExecutor() as executor:
         video_callable = ProcessFactory.get_processor(video, generated_files[0])
         pipeline_logger.info(f"video callable prepared for: {generated_files[1]}")
@@ -50,10 +55,14 @@ async def process_pipeline(generated_files, video: str, audio: str, run_from: st
     PathList = SaverFactory.save_all_script_media(video_bytes_list, audio_bytes_list, generated_files)
     print("PathList =>", PathList)
 
-    Table_gen.table_generator(generated_files, PathList)
+    Table_gen.table_generator(generated_files, PathList,)
+    print("mainUid",unique_id )
+    run_script_data_process(unique_id)
 
     # --- Merge final video/audio ---
-    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list,unique_id)
+    
+    
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"final_video_{timestamp}.mp4"
@@ -71,7 +80,7 @@ async def process_pipeline(generated_files, video: str, audio: str, run_from: st
 
 
 async def main():
-    generated_files = prepare_files(Settings.RUN_FROM, Settings.GENERATE_NEW_FILES, Settings.FILE_TYPES)
+    generated_files = prepare_files(Settings.RUN_FROM, Settings.GENERATE_NEW_FILES, Settings.FILE_TYPES,)
 
     output_path = await process_pipeline(
         generated_files,

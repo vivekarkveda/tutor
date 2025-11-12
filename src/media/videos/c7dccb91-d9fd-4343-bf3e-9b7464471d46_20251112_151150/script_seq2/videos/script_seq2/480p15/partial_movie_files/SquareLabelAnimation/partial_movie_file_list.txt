@@ -1,0 +1,11 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Vivek_Main/tutter/src/media/videos/c7dccb91-d9fd-4343-bf3e-9b7464471d46_20251112_151150/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAnimation/1185818338_671539147_2890870709.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/c7dccb91-d9fd-4343-bf3e-9b7464471d46_20251112_151150/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAnimation/624642324_800300783_1033631487.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/c7dccb91-d9fd-4343-bf3e-9b7464471d46_20251112_151150/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAnimation/624642324_1040986687_1033631487.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/c7dccb91-d9fd-4343-bf3e-9b7464471d46_20251112_151150/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAnimation/624642324_1141770404_1616161104.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/c7dccb91-d9fd-4343-bf3e-9b7464471d46_20251112_151150/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAnimation/624642324_2398415398_1616161104.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/c7dccb91-d9fd-4343-bf3e-9b7464471d46_20251112_151150/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAnimation/624642324_3196059864_2173361534.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/c7dccb91-d9fd-4343-bf3e-9b7464471d46_20251112_151150/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAnimation/624642324_3441119843_2173361534.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/c7dccb91-d9fd-4343-bf3e-9b7464471d46_20251112_151150/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAnimation/624642324_1611998152_2696284034.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/c7dccb91-d9fd-4343-bf3e-9b7464471d46_20251112_151150/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAnimation/624642324_1878293772_2696284034.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/c7dccb91-d9fd-4343-bf3e-9b7464471d46_20251112_151150/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAnimation/624642324_2844360058_1904807032.mp4'

@@ -1,0 +1,13 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251104_122802/script_seq1/videos/script_seq1/480p15/partial_movie_files/CircleLesson/931832650_3203534197_223132457.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251104_122802/script_seq1/videos/script_seq1/480p15/partial_movie_files/CircleLesson/1905288516_1436906429_3722081937.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251104_122802/script_seq1/videos/script_seq1/480p15/partial_movie_files/CircleLesson/1905288516_639426234_555631630.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251104_122802/script_seq1/videos/script_seq1/480p15/partial_movie_files/CircleLesson/1905288516_816375136_4237661890.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251104_122802/script_seq1/videos/script_seq1/480p15/partial_movie_files/CircleLesson/1905288516_1713215281_555631630.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251104_122802/script_seq1/videos/script_seq1/480p15/partial_movie_files/CircleLesson/1905288516_2205872272_2079172748.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251104_122802/script_seq1/videos/script_seq1/480p15/partial_movie_files/CircleLesson/1905288516_3634277275_4165932067.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251104_122802/script_seq1/videos/script_seq1/480p15/partial_movie_files/CircleLesson/1905288516_2023500230_4285055355.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251104_122802/script_seq1/videos/script_seq1/480p15/partial_movie_files/CircleLesson/1905288516_1734738734_1423268466.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251104_122802/script_seq1/videos/script_seq1/480p15/partial_movie_files/CircleLesson/1905288516_903618890_1161260734.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251104_122802/script_seq1/videos/script_seq1/480p15/partial_movie_files/CircleLesson/1905288516_4220811232_4008380924.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251104_122802/script_seq1/videos/script_seq1/480p15/partial_movie_files/CircleLesson/1905288516_2042515569_766464955.mp4'

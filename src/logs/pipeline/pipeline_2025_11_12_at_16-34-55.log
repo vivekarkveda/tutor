@@ -1,0 +1,21 @@
+[2025-11-12 16:36:11] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\generator_routes.py", line 25, in generate_code_endpoint
+    result = {"result_data" :generator.generate_code(request.input_data) ,"unique_id" :request.unique_id  }
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\LLM_Processor\codeGen_factory.py", line 144, in generate_code
+    response = self.client.chat(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\cohere\client.py", line 103, in _wrapped
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\cohere\client.py", line 35, in _wrapped
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\cohere\v2\client.py", line 362, in chat
+    _response = self._raw_client.chat(
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\cohere\v2\raw_client.py", line 629, in chat
+    raise TooManyRequestsError(
+cohere.errors.too_many_requests_error.TooManyRequestsError: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'f51e2316b98e98c240be0e4998f71b07', 'date': 'Wed, 12 Nov 2025 11:06:11 GMT', 'x-envoy-upstream-service-time': '15', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'd08240e3-b049-4a08-8679-b04b5236758f', 'message': 'Please wait and try again later'}
+[2025-11-12 16:36:12] [ERROR] ❌ HTTP 500: {"detail":"headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'f51e2316b98e98c240be0e4998f71b07', 'date': 'Wed, 12 Nov 2025 11:06:11 GMT', 'x-envoy-upstream-service-time': '15', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'd08240e3-b049-4a08-8679-b04b5236758f', 'message': 'Please wait and try again later'}"}

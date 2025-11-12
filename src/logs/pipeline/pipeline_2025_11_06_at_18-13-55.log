@@ -1,0 +1,10 @@
+[2025-11-06 18:16:46] [ERROR] ❌ HTTP 422: {"detail":[{"type":"string_type","loc":["body",0,"script_seq"],"msg":"Input should be a valid string","input":1},{"type":"string_type","loc":["body",1,"script_seq"],"msg":"Input should be a valid string","input":2},{"type":"string_type","loc":["body",2,"script_seq"],"msg":"Input should be a valid string","input":3},{"type":"string_type","loc":["body",3,"script_seq"],"msg":"Input should be a valid string","input":4}]}
+[2025-11-06 18:16:46] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\generator_routes.py", line 20, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 14, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 422: {"detail":[{"type":"string_type","loc":["body",0,"script_seq"],"msg":"Input should be a valid string","input":1},{"type":"string_type","loc":["body",1,"script_seq"],"msg":"Input should be a valid string","input":2},{"type":"string_type","loc":["body",2,"script_seq"],"msg":"Input should be a valid string","input":3},{"type":"string_type","loc":["body",3,"script_seq"],"msg":"Input should be a valid string","input":4}]}
+[2025-11-06 18:16:46] [ERROR] ❌ HTTP 500: {"detail":"422: {\"detail\":[{\"type\":\"string_type\",\"loc\":[\"body\",0,\"script_seq\"],\"msg\":\"Input should be a valid string\",\"input\":1},{\"type\":\"string_type\",\"loc\":[\"body\",1,\"script_seq\"],\"msg\":\"Input should be a valid string\",\"input\":2},{\"type\":\"string_type\",\"loc\":[\"body\",2,\"script_seq\"],\"msg\":\"Input should be a valid string\",\"input\":3},{\"type\":\"string_type\",\"loc\":[\"body\",3,\"script_seq\"],\"msg\":\"Input should be a valid string\",\"input\":4}]}"}

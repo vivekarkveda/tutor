@@ -1,0 +1,321 @@
+[2025-11-11 11:06:18] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/ab35e025-3b9f-45b0-9aa1-0c93d622f23e_20251111_110557/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  27%|##6       | 4/15 [00:00<00:00, 35.05it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  60%|######    | 9/15 [00:00<00:00, 39.65it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')): 100%|##########| 15/15 [00:00<00:00, 46.91it/s]
+                                                                                                                        
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\ab35e025-3b9f-45b0-9aa1-0c93d622f23e_2 |
+| 0251111_110557\script_seq1\script_seq1.py:15 in construct                   |
+|                                                                             |
+|   12                                                                        |
+|   13         # Zoom out slightly to reveal the square                       |
+|   14         square = Square(side_length=4, color=BLACK, stroke_width=2)    |
+| > 15         self.play(self.camera.frame.animate.scale(1.2), FadeIn(square) |
+|   16         self.wait(1)                                                   |
+|   17                                                                        |
+|   18         # Animate labels appearing at each corner of the square        |
++-----------------------------------------------------------------------------+
+AttributeError: 'Camera' object has no attribute 'frame'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/11/25 11:06:16] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\ab35e025-3b                         
+                             9f-45b0-9aa1-0c93d622f23e                         
+                             _20251111_110557\script_s                         
+                             eq1\videos\script_seq1\48                         
+                             0p15\partial_movie_files\                         
+                             SquareLabelsScene\9318326                         
+                             50_3107961746_223132457.m                         
+                             p4'                                               
+[11/11/25 11:06:17] INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\ab35e025-3b                         
+                             9f-45b0-9aa1-0c93d622f23e                         
+                             _20251111_110557\script_s                         
+                             eq1\videos\script_seq1\48                         
+                             0p15\partial_movie_files\                         
+                             SquareLabelsScene\1905288                         
+                             516_1436906429_1997571994                         
+                             .mp4'
+──────────────────────────────────────────────
+
+[2025-11-11 11:06:43] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/ab35e025-3b9f-45b0-9aa1-0c93d622f23e_20251111_110557/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\ab35e025-3b9f-45b0-9aa1-0c93d622f23e_2 |
+| 0251111_110557\script_seq2\script_seq2.py:22 in construct                   |
+|                                                                             |
+|   19         # Animate the first label moving along the square's edge       |
+|   20         self.play(                                                     |
+|   21             labels[0].animate.move_to(square.get_corner(UP + LEFT) + 0 |
+| > 22             ApplyMethod(glow_effect, labels[0]),                       |
+|   23             run_time=3                                                 |
+|   24         )                                                              |
+|   25         self.wait(1)                                                   |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\animation\transform.py:4 |
+| 69 in __init__                                                              |
+|                                                                             |
+|   466     def __init__(                                                     |
+|   467         self, method: Callable, *args, **kwargs                       |
+|   468     ) -> None:  # method typing (we want to specify Mobject method)?  |
+| > 469         self.check_validity_of_input(method)                          |
+|   470         self.method = method                                          |
+|   471         self.method_args = args                                       |
+|   472         super().__init__(method.__self__, **kwargs)                   |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\animation\transform.py:4 |
+| 76 in check_validity_of_input                                               |
+|                                                                             |
+|   473                                                                       |
+|   474     def check_validity_of_input(self, method: Callable) -> None:      |
+|   475         if not inspect.ismethod(method):                              |
+| > 476             raise ValueError(                                         |
+|   477                 "Whoops, looks like you accidentally invoked "        |
+|   478                 "the method you want to animate",                     |
+|   479             )                                                         |
++-----------------------------------------------------------------------------+
+ValueError: Whoops, looks like you accidentally invoked the method you want to 
+animate
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/11/25 11:06:27] INFO     Writing A to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\ab35e025-3b9f-                        
+                             45b0-9aa1-0c93d622f23e_202                        
+                             51111_110557\script_seq2\T                        
+                             ex\90f07b07e57adf79.tex                           
+[11/11/25 11:06:34] INFO     Writing B to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\ab35e025-3b9f-                        
+                             45b0-9aa1-0c93d622f23e_202                        
+                             51111_110557\script_seq2\T                        
+                             ex\d82288bb87e99d59.tex                           
+[11/11/25 11:06:37] INFO     Writing C to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\ab35e025-3b9f-                        
+                             45b0-9aa1-0c93d622f23e_202                        
+                             51111_110557\script_seq2\T                        
+                             ex\86474863bfdee3e7.tex                           
+[11/11/25 11:06:39] INFO     Writing D to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\ab35e025-3b9f-                        
+                             45b0-9aa1-0c93d622f23e_202                        
+                             51111_110557\script_seq2\T                        
+                             ex\265843fdb06dea70.tex
+──────────────────────────────────────────────
+
+[2025-11-11 11:06:57] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/ab35e025-3b9f-45b0-9aa1-0c93d622f23e_20251111_110557/script_seq3/script_seq3.py
+──────────────────────────────────────────────
+STDERR:
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\ab35e025-3b9f-45b0-9aa1-0c93d622f23e_2 |
+| 0251111_110557\script_seq3\script_seq3.py:15 in construct                   |
+|                                                                             |
+|   12         self.add(square, label1, label2, label3, label4)               |
+|   13                                                                        |
+|   14         # Fade in a small diagram or image representing a real-world e |
+| > 15         diagram = ImageMobject("map_example.png").scale(0.5).move_to(2 |
+|   16         self.play(FadeIn(diagram))                                     |
+|   17                                                                        |
+|   18         # Animate the square and labels shrinking and moving to fit in |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\mobject\types\image_mobj |
+| ect.py:194 in __init__                                                      |
+|                                                                             |
+|   191         self.invert_image = invert                                    |
+|   192         self.image_mode = image_mode                                  |
+|   193         if isinstance(filename_or_array, (str, pathlib.PurePath)):    |
+| > 194             path = get_full_raster_image_path(filename_or_array)      |
+|   195             image = Image.open(path).convert(self.image_mode)         |
+|   196             self.pixel_array = np.array(image)                        |
+|   197             self.path = path                                          |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\utils\images.py:28 in    |
+| get_full_raster_image_path                                                  |
+|                                                                             |
+|   25                                                                        |
+|   26                                                                        |
+|   27 def get_full_raster_image_path(image_file_name: str | PurePath) -> Pat |
+| > 28     return seek_full_path_from_defaults(                               |
+|   29         image_file_name,                                               |
+|   30         default_dir=config.get_dir("assets_dir"),                      |
+|   31         extensions=[".jpg", ".jpeg", ".png", ".gif", ".ico"],          |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\utils\file_ops.py:182 in |
+| seek_full_path_from_defaults                                                |
+|                                                                             |
+|   179         f"From: {Path.cwd()}, could not find {file_name} at either "  |
+|   180         f"of these locations: {list(map(str, possible_paths))}"       |
+|   181     )                                                                 |
+| > 182     raise OSError(error)                                              |
+|   183                                                                       |
+|   184                                                                       |
+|   185 def modify_atime(file_path: str) -> None:                             |
++-----------------------------------------------------------------------------+
+OSError: From: C:\Vivek_Main\tutter\src, could not find map_example.png at 
+either of these locations: ['map_example.png', 'map_example.png', 
+'map_example.png.jpg', 'map_example.png.jpeg', 'map_example.png.png', 
+'map_example.png.gif', 'map_example.png.ico']
+
+STDOUT:
+Manim Community v0.19.0
+──────────────────────────────────────────────
+
+[2025-11-11 11:07:11] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/ab35e025-3b9f-45b0-9aa1-0c93d622f23e_20251111_110557/script_seq4/script_seq4.py
+──────────────────────────────────────────────
+STDERR:
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\ab35e025-3b9f-45b0-9aa1-0c93d622f23e_2 |
+| 0251111_110557\script_seq4\script_seq4.py:16 in construct                   |
+|                                                                             |
+|   13         self.add(square, labels)                                       |
+|   14                                                                        |
+|   15         # Zoom out to show the entire diagram                          |
+| > 16         self.play(CameraFrame.scale, 1.5, run_time=2)                  |
+|   17                                                                        |
+|   18         # Fade in summary text                                         |
+|   19         summary = Text("Key Takeaway: Labels at corners enhance clarit |
++-----------------------------------------------------------------------------+
+NameError: name 'CameraFrame' is not defined
+
+STDOUT:
+Manim Community v0.19.0
+──────────────────────────────────────────────
+
+[2025-11-11 11:07:23] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\video_routes.py", line 32, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\main.py", line 56, in process_pipeline
+    run_script_data_process()
+  File "C:\Vivek_Main\tutter\src\Artifacts\artifacts.py", line 137, in run_script_data_process
+    data = handler.load_files()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\Artifacts\artifacts.py", line 48, in load_files
+    with open(json_file, "r", encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Vivek_Main\\Temp_Data\\ab35e025-3b9f-45b0-9aa1-0c93d622f23e_20251111_110557\\input_data.json'
+[2025-11-11 11:07:24] [ERROR] ❌ HTTP 500: {"detail":"[Errno 2] No such file or directory: 'C:\\\\Vivek_Main\\\\Temp_Data\\\\ab35e025-3b9f-45b0-9aa1-0c93d622f23e_20251111_110557\\\\input_data.json'"}
+[2025-11-11 11:07:24] [ERROR] ❌ Error writing scripts
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\write_routes.py", line 37, in write_scripts
+    video_result = await async_post(video_url, {"path": str(folder),"unique_id":data.unique_id}, timeout=300)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"[Errno 2] No such file or directory: 'C:\\\\Vivek_Main\\\\Temp_Data\\\\ab35e025-3b9f-45b0-9aa1-0c93d622f23e_20251111_110557\\\\input_data.json'"}
+[2025-11-11 11:07:24] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"[Errno 2] No such file or directory: 'C:\\\\\\\\Vivek_Main\\\\\\\\Temp_Data\\\\\\\\ab35e025-3b9f-45b0-9aa1-0c93d622f23e_20251111_110557\\\\\\\\input_data.json'\"}"}
+[2025-11-11 11:07:24] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\generator_routes.py", line 25, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: {\"detail\":\"[Errno 2] No such file or directory: 'C:\\\\\\\\Vivek_Main\\\\\\\\Temp_Data\\\\\\\\ab35e025-3b9f-45b0-9aa1-0c93d622f23e_20251111_110557\\\\\\\\input_data.json'\"}"}
+[2025-11-11 11:07:24] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: {\\\"detail\\\":\\\"[Errno 2] No such file or directory: 'C:\\\\\\\\\\\\\\\\Vivek_Main\\\\\\\\\\\\\\\\Temp_Data\\\\\\\\\\\\\\\\ab35e025-3b9f-45b0-9aa1-0c93d622f23e_20251111_110557\\\\\\\\\\\\\\\\input_data.json'\\\"}\"}"}

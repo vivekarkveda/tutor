@@ -1,0 +1,218 @@
+[2025-11-12 13:44:51] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/79c1533a-e84e-4a78-86af-738ebea1df49_20251112_134337/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  13%|#3        | 2/15 [00:00<00:00, 15.76it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  27%|##6       | 4/15 [00:00<00:00, 16.91it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  40%|####      | 6/15 [00:00<00:00, 16.84it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  53%|#####3    | 8/15 [00:00<00:00, 16.60it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  67%|######6   | 10/15 [00:00<00:00, 16.78it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  80%|########  | 12/15 [00:00<00:00, 16.64it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  93%|#########3| 14/15 [00:00<00:00, 16.88it/s]
+                                                                                                                        
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\79c1533a-e84e-4a78-86af-738ebea1df49_2 |
+| 0251112_134337\script_seq1\script_seq1.py:15 in construct                   |
+|                                                                             |
+|   12                                                                        |
+|   13         # Zoom out slightly to reveal the square                       |
+|   14         square = Square(side_length=4, color=BLACK, stroke_width=2).mo |
+| > 15         self.play(self.camera.frame.animate.scale(1.2).move_to(square) |
+|   16         self.wait(1)                                                   |
+|   17                                                                        |
+|   18         # Animate label boxes appearing at each corner                 |
++-----------------------------------------------------------------------------+
+AttributeError: 'Camera' object has no attribute 'frame'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/12/25 13:44:49] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\79c1533a-e8                         
+                             4e-4a78-86af-738ebea1df49                         
+                             _20251112_134337\script_s                         
+                             eq1\videos\script_seq1\48                         
+                             0p15\partial_movie_files\                         
+                             SquareLabelAnimation\9318                         
+                             32650_3107961746_22313245                         
+                             7.mp4'                                            
+[11/12/25 13:44:50] INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\79c1533a-e8                         
+                             4e-4a78-86af-738ebea1df49                         
+                             _20251112_134337\script_s                         
+                             eq1\videos\script_seq1\48                         
+                             0p15\partial_movie_files\                         
+                             SquareLabelAnimation\1905                         
+                             288516_1436906429_1997571                         
+                             994.mp4'
+──────────────────────────────────────────────
+
+[2025-11-12 13:46:36] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\video_routes.py", line 36, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\main.py", line 51, in process_pipeline
+    video_bytes_list, audio_bytes_list = await asyncio.gather(video_task, audio_task)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\main.py", line 20, in run_in_executor
+    return await loop.run_in_executor(executor, func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\processor\process_factory.py", line 16, in <lambda>
+    return lambda: VideoFactory.run_manim_on_files(generated_files)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\processor\Manim\video_factory.py", line 84, in run_manim_on_files
+    pipeline_logger.error(full_error_log, extra={"part_name": "ManimRenderer"})
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1518, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1634, in _log
+    self.handle(record)
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1644, in handle
+    self.callHandlers(record)
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1706, in callHandlers
+    hdlr.handle(record)
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 962, in emit
+    raise NotImplementedError('emit must be implemented '
+NotImplementedError: emit must be implemented by Handler subclasses
+[2025-11-12 13:46:36] [ERROR] ❌ HTTP 500: Internal Server Error
+[2025-11-12 13:46:36] [ERROR] ❌ Error writing scripts
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\write_routes.py", line 42, in write_scripts
+    video_result = await async_post(video_url, {"path": str(folder),"unique_id":data.unique_id}, timeout=300)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 14, in async_post
+    pipeline_logger.error(f"❌ HTTP {resp.status_code}: {resp.text}")
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1518, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1634, in _log
+    self.handle(record)
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1644, in handle
+    self.callHandlers(record)
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1706, in callHandlers
+    hdlr.handle(record)
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 962, in emit
+    raise NotImplementedError('emit must be implemented '
+NotImplementedError: emit must be implemented by Handler subclasses
+[2025-11-12 13:46:36] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\generator_routes.py", line 30, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 12, in async_post
+    resp = await client.post(url, json=payload, headers={"Content-Type": "application/json"})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+[2025-11-12 13:46:36] [ERROR] ❌ HTTP 500: Internal Server Error
+[2025-11-12 13:46:36] [ERROR] ❌ Unexpected error in /search endpoint
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\search_routes.py", line 88, in search
+    file_resp, code_resp = await asyncio.gather(gen_task, code_task)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 14, in async_post
+    pipeline_logger.error(f"❌ HTTP {resp.status_code}: {resp.text}")
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1518, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1634, in _log
+    self.handle(record)
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1644, in handle
+    self.callHandlers(record)
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1706, in callHandlers
+    hdlr.handle(record)
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 962, in emit
+    raise NotImplementedError('emit must be implemented '
+NotImplementedError: emit must be implemented by Handler subclasses

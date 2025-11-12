@@ -1,0 +1,21 @@
+[2025-11-12 13:48:45] [ERROR] ❌ HTTP 500: {"detail":"'JsonHandler' object has no attribute '_generate_files'"}
+[2025-11-12 13:48:45] [ERROR] ❌ Unexpected error in /search endpoint
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\search_routes.py", line 88, in search
+    file_resp, code_resp = await asyncio.gather(gen_task, code_task)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 14, in async_post
+    pipeline_logger.error(f"❌ HTTP {resp.status_code}: {resp.text}")
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1518, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1634, in _log
+    self.handle(record)
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1644, in handle
+    self.callHandlers(record)
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1706, in callHandlers
+    hdlr.handle(record)
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 962, in emit
+    raise NotImplementedError('emit must be implemented '
+NotImplementedError: emit must be implemented by Handler subclasses

@@ -1,0 +1,391 @@
+[2025-11-11 18:11:38] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/ac3b871c-4bdc-4052-bce8-c2d070fa340b_20251111_181112/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  13%|#3        | 2/15 [00:00<00:00, 13.38it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  27%|##6       | 4/15 [00:00<00:00, 14.30it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  40%|####      | 6/15 [00:00<00:00, 15.67it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  60%|######    | 9/15 [00:00<00:00, 18.02it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  73%|#######3  | 11/15 [00:00<00:00, 15.88it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  87%|########6 | 13/15 [00:00<00:00, 15.93it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')): 100%|##########| 15/15 [00:00<00:00, 15.68it/s]
+                                                                                                                        
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\ac3b871c-4bdc-4052-bce8-c2d070fa340b_2 |
+| 0251111_181112\script_seq1\script_seq1.py:17 in construct                   |
+|                                                                             |
+|   14         # Zoom out slightly to reveal a simple square shape below the  |
+|   15         square = Square(side_length=4, color=BLACK, stroke_width=2)    |
+|   16         square.move_to(DOWN * 1.5)                                     |
+| > 17         self.play(self.camera.frame.animate.scale(1.2).move_to(square) |
+|   18         self.play(Create(square))                                      |
+|   19         self.wait(1)                                                   |
+|   20                                                                        |
++-----------------------------------------------------------------------------+
+AttributeError: 'Camera' object has no attribute 'frame'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/11/25 18:11:35] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\ac3b871c-4b                         
+                             dc-4052-bce8-c2d070fa340b                         
+                             _20251111_181112\script_s                         
+                             eq1\videos\script_seq1\48                         
+                             0p15\partial_movie_files\                         
+                             SquareLabelAnimation\9318                         
+                             32650_984622512_223132457                         
+                             .mp4'                                             
+[11/11/25 18:11:36] INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\ac3b871c-4b                         
+                             dc-4052-bce8-c2d070fa340b                         
+                             _20251111_181112\script_s                         
+                             eq1\videos\script_seq1\48                         
+                             0p15\partial_movie_files\                         
+                             SquareLabelAnimation\1905                         
+                             288516_1436906429_3629667                         
+                             627.mp4'
+──────────────────────────────────────────────
+
+[2025-11-11 18:12:18] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/ac3b871c-4bdc-4052-bce8-c2d070fa340b_20251111_181112/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: Write(Square):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: Write(Square):  13%|#3        | 2/15 [00:00<00:00, 13.78it/s]
+Animation 0: Write(Square):  27%|##6       | 4/15 [00:00<00:00, 16.04it/s]
+Animation 0: Write(Square):  40%|####      | 6/15 [00:00<00:00, 17.01it/s]
+Animation 0: Write(Square):  53%|#####3    | 8/15 [00:00<00:00, 17.50it/s]
+Animation 0: Write(Square):  67%|######6   | 10/15 [00:00<00:00, 18.22it/s]
+Animation 0: Write(Square):  80%|########  | 12/15 [00:00<00:00, 17.03it/s]
+Animation 0: Write(Square): 100%|##########| 15/15 [00:00<00:00, 18.31it/s]
+                                                                           
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\ac3b871c-4bdc-4052-bce8-c2d070fa340b_2 |
+| 0251111_181112\script_seq2\script_seq2.py:34 in construct                   |
+|                                                                             |
+|   31         ]                                                              |
+|   32                                                                        |
+|   33         for i, (corner, text) in enumerate(zip(corners, label_texts)): |
+| > 34             target_point = square.get_corner(corner) + 0.5 * DOWN + 0. |
+|   35             self.play(MoveAlongPath(pointer.copy(), Line(pointer.get_c |
+|   36             self.play(Write(labels[i]), run_time=2)                    |
+|   37             self.play(Indicate(labels[i], scale_factor=1.2), run_time= |
++-----------------------------------------------------------------------------+
+ValueError: The truth value of an array with more than one element is 
+ambiguous. Use a.any() or a.all()
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/11/25 18:11:53] INFO     Writing Top     ext{-}Left tex_file_writing.py:111
+                             to                                                
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\ac3b871c-4bdc-                        
+                             4052-bce8-c2d070fa340b_202                        
+                             51111_181112\script_seq2\T                        
+                             ex\589659f7f976a1a5.tex                           
+[11/11/25 18:11:58] INFO     Writing Top                tex_file_writing.py:111
+                             ext{-}Right to                                    
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\ac3b871c-4bdc-                        
+                             4052-bce8-c2d070fa340b_202                        
+                             51111_181112\script_seq2\T                        
+                             ex\20de1706008c91a9.tex                           
+[11/11/25 18:12:03] INFO     Writing Bottom  ext{-}Left tex_file_writing.py:111
+                             to                                                
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\ac3b871c-4bdc-                        
+                             4052-bce8-c2d070fa340b_202                        
+                             51111_181112\script_seq2\T                        
+                             ex\5dfa28db559736df.tex                           
+[11/11/25 18:12:09] INFO     Writing Bottom             tex_file_writing.py:111
+                             ext{-}Right to                                    
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\ac3b871c-4bdc-                        
+                             4052-bce8-c2d070fa340b_202                        
+                             51111_181112\script_seq2\T                        
+                             ex\09f30f236ffc868d.tex                           
+[11/11/25 18:12:15] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\ac3b871c-4b                         
+                             dc-4052-bce8-c2d070fa340b                         
+                             _20251111_181112\script_s                         
+                             eq2\videos\script_seq2\48                         
+                             0p15\partial_movie_files\                         
+                             SquareLabelingScene\11858                         
+                             18338_2491758213_28185728                         
+                             19.mp4'                                           
+[11/11/25 18:12:16] INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\ac3b871c-4b                         
+                             dc-4052-bce8-c2d070fa340b                         
+                             _20251111_181112\script_s                         
+                             eq2\videos\script_seq2\48                         
+                             0p15\partial_movie_files\                         
+                             SquareLabelingScene\62464                         
+                             2324_4217992463_328475943                         
+                             4.mp4'
+──────────────────────────────────────────────
+
+[2025-11-11 18:12:55] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/ac3b871c-4bdc-4052-bce8-c2d070fa340b_20251111_181112/script_seq3/script_seq3.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: Create(Square), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: Create(Square), etc.:  40%|####      | 6/15 [00:00<00:00, 44.94it/s]
+Animation 0: Create(Square), etc.:  73%|#######3  | 11/15 [00:00<00:00, 43.77it/s]
+                                                                                  
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\ac3b871c-4bdc-4052-bce8-c2d070fa340b_2 |
+| 0251111_181112\script_seq3\script_seq3.py:22 in construct                   |
+|                                                                             |
+|   19             for j in range(3):                                         |
+|   20                 new_square = Square(side_length=2, color=BLUE, fill_op |
+|   21                 grid.add(new_square)                                   |
+| > 22                 for k, corner in enumerate(new_square.get_corners()):  |
+|   23                     label = MathTex(chr(65 + k)).move_to(corner)       |
+|   24                     grid.add(label)                                    |
+|   25         self.play(Transform(square, grid), run_time=3)                 |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\mobject\mobject.py:698   |
+| in getter                                                                   |
+|                                                                             |
+|    695                     stacklevel=2,                                    |
+|    696                 )                                                    |
+|    697                                                                      |
+| >  698                 return getattr(self, to_get)                         |
+|    699                                                                      |
+|    700             # Return a bound method                                  |
+|    701             return types.MethodType(getter, self)                    |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\mobject\mobject.py:723   |
+| in __getattr__                                                              |
+|                                                                             |
+|    720             return types.MethodType(setter, self)                    |
+|    721                                                                      |
+|    722         # Unhandled attribute, therefore error                       |
+| >  723         raise AttributeError(f"{type(self).__name__} object has no a |
+|    724                                                                      |
+|    725     @property                                                        |
+|    726     def width(self) -> float:                                        |
++-----------------------------------------------------------------------------+
+AttributeError: Square object has no attribute 'corners'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/11/25 18:12:34] INFO     Writing A to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\ac3b871c-4bdc-                        
+                             4052-bce8-c2d070fa340b_202                        
+                             51111_181112\script_seq3\T                        
+                             ex\90f07b07e57adf79.tex                           
+[11/11/25 18:12:39] INFO     Writing B to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\ac3b871c-4bdc-                        
+                             4052-bce8-c2d070fa340b_202                        
+                             51111_181112\script_seq3\T                        
+                             ex\d82288bb87e99d59.tex                           
+[11/11/25 18:12:43] INFO     Writing C to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\ac3b871c-4bdc-                        
+                             4052-bce8-c2d070fa340b_202                        
+                             51111_181112\script_seq3\T                        
+                             ex\86474863bfdee3e7.tex                           
+[11/11/25 18:12:47] INFO     Writing D to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\ac3b871c-4bdc-                        
+                             4052-bce8-c2d070fa340b_202                        
+                             51111_181112\script_seq3\T                        
+                             ex\265843fdb06dea70.tex                           
+[11/11/25 18:12:53] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\ac3b871c-4b                         
+                             dc-4052-bce8-c2d070fa340b                         
+                             _20251111_181112\script_s                         
+                             eq3\videos\script_seq3\48                         
+                             0p15\partial_movie_files\                         
+                             GridLabelingScene\1185818                         
+                             338_2478257300_223132457.                         
+                             mp4'                                              
+[11/11/25 18:12:54] INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\ac3b871c-4b                         
+                             dc-4052-bce8-c2d070fa340b                         
+                             _20251111_181112\script_s                         
+                             eq3\videos\script_seq3\48                         
+                             0p15\partial_movie_files\                         
+                             GridLabelingScene\6246423                         
+                             24_2844360058_138437693.m                         
+                             p4'
+──────────────────────────────────────────────
+
+[2025-11-11 18:13:12] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\generator_routes.py", line 28, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 12, in async_post
+    resp = await client.post(url, json=payload, headers={"Content-Type": "application/json"})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+[2025-11-11 18:13:13] [ERROR] ❌ HTTP 500: {"detail":""}
+[2025-11-11 18:13:53] [ERROR] ❌ Video and audio list length mismatch
+[2025-11-11 18:13:54] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\video_routes.py", line 34, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\main.py", line 61, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list,unique_id)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\merger_factory.py", line 208, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list, unique_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\merger_factory.py", line 131, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-11 18:13:54] [ERROR] ❌ HTTP 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-11 18:13:54] [ERROR] ❌ Error writing scripts
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\write_routes.py", line 40, in write_scripts
+    video_result = await async_post(video_url, {"path": str(folder),"unique_id":data.unique_id}, timeout=300)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"Video and audio lists must have the same length"}

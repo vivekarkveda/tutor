@@ -1,0 +1,12 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_155233/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAlignment/1185818338_1214757592_1505502750.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_155233/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAlignment/624642324_4217992463_395825890.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_155233/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAlignment/624642324_3642768514_3979414394.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_155233/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAlignment/624642324_4217992463_1675116893.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_155233/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAlignment/624642324_2442770664_1923535291.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_155233/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAlignment/624642324_4217992463_1525668931.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_155233/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAlignment/624642324_1152507862_3486032174.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_155233/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAlignment/624642324_4217992463_3965057597.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_155233/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAlignment/624642324_2276257820_874665757.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_155233/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAlignment/624642324_2844360058_1423650976.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_155233/script_seq2/videos/script_seq2/480p15/partial_movie_files/SquareLabelAlignment/624642324_2049319290_108277601.mp4'

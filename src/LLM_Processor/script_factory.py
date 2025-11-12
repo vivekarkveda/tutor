@@ -1,29 +1,28 @@
 import cohere
 from abc import ABC, abstractmethod
+from logger import pipeline_logger, validation_logger
+from Transaction.transaction_handler import transaction
+from Transaction.excepetion import exception
+import traceback
 
 
-# === Abstract Base Product ===
 # === Abstract Base Product ===
 class ScriptGenerator(ABC):
-    """
-    Abstract base class for all script generators.
-    """
+    """Abstract base class for all script generators."""
 
     @abstractmethod
-    def generate_script(self, topic: str) -> str:
+    def generate_script(self, topic: str, unique_id: str) -> str:
         pass
 
 
 # === Concrete Product: Cohere ===
 class CohereScriptGenerator(ScriptGenerator):
-    """
-    Concrete implementation using Cohere's Command model.
-    """
+    """Concrete implementation using Cohere's Command model."""
 
     def __init__(self, api_key: str):
         self.client = cohere.ClientV2(api_key)
 
-    def generate_script(self, topic: str) -> str:
+    def generate_script(self, topic: str, unique_id: str) -> str:
         prompt = f"""
 You are an expert in storytelling and Manim Community Edition animation design.
 Your task:
@@ -58,39 +57,77 @@ Return only a valid JSON array (no extra text).
 
 📌 Topic: {topic}
 """
+
         print(f"🧠 Generating script for topic: {topic}")
-        response = self.client.chat(
-            model="command-a-03-2025",
-            messages=[{"role": "user", "content": prompt}]
-        )
-        script_json = response.message.content[0].text.strip()
-        print("✅ Script generated successfully.")
-        return script_json
+        pipeline_logger.info(f"Prompt for generation: {prompt}")
+
+        try:
+            # === Cohere API Call ===
+            response = self.client.chat(
+                model="command-a-03-2025",
+                messages=[{"role": "user", "content": prompt}]
+            )
+
+            # Extract the generated text
+            script_json = response.message.content[0].text.strip()
+            print("✅ Script generated successfully.")
+            pipeline_logger.info(f"Generated Script JSON: {script_json}")
+
+            # ✅ Log transaction success
+            transaction(unique_id, script_gen_status="Script generated successfully")
+
+            return script_json
+
+        except Exception as e:
+            error_msg = f"❌ Error during script generation for topic '{topic}': {e}"
+            validation_logger.error(error_msg)
+            pipeline_logger.error(error_msg)
+            pipeline_logger.error(traceback.format_exc())
+
+            # ❌ Log to exception table with traceback
+            exception(
+                unique_id,
+                script_gen_status="Script generation failed",
+                exception_message=str(e),
+                trace=traceback.format_exc()
+            )
+
+            # Reraise so upstream knows something went wrong
+            raise RuntimeError(f"Script generation failed for topic '{topic}': {e}")
 
 
 # === Concrete Product: Mock Generator (for testing) ===
 class MockScriptGenerator(ScriptGenerator):
-    """
-    Mock generator for testing without calling external APIs.
-    """
+    """Mock generator for testing without calling external APIs."""
 
-    def generate_script(self, topic: str) -> str:
-        print(f"🧪 Mock generating script for topic: {topic}")
-        return f"""[
-            {{
-                "script_seq": 1,
-                "script_for_manim": ["Display topic title '{topic}'"],
-                "script_voice_over": ["Welcome! Today we'll discuss {topic}."],
-                "script_length": 30
-            }}
-        ]"""
+    def generate_script(self, topic: str, unique_id: str) -> str:
+        try:
+            print(f"🧪 Mock generating script for topic: {topic}")
+            mock_script = f"""[
+                {{
+                    "script_seq": 1,
+                    "script_for_manim": ["Display topic title '{topic}'"],
+                    "script_voice_over": ["Welcome! Today we'll discuss {topic}."],
+                    "script_length": 30
+                }}
+            ]"""
+            # ✅ Log success
+            transaction(unique_id, script_gen_status="Mock script generated successfully")
+            return mock_script
+        except Exception as e:
+            # ❌ Log error
+            exception(
+                unique_id,
+                script_gen_status="Mock script generation failed",
+                exception_message=str(e),
+                trace=traceback.format_exc()
+            )
+            raise
 
 
 # === Factory Class ===
 class ScriptGeneratorFactory:
-    """
-    Factory class for creating appropriate ScriptGenerator instances.
-    """
+    """Factory class for creating appropriate ScriptGenerator instances."""
 
     @staticmethod
     def get_generator(generator_type: str, **kwargs) -> ScriptGenerator:
@@ -103,4 +140,3 @@ class ScriptGeneratorFactory:
             return MockScriptGenerator()
         else:
             raise ValueError(f"Unknown generator type: {generator_type}")
-

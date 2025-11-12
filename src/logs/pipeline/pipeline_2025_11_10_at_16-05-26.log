@@ -1,0 +1,117 @@
+[2025-11-10 16:05:44] [INFO] dd28ce51-7115-40f2-bbda-21031e2d562d
+[2025-11-10 16:05:44] [INFO] 🧠 Generating script for topic='Labels placed correctly at square corners', class='10'
+[2025-11-10 16:05:45] [INFO] 
+You are an expert in storytelling and Manim Community Edition animation design.
+Your task:
+Generate a JSON script that describes the full video in a step-by-step, highly detailed way.
+Each scene/sequence should have a flexible length between 25 to 45 seconds.
+You can break the video into multiple sequences/scenes if needed to explain the concept clearly.
+Narration and animations must be tightly synchronized:
+Step i in "script_for_manim" must align exactly with step i in "script_voice_over".
+Ensure pacing: narration should match animation timing naturally.
+"script_length" should reflect the realistic duration of each scene.
+
+Each JSON object must include:
+- "script_seq" → scene number.
+- "script_for_manim" → array of detailed English animation steps (no Manim code).
+- "script_voice_over" → array of narration lines aligned step-by-step with visuals.
+- "script_length" → approximate duration of the scene (25–45 seconds).
+
+Rules:
+- Use descriptive English for visuals (no code).
+- Narration must align with visuals.
+- Describe each animation step precisely.
+- Break complex ideas into smaller, smooth transitions.
+- Maintain consistent references between scenes.
+- Scene 1: Introduction
+- Scene 2: Concept Demonstration
+- Scene 3: Application/Example
+- Scene 4: Recap/Closing
+📌 Continuity Rule: The last frame of a scene becomes the first frame of the next.
+
+Output format:
+Return only a valid JSON array (no extra text).
+
+📌 Topic: Labels placed correctly at square corners for class 10 in English language
+
+[2025-11-10 16:06:00] [INFO] ```json
+[
+  {
+    "script_seq": 1,
+    "script_for_manim": [
+      "Start with a blank canvas.",
+      "Fade in a large, centered title: 'Labels at Square Corners: Class 10 English'.",
+      "Zoom out slightly to reveal a simple square shape below the title.",
+      "Animate four small, empty labels appearing at each corner of the square, initially overlapping the corners.",
+      "Move each label outward smoothly to its correct position, slightly away from the corners.",
+      "Highlight one label with a glowing effect to draw attention."
+    ],
+    "script_voice_over": [
+      "Welcome to our lesson on placing labels correctly at square corners for Class 10 English.",
+      "Today, we’ll learn how to position labels neatly and accurately.",
+      "Here’s a simple square, a common shape you might encounter in diagrams or illustrations.",
+      "Labels are often placed at the corners, but they need to be positioned carefully.",
+      "Let’s move these labels to their correct spots, ensuring they’re clear and easy to read.",
+      "Notice how this label is now perfectly aligned and visible."
+    ],
+    "script_length": 35
+  },
+  {
+    "script_seq": 2,
+    "script_for_manim": [
+      "Start with the final frame of Scene 1: square with labels in place.",
+      "Animate a pointer moving to each label one by one, highlighting it as it goes.",
+      "For each label, show a small text box explaining its alignment (e.g., 'Top-left corner: Label shifted slightly outward').",
+      "Introduce a second square with incorrectly placed labels (overlapping corners, uneven spacing).",
+      "Animate the incorrect labels moving to their correct positions, matching the first square.",
+      "Zoom in on one corner to show the before-and-after comparison."
+    ],
+    "script_voice_over": [
+      "Let’s examine these labels more closely.",
+      "Each label is aligned just outside the corner, ensuring it doesn’t overlap the square’s edges.",
+      "This makes the labels clear and professional-looking.",
+      "Now, let’s look at an example of incorrectly placed labels.",
+      "See how these labels overlap the corners and look cluttered?",
+      "By adjusting their positions, we achieve a clean and organized layout."
+    ],
+    "script_length": 40
+  },
+  {
+    "script_seq": 3,
+    "script_for_manim": [
+      "Start with the final frame of Scene 2: two squares side by side, one with correct labels and one with corrected labels.",
+      "Fade in a real-world example: a map with labeled corners representing directions (North, South, East, West).",
+      "Animate the labels on the map shifting to their correct positions if initially incorrect.",
+      "Highlight each direction label as it’s mentioned in the narration.",
+      "End with a close-up of the map, showing all labels neatly placed."
+    ],
+    "script_voice_over": [
+      "This concept isn’t just theoretical—it’s used in real-world applications, like maps.",
+      "Here’s a map with directional labels at its corners.",
+      "Even on a map, proper label placement ensures clarity and readability.",
+      "Let’s adjust these labels to their correct positions.",
+      "Now, the map looks professional, and the directions are easy to understand."
+    ],
+    "script_length": 30
+  },
+  {
+    "script_seq": 4,
+    "script_for_manim": [
+      "Start with the final frame of Scene 3: the map with correctly placed labels.",
+      "Zoom out to show both squares and the map side by side.",
+      "Animate a checklist appearing: '1. Align labels slightly outward. 2. Avoid overlapping corners. 3. Ensure even spacing.'",
+      "Highlight each point on the checklist as it’s mentioned in the narration.",
+      "Fade out all elements except the title, which remains centered on the screen."
+    ],
+    "script_voice_over": [
+      "To recap, placing labels correctly at square corners involves a few simple steps.",
+      "First, align labels slightly outward from the corners.",
+      "Second, avoid overlapping the corners to prevent clutter.",
+      "Third, ensure even spacing for a neat appearance.",
+      "Remember, whether it’s a diagram, map, or any other visual, proper label placement makes a big difference.",
+      "Thanks for watching, and happy labeling!"
+    ],
+    "script_length": 45
+  }
+]
+```

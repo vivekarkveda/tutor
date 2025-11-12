@@ -21,7 +21,7 @@ topicName = ""
 #  🚀 FastAPI Setup
 # ================================================================
 app = FastAPI(title="🎬 Video Processing Pipeline API")
-API_KEY = "ItjCVeX2H4je76T4Az0yQGnjISqZhD3IrKWj6ebq"
+API_KEY = "dZfHrqzrU2lw32MX2RPRiG8ARSKqavpiqpLsU2b0"
 BASE_INPUT_ROOT = Path(r"C:\Vivek_Main\Manim_project\inputbox")
 
 
@@ -44,7 +44,7 @@ def save_json_to_temp(data: List[Dict]) -> Path:
 
     json_path = temp_dir / "input_data.json"
     json_path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
-    pipeline_logger.info(f"📄 JSON saved: {json_path}")
+    # pipeline_logger.info(f"📄 JSON saved: {json_path}")
     return json_path
 
 
@@ -331,7 +331,7 @@ async def generate_videos_endpoint(request: VideoRequest):
             Settings.RUN_FROM,
         )
 
-        pipeline_logger.info(f"🎬 Final video saved: {output_path}")
+        pipeline_logger.info(f"🎬 Final video saved: {output_path}",)
         return {
             "status": "success",
             "final_video": output_path,

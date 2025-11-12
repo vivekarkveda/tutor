@@ -49,7 +49,7 @@ class AudioFactory:
                             f"──────────────────────────────────────────────\n"
                             f"Exception: {e}\n"
                             f"Traceback:\n{error_trace}\n"
-                            f"──────────────────────────────────────────────", extra={"part_name": "KokoroAudioFactory"}
+                            f"──────────────────────────────────────────────"
                         )
                         validation_logger.error(f"❌ Audio processing error: {e}")
                         print(f"⚠️ Error in audio generation: {e}")

@@ -1,0 +1,116 @@
+[2025-11-10 16:03:49] [INFO] 5642962e-5450-4e23-8181-74e0ca007808
+[2025-11-10 16:03:49] [INFO] 🧠 Generating script for topic='Labels placed correctly at square corners', class='10'
+[2025-11-10 16:03:50] [INFO] 
+You are an expert in storytelling and Manim Community Edition animation design.
+Your task:
+Generate a JSON script that describes the full video in a step-by-step, highly detailed way.
+Each scene/sequence should have a flexible length between 25 to 45 seconds.
+You can break the video into multiple sequences/scenes if needed to explain the concept clearly.
+Narration and animations must be tightly synchronized:
+Step i in "script_for_manim" must align exactly with step i in "script_voice_over".
+Ensure pacing: narration should match animation timing naturally.
+"script_length" should reflect the realistic duration of each scene.
+
+Each JSON object must include:
+- "script_seq" → scene number.
+- "script_for_manim" → array of detailed English animation steps (no Manim code).
+- "script_voice_over" → array of narration lines aligned step-by-step with visuals.
+- "script_length" → approximate duration of the scene (25–45 seconds).
+
+Rules:
+- Use descriptive English for visuals (no code).
+- Narration must align with visuals.
+- Describe each animation step precisely.
+- Break complex ideas into smaller, smooth transitions.
+- Maintain consistent references between scenes.
+- Scene 1: Introduction
+- Scene 2: Concept Demonstration
+- Scene 3: Application/Example
+- Scene 4: Recap/Closing
+📌 Continuity Rule: The last frame of a scene becomes the first frame of the next.
+
+Output format:
+Return only a valid JSON array (no extra text).
+
+📌 Topic: Labels placed correctly at square corners for class 10 in English language
+
+[2025-11-10 16:03:59] [INFO] ```json
+[
+  {
+    "script_seq": 1,
+    "script_for_manim": [
+      "Start with a blank canvas.",
+      "Fade in a large, centered title: 'Labels at Square Corners: Class 10 English'.",
+      "Zoom out slightly to reveal a simple square shape below the title.",
+      "Animate four small, empty labels appearing at each corner of the square, initially overlapping the corners.",
+      "Move each label slightly outward to avoid overlapping, ensuring they are clearly visible."
+    ],
+    "script_voice_over": [
+      "Welcome to our lesson on placing labels correctly at square corners for Class 10 English.",
+      "Today, we’ll explore how to position labels neatly and effectively.",
+      "Let’s start with a basic square, a common shape in diagrams and illustrations.",
+      "Here, we have four labels, one at each corner of the square.",
+      "To ensure clarity, we’ll adjust their positions slightly, so they don’t overlap the corners."
+    ],
+    "script_length": 30
+  },
+  {
+    "script_seq": 2,
+    "script_for_manim": [
+      "Maintain the square and labels from Scene 1.",
+      "Highlight one label at a time, starting with the top-left corner.",
+      "Animate an arrow pointing from the label to the corner it represents.",
+      "Repeat for the top-right, bottom-right, and bottom-left labels, ensuring each arrow appears sequentially.",
+      "Fade out the arrows and zoom in on the square with labels for emphasis."
+    ],
+    "script_voice_over": [
+      "Each label corresponds to a specific corner of the square.",
+      "Let’s start with the top-left corner. This label clearly indicates its position.",
+      "Next, the top-right corner. Notice how the label is aligned for easy reading.",
+      "Moving to the bottom-right corner, the label remains distinct and visible.",
+      "Finally, the bottom-left corner. All labels are now clearly associated with their respective corners."
+    ],
+    "script_length": 35
+  },
+  {
+    "script_seq": 3,
+    "script_for_manim": [
+      "Fade out the square and labels from Scene 2.",
+      "Transition to a new scene with a map of a classroom, divided into four sections (top-left, top-right, bottom-right, bottom-left).",
+      "Place labels at each section’s corner, similar to the square example.",
+      "Animate students appearing in each section, pointing to the labels.",
+      "Zoom in on one section to show a student reading the label clearly."
+    ],
+    "script_voice_over": [
+      "Now, let’s apply this concept to a real-world example: a classroom map.",
+      "The classroom is divided into four sections, each with a label at its corner.",
+      "Students in each section can easily identify their location using these labels.",
+      "For instance, a student in the top-left section can quickly refer to the label for directions.",
+      "This method ensures clarity and organization in any setting."
+    ],
+    "script_length": 40
+  },
+  {
+    "script_seq": 4,
+    "script_for_manim": [
+      "Fade back to the square with labels from Scene 1.",
+      "Animate the labels shrinking slightly and becoming more polished in appearance.",
+      "Add a checklist appearing beside the square: '1. Place labels at corners. 2. Avoid overlapping. 3. Ensure clarity.'",
+      "Tick each item on the checklist sequentially as the narration progresses.",
+      "End with a final zoom out, displaying the title and square with labels, and fade to black."
+    ],
+    "script_voice_over": [
+      "To recap, placing labels correctly at square corners involves a few key steps.",
+      "First, position each label at its respective corner.",
+      "Second, ensure labels don’t overlap for better readability.",
+      "Third, maintain clarity so the labels serve their purpose effectively.",
+      "By following these steps, you’ll create neat and informative diagrams. Thank you for watching!"
+    ],
+    "script_length": 35
+  }
+]
+```
+[2025-11-10 16:04:00] [INFO] 📄 JSON saved at C:\Vivek_Main\Temp_Data\5642962e-5450-4e23-8181-74e0ca007808_20251110_160400\5642962e-5450-4e23-8181-74e0ca007808.json
+[2025-11-10 16:04:41] [INFO] ['1.\nYou are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).\nYour goal is to turn a provided topic script into a visually clear, accurate, and fully executable Python animation.\n\nFollow these CRITICAL INSTRUCTIONS exactly as described:\n- Maintain precise spatial geometry and proportions.\n- Use legible, non-overlapping text.\n- Include accurate math-based animation sequences.\n- Avoid redundant or commented-out code.\n\nNow, based on the following structured input:\n\nDEBUG: \nCATALOG: \nSCRIPT_SEQ: 1\nSCRIPT_FOR_MANIM: [\n  "Start with a blank canvas.",\n  "Fade in a large, centered title: \'Labels at Square Corners: Class 10 English\'.",\n  "Zoom out slightly to reveal a simple square shape below the title.",\n  "Animate four small, empty labels appearing at each corner of the square, initially overlapping the corners.",\n  "Move each label slightly outward to avoid overlapping, ensuring they are clearly visible."\n]\nSCRIPT_VOICE_OVER: [\n  "Welcome to our lesson on placing labels correctly at square corners for Class 10 English.",\n  "Today, we\\u2019ll explore how to position labels neatly and effectively.",\n  "Let\\u2019s start with a basic square, a common shape in diagrams and illustrations.",\n  "Here, we have four labels, one at each corner of the square.",\n  "To ensure clarity, we\\u2019ll adjust their positions slightly, so they don\\u2019t overlap the corners."\n]\nSCRIPT_LENGTH: 30\n\nGenerate the FULL Manim Python code that:\n- Follows all layout and animation rules.\n- Is executable and error-free.\n- Returns ONLY valid Python code (no Markdown or explanations).\n', '2.\nYou are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).\nYour goal is to turn a provided topic script into a visually clear, accurate, and fully executable Python animation.\n\nFollow these CRITICAL INSTRUCTIONS exactly as described:\n- Maintain precise spatial geometry and proportions.\n- Use legible, non-overlapping text.\n- Include accurate math-based animation sequences.\n- Avoid redundant or commented-out code.\n\nNow, based on the following structured input:\n\nDEBUG: \nCATALOG: \nSCRIPT_SEQ: 2\nSCRIPT_FOR_MANIM: [\n  "Maintain the square and labels from Scene 1.",\n  "Highlight one label at a time, starting with the top-left corner.",\n  "Animate an arrow pointing from the label to the corner it represents.",\n  "Repeat for the top-right, bottom-right, and bottom-left labels, ensuring each arrow appears sequentially.",\n  "Fade out the arrows and zoom in on the square with labels for emphasis."\n]\nSCRIPT_VOICE_OVER: [\n  "Each label corresponds to a specific corner of the square.",\n  "Let\\u2019s start with the top-left corner. This label clearly indicates its position.",\n  "Next, the top-right corner. Notice how the label is aligned for easy reading.",\n  "Moving to the bottom-right corner, the label remains distinct and visible.",\n  "Finally, the bottom-left corner. All labels are now clearly associated with their respective corners."\n]\nSCRIPT_LENGTH: 35\n\nGenerate the FULL Manim Python code that:\n- Follows all layout and animation rules.\n- Is executable and error-free.\n- Returns ONLY valid Python code (no Markdown or explanations).\n', '3.\nYou are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).\nYour goal is to turn a provided topic script into a visually clear, accurate, and fully executable Python animation.\n\nFollow these CRITICAL INSTRUCTIONS exactly as described:\n- Maintain precise spatial geometry and proportions.\n- Use legible, non-overlapping text.\n- Include accurate math-based animation sequences.\n- Avoid redundant or commented-out code.\n\nNow, based on the following structured input:\n\nDEBUG: \nCATALOG: \nSCRIPT_SEQ: 3\nSCRIPT_FOR_MANIM: [\n  "Fade out the square and labels from Scene 2.",\n  "Transition to a new scene with a map of a classroom, divided into four sections (top-left, top-right, bottom-right, bottom-left).",\n  "Place labels at each section\\u2019s corner, similar to the square example.",\n  "Animate students appearing in each section, pointing to the labels.",\n  "Zoom in on one section to show a student reading the label clearly."\n]\nSCRIPT_VOICE_OVER: [\n  "Now, let\\u2019s apply this concept to a real-world example: a classroom map.",\n  "The classroom is divided into four sections, each with a label at its corner.",\n  "Students in each section can easily identify their location using these labels.",\n  "For instance, a student in the top-left section can quickly refer to the label for directions.",\n  "This method ensures clarity and organization in any setting."\n]\nSCRIPT_LENGTH: 40\n\nGenerate the FULL Manim Python code that:\n- Follows all layout and animation rules.\n- Is executable and error-free.\n- Returns ONLY valid Python code (no Markdown or explanations).\n', '4.\nYou are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).\nYour goal is to turn a provided topic script into a visually clear, accurate, and fully executable Python animation.\n\nFollow these CRITICAL INSTRUCTIONS exactly as described:\n- Maintain precise spatial geometry and proportions.\n- Use legible, non-overlapping text.\n- Include accurate math-based animation sequences.\n- Avoid redundant or commented-out code.\n\nNow, based on the following structured input:\n\nDEBUG: \nCATALOG: \nSCRIPT_SEQ: 4\nSCRIPT_FOR_MANIM: [\n  "Fade back to the square with labels from Scene 1.",\n  "Animate the labels shrinking slightly and becoming more polished in appearance.",\n  "Add a checklist appearing beside the square: \'1. Place labels at corners. 2. Avoid overlapping. 3. Ensure clarity.\'",\n  "Tick each item on the checklist sequentially as the narration progresses.",\n  "End with a final zoom out, displaying the title and square with labels, and fade to black."\n]\nSCRIPT_VOICE_OVER: [\n  "To recap, placing labels correctly at square corners involves a few key steps.",\n  "First, position each label at its respective corner.",\n  "Second, ensure labels don\\u2019t overlap for better readability.",\n  "Third, maintain clarity so the labels serve their purpose effectively.",\n  "By following these steps, you\\u2019ll create neat and informative diagrams. Thank you for watching!"\n]\nSCRIPT_LENGTH: 35\n\nGenerate the FULL Manim Python code that:\n- Follows all layout and animation rules.\n- Is executable and error-free.\n- Returns ONLY valid Python code (no Markdown or explanations).\n']
+[2025-11-10 16:04:41] [INFO] [{'script_seq1': 'from manim import *\n\nclass SquareLabelsScene(Scene):\n    def construct(self):\n        # Start with a blank canvas\n        self.camera.background_color = WHITE\n\n        # Fade in a large, centered title\n        title = Text("Labels at Square Corners: Class 10 English", font_size=36)\n        title.set_color(BLACK)\n        self.play(FadeIn(title))\n        self.wait(1)\n\n        # Zoom out slightly to reveal a simple square shape below the title\n        square = Square(side_length=4, color=BLACK, stroke_width=2)\n        square.move_to(DOWN * 2)\n        self.play(self.camera.frame.animate.scale(1.2).move_to(title.get_center() + DOWN * 1.5))\n        self.play(Create(square))\n        self.wait(1)\n\n        # Animate four small, empty labels appearing at each corner of the square\n        labels = VGroup(\n            Text("Label 1", font_size=24).move_to(square.get_corner(UP + LEFT)),\n            Text("Label 2", font_size=24).move_to(square.get_corner(UP + RIGHT)),\n            Text("Label 3", font_size=24).move_to(square.get_corner(DOWN + RIGHT)),\n            Text("Label 4", font_size=24).move_to(square.get_corner(DOWN + LEFT))\n        ).set_color(BLACK)\n\n        self.play(FadeIn(labels, shift=OUT))\n        self.wait(1)\n\n        # Move each label slightly outward to avoid overlapping\n        label_positions = [\n            square.get_corner(UP + LEFT) + OUT * 0.5,\n            square.get_corner(UP + RIGHT) + OUT * 0.5,\n            square.get_corner(DOWN + RIGHT) + OUT * 0.5,\n            square.get_corner(DOWN + LEFT) + OUT * 0.5\n        ]\n\n        self.play(*[MoveAlongPath(label, Line(label.get_center(), pos)) for label, pos in zip(labels, label_positions)])\n        self.wait(2)'}, {'script_seq2': 'from manim import *\n\nclass SquareLabelAnimation(Scene):\n    def construct(self):\n        # Maintain the square and labels from Scene 1\n        square = Square(side_length=3, color=BLUE, fill_opacity=0.1)\n        labels = [\n            MathTex("Top-Left").move_to(square.get_corner(UP + LEFT) + 0.5 * UP + 0.5 * LEFT),\n            MathTex("Top-Right").move_to(square.get_corner(UP + RIGHT) + 0.5 * UP + 0.5 * RIGHT),\n            MathTex("Bottom-Right").move_to(square.get_corner(DOWN + RIGHT) + 0.5 * DOWN + 0.5 * RIGHT),\n            MathTex("Bottom-Left").move_to(square.get_corner(DOWN + LEFT) + 0.5 * DOWN + 0.5 * LEFT)\n        ]\n        \n        self.add(square, *labels)\n        \n        # Corners and corresponding labels\n        corners = [UP + LEFT, UP + RIGHT, DOWN + RIGHT, DOWN + LEFT]\n        label_texts = ["Top-Left", "Top-Right", "Bottom-Right", "Bottom-Left"]\n        \n        for i, (corner, label_text) in enumerate(zip(corners, label_texts)):\n            # Highlight one label at a time\n            label = labels[i]\n            label_highlight = SurroundingRectangle(label, color=YELLOW, buff=0.2)\n            self.play(ShowCreation(label_highlight))\n            \n            # Animate an arrow pointing from the label to the corner\n            arrow = Arrow(label.get_bottom(), square.get_corner(corner), buff=0.1, color=GREEN)\n            self.play(GrowArrow(arrow))\n            \n            # Voiceover\n            self.wait(1)\n            if i == 0:\n                self.play(FadeOut(label_highlight), FadeOut(arrow))\n            else:\n                self.remove(label_highlight, arrow)\n            \n            # Fade out previous arrow if not the first iteration\n            if i > 0:\n                self.remove(arrows[-1])\n            \n            arrows.append(arrow)\n        \n        # Fade out all arrows\n        self.play(FadeOut(VGroup(*arrows)))\n        \n        # Zoom in on the square with labels for emphasis\n        self.play(self.camera.frame.animate.scale(0.7).move_to(square))\n        self.wait(2)'}, {'script_seq3': 'from manim import *\n\nclass ClassroomMapScene(Scene):\n    def construct(self):\n        # Fade out the square and labels from Scene 2 (assuming they exist)\n        self.play(FadeOut(self.get_mobjects()))\n\n        # Transition to a new scene with a map of a classroom\n        classroom = Rectangle(width=8, height=6, stroke_width=2)\n        sections = VGroup(\n            Rectangle(width=4, height=3).move_to(UP + LEFT),\n            Rectangle(width=4, height=3).move_to(UP + RIGHT),\n            Rectangle(width=4, height=3).move_to(DOWN + RIGHT),\n            Rectangle(width=4, height=3).move_to(DOWN + LEFT)\n        )\n        labels = VGroup(\n            Text("Top-Left", font_size=24).move_to(UP + LEFT),\n            Text("Top-Right", font_size=24).move_to(UP + RIGHT),\n            Text("Bottom-Right", font_size=24).move_to(DOWN + RIGHT),\n            Text("Bottom-Left", font_size=24).move_to(DOWN + LEFT)\n        )\n\n        self.play(Create(classroom))\n        self.play(Create(sections))\n        self.play(Write(labels))\n\n        # Animate students appearing in each section, pointing to the labels\n        students = VGroup(\n            Dot().move_to(UP + LEFT),\n            Dot().move_to(UP + RIGHT),\n            Dot().move_to(DOWN + RIGHT),\n            Dot().move_to(DOWN + LEFT)\n        )\n        arrows = VGroup(\n            Arrow(students[0].get_center() + 0.5*UP + 0.5*LEFT, labels[0].get_center()),\n            Arrow(students[1].get_center() + 0.5*UP + 0.5*RIGHT, labels[1].get_center()),\n            Arrow(students[2].get_center() + 0.5*DOWN + 0.5*RIGHT, labels[2].get_center()),\n            Arrow(students[3].get_center() + 0.5*DOWN + 0.5*LEFT, labels[3].get_center())\n        )\n\n        self.play(*[Create(student) for student in students])\n        self.play(*[Create(arrow) for arrow in arrows])\n\n        # Zoom in on one section to show a student reading the label clearly\n        self.play(CameraFrame.move_to, sections[0].get_center(), run_time=2)\n        self.wait(2)\n        self.play(Indicate(labels[0]), run_time=2)\n\n        # Voiceover synchronization (assuming you have a voiceover file or will add it later)\n        self.wait(40)'}, {'script_seq4': 'from manim import *\n\nclass ChecklistScene(Scene):\n    def construct(self):\n        # Fade back to the square with labels from Scene 1\n        square = Square(side_length=4, color=BLUE).move_to(ORIGIN)\n        labels = [\n            MathTex("A").move_to(square.get_corner(UP + LEFT) + OUT * 0.2),\n            MathTex("B").move_to(square.get_corner(UP + RIGHT) + OUT * 0.2),\n            MathTex("C").move_to(square.get_corner(DOWN + RIGHT) + OUT * 0.2),\n            MathTex("D").move_to(square.get_corner(DOWN + LEFT) + OUT * 0.2),\n        ]\n        self.play(FadeIn(square), *[Write(label) for label in labels])\n        self.wait(1)\n\n        # Animate labels shrinking and becoming more polished\n        polished_labels = [label.copy().scale(0.8).set_color(WHITE) for label in labels]\n        self.play(*[Transform(labels[i], polished_labels[i]) for i in range(4)], run_time=1)\n        self.wait(1)\n\n        # Add checklist\n        checklist = VGroup(\n            Text("1. Place labels at corners.", font_size=24),\n            Text("2. Avoid overlapping.", font_size=24),\n            Text("3. Ensure clarity.", font_size=24),\n        ).arrange(DOWN, aligned_edge=LEFT).next_to(square, RIGHT, buff=1.5)\n        ticks = [\n            SVGMobject("checkmark.svg").scale(0.5).next_to(checklist[i], LEFT, buff=0.5)\n            for i in range(3)\n        ]\n        for i in range(3):\n            ticks[i].set_stroke(GREEN, 5)\n            ticks[i].set_fill(GREEN, opacity=1)\n            ticks[i].move_to(checklist[i].get_left() + LEFT * 0.5)\n\n        # Animate checklist and ticks\n        self.play(Write(checklist[0]))\n        self.play(FadeIn(ticks[0]))\n        self.wait(1)\n        self.play(Write(checklist[1]))\n        self.play(FadeIn(ticks[1]))\n        self.wait(1)\n        self.play(Write(checklist[2]))\n        self.play(FadeIn(ticks[2]))\n        self.wait(1)\n\n        # Final zoom out and fade to black\n        title = Text("Labeling Square Corners", font_size=36).to_edge(UP)\n        self.play(Write(title))\n        self.play(\n            self.camera.frame.animate.set(width=8).move_to(square),\n            run_time=2,\n        )\n        self.wait(1)\n        self.play(FadeOut(square, *labels, checklist, *ticks, title))'}]
+[2025-11-10 16:04:42] [INFO] 🎬 Generated Manim Code Successfully

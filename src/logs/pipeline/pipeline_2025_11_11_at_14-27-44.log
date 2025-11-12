@@ -1,0 +1,415 @@
+[2025-11-11 14:30:41] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/a8d96064-4e8d-4f04-8675-0fe111f78ddc_20251111_143022/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Vivek_Main\tutter\.venv\Scripts\manim.exe\__main__.py", line 4, in <module>
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\__init__.py", line 13, in <module>
+    from ._config import *
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\_config\__init__.py", line 12, in <module>
+    from .utils import ManimConfig, ManimFrame, make_config_parser
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\_config\utils.py", line 31, in <module>
+    from manim.utils.color import ManimColor
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\utils\color\__init__.py", line 55, in <module>
+    from . import AS2700, BS381, DVIPSNAMES, SVGNAMES, X11, XKCD
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\utils\color\AS2700.py", line 29, in <module>
+    from .core import ManimColor
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\utils\color\core.py", line 100, in <module>
+    from ...utils.space_ops import normalize
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\utils\space_ops.py", line 11, in <module>
+    from scipy.spatial.transform import Rotation
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\scipy\spatial\__init__.py", line 119, in <module>
+    from . import ckdtree, kdtree, qhull
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1032, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1131, in get_data
+KeyboardInterrupt
+^C
+
+STDOUT:
+(no stdout)
+──────────────────────────────────────────────
+
+[2025-11-11 14:32:23] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\generator_routes.py", line 28, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 12, in async_post
+    resp = await client.post(url, json=payload, headers={"Content-Type": "application/json"})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+[2025-11-11 14:32:24] [ERROR] ❌ HTTP 500: {"detail":""}
+[2025-11-11 14:33:15] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/a8d96064-4e8d-4f04-8675-0fe111f78ddc_20251111_143022/script_seq3/script_seq3.py
+──────────────────────────────────────────────
+STDERR:
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\a8d96064-4e8d-4f04-8675-0fe111f78ddc_2 |
+| 0251111_143022\script_seq3\script_seq3.py:43 in construct                   |
+|                                                                             |
+|   40                 *[FadeIn(sq) for sq in grid],                          |
+|   41                 lag_ratio=0.1                                          |
+|   42             ),                                                         |
+| > 43             self.camera.frame.animate.scale(1.5).move_to(grid),        |
+|   44             run_time=3                                                 |
+|   45         )                                                              |
+|   46         self.wait(1)                                                   |
++-----------------------------------------------------------------------------+
+AttributeError: 'Camera' object has no attribute 'frame'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/11/25 14:32:13] INFO     Writing A to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\90f07b07e57adf79.tex                           
+[11/11/25 14:32:16] INFO     Writing B to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\d82288bb87e99d59.tex                           
+[11/11/25 14:32:19] INFO     Writing C to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\86474863bfdee3e7.tex                           
+[11/11/25 14:32:22] INFO     Writing D to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\265843fdb06dea70.tex                           
+[11/11/25 14:32:26] INFO     Writing AA1 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\873f3054ba2c787d.tex                           
+[11/11/25 14:32:28] INFO     Writing BA2 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\0e01d2e2c0258096.tex                           
+[11/11/25 14:32:31] INFO     Writing BB3 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\b08a16653b45daf5.tex                           
+[11/11/25 14:32:33] INFO     Writing AB4 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\5f7db6c194eb2e1c.tex                           
+[11/11/25 14:32:36] INFO     Writing AB1 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\fab12d1c6d6ab99f.tex                           
+[11/11/25 14:32:38] INFO     Writing BB2 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\f0175e69cb0cb8d6.tex                           
+[11/11/25 14:32:40] INFO     Writing BC3 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\175e141a44aab441.tex                           
+[11/11/25 14:32:43] INFO     Writing AC4 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\5a5e1d3f44270f99.tex                           
+[11/11/25 14:32:45] INFO     Writing AC1 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\d120c81f42dfe2c3.tex                           
+[11/11/25 14:32:48] INFO     Writing BC2 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\ccedfcdd7151e360.tex                           
+[11/11/25 14:32:51] INFO     Writing BD3 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\25199c21c623a1e2.tex                           
+[11/11/25 14:32:54] INFO     Writing AD4 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\a0aa01c085bf473a.tex                           
+                    INFO     Writing BA1 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\63f4c034dc54ecfe.tex                           
+[11/11/25 14:32:55] INFO     Writing CA2 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\953f61851d127afd.tex                           
+[11/11/25 14:32:56] INFO     Writing CB3 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\9d559670edc1b24a.tex                           
+[11/11/25 14:32:57] INFO     Writing BB4 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\feaa6452cbbb953f.tex                           
+[11/11/25 14:32:58] INFO     Writing BB1 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\eda3850fd7b7737f.tex                           
+[11/11/25 14:32:59] INFO     Writing CB2 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\f232e84a6e218bac.tex                           
+[11/11/25 14:33:00] INFO     Writing CC3 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\20edb5f21eeda8bd.tex                           
+[11/11/25 14:33:01] INFO     Writing BC4 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\270fe7ae5481653d.tex                           
+[11/11/25 14:33:02] INFO     Writing BC1 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\5c31a3973a9712ed.tex                           
+                    INFO     Writing CC2 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\6c57cc727c20baaf.tex                           
+[11/11/25 14:33:03] INFO     Writing CD3 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\2fd5447faa94a74e.tex                           
+[11/11/25 14:33:04] INFO     Writing BD4 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\cc1b4a5c0bac32f0.tex                           
+[11/11/25 14:33:05] INFO     Writing CA1 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\886fc900509a6e34.tex                           
+[11/11/25 14:33:06] INFO     Writing DA2 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\961ebf66736b4cc2.tex                           
+                    INFO     Writing DB3 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\114c6e9179a5f698.tex                           
+[11/11/25 14:33:07] INFO     Writing CB4 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\b85b708d9df7f165.tex                           
+[11/11/25 14:33:08] INFO     Writing CB1 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\2642b881a6aa70a1.tex                           
+[11/11/25 14:33:09] INFO     Writing DB2 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\b65d35fff0086cc6.tex                           
+[11/11/25 14:33:10] INFO     Writing DC3 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\30de0b9df424ef6c.tex                           
+[11/11/25 14:33:11] INFO     Writing CC4 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\31af3121e0d042b6.tex                           
+                    INFO     Writing CC1 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\865aeb637cccf981.tex                           
+[11/11/25 14:33:12] INFO     Writing DC2 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\e992e18f5d0199ff.tex                           
+[11/11/25 14:33:13] INFO     Writing DD3 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\1ac3ee72d5245022.tex                           
+[11/11/25 14:33:14] INFO     Writing CD4 to             tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\a8d96064-4e8d-                        
+                             4f04-8675-0fe111f78ddc_202                        
+                             51111_143022\script_seq3\T                        
+                             ex\e2a9bbb006765589.tex
+──────────────────────────────────────────────
+
+[2025-11-11 14:33:32] [ERROR] ❌ Video and audio lists must have the same length
+[2025-11-11 14:33:32] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\video_routes.py", line 32, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\main.py", line 61, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\merger_factory.py", line 261, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\merger_factory.py", line 136, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-11 14:33:32] [ERROR] ❌ HTTP 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-11 14:33:32] [ERROR] ❌ Error writing scripts
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\write_routes.py", line 40, in write_scripts
+    video_result = await async_post(video_url, {"path": str(folder),"unique_id":data.unique_id}, timeout=300)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"Video and audio lists must have the same length"}

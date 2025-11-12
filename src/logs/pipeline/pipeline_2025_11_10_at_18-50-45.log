@@ -1,0 +1,18 @@
+[2025-11-10 18:52:01] [ERROR] ❌ Error writing scripts
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\write_routes.py", line 23, in write_scripts
+    for item in data.root:
+                ^^^^^^^^^
+  File "C:\Vivek_Main\tutter\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'GenerateFilesRequest' object has no attribute 'root'
+[2025-11-10 18:52:01] [ERROR] ❌ HTTP 500: {"detail":"'GenerateFilesRequest' object has no attribute 'root'"}
+[2025-11-10 18:52:02] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\generator_routes.py", line 25, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"'GenerateFilesRequest' object has no attribute 'root'"}
+[2025-11-10 18:52:02] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"'GenerateFilesRequest' object has no attribute 'root'\"}"}

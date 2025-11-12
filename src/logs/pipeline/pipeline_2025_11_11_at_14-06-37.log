@@ -1,0 +1,7 @@
+[2025-11-11 14:07:52] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\generator_routes.py", line 25, in generate_code_endpoint
+    transaction(unique_id, code_gen ="Generated Manim Code Successfully")
+                ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'unique_id' where it is not associated with a value
+[2025-11-11 14:07:52] [ERROR] ❌ HTTP 500: {"detail":"cannot access local variable 'unique_id' where it is not associated with a value"}

@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_152406/script_seq3/videos/script_seq3/480p15/partial_movie_files/SquareLabelAnimation/1185818338_4185489736_223132457.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_152406/script_seq3/videos/script_seq3/480p15/partial_movie_files/SquareLabelAnimation/624642324_194111248_672950610.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_152406/script_seq3/videos/script_seq3/480p15/partial_movie_files/SquareLabelAnimation/624642324_637468518_539632524.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_152406/script_seq3/videos/script_seq3/480p15/partial_movie_files/SquareLabelAnimation/624642324_1957056858_114122777.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_152406/script_seq3/videos/script_seq3/480p15/partial_movie_files/SquareLabelAnimation/624642324_1967921387_948453018.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_152406/script_seq3/videos/script_seq3/480p15/partial_movie_files/SquareLabelAnimation/624642324_669939813_2339542383.mp4'
+file 'file:C:/Vivek_Main/tutter/src/media/videos/input_data_20251106_152406/script_seq3/videos/script_seq3/480p15/partial_movie_files/SquareLabelAnimation/624642324_2844360058_2098378128.mp4'

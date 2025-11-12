@@ -1,0 +1,331 @@
+[2025-11-04 14:54:30] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251104_145257/script_seq_2/script_seq_2.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: Create(Circle):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: Create(Circle):  80%|########  | 12/15 [00:00<00:00, 114.24it/s]
+                                                                             
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\input_data_20251104_145257\script_seq_ |
+| 2\script_seq_2.py:11 in construct                                           |
+|                                                                             |
+|    8         self.wait(1)                                                   |
+|    9                                                                        |
+|   10         # Zoom in on the circle                                        |
+| > 11         self.play(CameraFrame.scale, 0.5, run_time=2)                  |
+|   12         self.wait(1)                                                   |
+|   13                                                                        |
+|   14         # Add point P on the circle's edge                             |
++-----------------------------------------------------------------------------+
+NameError: name 'CameraFrame' is not defined
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/04/25 14:54:29] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_145257\script_se                         
+                             q_2\videos\script_seq_2\4                         
+                             80p15\partial_movie_files                         
+                             \CircleAnimation\11858183                         
+                             38_359695016_223132457.mp                         
+                             4'                                                
+                    INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_145257\script_se                         
+                             q_2\videos\script_seq_2\4                         
+                             80p15\partial_movie_files                         
+                             \CircleAnimation\62464232                         
+                             4_4217992463_149792949.mp                         
+                             4'
+──────────────────────────────────────────────
+
+[2025-11-04 14:54:40] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251104_145257/script_seq_3/script_seq_3.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: Create(Circle):   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                   
+
+Animation 1: FadeIn(Group):   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                  
+
+Animation 3: FadeOut(Group):   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                   
+
+Animation 5: Create(Line):   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                 
+
+Animation 7: Create(Line):   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                 
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\input_data_20251104_145257\script_seq_ |
+| 3\script_seq_3.py:35 in construct                                           |
+|                                                                             |
+|   32                                                                        |
+|   33         # Highlight center point with glowing effect                   |
+|   34         center_dot = Dot(center).set_color(ORANGE)                     |
+| > 35         self.play(FadeIn(center_dot), center_dot.animate.set_glow(glow |
+|   36         self.wait(1)                                                   |
+|   37                                                                        |
+|   38         # Draw radii OA and OB                                         |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\mobject\mobject.py:3088  |
+| in update_target                                                            |
+|                                                                             |
+|   3085                 )                                                    |
+|   3086             else:                                                    |
+|   3087                 self.methods.append([method, method_args, method_kwa |
+| > 3088                 method(*method_args, **method_kwargs)                |
+|   3089             return self                                              |
+|   3090                                                                      |
+|   3091         self.is_chaining = True                                      |
++-----------------------------------------------------------------------------+
+TypeError: Mobject.__getattr__.<locals>.setter() got an unexpected keyword 
+argument 'glow_factor'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/04/25 14:54:39] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_145257\script_se                         
+                             q_3\videos\script_seq_3\4                         
+                             80p15\partial_movie_files                         
+                             \CircleChordAnimation\118                         
+                             5818338_359695016_2231324                         
+                             57.mp4'                                           
+                    INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_145257\script_se                         
+                             q_3\videos\script_seq_3\4                         
+                             80p15\partial_movie_files                         
+                             \CircleChordAnimation\624                         
+                             642324_2690138645_3425753                         
+                             932.mp4'                                          
+                    INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_145257\script_se                         
+                             q_3\videos\script_seq_3\4                         
+                             80p15\partial_movie_files                         
+                             \CircleChordAnimation\624                         
+                             642324_4217992463_1362299                         
+                             444.mp4'                                          
+                    INFO     Animation 3 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_145257\script_se                         
+                             q_3\videos\script_seq_3\4                         
+                             80p15\partial_movie_files                         
+                             \CircleChordAnimation\624                         
+                             642324_816889691_70674585                         
+                             .mp4'                                             
+                    INFO     Animation 4 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_145257\script_se                         
+                             q_3\videos\script_seq_3\4                         
+                             80p15\partial_movie_files                         
+                             \CircleChordAnimation\624                         
+                             642324_4217992463_6198897                         
+                             9.mp4'                                            
+                    INFO     Animation 5 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_145257\script_se                         
+                             q_3\videos\script_seq_3\4                         
+                             80p15\partial_movie_files                         
+                             \CircleChordAnimation\624                         
+                             642324_3832433557_1375674                         
+                             117.mp4'                                          
+                    INFO     Animation 6 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_145257\script_se                         
+                             q_3\videos\script_seq_3\4                         
+                             80p15\partial_movie_files                         
+                             \CircleChordAnimation\624                         
+                             642324_4217992463_1757269                         
+                             206.mp4'                                          
+[11/04/25 14:54:40] INFO     Animation 7 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_145257\script_se                         
+                             q_3\videos\script_seq_3\4                         
+                             80p15\partial_movie_files                         
+                             \CircleChordAnimation\624                         
+                             642324_1860327410_3329351                         
+                             359.mp4'                                          
+                    INFO     Animation 8 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_145257\script_se                         
+                             q_3\videos\script_seq_3\4                         
+                             80p15\partial_movie_files                         
+                             \CircleChordAnimation\624                         
+                             642324_4217992463_1177966                         
+                             118.mp4'
+──────────────────────────────────────────────
+
+[2025-11-04 14:54:54] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251104_145257/script_seq_4/script_seq_4.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: Create(Circle), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: Create(Circle), etc.:  80%|########  | 12/15 [00:00<00:00, 119.75it/s]
+                                                                                   
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\input_data_20251104_145257\script_seq_ |
+| 4\script_seq_4.py:18 in construct                                           |
+|                                                                             |
+|   15         self.wait(1)                                                   |
+|   16                                                                        |
+|   17         # Zoom out to show full circle                                 |
+| > 18         self.play(CameraFrame.scale, 1.5, {"about_point": circle.get_c |
+|   19                                                                        |
+|   20         # Fade in summary text                                         |
+|   21         summary_text = Text("Key Points: Center, Radius, Chord", font_ |
++-----------------------------------------------------------------------------+
+NameError: name 'CameraFrame' is not defined
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/04/25 14:54:53] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_145257\script_se                         
+                             q_4\videos\script_seq_4\4                         
+                             80p15\partial_movie_files                         
+                             \CircleAnimation\11858183                         
+                             38_330340002_223132457.mp                         
+                             4'                                                
+                    INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_145257\script_se                         
+                             q_4\videos\script_seq_4\4                         
+                             80p15\partial_movie_files                         
+                             \CircleAnimation\62464232                         
+                             4_4217992463_2499495646.m                         
+                             p4'
+──────────────────────────────────────────────
+
+[2025-11-04 14:54:54] [ERROR] ❌ Video and audio lists must have the same length
+[2025-11-04 14:54:54] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\video_routes.py", line 29, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\main.py", line 56, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\merger_factory.py", line 261, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\merger_factory.py", line 136, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-04 14:54:54] [ERROR] ❌ HTTP 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-04 14:54:54] [ERROR] ❌ Error writing scripts
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\write_routes.py", line 27, in write_scripts
+    video_result = await async_post(video_url, {"path": str(folder)}, timeout=300)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 14, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-04 14:54:54] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-04 14:54:54] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\generator_routes.py", line 20, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 14, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-04 14:54:54] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: {\\\"detail\\\":\\\"Video and audio lists must have the same length\\\"}\"}"}

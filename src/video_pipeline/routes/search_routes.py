@@ -7,10 +7,12 @@ from logger import pipeline_logger
 import asyncio, json
 from config import Settings
 from typing import Optional
+import uuid
+from Transaction.transaction_handler import transaction
 
 router = APIRouter(prefix="", tags=["Script Generation"])
 
-API_KEY = "ItjCVeX2H4je76T4Az0yQGnjISqZhD3IrKWj6ebq"
+API_KEY = "dZfHrqzrU2lw32MX2RPRiG8ARSKqavpiqpLsU2b0"
 
 
 # 🧩 Request Model (no mock flag)
@@ -33,15 +35,20 @@ async def search(request: SearchRequest):
         topic = request.topic
         class_level = request.class_
         language = request.language
+        unique_id = str(uuid.uuid4())
+        pipeline_logger.info(f"Transaction ID {unique_id}")
+        
 
         pipeline_logger.info(f"🧠 Generating script for topic='{topic}', class='{class_level}'")
+        
 
         # === Step 1️⃣: Initialize Cohere generator
-        generator = ScriptGeneratorFactory.get_generator("cohere", api_key=API_KEY)
+        generator = ScriptGeneratorFactory.get_generator("cohere", api_key=API_KEY )
 
         # === Step 2️⃣: Generate the storytelling JSON
         full_prompt = f"{topic} for class {class_level} in {language} language"
-        raw_script = generator.generate_script(full_prompt)
+
+        raw_script = generator.generate_script(full_prompt,unique_id )
 
         # === Step 3️⃣: Clean up and parse JSON safely
         cleaned_script = (
@@ -50,11 +57,18 @@ async def search(request: SearchRequest):
             .removeprefix("```").removesuffix("```").strip()
         )
 
+        transaction(unique_id, topic=topic, meta_prompt=full_prompt, cleaned_script=cleaned_script)
+
         try:
-            parsed_json = json.loads(cleaned_script)
+            input_data = []
+            parsed_json = {
+                        "input_data": json.loads(cleaned_script),
+                        "unique_id": unique_id
+                    }
         except json.JSONDecodeError as je:
             pipeline_logger.error(f"⚠️ Invalid JSON output from Cohere: {je}")
             raise HTTPException(status_code=400, detail="Generated script is not valid JSON")
+        
 
         # === Step 4️⃣: Send data to internal APIs
         gen_url = f"{Settings.IP_ADDRESS}/generate-files-api"
@@ -68,8 +82,9 @@ async def search(request: SearchRequest):
 
         # === Step 5️⃣: Final response
         pipeline_logger.info(f"✅ Script pipeline completed successfully for topic='{topic}'")
+        
 
-        return {
+        result = {
             "status": "success",
             "topic": topic,
             "class": class_level,
@@ -78,8 +93,14 @@ async def search(request: SearchRequest):
             "manim_code_generation": code_resp,
         }
 
+
+
+
+        return result
+
     except HTTPException:
         raise
     except Exception as e:
-        pipeline_logger.exception("❌ Unexpected error in /search endpoint")
+        pipeline_logger.info(f"❌ Script pipeline completed unsuccessfully for topic='{topic}'")
+        pipeline_logger.exception("❌ Unexpected error in /search endpoint",extra={"part_name": "SearchRoutes"})
         raise HTTPException(status_code=500, detail=f"Internal Error: {str(e)}")

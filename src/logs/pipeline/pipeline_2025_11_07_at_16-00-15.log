@@ -1,0 +1,288 @@
+[2025-11-07 16:01:18] [INFO] Transaction ID c94d7d6c-517a-4fc6-b512-3b4ec21c6a0f
+[2025-11-07 16:01:18] [INFO] 🧠 Generating script for topic='Labels placed correctly at square corners', class='10'
+[2025-11-07 16:01:19] [INFO] prompt 
+You are an expert in storytelling and Manim Community Edition animation design.
+Your task:
+Generate a JSON script that describes the full video in a step-by-step, highly detailed way.
+Each scene/sequence should have a flexible length between 25 to 45 seconds.
+You can break the video into multiple sequences/scenes if needed to explain the concept clearly.
+Narration and animations must be tightly synchronized:
+Step i in "script_for_manim" must align exactly with step i in "script_voice_over".
+Ensure pacing: narration should match animation timing naturally.
+"script_length" should reflect the realistic duration of each scene.
+
+Each JSON object must include:
+- "script_seq" → scene number.
+- "script_for_manim" → array of detailed English animation steps (no Manim code).
+- "script_voice_over" → array of narration lines aligned step-by-step with visuals.
+- "script_length" → approximate duration of the scene (25–45 seconds).
+
+Rules:
+- Use descriptive English for visuals (no code).
+- Narration must align with visuals.
+- Describe each animation step precisely.
+- Break complex ideas into smaller, smooth transitions.
+- Maintain consistent references between scenes.
+- Scene 1: Introduction
+- Scene 2: Concept Demonstration
+- Scene 3: Application/Example
+- Scene 4: Recap/Closing
+📌 Continuity Rule: The last frame of a scene becomes the first frame of the next.
+
+Output format:
+Return only a valid JSON array (no extra text).
+
+📌 Topic: Labels placed correctly at square corners for class 10 in English language
+
+[2025-11-07 16:01:33] [INFO] script ```json
+[
+  {
+    "script_seq": 1,
+    "script_for_manim": [
+      "Start with a blank canvas.",
+      "Fade in a large, centered title: 'Labels at Square Corners: Class 10 English'.",
+      "Zoom out slightly to reveal a simple square shape below the title.",
+      "Animate four small, empty labels appearing at each corner of the square, initially overlapping the corners.",
+      "Move each label slightly outward to position them correctly at the corners without overlapping."
+    ],
+    "script_voice_over": [
+      "Welcome to our lesson on placing labels correctly at square corners for Class 10 English.",
+      "Today, we’ll learn how to position labels neatly and accurately at the corners of a square.",
+      "Let’s start with a basic square and see how labels can be placed effectively.",
+      "Here, we have four labels, one at each corner of the square.",
+      "By adjusting their position, we ensure they are clearly visible and do not overlap the square’s edges."
+    ],
+    "script_length": 35
+  },
+  {
+    "script_seq": 2,
+    "script_for_manim": [
+      "Maintain the square with labels from Scene 1.",
+      "Highlight one label at a time, starting with the top-left corner, and animate a dashed line connecting it to the corner.",
+      "Repeat for the top-right, bottom-right, and bottom-left corners.",
+      "Zoom in on one corner to show the label’s alignment in detail.",
+      "Zoom back out to show all corners with labels aligned perfectly."
+    ],
+    "script_voice_over": [
+      "Let’s focus on each label individually to understand their placement.",
+      "Starting with the top-left corner, the label is aligned precisely at the corner.",
+      "Similarly, the top-right, bottom-right, and bottom-left labels are positioned accurately.",
+      "Zooming in, we see how each label is perfectly aligned with its respective corner.",
+      "Zooming back out, all labels are now clearly placed at their designated corners."
+    ],
+    "script_length": 30
+  },
+  {
+    "script_seq": 3,
+    "script_for_manim": [
+      "Replace the square with a map of a classroom with four tables arranged in a square.",
+      "Animate labels appearing at the corners of the table arrangement, representing student names.",
+      "Show a teacher figure pointing to each label as it appears.",
+      "Highlight each label briefly as the teacher points to it.",
+      "End with all labels visible and the teacher nodding in approval."
+    ],
+    "script_voice_over": [
+      "Now, let’s apply this concept to a real-world example: labeling tables in a classroom.",
+      "Imagine four tables arranged in a square, each with a student’s name labeled at the corners.",
+      "As the teacher points to each table, the corresponding label appears clearly at the corner.",
+      "This ensures students can easily identify their seats without confusion.",
+      "With all labels in place, the classroom is organized and ready for learning."
+    ],
+    "script_length": 40
+  },
+  {
+    "script_seq": 4,
+    "script_for_manim": [
+      "Return to the original square with labels from Scene 1.",
+      "Animate the labels fading out one by one, starting with the top-left corner.",
+      "Once all labels are gone, shrink the square and move it to one side of the screen.",
+      "Fade in a summary text: 'Key Points: Labels at Corners – Clear, Precise, and Organized'.",
+      "End with the square and summary text side by side, then fade out slowly."
+    ],
+    "script_voice_over": [
+      "To recap, placing labels at square corners is all about clarity and precision.",
+      "Whether it’s a simple square or a classroom setup, labels should be positioned accurately.",
+      "This ensures they are easily readable and do not overlap with the main shape.",
+      "Remember: clear, precise, and organized labeling makes communication effective.",
+      "Thank you for watching, and happy labeling!"
+    ],
+    "script_length": 35
+  }
+]
+```
+[2025-11-07 16:01:33] [INFO] 🚀 Sending generated script to /generate-files-api and /Generator ...
+[2025-11-07 16:01:38] [INFO] Final prompt  
+You are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).
+Your goal is to turn a provided topic script into a visually clear, accurate, and fully executable Python animation.
+
+Follow these CRITICAL INSTRUCTIONS exactly as described:
+- Maintain precise spatial geometry and proportions.
+- Use legible, non-overlapping text.
+- Include accurate math-based animation sequences.
+- Avoid redundant or commented-out code.
+
+Now, based on the following structured input:
+
+DEBUG: 
+CATALOG: 
+SCRIPT_SEQ: 1
+SCRIPT_FOR_MANIM: [
+  "Start with a blank canvas.",
+  "Fade in a large, centered title: 'Labels at Square Corners: Class 10 English'.",
+  "Zoom out slightly to reveal a simple square shape below the title.",
+  "Animate four small, empty labels appearing at each corner of the square, initially overlapping the corners.",
+  "Move each label slightly outward to position them correctly at the corners without overlapping."
+]
+SCRIPT_VOICE_OVER: [
+  "Welcome to our lesson on placing labels correctly at square corners for Class 10 English.",
+  "Today, we\u2019ll learn how to position labels neatly and accurately at the corners of a square.",
+  "Let\u2019s start with a basic square and see how labels can be placed effectively.",
+  "Here, we have four labels, one at each corner of the square.",
+  "By adjusting their position, we ensure they are clearly visible and do not overlap the square\u2019s edges."
+]
+SCRIPT_LENGTH: 35
+
+Generate the FULL Manim Python code that:
+- Follows all layout and animation rules.
+- Is executable and error-free.
+- Returns ONLY valid Python code (no Markdown or explanations).
+
+[2025-11-07 16:01:47] [INFO] Final prompt  
+You are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).
+Your goal is to turn a provided topic script into a visually clear, accurate, and fully executable Python animation.
+
+Follow these CRITICAL INSTRUCTIONS exactly as described:
+- Maintain precise spatial geometry and proportions.
+- Use legible, non-overlapping text.
+- Include accurate math-based animation sequences.
+- Avoid redundant or commented-out code.
+
+Now, based on the following structured input:
+
+DEBUG: 
+CATALOG: 
+SCRIPT_SEQ: 2
+SCRIPT_FOR_MANIM: [
+  "Maintain the square with labels from Scene 1.",
+  "Highlight one label at a time, starting with the top-left corner, and animate a dashed line connecting it to the corner.",
+  "Repeat for the top-right, bottom-right, and bottom-left corners.",
+  "Zoom in on one corner to show the label\u2019s alignment in detail.",
+  "Zoom back out to show all corners with labels aligned perfectly."
+]
+SCRIPT_VOICE_OVER: [
+  "Let\u2019s focus on each label individually to understand their placement.",
+  "Starting with the top-left corner, the label is aligned precisely at the corner.",
+  "Similarly, the top-right, bottom-right, and bottom-left labels are positioned accurately.",
+  "Zooming in, we see how each label is perfectly aligned with its respective corner.",
+  "Zooming back out, all labels are now clearly placed at their designated corners."
+]
+SCRIPT_LENGTH: 30
+
+Generate the FULL Manim Python code that:
+- Follows all layout and animation rules.
+- Is executable and error-free.
+- Returns ONLY valid Python code (no Markdown or explanations).
+
+[2025-11-07 16:01:56] [INFO] Final prompt  
+You are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).
+Your goal is to turn a provided topic script into a visually clear, accurate, and fully executable Python animation.
+
+Follow these CRITICAL INSTRUCTIONS exactly as described:
+- Maintain precise spatial geometry and proportions.
+- Use legible, non-overlapping text.
+- Include accurate math-based animation sequences.
+- Avoid redundant or commented-out code.
+
+Now, based on the following structured input:
+
+DEBUG: 
+CATALOG: 
+SCRIPT_SEQ: 3
+SCRIPT_FOR_MANIM: [
+  "Replace the square with a map of a classroom with four tables arranged in a square.",
+  "Animate labels appearing at the corners of the table arrangement, representing student names.",
+  "Show a teacher figure pointing to each label as it appears.",
+  "Highlight each label briefly as the teacher points to it.",
+  "End with all labels visible and the teacher nodding in approval."
+]
+SCRIPT_VOICE_OVER: [
+  "Now, let\u2019s apply this concept to a real-world example: labeling tables in a classroom.",
+  "Imagine four tables arranged in a square, each with a student\u2019s name labeled at the corners.",
+  "As the teacher points to each table, the corresponding label appears clearly at the corner.",
+  "This ensures students can easily identify their seats without confusion.",
+  "With all labels in place, the classroom is organized and ready for learning."
+]
+SCRIPT_LENGTH: 40
+
+Generate the FULL Manim Python code that:
+- Follows all layout and animation rules.
+- Is executable and error-free.
+- Returns ONLY valid Python code (no Markdown or explanations).
+
+[2025-11-07 16:02:08] [INFO] Final prompt  
+You are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).
+Your goal is to turn a provided topic script into a visually clear, accurate, and fully executable Python animation.
+
+Follow these CRITICAL INSTRUCTIONS exactly as described:
+- Maintain precise spatial geometry and proportions.
+- Use legible, non-overlapping text.
+- Include accurate math-based animation sequences.
+- Avoid redundant or commented-out code.
+
+Now, based on the following structured input:
+
+DEBUG: 
+CATALOG: 
+SCRIPT_SEQ: 4
+SCRIPT_FOR_MANIM: [
+  "Return to the original square with labels from Scene 1.",
+  "Animate the labels fading out one by one, starting with the top-left corner.",
+  "Once all labels are gone, shrink the square and move it to one side of the screen.",
+  "Fade in a summary text: 'Key Points: Labels at Corners \u2013 Clear, Precise, and Organized'.",
+  "End with the square and summary text side by side, then fade out slowly."
+]
+SCRIPT_VOICE_OVER: [
+  "To recap, placing labels at square corners is all about clarity and precision.",
+  "Whether it\u2019s a simple square or a classroom setup, labels should be positioned accurately.",
+  "This ensures they are easily readable and do not overlap with the main shape.",
+  "Remember: clear, precise, and organized labeling makes communication effective.",
+  "Thank you for watching, and happy labeling!"
+]
+SCRIPT_LENGTH: 35
+
+Generate the FULL Manim Python code that:
+- Follows all layout and animation rules.
+- Is executable and error-free.
+- Returns ONLY valid Python code (no Markdown or explanations).
+
+[2025-11-07 16:02:13] [INFO] 🎬 Generated Manim Code Successfully
+[2025-11-07 16:02:13] [INFO] 📄 JSON saved at C:\Vivek_Main\Temp_Data\c94d7d6c-517a-4fc6-b512-3b4ec21c6a0f_20251107_160213\c94d7d6c-517a-4fc6-b512-3b4ec21c6a0f.json
+[2025-11-07 16:02:13] [INFO] 📝 Generating Python and TXT files from JSON: C:\Vivek_Main\Temp_Data\c94d7d6c-517a-4fc6-b512-3b4ec21c6a0f_20251107_160213\c94d7d6c-517a-4fc6-b512-3b4ec21c6a0f.json
+[2025-11-07 16:02:13] [INFO] ✅ Created PY file: C:\Vivek_Main\Manim_project\inputbox\c94d7d6c-517a-4fc6-b512-3b4ec21c6a0f_20251107_160213\script_seq1\script_seq1.py
+[2025-11-07 16:02:13] [INFO] ✅ Created TXT file: C:\Vivek_Main\Manim_project\inputbox\c94d7d6c-517a-4fc6-b512-3b4ec21c6a0f_20251107_160213\script_seq1\script_seq1.txt
+[2025-11-07 16:02:13] [INFO] ✅ Created PY file: C:\Vivek_Main\Manim_project\inputbox\c94d7d6c-517a-4fc6-b512-3b4ec21c6a0f_20251107_160213\script_seq2\script_seq2.py
+[2025-11-07 16:02:13] [INFO] ✅ Created TXT file: C:\Vivek_Main\Manim_project\inputbox\c94d7d6c-517a-4fc6-b512-3b4ec21c6a0f_20251107_160213\script_seq2\script_seq2.txt
+[2025-11-07 16:02:13] [INFO] ✅ Created PY file: C:\Vivek_Main\Manim_project\inputbox\c94d7d6c-517a-4fc6-b512-3b4ec21c6a0f_20251107_160213\script_seq3\script_seq3.py
+[2025-11-07 16:02:13] [INFO] ✅ Created TXT file: C:\Vivek_Main\Manim_project\inputbox\c94d7d6c-517a-4fc6-b512-3b4ec21c6a0f_20251107_160213\script_seq3\script_seq3.txt
+[2025-11-07 16:02:13] [INFO] ✅ Created PY file: C:\Vivek_Main\Manim_project\inputbox\c94d7d6c-517a-4fc6-b512-3b4ec21c6a0f_20251107_160213\script_seq4\script_seq4.py
+[2025-11-07 16:02:13] [INFO] ✅ Created TXT file: C:\Vivek_Main\Manim_project\inputbox\c94d7d6c-517a-4fc6-b512-3b4ec21c6a0f_20251107_160213\script_seq4\script_seq4.txt
+[2025-11-07 16:02:13] [INFO] 🎯 Total Words: 776 | Approx. Total GPT Tokens: 1032
+[2025-11-07 16:02:13] [INFO] 🎉 All files generated inside: C:\Vivek_Main\Manim_project\inputbox\c94d7d6c-517a-4fc6-b512-3b4ec21c6a0f_20251107_160213
+[2025-11-07 16:02:13] [INFO] ✅ Script written: C:\Vivek_Main\Manim_project\inputbox\input_data_20251107_121502\script_seq1\script_seq1.py
+[2025-11-07 16:02:13] [INFO] ✅ Script written: C:\Vivek_Main\Manim_project\inputbox\input_data_20251107_121502\script_seq2\script_seq2.py
+[2025-11-07 16:02:13] [INFO] ✅ Script written: C:\Vivek_Main\Manim_project\inputbox\input_data_20251107_121502\script_seq3\script_seq3.py
+[2025-11-07 16:02:13] [INFO] ✅ Script written: C:\Vivek_Main\Manim_project\inputbox\input_data_20251107_121502\script_seq4\script_seq4.py
+[2025-11-07 16:02:13] [INFO] video callable prepared for: C:\Vivek_Main\Manim_project\inputbox\input_data_20251107_121502
+[2025-11-07 16:02:13] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251107_121502/script_seq1/script_seq1.py ...
+[2025-11-07 16:02:13] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\input_data_20251107_121502\script_seq1
+[2025-11-07 16:02:28] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251107_121502/script_seq2/script_seq2.py ...
+[2025-11-07 16:02:28] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\input_data_20251107_121502\script_seq2
+[2025-11-07 16:02:56] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251107_121502/script_seq3/script_seq3.py ...
+[2025-11-07 16:02:56] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\input_data_20251107_121502\script_seq3
+[2025-11-07 16:03:06] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251107_121502/script_seq4/script_seq4.py ...
+[2025-11-07 16:03:06] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\input_data_20251107_121502\script_seq4
+[2025-11-07 16:03:34] [INFO] ✅ Total words: 608 | Approx. GPT tokens: 809 | Total videos collected: 0
+[2025-11-07 16:04:12] [INFO] ✅ Inserted record input_data_20251107_121502_20251107_FXS771 with paths
+[2025-11-07 16:04:12] [INFO] ✅ Inserted record input_data_20251107_121502_20251107_GQRYPH with paths
+[2025-11-07 16:04:12] [INFO] ✅ Inserted record input_data_20251107_121502_20251107_EM55H7 with paths
+[2025-11-07 16:04:12] [INFO] ✅ Inserted record input_data_20251107_121502_20251107_EO9PHU with paths

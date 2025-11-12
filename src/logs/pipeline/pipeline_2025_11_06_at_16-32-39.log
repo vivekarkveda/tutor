@@ -1,0 +1,367 @@
+[2025-11-06 16:34:38] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251106_163344/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  27%|##6       | 4/15 [00:00<00:00, 35.07it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  60%|######    | 9/15 [00:00<00:00, 41.27it/s]
+Animation 0: FadeIn(Text('Labels at Square Corners: Class 10 English')):  93%|#########3| 14/15 [00:00<00:00, 39.77it/s]
+                                                                                                                        
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\input_data_20251106_163344\script_seq1 |
+| \script_seq1.py:14 in construct                                             |
+|                                                                             |
+|   11         self.wait(1)                                                   |
+|   12                                                                        |
+|   13         # Zoom out slightly to reveal the square                       |
+| > 14         self.play(self.camera.frame.animate.scale(1.2).move_to(title.g |
+|   15                                                                        |
+|   16         # Draw the square                                              |
+|   17         square = Square(side_length=4, color=BLACK, stroke_width=2).mo |
++-----------------------------------------------------------------------------+
+AttributeError: 'Camera' object has no attribute 'frame'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/06/25 16:34:35] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251106_163344\script_se                         
+                             q1\videos\script_seq1\480                         
+                             p15\partial_movie_files\S                         
+                             quareLabelingScene\931832                         
+                             650_3107961746_223132457.                         
+                             mp4'                                              
+                    INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251106_163344\script_se                         
+                             q1\videos\script_seq1\480                         
+                             p15\partial_movie_files\S                         
+                             quareLabelingScene\190528                         
+                             8516_1436906429_199757199                         
+                             4.mp4'
+──────────────────────────────────────────────
+
+[2025-11-06 16:34:58] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251106_163344/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: Create(Square), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: Create(Square), etc.:  73%|#######3  | 11/15 [00:00<00:00, 100.46it/s]
+                                                                                   
+
+Animation 2: _MethodAnimation(Dot), etc.:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                               
+
+Animation 4: Create(Line):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 4: Create(Line): 100%|##########| 15/15 [00:00<00:00, 143.26it/s]
+                                                                           
+
+Animation 6: Create(Line):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 6: Create(Line):  93%|#########3| 14/15 [00:00<00:00, 138.31it/s]
+                                                                           
+
+Animation 8: _MethodAnimation(Dot), etc.:   0%|          | 0/8 [00:00<?, ?it/s]
+Animation 8: _MethodAnimation(Dot), etc.:  75%|#######5  | 6/8 [00:00<00:00, 54.98it/s]
+                                                                                       
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\input_data_20251106_163344\script_seq2 |
+| \script_seq2.py:43 in construct                                             |
+|                                                                             |
+|   40             self.play(dot.animate.scale(1.5), label.animate.scale(1.5) |
+|   41             self.wait(0.5)                                             |
+|   42                                                                        |
+| > 43             if corner == UP + RIGHT:                                   |
+|   44                 line_horizontal = Line(square.get_corner(corner) + RIG |
+|   45                 line_vertical = Line(square.get_corner(corner) + DOWN  |
+|   46             elif corner == DOWN + RIGHT:                               |
++-----------------------------------------------------------------------------+
+ValueError: The truth value of an array with more than one element is 
+ambiguous. Use a.any() or a.all()
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/06/25 16:34:46] INFO     Writing A to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\input_data_202                        
+                             51106_163344\script_seq2\T                        
+                             ex\90f07b07e57adf79.tex                           
+[11/06/25 16:34:48] INFO     Writing B to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\input_data_202                        
+                             51106_163344\script_seq2\T                        
+                             ex\d82288bb87e99d59.tex                           
+[11/06/25 16:34:50] INFO     Writing C to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\input_data_202                        
+                             51106_163344\script_seq2\T                        
+                             ex\86474863bfdee3e7.tex                           
+[11/06/25 16:34:53] INFO     Writing D to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\input_data_202                        
+                             51106_163344\script_seq2\T                        
+                             ex\265843fdb06dea70.tex                           
+[11/06/25 16:34:55] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251106_163344\script_se                         
+                             q2\videos\script_seq2\480                         
+                             p15\partial_movie_files\S                         
+                             quareCornersScene\1185818                         
+                             338_2444788463_223132457.                         
+                             mp4'                                              
+                    INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251106_163344\script_se                         
+                             q2\videos\script_seq2\480                         
+                             p15\partial_movie_files\S                         
+                             quareCornersScene\6246423                         
+                             24_4217992463_2396106273.                         
+                             mp4'                                              
+                    INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251106_163344\script_se                         
+                             q2\videos\script_seq2\480                         
+                             p15\partial_movie_files\S                         
+                             quareCornersScene\6246423                         
+                             24_1159717346_3701809004.                         
+                             mp4'                                              
+                    INFO     Animation 3 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251106_163344\script_se                         
+                             q2\videos\script_seq2\480                         
+                             p15\partial_movie_files\S                         
+                             quareCornersScene\6246423                         
+                             24_3394500337_378012400.m                         
+                             p4'                                               
+                    INFO     Animation 4 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251106_163344\script_se                         
+                             q2\videos\script_seq2\480                         
+                             p15\partial_movie_files\S                         
+                             quareCornersScene\6246423                         
+                             24_1334590995_841306053.m                         
+                             p4'                                               
+[11/06/25 16:34:56] INFO     Animation 5 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251106_163344\script_se                         
+                             q2\videos\script_seq2\480                         
+                             p15\partial_movie_files\S                         
+                             quareCornersScene\6246423                         
+                             24_4217992463_3129738592.                         
+                             mp4'                                              
+                    INFO     Animation 6 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251106_163344\script_se                         
+                             q2\videos\script_seq2\480                         
+                             p15\partial_movie_files\S                         
+                             quareCornersScene\6246423                         
+                             24_3235572475_3214537461.                         
+                             mp4'                                              
+                    INFO     Animation 7 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251106_163344\script_se                         
+                             q2\videos\script_seq2\480                         
+                             p15\partial_movie_files\S                         
+                             quareCornersScene\6246423                         
+                             24_4217992463_2395903397.                         
+                             mp4'                                              
+[11/06/25 16:34:57] INFO     Animation 8 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251106_163344\script_se                         
+                             q2\videos\script_seq2\480                         
+                             p15\partial_movie_files\S                         
+                             quareCornersScene\6246423                         
+                             24_931943864_122245053.mp                         
+                             4'                                                
+                    INFO     Animation 9 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251106_163344\script_se                         
+                             q2\videos\script_seq2\480                         
+                             p15\partial_movie_files\S                         
+                             quareCornersScene\6246423                         
+                             24_3394500337_2241350383.                         
+                             mp4'
+──────────────────────────────────────────────
+
+[2025-11-06 16:35:41] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251106_163344/script_seq4/script_seq4.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: DrawBorderThenFill(Square), etc.:   0%|          | 0/30 [00:00<?, ?it/s]
+Animation 0: DrawBorderThenFill(Square), etc.:  70%|#######   | 21/30 [00:00<00:00, 203.86it/s]
+                                                                                               
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\input_data_20251106_163344\script_seq4 |
+| \script_seq4.py:15 in construct                                             |
+|                                                                             |
+|   12         self.play(DrawBorderThenFill(square), DrawBorderThenFill(recta |
+|   13         for i, label in enumerate(labels):                             |
+|   14             if i < 4:                                                  |
+| > 15                 label.move_to(square.get_corners()[i] + label_position |
+|   16             else:                                                      |
+|   17                 label.move_to(rectangle.get_corners()[i-4] + label_pos |
+|   18             self.play(Write(label))                                    |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\mobject\mobject.py:698   |
+| in getter                                                                   |
+|                                                                             |
+|    695                     stacklevel=2,                                    |
+|    696                 )                                                    |
+|    697                                                                      |
+| >  698                 return getattr(self, to_get)                         |
+|    699                                                                      |
+|    700             # Return a bound method                                  |
+|    701             return types.MethodType(getter, self)                    |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\mobject\mobject.py:723   |
+| in __getattr__                                                              |
+|                                                                             |
+|    720             return types.MethodType(setter, self)                    |
+|    721                                                                      |
+|    722         # Unhandled attribute, therefore error                       |
+| >  723         raise AttributeError(f"{type(self).__name__} object has no a |
+|    724                                                                      |
+|    725     @property                                                        |
+|    726     def width(self) -> float:                                        |
++-----------------------------------------------------------------------------+
+AttributeError: Square object has no attribute 'corners'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/06/25 16:35:40] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251106_163344\script_se                         
+                             q4\videos\script_seq4\480                         
+                             p15\partial_movie_files\L                         
+                             abelingScene\1185818338_4                         
+                             16117663_223132457.mp4'
+──────────────────────────────────────────────
+
+[2025-11-06 16:35:59] [ERROR] ❌ Video and audio lists must have the same length
+[2025-11-06 16:35:59] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\video_routes.py", line 40, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\main.py", line 56, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\merger_factory.py", line 261, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\merger_factory.py", line 136, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-06 16:35:59] [ERROR] ❌ HTTP 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-06 16:35:59] [ERROR] ❌ Error writing scripts
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\write_routes.py", line 27, in write_scripts
+    video_result = await async_post(video_url, {"path": str(folder)}, timeout=300)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 14, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-06 16:35:59] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-06 16:35:59] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\generator_routes.py", line 20, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 14, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-06 16:35:59] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: {\\\"detail\\\":\\\"Video and audio lists must have the same length\\\"}\"}"}

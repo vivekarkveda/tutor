@@ -1,0 +1,144 @@
+[2025-11-07 15:23:58] [INFO] Transaction ID 0eb9cf8d-9a0e-4bbc-bba4-aa39d1c3982d
+[2025-11-07 15:23:58] [INFO] 🧠 Generating script for topic='Labels placed correctly at square corners', class='10'
+[2025-11-07 15:23:59] [INFO] prompt 
+You are an expert in storytelling and Manim Community Edition animation design.
+Your task:
+Generate a JSON script that describes the full video in a step-by-step, highly detailed way.
+Each scene/sequence should have a flexible length between 25 to 45 seconds.
+You can break the video into multiple sequences/scenes if needed to explain the concept clearly.
+Narration and animations must be tightly synchronized:
+Step i in "script_for_manim" must align exactly with step i in "script_voice_over".
+Ensure pacing: narration should match animation timing naturally.
+"script_length" should reflect the realistic duration of each scene.
+
+Each JSON object must include:
+- "script_seq" → scene number.
+- "script_for_manim" → array of detailed English animation steps (no Manim code).
+- "script_voice_over" → array of narration lines aligned step-by-step with visuals.
+- "script_length" → approximate duration of the scene (25–45 seconds).
+
+Rules:
+- Use descriptive English for visuals (no code).
+- Narration must align with visuals.
+- Describe each animation step precisely.
+- Break complex ideas into smaller, smooth transitions.
+- Maintain consistent references between scenes.
+- Scene 1: Introduction
+- Scene 2: Concept Demonstration
+- Scene 3: Application/Example
+- Scene 4: Recap/Closing
+📌 Continuity Rule: The last frame of a scene becomes the first frame of the next.
+
+Output format:
+Return only a valid JSON array (no extra text).
+
+📌 Topic: Labels placed correctly at square corners for class 10 in English language
+
+[2025-11-07 15:24:08] [INFO] script ```json
+[
+  {
+    "script_seq": 1,
+    "script_for_manim": [
+      "Start with a blank canvas.",
+      "Fade in a large, centered title: 'Labels at Square Corners: Class 10 English'.",
+      "Zoom out slightly to reveal a simple square shape below the title.",
+      "Animate four small, empty labels appearing at each corner of the square, initially overlapping the corners.",
+      "Move each label slightly outward to avoid overlapping, ensuring they are clearly visible."
+    ],
+    "script_voice_over": [
+      "Welcome to our lesson on placing labels correctly at square corners for Class 10 English.",
+      "Today, we’ll explore how to position labels neatly and effectively.",
+      "Here’s a simple square, a common shape we’ll work with.",
+      "Let’s add labels to its corners, starting with them overlapping.",
+      "Now, we’ll adjust their positions for clarity and readability."
+    ],
+    "script_length": 30
+  },
+  {
+    "script_seq": 2,
+    "script_for_manim": [
+      "Highlight one corner label with a glowing effect.",
+      "Animate an arrow pointing from the label to the exact corner point.",
+      "Repeat the highlighting and arrow animation for the remaining three labels.",
+      "Show all four labels with arrows simultaneously, emphasizing their alignment.",
+      "Fade out the arrows, leaving only the labels at the corners."
+    ],
+    "script_voice_over": [
+      "Each label should correspond precisely to its corner.",
+      "Here’s how the first label aligns perfectly with its corner.",
+      "Let’s repeat this for the other corners.",
+      "All labels are now correctly aligned with their respective corners.",
+      "With the arrows faded, we see the labels clearly marking each corner."
+    ],
+    "script_length": 35
+  },
+  {
+    "script_seq": 3,
+    "script_for_manim": [
+      "Shrink the square and labels slightly to make space.",
+      "Introduce a new element: a small image of a classroom map inside the square.",
+      "Animate labels with student names appearing at each corner of the map.",
+      "Show a hand icon dragging one label to a new position, demonstrating flexibility.",
+      "Return the label to its original corner, emphasizing correct placement."
+    ],
+    "script_voice_over": [
+      "Let’s apply this to a real-world example: labeling a classroom map.",
+      "Here’s a map inside our square, with labels for student names at each corner.",
+      "Labels can be adjusted if needed, but precision is key.",
+      "Returning the label to its corner ensures consistency.",
+      "This method works for any square-shaped layout in English language tasks."
+    ],
+    "script_length": 40
+  },
+  {
+    "script_seq": 4,
+    "script_for_manim": [
+      "Zoom out to show the entire square with labels.",
+      "Animate a checklist appearing beside the square: '1. Align labels with corners. 2. Ensure clarity. 3. Apply to real examples.'",
+      "Highlight each checklist item as it’s mentioned in the narration.",
+      "Fade out the checklist and square, leaving a closing message: 'Master Labels, Master English!'.",
+      "End with a brief pause on the closing message before fading to black."
+    ],
+    "script_voice_over": [
+      "To recap, always align labels precisely with square corners.",
+      "Ensure they’re clear and readable for effective communication.",
+      "Apply this technique to maps, diagrams, or any square layout in English tasks.",
+      "Remember, mastering small details like labeling enhances your overall language skills.",
+      "Thank you for watching, and keep practicing! Master Labels, Master English!"
+    ],
+    "script_length": 35
+  }
+]
+```
+[2025-11-07 15:24:08] [INFO] 🚀 Sending generated script to /generate-files-api and /Generator ...
+[2025-11-07 15:24:09] [INFO] 📄 JSON saved at C:\Vivek_Main\Temp_Data\0eb9cf8d-9a0e-4bbc-bba4-aa39d1c3982d_20251107_152409\0eb9cf8d-9a0e-4bbc-bba4-aa39d1c3982d.json
+[2025-11-07 15:24:09] [INFO] 📝 Generating Python and TXT files from JSON: C:\Vivek_Main\Temp_Data\0eb9cf8d-9a0e-4bbc-bba4-aa39d1c3982d_20251107_152409\0eb9cf8d-9a0e-4bbc-bba4-aa39d1c3982d.json
+[2025-11-07 15:24:10] [INFO] ✅ Created PY file: C:\Vivek_Main\Manim_project\inputbox\0eb9cf8d-9a0e-4bbc-bba4-aa39d1c3982d_20251107_152410\script_seq1\script_seq1.py
+[2025-11-07 15:24:10] [INFO] ✅ Created TXT file: C:\Vivek_Main\Manim_project\inputbox\0eb9cf8d-9a0e-4bbc-bba4-aa39d1c3982d_20251107_152410\script_seq1\script_seq1.txt
+[2025-11-07 15:24:10] [INFO] ✅ Created PY file: C:\Vivek_Main\Manim_project\inputbox\0eb9cf8d-9a0e-4bbc-bba4-aa39d1c3982d_20251107_152410\script_seq2\script_seq2.py
+[2025-11-07 15:24:10] [INFO] ✅ Created TXT file: C:\Vivek_Main\Manim_project\inputbox\0eb9cf8d-9a0e-4bbc-bba4-aa39d1c3982d_20251107_152410\script_seq2\script_seq2.txt
+[2025-11-07 15:24:10] [INFO] ✅ Created PY file: C:\Vivek_Main\Manim_project\inputbox\0eb9cf8d-9a0e-4bbc-bba4-aa39d1c3982d_20251107_152410\script_seq3\script_seq3.py
+[2025-11-07 15:24:10] [INFO] ✅ Created TXT file: C:\Vivek_Main\Manim_project\inputbox\0eb9cf8d-9a0e-4bbc-bba4-aa39d1c3982d_20251107_152410\script_seq3\script_seq3.txt
+[2025-11-07 15:24:10] [INFO] ✅ Created PY file: C:\Vivek_Main\Manim_project\inputbox\0eb9cf8d-9a0e-4bbc-bba4-aa39d1c3982d_20251107_152410\script_seq4\script_seq4.py
+[2025-11-07 15:24:10] [INFO] ✅ Created TXT file: C:\Vivek_Main\Manim_project\inputbox\0eb9cf8d-9a0e-4bbc-bba4-aa39d1c3982d_20251107_152410\script_seq4\script_seq4.txt
+[2025-11-07 15:24:10] [INFO] 🎯 Total Words: 657 | Approx. Total GPT Tokens: 873
+[2025-11-07 15:24:10] [INFO] 🎉 All files generated inside: C:\Vivek_Main\Manim_project\inputbox\0eb9cf8d-9a0e-4bbc-bba4-aa39d1c3982d_20251107_152410
+[2025-11-07 15:24:54] [INFO] 🎬 Generated Manim Code Successfully
+[2025-11-07 15:24:55] [INFO] ✅ Script written: C:\Vivek_Main\Manim_project\inputbox\input_data_20251107_121502\script_seq1\script_seq1.py
+[2025-11-07 15:24:55] [INFO] ✅ Script written: C:\Vivek_Main\Manim_project\inputbox\input_data_20251107_121502\script_seq2\script_seq2.py
+[2025-11-07 15:24:55] [INFO] ✅ Script written: C:\Vivek_Main\Manim_project\inputbox\input_data_20251107_121502\script_seq3\script_seq3.py
+[2025-11-07 15:24:55] [INFO] ✅ Script written: C:\Vivek_Main\Manim_project\inputbox\input_data_20251107_121502\script_seq4\script_seq4.py
+[2025-11-07 15:24:55] [INFO] video callable prepared for: C:\Vivek_Main\Manim_project\inputbox\input_data_20251107_121502
+[2025-11-07 15:24:55] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251107_121502/script_seq1/script_seq1.py ...
+[2025-11-07 15:24:56] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\input_data_20251107_121502\script_seq1
+[2025-11-07 15:25:12] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251107_121502/script_seq2/script_seq2.py ...
+[2025-11-07 15:25:12] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\input_data_20251107_121502\script_seq2
+[2025-11-07 15:25:36] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251107_121502/script_seq3/script_seq3.py ...
+[2025-11-07 15:25:37] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\input_data_20251107_121502\script_seq3
+[2025-11-07 15:25:51] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251107_121502/script_seq4/script_seq4.py ...
+[2025-11-07 15:25:51] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\input_data_20251107_121502\script_seq4
+[2025-11-07 15:26:17] [INFO] ✅ Total words: 618 | Approx. GPT tokens: 823 | Total videos collected: 0
+[2025-11-07 15:26:51] [INFO] ✅ Inserted record input_data_20251107_121502_20251107_8SHPGH with paths
+[2025-11-07 15:26:51] [INFO] ✅ Inserted record input_data_20251107_121502_20251107_0DH0IH with paths
+[2025-11-07 15:26:51] [INFO] ✅ Inserted record input_data_20251107_121502_20251107_AIBQ9B with paths
+[2025-11-07 15:26:51] [INFO] ✅ Inserted record input_data_20251107_121502_20251107_S0XJUK with paths

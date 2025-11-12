@@ -1,0 +1,140 @@
+[2025-11-07 18:08:03] [INFO] Transaction ID f7f64d3c-e65d-4db2-9ecb-0d0465b82304
+[2025-11-07 18:08:03] [INFO] 🧠 Generating script for topic='Labels placed correctly at square corners', class='10'
+[2025-11-07 18:08:04] [INFO] prompt 
+You are an expert in storytelling and Manim Community Edition animation design.
+Your task:
+Generate a JSON script that describes the full video in a step-by-step, highly detailed way.
+Each scene/sequence should have a flexible length between 25 to 45 seconds.
+You can break the video into multiple sequences/scenes if needed to explain the concept clearly.
+Narration and animations must be tightly synchronized:
+Step i in "script_for_manim" must align exactly with step i in "script_voice_over".
+Ensure pacing: narration should match animation timing naturally.
+"script_length" should reflect the realistic duration of each scene.
+
+Each JSON object must include:
+- "script_seq" → scene number.
+- "script_for_manim" → array of detailed English animation steps (no Manim code).
+- "script_voice_over" → array of narration lines aligned step-by-step with visuals.
+- "script_length" → approximate duration of the scene (25–45 seconds).
+
+Rules:
+- Use descriptive English for visuals (no code).
+- Narration must align with visuals.
+- Describe each animation step precisely.
+- Break complex ideas into smaller, smooth transitions.
+- Maintain consistent references between scenes.
+- Scene 1: Introduction
+- Scene 2: Concept Demonstration
+- Scene 3: Application/Example
+- Scene 4: Recap/Closing
+📌 Continuity Rule: The last frame of a scene becomes the first frame of the next.
+
+Output format:
+Return only a valid JSON array (no extra text).
+
+📌 Topic: Labels placed correctly at square corners for class 10 in English language
+
+[2025-11-07 18:08:19] [INFO] script ```json
+[
+  {
+    "script_seq": 1,
+    "script_for_manim": [
+      "Start with a blank canvas.",
+      "Fade in a large, centered title: 'Labels at Square Corners: Class 10 English'.",
+      "Zoom out slightly to reveal a simple square grid with four squares.",
+      "Place a small, faint label at each corner of the grid, initially overlapping the lines.",
+      "Animate the labels moving slightly outward to their correct positions at the corners."
+    ],
+    "script_voice_over": [
+      "Welcome to today’s lesson on placing labels correctly at square corners for Class 10 English.",
+      "Understanding how to position labels accurately is essential for clarity and precision in your work.",
+      "Let’s start with a simple square grid to visualize this concept.",
+      "Here, we have labels placed at each corner, but they’re not quite in the right spot yet.",
+      "Now, watch as we adjust them to their correct positions, ensuring they’re clearly visible and properly aligned."
+    ],
+    "script_length": 35
+  },
+  {
+    "script_seq": 2,
+    "script_for_manim": [
+      "Focus on one square with its label at the top-left corner.",
+      "Highlight the corner with a glowing effect to emphasize its position.",
+      "Animate the label moving slightly if needed to ensure it’s perfectly aligned.",
+      "Repeat the process for the top-right, bottom-left, and bottom-right corners, one by one.",
+      "End with all four labels perfectly positioned and the glowing effect fading out."
+    ],
+    "script_voice_over": [
+      "Let’s focus on one corner at a time, starting with the top-left.",
+      "The label should sit exactly at the intersection of the horizontal and vertical lines, like this.",
+      "Now, let’s move to the top-right corner and ensure the label is correctly placed.",
+      "Next, the bottom-left corner—same principle applies here.",
+      "Finally, the bottom-right corner. With all labels in place, the square is now clearly labeled."
+    ],
+    "script_length": 40
+  },
+  {
+    "script_seq": 3,
+    "script_for_manim": [
+      "Zoom out to show the entire grid with all labels in place.",
+      "Add a new square with a real-world example: a map with labeled corners (e.g., North, South, East, West).",
+      "Animate the labels on the map adjusting to their correct positions, mirroring the grid example.",
+      "Highlight the connection between the grid and the map with a subtle arrow animation.",
+      "End with both the grid and map side by side, labels perfectly aligned."
+    ],
+    "script_voice_over": [
+      "Now, let’s apply this concept to a real-world example, like labeling the corners of a map.",
+      "Here, we have a map with labels for North, South, East, and West, but they’re not quite right.",
+      "Using the same principles we learned, we adjust the labels to their correct positions.",
+      "As you can see, the process is the same whether you’re working with a grid or a map.",
+      "This skill ensures clarity and accuracy in any labeling task you encounter."
+    ],
+    "script_length": 45
+  },
+  {
+    "script_seq": 4,
+    "script_for_manim": [
+      "Fade out the map and focus back on the original grid.",
+      "Animate the labels glowing one by one as a recap.",
+      "Zoom in on each corner briefly to reinforce their correct positions.",
+      "End with a final, centered message: 'Mastering Labels at Square Corners: Class 10 English'.",
+      "Fade to black with a subtle thank-you note: 'Thank you for watching!'"
+    ],
+    "script_voice_over": [
+      "To recap, placing labels correctly at square corners involves precision and attention to detail.",
+      "Each label should sit exactly at the intersection of the lines, as we’ve demonstrated.",
+      "Whether you’re working with grids, maps, or other diagrams, this skill is invaluable.",
+      "Thank you for joining today’s lesson on mastering labels at square corners for Class 10 English.",
+      "Keep practicing, and you’ll become an expert in no time. Thank you for watching!"
+    ],
+    "script_length": 30
+  }
+]
+```
+[2025-11-07 18:08:19] [INFO] 🚀 Sending generated script to /generate-files-api and /Generator ...
+[2025-11-07 18:09:01] [INFO] prompt_data  ['1.\nYou are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).\nYour goal is to turn a provided topic script into a visually clear, accurate, and fully executable Python animation.\n\nFollow these CRITICAL INSTRUCTIONS exactly as described:\n- Maintain precise spatial geometry and proportions.\n- Use legible, non-overlapping text.\n- Include accurate math-based animation sequences.\n- Avoid redundant or commented-out code.\n\nNow, based on the following structured input:\n\nDEBUG: \nCATALOG: \nSCRIPT_SEQ: 1\nSCRIPT_FOR_MANIM: [\n  "Start with a blank canvas.",\n  "Fade in a large, centered title: \'Labels at Square Corners: Class 10 English\'.",\n  "Zoom out slightly to reveal a simple square grid with four squares.",\n  "Place a small, faint label at each corner of the grid, initially overlapping the lines.",\n  "Animate the labels moving slightly outward to their correct positions at the corners."\n]\nSCRIPT_VOICE_OVER: [\n  "Welcome to today\\u2019s lesson on placing labels correctly at square corners for Class 10 English.",\n  "Understanding how to position labels accurately is essential for clarity and precision in your work.",\n  "Let\\u2019s start with a simple square grid to visualize this concept.",\n  "Here, we have labels placed at each corner, but they\\u2019re not quite in the right spot yet.",\n  "Now, watch as we adjust them to their correct positions, ensuring they\\u2019re clearly visible and properly aligned."\n]\nSCRIPT_LENGTH: 35\n\nGenerate the FULL Manim Python code that:\n- Follows all layout and animation rules.\n- Is executable and error-free.\n- Returns ONLY valid Python code (no Markdown or explanations).\n', '2.\nYou are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).\nYour goal is to turn a provided topic script into a visually clear, accurate, and fully executable Python animation.\n\nFollow these CRITICAL INSTRUCTIONS exactly as described:\n- Maintain precise spatial geometry and proportions.\n- Use legible, non-overlapping text.\n- Include accurate math-based animation sequences.\n- Avoid redundant or commented-out code.\n\nNow, based on the following structured input:\n\nDEBUG: \nCATALOG: \nSCRIPT_SEQ: 2\nSCRIPT_FOR_MANIM: [\n  "Focus on one square with its label at the top-left corner.",\n  "Highlight the corner with a glowing effect to emphasize its position.",\n  "Animate the label moving slightly if needed to ensure it\\u2019s perfectly aligned.",\n  "Repeat the process for the top-right, bottom-left, and bottom-right corners, one by one.",\n  "End with all four labels perfectly positioned and the glowing effect fading out."\n]\nSCRIPT_VOICE_OVER: [\n  "Let\\u2019s focus on one corner at a time, starting with the top-left.",\n  "The label should sit exactly at the intersection of the horizontal and vertical lines, like this.",\n  "Now, let\\u2019s move to the top-right corner and ensure the label is correctly placed.",\n  "Next, the bottom-left corner\\u2014same principle applies here.",\n  "Finally, the bottom-right corner. With all labels in place, the square is now clearly labeled."\n]\nSCRIPT_LENGTH: 40\n\nGenerate the FULL Manim Python code that:\n- Follows all layout and animation rules.\n- Is executable and error-free.\n- Returns ONLY valid Python code (no Markdown or explanations).\n', '3.\nYou are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).\nYour goal is to turn a provided topic script into a visually clear, accurate, and fully executable Python animation.\n\nFollow these CRITICAL INSTRUCTIONS exactly as described:\n- Maintain precise spatial geometry and proportions.\n- Use legible, non-overlapping text.\n- Include accurate math-based animation sequences.\n- Avoid redundant or commented-out code.\n\nNow, based on the following structured input:\n\nDEBUG: \nCATALOG: \nSCRIPT_SEQ: 3\nSCRIPT_FOR_MANIM: [\n  "Zoom out to show the entire grid with all labels in place.",\n  "Add a new square with a real-world example: a map with labeled corners (e.g., North, South, East, West).",\n  "Animate the labels on the map adjusting to their correct positions, mirroring the grid example.",\n  "Highlight the connection between the grid and the map with a subtle arrow animation.",\n  "End with both the grid and map side by side, labels perfectly aligned."\n]\nSCRIPT_VOICE_OVER: [\n  "Now, let\\u2019s apply this concept to a real-world example, like labeling the corners of a map.",\n  "Here, we have a map with labels for North, South, East, and West, but they\\u2019re not quite right.",\n  "Using the same principles we learned, we adjust the labels to their correct positions.",\n  "As you can see, the process is the same whether you\\u2019re working with a grid or a map.",\n  "This skill ensures clarity and accuracy in any labeling task you encounter."\n]\nSCRIPT_LENGTH: 45\n\nGenerate the FULL Manim Python code that:\n- Follows all layout and animation rules.\n- Is executable and error-free.\n- Returns ONLY valid Python code (no Markdown or explanations).\n', '4.\nYou are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).\nYour goal is to turn a provided topic script into a visually clear, accurate, and fully executable Python animation.\n\nFollow these CRITICAL INSTRUCTIONS exactly as described:\n- Maintain precise spatial geometry and proportions.\n- Use legible, non-overlapping text.\n- Include accurate math-based animation sequences.\n- Avoid redundant or commented-out code.\n\nNow, based on the following structured input:\n\nDEBUG: \nCATALOG: \nSCRIPT_SEQ: 4\nSCRIPT_FOR_MANIM: [\n  "Fade out the map and focus back on the original grid.",\n  "Animate the labels glowing one by one as a recap.",\n  "Zoom in on each corner briefly to reinforce their correct positions.",\n  "End with a final, centered message: \'Mastering Labels at Square Corners: Class 10 English\'.",\n  "Fade to black with a subtle thank-you note: \'Thank you for watching!\'"\n]\nSCRIPT_VOICE_OVER: [\n  "To recap, placing labels correctly at square corners involves precision and attention to detail.",\n  "Each label should sit exactly at the intersection of the lines, as we\\u2019ve demonstrated.",\n  "Whether you\\u2019re working with grids, maps, or other diagrams, this skill is invaluable.",\n  "Thank you for joining today\\u2019s lesson on mastering labels at square corners for Class 10 English.",\n  "Keep practicing, and you\\u2019ll become an expert in no time. Thank you for watching!"\n]\nSCRIPT_LENGTH: 30\n\nGenerate the FULL Manim Python code that:\n- Follows all layout and animation rules.\n- Is executable and error-free.\n- Returns ONLY valid Python code (no Markdown or explanations).\n']
+[2025-11-07 18:09:01] [INFO] results [{'script_seq1': 'from manim import *\n\nclass SquareCornerLabels(Scene):\n    def construct(self):\n        # Start with a blank canvas\n        self.camera.background_color = WHITE\n\n        # Fade in the title\n        title = Text("Labels at Square Corners: Class 10 English", font_size=36, color=BLACK)\n        title.move_to(UP * 3)\n        self.play(FadeIn(title))\n        self.wait(1)\n\n        # Zoom out to reveal the square grid\n        grid = SquareGrid(\n            side_length=4,\n            stroke_color=BLACK,\n            stroke_width=2,\n        )\n        self.play(FadeIn(grid), self.camera.frame.animate.scale(1.5).move_to(ORIGIN))\n        self.wait(1)\n\n        # Place labels at corners, initially overlapping\n        labels = [\n            Text(f"Label {i+1}", font_size=24, color=BLACK).move_to(corner).shift(0.1 * OUT)\n            for i, corner in enumerate([grid.get_corners()[0], grid.get_corners()[1], grid.get_corners()[2], grid.get_corners()[3]])\n        ]\n        for label in labels:\n            label.set_opacity(0.5)\n        self.play(*[FadeIn(label) for label in labels])\n        self.wait(1)\n\n        # Animate labels to correct positions\n        correct_positions = [\n            grid.get_corners()[0] + 0.3 * LEFT + 0.3 * DOWN,\n            grid.get_corners()[1] + 0.3 * RIGHT + 0.3 * DOWN,\n            grid.get_corners()[2] + 0.3 * RIGHT + 0.3 * UP,\n            grid.get_corners()[3] + 0.3 * LEFT + 0.3 * UP,\n        ]\n        self.play(*[MoveAlongPath(label, Line(label.get_center(), correct_positions[i])).set_opacity(1) for i, label in enumerate(labels)])\n        self.wait(2)'}, {'script_seq2': 'from manim import *\n\nclass SquareCornersAnimation(Scene):\n    def construct(self):\n        # Define the square\n        square = Square(side_length=4, color=BLUE, stroke_width=2)\n        self.add(square)\n\n        # Define corner labels\n        labels = [\n            MathTex(r"\\text{Top-Left}").scale(0.7).move_to(square.get_corner(UP + LEFT) + 0.5 * UP + 0.5 * LEFT),\n            MathTex(r"\\text{Top-Right}").scale(0.7).move_to(square.get_corner(UP + RIGHT) + 0.5 * UP + 0.5 * RIGHT),\n            MathTex(r"\\text{Bottom-Left}").scale(0.7).move_to(square.get_corner(DOWN + LEFT) + 0.5 * DOWN + 0.5 * LEFT),\n            MathTex(r"\\text{Bottom-Right}").scale(0.7).move_to(square.get_corner(DOWN + RIGHT) + 0.5 * DOWN + 0.5 * RIGHT)\n        ]\n\n        # Define corner dots for glowing effect\n        dots = [\n            Dot(square.get_corner(UP + LEFT), radius=0.1, color=YELLOW).set_opacity(0),\n            Dot(square.get_corner(UP + RIGHT), radius=0.1, color=YELLOW).set_opacity(0),\n            Dot(square.get_corner(DOWN + LEFT), radius=0.1, color=YELLOW).set_opacity(0),\n            Dot(square.get_corner(DOWN + RIGHT), radius=0.1, color=YELLOW).set_opacity(0)\n        ]\n\n        # Add initial elements\n        self.play(Write(square))\n        self.wait(1)\n\n        # Animate each corner\n        for i, (label, dot) in enumerate(zip(labels, dots)):\n            self.play(FadeIn(dot), run_time=0.5)\n            self.play(Write(label), run_time=1)\n            self.play(FadeOut(dot), run_time=0.5)\n            self.wait(1)\n\n        # Final state with all labels visible\n        self.wait(2)'}, {'script_seq3': 'from manim import *\n\nclass GridToMapAnimation(Scene):\n    def construct(self):\n        # Define grid and map dimensions\n        grid_size = 4\n        map_size = 4\n        label_scale = 0.5\n\n        # Create grid\n        grid = NumberPlane(\n            x_range=[-grid_size, grid_size, 1],\n            y_range=[-grid_size, grid_size, 1],\n            axis_config={"stroke_width": 1, "color": BLUE},\n            background_line_style={"stroke_color": BLUE_E, "stroke_width": 1},\n        )\n\n        # Grid labels\n        grid_labels = VGroup(\n            Text("X", font_size=24).scale(label_scale).move_to(RIGHT * (grid_size + 0.5)),\n            Text("Y", font_size=24).scale(label_scale).move_to(UP * (grid_size + 0.5)),\n            Text("0", font_size=24).scale(label_scale).move_to(LEFT * (grid_size + 0.5)),\n            Text("0", font_size=24).scale(label_scale).move_to(DOWN * (grid_size + 0.5)),\n        )\n\n        # Create map\n        map_square = Square(side_length=4, color=GREEN, fill_opacity=0.1).shift(RIGHT * 5)\n\n        # Map labels (initial incorrect positions)\n        map_labels = VGroup(\n            Text("North", font_size=24).scale(label_scale).move_to(map_square.get_top() + UP * 0.5),\n            Text("South", font_size=24).scale(label_scale).move_to(map_square.get_bottom() + DOWN * 0.5),\n            Text("East", font_size=24).scale(label_scale).move_to(map_square.get_right() + RIGHT * 0.5),\n            Text("West", font_size=24).scale(label_scale).move_to(map_square.get_left() + LEFT * 0.5),\n        )\n\n        # Correct positions for map labels\n        correct_map_labels = VGroup(\n            Text("North", font_size=24).scale(label_scale).move_to(map_square.get_top() + UP * 0.5),\n            Text("South", font_size=24).scale(label_scale).move_to(map_square.get_bottom() + DOWN * 0.5),\n            Text("East", font_size=24).scale(label_scale).move_to(map_square.get_right() + RIGHT * 0.5),\n            Text("West", font_size=24).scale(label_scale).move_to(map_square.get_left() + LEFT * 0.5),\n        )\n\n        # Initial setup\n        self.play(Create(grid))\n        self.play(Write(grid_labels))\n        self.wait(1)\n\n        # Zoom out to show grid and add map\n        self.play(CameraFrame.scale, 1.5, self.camera.frame, run_time=2)\n        self.play(Create(map_square), Write(map_labels))\n        self.wait(1)\n\n        # Animate labels to correct positions\n        self.play(\n            *[MoveAlongPath(label, Line(label.get_center(), correct_label.get_center())) \n              for label, correct_label in zip(map_labels, correct_map_labels)],\n            run_time=3\n        )\n        self.wait(1)\n\n        # Highlight connection with arrow\n        arrow = Arrow(grid.get_right(), map_square.get_left(), buff=0.5, color=YELLOW)\n        self.play(Create(arrow))\n        self.wait(1)\n        self.play(FadeOut(arrow))\n\n        # Final alignment\n        self.play(\n            grid.animate.shift(LEFT * 2.5),\n            map_square.animate.shift(RIGHT * 2.5),\n            run_time=2\n        )\n        self.wait(2)'}, {'script_seq4': 'from manim import *\n\nclass LabelMasteryAnimation(Scene):\n    def construct(self):\n        # Initial setup\n        grid = NumberPlane(x_range=(-5, 5, 1), y_range=(-5, 5, 1), faded_line_ratio=0.5)\n        labels = [\n            MathTex(r"\\text{A}").move_to(LEFT * 4 + DOWN * 4),\n            MathTex(r"\\text{B}").move_to(RIGHT * 4 + DOWN * 4),\n            MathTex(r"\\text{C}").move_to(RIGHT * 4 + UP * 4),\n            MathTex(r"\\text{D}").move_to(LEFT * 4 + UP * 4)\n        ]\n        for label in labels:\n            self.add(label)\n\n        # Fade out the map and focus back on the original grid\n        self.play(FadeOut(grid), run_time=2)\n\n        # Animate labels glowing one by one as a recap\n        for label in labels:\n            self.play(Indicate(label, scale_factor=1.2), run_time=1)\n\n        # Zoom in on each corner briefly to reinforce their correct positions\n        for label in labels:\n            self.play(CameraFrame.frame.move_to(label.get_center()), run_time=1)\n            self.wait(0.5)\n            self.play(CameraFrame.frame.move_to(ORIGIN), run_time=1)\n\n        # Final centered message\n        final_message = Text("Mastering Labels at Square Corners: Class 10 English", font_size=24).to_edge(UP)\n        self.play(Write(final_message), run_time=2)\n        self.wait(2)\n\n        # Fade to black with a subtle thank-you note\n        thank_you = Text("Thank you for watching!", font_size=24).to_edge(DOWN)\n        self.play(FadeIn(thank_you), run_time=1)\n        self.wait(2)\n        self.play(FadeOut(final_message, thank_you), run_time=2)'}]
+[2025-11-07 18:09:01] [INFO] 🎬 Generated Manim Code Successfully
+[2025-11-07 18:09:02] [INFO] 📄 JSON saved at C:\Vivek_Main\Temp_Data\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\f7f64d3c-e65d-4db2-9ecb-0d0465b82304.json
+[2025-11-07 18:09:02] [INFO] 📝 Generating Python and TXT files from JSON: C:\Vivek_Main\Temp_Data\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\f7f64d3c-e65d-4db2-9ecb-0d0465b82304.json
+[2025-11-07 18:09:02] [INFO] ['✅ Created PY file: C:\\Vivek_Main\\Manim_project\\inputbox\\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\\script_seq1\\script_seq1.py', '✅ Created TXT file: C:\\Vivek_Main\\Manim_project\\inputbox\\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\\script_seq1\\script_seq1.txt']
+[2025-11-07 18:09:02] [INFO] ['✅ Created PY file: C:\\Vivek_Main\\Manim_project\\inputbox\\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\\script_seq1\\script_seq1.py', '✅ Created TXT file: C:\\Vivek_Main\\Manim_project\\inputbox\\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\\script_seq1\\script_seq1.txt', '✅ Created PY file: C:\\Vivek_Main\\Manim_project\\inputbox\\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\\script_seq2\\script_seq2.py', '✅ Created TXT file: C:\\Vivek_Main\\Manim_project\\inputbox\\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\\script_seq2\\script_seq2.txt']
+[2025-11-07 18:09:02] [INFO] ['✅ Created PY file: C:\\Vivek_Main\\Manim_project\\inputbox\\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\\script_seq1\\script_seq1.py', '✅ Created TXT file: C:\\Vivek_Main\\Manim_project\\inputbox\\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\\script_seq1\\script_seq1.txt', '✅ Created PY file: C:\\Vivek_Main\\Manim_project\\inputbox\\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\\script_seq2\\script_seq2.py', '✅ Created TXT file: C:\\Vivek_Main\\Manim_project\\inputbox\\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\\script_seq2\\script_seq2.txt', '✅ Created PY file: C:\\Vivek_Main\\Manim_project\\inputbox\\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\\script_seq3\\script_seq3.py', '✅ Created TXT file: C:\\Vivek_Main\\Manim_project\\inputbox\\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\\script_seq3\\script_seq3.txt']
+[2025-11-07 18:09:02] [INFO] ['✅ Created PY file: C:\\Vivek_Main\\Manim_project\\inputbox\\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\\script_seq1\\script_seq1.py', '✅ Created TXT file: C:\\Vivek_Main\\Manim_project\\inputbox\\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\\script_seq1\\script_seq1.txt', '✅ Created PY file: C:\\Vivek_Main\\Manim_project\\inputbox\\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\\script_seq2\\script_seq2.py', '✅ Created TXT file: C:\\Vivek_Main\\Manim_project\\inputbox\\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\\script_seq2\\script_seq2.txt', '✅ Created PY file: C:\\Vivek_Main\\Manim_project\\inputbox\\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\\script_seq3\\script_seq3.py', '✅ Created TXT file: C:\\Vivek_Main\\Manim_project\\inputbox\\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\\script_seq3\\script_seq3.txt', '✅ Created PY file: C:\\Vivek_Main\\Manim_project\\inputbox\\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\\script_seq4\\script_seq4.py', '✅ Created TXT file: C:\\Vivek_Main\\Manim_project\\inputbox\\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902\\script_seq4\\script_seq4.txt']
+[2025-11-07 18:09:02] [INFO] 🎯 Total Words: 832 | Approx. Total GPT Tokens: 1107
+[2025-11-07 18:09:02] [INFO] 🎉 All files generated inside: C:\Vivek_Main\Manim_project\inputbox\f7f64d3c-e65d-4db2-9ecb-0d0465b82304_20251107_180902
+[2025-11-07 18:09:02] [INFO] ✅ Script written successfully
+[2025-11-07 18:09:03] [INFO] video callable prepared for: C:\Vivek_Main\Manim_project\inputbox\input_data_20251107_121502
+[2025-11-07 18:09:03] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251107_121502/script_seq1/script_seq1.py ...
+[2025-11-07 18:09:03] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\input_data_20251107_121502\script_seq1
+[2025-11-07 18:09:19] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251107_121502/script_seq2/script_seq2.py ...
+[2025-11-07 18:09:20] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\input_data_20251107_121502\script_seq2
+[2025-11-07 18:09:33] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251107_121502/script_seq3/script_seq3.py ...
+[2025-11-07 18:09:33] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\input_data_20251107_121502\script_seq3
+[2025-11-07 18:10:04] [INFO] 🎬 Running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251107_121502/script_seq4/script_seq4.py ...
+[2025-11-07 18:10:04] [INFO] 🧹 Cleaned old media folder: C:\Vivek_Main\tutter\src\media\videos\input_data_20251107_121502\script_seq4
+[2025-11-07 18:10:30] [INFO] ✅ Total words: 658 | Approx. GPT tokens: 876 | Total videos collected: 0
+[2025-11-07 18:10:58] [INFO] ✅ Inserted record input_data_20251107_121502_20251107_LXCYFZ with paths
+[2025-11-07 18:10:58] [INFO] ✅ Inserted record input_data_20251107_121502_20251107_V2DN0P with paths
+[2025-11-07 18:10:58] [INFO] ✅ Inserted record input_data_20251107_121502_20251107_M63B4N with paths
+[2025-11-07 18:10:58] [INFO] ✅ Inserted record input_data_20251107_121502_20251107_UNGGX6 with paths
+[2025-11-07 18:10:58] [INFO] video generation unseccessfull

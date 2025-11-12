@@ -1,0 +1,371 @@
+[2025-11-04 11:25:41] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251104_112522/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: FadeIn(Text('Understanding Circles - Class 10')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: FadeIn(Text('Understanding Circles - Class 10')):  13%|#3        | 2/15 [00:00<00:00, 19.62it/s]
+Animation 0: FadeIn(Text('Understanding Circles - Class 10')):  40%|####      | 6/15 [00:00<00:00, 26.85it/s]
+Animation 0: FadeIn(Text('Understanding Circles - Class 10')):  67%|######6   | 10/15 [00:00<00:00, 31.32it/s]
+Animation 0: FadeIn(Text('Understanding Circles - Class 10')):  93%|#########3| 14/15 [00:00<00:00, 32.12it/s]
+                                                                                                              
+
+Animation 2: DrawBorderThenFill(Circle):   0%|          | 0/30 [00:00<?, ?it/s]
+Animation 2: DrawBorderThenFill(Circle):  80%|########  | 24/30 [00:00<00:00, 234.55it/s]
+                                                                                         
+
+Animation 4: Create(Circle), etc.:   0%|          | 0/30 [00:00<?, ?it/s]
+Animation 4: Create(Circle), etc.:  50%|#####     | 15/30 [00:00<00:00, 147.40it/s]
+Animation 4: Create(Circle), etc.: 100%|##########| 30/30 [00:00<00:00, 123.67it/s]
+                                                                                   
+
+Animation 6: Write(Text('O')), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 6: Write(Text('O')), etc.:  67%|######6   | 10/15 [00:00<00:00, 91.21it/s]
+                                                                                    
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\input_data_20251104_112522\script_seq1 |
+| \script_seq1.py:32 in construct                                             |
+|                                                                             |
+|   29         self.wait(1)                                                   |
+|   30                                                                        |
+|   31         # Highlight the radius line with a glowing effect              |
+| > 32         glow_effect = AlwaysReapply(LaggedStart, *[Indicate(radius_lin |
+|   33         self.play(glow_effect, run_time=2)                             |
+|   34         self.wait(2)                                                   |
+|   35                                                                        |
++-----------------------------------------------------------------------------+
+NameError: name 'AlwaysReapply' is not defined
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/04/25 11:25:36] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_112522\script_se                         
+                             q1\videos\script_seq1\480                         
+                             p15\partial_movie_files\C                         
+                             ircleLesson\931832650_320                         
+                             3534197_223132457.mp4'                            
+[11/04/25 11:25:37] INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_112522\script_se                         
+                             q1\videos\script_seq1\480                         
+                             p15\partial_movie_files\C                         
+                             ircleLesson\1905288516_14                         
+                             36906429_3722081937.mp4'                          
+                    INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_112522\script_se                         
+                             q1\videos\script_seq1\480                         
+                             p15\partial_movie_files\C                         
+                             ircleLesson\1905288516_20                         
+                             87388844_555631630.mp4'                           
+                    INFO     Animation 3 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_112522\script_se                         
+                             q1\videos\script_seq1\480                         
+                             p15\partial_movie_files\C                         
+                             ircleLesson\1905288516_14                         
+                             36906429_2396779635.mp4'                          
+[11/04/25 11:25:38] INFO     Animation 4 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_112522\script_se                         
+                             q1\videos\script_seq1\480                         
+                             p15\partial_movie_files\C                         
+                             ircleLesson\1905288516_22                         
+                             02227727_4005701848.mp4'                          
+[11/04/25 11:25:39] INFO     Animation 5 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_112522\script_se                         
+                             q1\videos\script_seq1\480                         
+                             p15\partial_movie_files\C                         
+                             ircleLesson\1905288516_14                         
+                             36906429_1131480302.mp4'                          
+[11/04/25 11:25:40] INFO     Animation 6 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_112522\script_se                         
+                             q1\videos\script_seq1\480                         
+                             p15\partial_movie_files\C                         
+                             ircleLesson\1905288516_34                         
+                             1775239_3996740463.mp4'                           
+                    INFO     Animation 7 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_112522\script_se                         
+                             q1\videos\script_seq1\480                         
+                             p15\partial_movie_files\C                         
+                             ircleLesson\1905288516_14                         
+                             36906429_2404641388.mp4'
+──────────────────────────────────────────────
+
+[2025-11-04 11:26:07] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251104_112522/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: Create(Circle), etc.:   0%|          | 0/60 [00:00<?, ?it/s]
+Animation 0: Create(Circle), etc.:  10%|#         | 6/60 [00:00<00:00, 56.54it/s]
+Animation 0: Create(Circle), etc.:  28%|##8       | 17/60 [00:00<00:00, 82.29it/s]
+Animation 0: Create(Circle), etc.:  43%|####3     | 26/60 [00:00<00:00, 63.33it/s]
+Animation 0: Create(Circle), etc.:  55%|#####5    | 33/60 [00:00<00:00, 59.63it/s]
+Animation 0: Create(Circle), etc.:  67%|######6   | 40/60 [00:00<00:00, 60.76it/s]
+Animation 0: Create(Circle), etc.:  82%|########1 | 49/60 [00:00<00:00, 67.13it/s]
+                                                                                  
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\input_data_20251104_112522\script_seq2 |
+| \script_seq2.py:26 in construct                                             |
+|                                                                             |
+|   23                                                                        |
+|   24         # Step 1: Zoom into the circle, keeping the radius line visibl |
+|   25         self.play(Create(circle), Create(radius_A), Write(label_O), Wr |
+| > 26         self.play(CameraFrame.frame.animate.scale(0.5).move_to(point_A |
+|   27                                                                        |
+|   28         # Step 2: Animate a second radius line from the center to anot |
+|   29         self.play(Create(radius_B), Write(label_B), run_time=3)        |
++-----------------------------------------------------------------------------+
+NameError: name 'CameraFrame' is not defined
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/04/25 11:25:50] INFO     Writing A to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\input_data_202                        
+                             51104_112522\script_seq2\T                        
+                             ex\dba7d601a6d99f08.tex                           
+[11/04/25 11:25:55] INFO     Writing B to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\input_data_202                        
+                             51104_112522\script_seq2\T                        
+                             ex\afdf6c97006e9e7b.tex                           
+[11/04/25 11:25:57] INFO     Writing O to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\input_data_202                        
+                             51104_112522\script_seq2\T                        
+                             ex\f84d24e0f368e92f.tex                           
+[11/04/25 11:26:00] INFO     Writing Chord AB to        tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\input_data_202                        
+                             51104_112522\script_seq2\T                        
+                             ex\1d965b020ca3c611.tex                           
+[11/04/25 11:26:02] INFO     Writing Perpendicular      tex_file_writing.py:111
+                             Bisector to                                       
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\input_data_202                        
+                             51104_112522\script_seq2\T                        
+                             ex\2e6c1aef4ebdf6d6.tex                           
+[11/04/25 11:26:06] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_112522\script_se                         
+                             q2\videos\script_seq2\480                         
+                             p15\partial_movie_files\C                         
+                             ircleComponents\118581833                         
+                             8_2176285916_223132457.mp                         
+                             4'
+──────────────────────────────────────────────
+
+[2025-11-04 11:26:25] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251104_112522/script_seq3/script_seq3.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: Create(Circle), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: Create(Circle), etc.:  53%|#####3    | 8/15 [00:00<00:00, 77.59it/s]
+                                                                                 
+
+Animation 2: ReplacementTransform(Line):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 2: ReplacementTransform(Line):  60%|######    | 9/15 [00:00<00:00, 87.14it/s]
+                                                                                       
+
+Animation 3: Write(Text('Radius')), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 3: Write(Text('Radius')), etc.:  73%|#######3  | 11/15 [00:00<00:00, 99.43it/s]
+                                                                                         
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\input_data_20251104_112522\script_seq3 |
+| \script_seq3.py:27 in construct                                             |
+|                                                                             |
+|   24         self.wait(1)                                                   |
+|   25                                                                        |
+|   26         # Step 3: Draw a right-angled triangle within the circle, usin |
+| > 27         triangle = Triangle(circle.get_center(), circle.point_at_angle |
+|   28         self.play(Create(triangle))                                    |
+|   29         self.wait(1)                                                   |
+|   30                                                                        |
++-----------------------------------------------------------------------------+
+TypeError: Triangle.__init__() takes 1 positional argument but 4 were given
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/04/25 11:26:18] INFO     Writing Diameter = 2       tex_file_writing.py:111
+                             imes Radius to                                    
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\input_data_202                        
+                             51104_112522\script_seq3\T                        
+                             ex\88d426601ed4af74.tex                           
+[11/04/25 11:26:22] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_112522\script_se                         
+                             q3\videos\script_seq3\480                         
+                             p15\partial_movie_files\C                         
+                             ircleDiameterAnimation\93                         
+                             1832650_1027625534_223132                         
+                             457.mp4'                                          
+[11/04/25 11:26:23] INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_112522\script_se                         
+                             q3\videos\script_seq3\480                         
+                             p15\partial_movie_files\C                         
+                             ircleDiameterAnimation\19                         
+                             05288516_1436906429_81835                         
+                             7399.mp4'                                         
+                    INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_112522\script_se                         
+                             q3\videos\script_seq3\480                         
+                             p15\partial_movie_files\C                         
+                             ircleDiameterAnimation\19                         
+                             05288516_757328164_302906                         
+                             9047.mp4'                                         
+[11/04/25 11:26:24] INFO     Animation 3 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_112522\script_se                         
+                             q3\videos\script_seq3\480                         
+                             p15\partial_movie_files\C                         
+                             ircleDiameterAnimation\19                         
+                             05288516_3228993333_14977                         
+                             52064.mp4'                                        
+                    INFO     Animation 4 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251104_112522\script_se                         
+                             q3\videos\script_seq3\480                         
+                             p15\partial_movie_files\C                         
+                             ircleDiameterAnimation\19                         
+                             05288516_1436906429_16402                         
+                             8923.mp4'
+──────────────────────────────────────────────
+
+[2025-11-04 11:27:03] [ERROR] ❌ Video and audio lists must have the same length
+[2025-11-04 11:27:03] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\video_routes.py", line 29, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\main.py", line 56, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\merger_factory.py", line 261, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\merger_factory.py", line 136, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-04 11:27:03] [ERROR] ❌ HTTP 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-04 11:27:03] [ERROR] ❌ Error writing scripts
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\write_routes.py", line 27, in write_scripts
+    video_result = await async_post(video_url, {"path": str(folder)}, timeout=300)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 14, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-04 11:27:03] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-04 11:27:04] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\generator_routes.py", line 20, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 14, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-04 11:27:04] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: {\\\"detail\\\":\\\"Video and audio lists must have the same length\\\"}\"}"}
