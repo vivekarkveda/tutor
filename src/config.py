@@ -19,6 +19,16 @@ class Settings:
     BASE_INPUT_PATH = Path(r"C:\ArkMalay\Framework\Video_data")  # adjust as needed
     TRANSACTION_FOLDER = None  # initialize globally
 
+
+    #Test prompt Paths
+    TEST_JSON_PROMPT_PATH = Path(r"C:\ArkMalay\Framework\tutor\src\Prompt\test_json.txt")
+    TEST_MANIM_PROMPT_PATH = Path(r"C:\ArkMalay\Framework\tutor\src\Prompt\test_manim.txt")
+
+
+    # === New default timing parameters ===
+    DEFAULT_SCENE_DURATION_RANGE = " 30 seconds"
+    DEFAULT_TOTAL_VIDEO_LENGTH_TARGET = "1 minutes"
+
     @classmethod
     def set_transaction_folder(cls, path: Path):
         cls.TRANSACTION_FOLDER = str(path)
@@ -28,6 +38,10 @@ class Settings:
     def clear_transaction_folder(cls):
         print(f"[Settings] TRANSACTION_FOLDER cleared (was {cls.TRANSACTION_FOLDER})")
         cls.TRANSACTION_FOLDER = None
+
+
+
+
 
     POSTGRES = {
         "host": "localhost",

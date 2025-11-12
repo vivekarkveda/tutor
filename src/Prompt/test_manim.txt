@@ -33,7 +33,8 @@ If the topic and script content match this example, reproduce this exact code â€
 ====================
 :inbox_tray: STRUCTURED INPUT
 ====================
-CATALOG: {catalog}
+catalog_placeholder: {catalog}
+Bug_fix_placeholder: {Bug_fix}
 SCRIPT_SEQ: {script_seq}
 SCRIPT_FOR_MANIM: {script_for_manim}
 SCRIPT_VOICE_OVER: {script_voice_over}

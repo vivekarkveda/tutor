@@ -35,7 +35,7 @@ If the topic and script content match this example, reproduce this exact code â€
 ====================
 :inbox_tray: STRUCTURED INPUT
 ====================
-CATALOG:     def construct(self):
+catalog_placeholder:     def construct(self):
         # Set radius
         r = 2  # You can change this
         d = 2 * r
@@ -65,29 +65,44 @@ CATALOG:     def construct(self):
 
         self.wait(2)
 
+Bug_fix_placeholder: # Original Bug Snippet:
+```python
+# Point A on circle (contact point)
+point_A = circle.point_at_angle(PI * 0.5)
+dot_A = Dot(point_A, color="#FFFFFF")
+```
+
+# Fixed Bug Snippet:
+```python
+# Point A on circle (contact point)
+point_A = circle.point_at_angle(PI * 0.25)
+dot_A = Dot(point_A, color="#FFFFFF")
+```
 SCRIPT_SEQ: 2
 SCRIPT_FOR_MANIM: [
-  "Start with the vibrant blue circle from the previous scene.",
-  "Animate a ruler appearing on the screen, aligning horizontally across the circle\u2019s diameter.",
-  "Label the endpoints of the diameter as 'A' and 'B'.",
-  "Draw a vertical line from the center dot to the circle\u2019s edge, splitting the circle into two halves.",
-  "Label the point where the vertical line touches the circle as 'C'.",
-  "Highlight the triangle formed by points A, B, and C.",
-  "Animate the triangle\u2019s angles and sides being measured, showing it\u2019s a right-angled triangle.",
-  "Fade out the ruler and labels, leaving only the circle and its center dot.",
-  "Zoom in slightly on the circle, emphasizing its perfection."
+  "Start with the circle from Scene 1.",
+  "Label the center of the circle as 'O'.",
+  "Draw a radius from the center to a point on the circle, labeling the point as 'A'.",
+  "Animate the radius extending and contracting slightly to emphasize its role.",
+  "Introduce a tangent line at point A, showing it touching the circle at exactly one point.",
+  "Highlight the tangent line with a different color.",
+  "Zoom out to show the entire circle, center, radius, and tangent line together.",
+  "Fade out the grid to focus on the key elements."
 ]
 SCRIPT_VOICE_OVER: [
-  "Now, let\u2019s analyze our circle further.",
-  "This horizontal line across the circle is its diameter, connecting points A and B.",
-  "From the center, we draw a vertical line to point C, dividing the circle into two equal halves.",
-  "Notice the triangle formed by points A, B, and C\u2014it\u2019s a right-angled triangle!",
-  "This demonstrates the symmetry and precision of our circle.",
-  "And there you have it\u2014a perfectly crafted circle for Class 10 English!"
+  "Now that we have our circle, let\u2019s break down its key components.",
+  "This is the center, labeled as 'O'.",
+  "From the center, we draw a radius to any point on the circle, let\u2019s call it 'A'.",
+  "The radius is the distance from the center to any point on the circle.",
+  "Notice this tangent line at point A\u2014it touches the circle at exactly one point.",
+  "The tangent is a crucial concept in circle geometry, representing a line that just grazes the circle.",
+  "Here\u2019s the complete picture: the circle, its center, radius, and tangent line.",
+  "With this understanding, you\u2019re well-equipped to explore more advanced circle properties in Class 10."
 ]
-SCRIPT_LENGTH: 40
+SCRIPT_LENGTH: 30 seconds
 Previous Code (for continuity):
 from manim import *
+
 class ExpandingCircle(Scene):
     def construct(self):
         self.camera.background_color = "#1E1E1E"

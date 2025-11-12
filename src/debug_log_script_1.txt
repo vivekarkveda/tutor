@@ -36,31 +36,23 @@ If the topic and script content match this example, reproduce this exact code â€
 :inbox_tray: STRUCTURED INPUT
 ====================
 CATALOG:     def construct(self):
-        # Set radius
-        r = 2  # You can change this
-        d = 2 * r
-
         # Create circle
-        circle = Circle(radius=r, color=BLUE)
+        circle = Circle(radius=2, color=BLUE)
         
         # Center dot
         center = Dot(circle.get_center(), color=RED)
-        
-        # Move the center label slightly to the left
-        center_label = MathTex("O", font_size=36).next_to(center, LEFT*0.4)
+        label = MathTex("O", font_size=36).next_to(center, DOWN)
 
-        # Draw a diameter line (top to bottom)
-        diameter_line = Line(circle.get_top(), circle.get_bottom(), color=YELLOW)
-        diameter_label = MathTex("d", font_size=32).next_to(diameter_line.get_center(), RIGHT*0.3)
-
-        # Animate circle and center
+        # Animate circle drawing with a border fill effect
         self.play(DrawBorderThenFill(circle), run_time=2)
-        self.play(FadeIn(center, scale=0.6), Write(center_label))
 
-        # Animate diameter line and label
-        self.play(Create(diameter_line), Write(diameter_label))
+        # Animate the center dot popping in
+        self.play(FadeIn(center, scale=0.6), run_time=0.5)
 
-        # Optional subtle bounce for emphasis
+        # Animate the label appearing
+        self.play(Write(label), run_time=0.5)
+
+        # Optional subtle bounce on the circle for emphasis
         self.play(circle.animate.scale(1.03).scale(0.97), run_time=0.5)
 
         self.wait(2)
@@ -68,25 +60,22 @@ CATALOG:     def construct(self):
 SCRIPT_SEQ: 1
 SCRIPT_FOR_MANIM: [
   "Start with a blank canvas.",
-  "Fade in a title text: 'Creating a Circle for Class 10'",
-  "Zoom out slightly to reveal a grid background.",
-  "Draw a horizontal line (x-axis) and a vertical line (y-axis) intersecting at the center.",
-  "Highlight the center point with a small dot.",
-  "Animate a compass tool appearing at the center dot.",
-  "Extend the compass to a fixed radius, leaving a faint circular trace.",
-  "Remove the compass tool, leaving only the trace.",
-  "Thicken the circular trace to form a solid circle."
+  "Fade in the text 'Welcome to Class 10 English' in the center of the screen.",
+  "Zoom out slightly to make space for the next elements.",
+  "Draw a faint grid in the background to guide the circle creation.",
+  "Introduce a small dot at the center of the grid, which will be the center of the circle.",
+  "Animate a compass tool appearing on the screen, with one end fixed at the center dot.",
+  "Slowly expand the compass to draw a perfect circle around the center dot.",
+  "Fade out the compass tool, leaving only the circle and the center dot visible.",
+  "Highlight the circle by changing its color to a vibrant blue."
 ]
 SCRIPT_VOICE_OVER: [
-  "Welcome to today\u2019s lesson on creating a circle, designed specifically for Class 10 students.",
-  "We\u2019ll start by setting up our workspace.",
-  "Here, we have a grid to help us visualize measurements.",
-  "Let\u2019s draw the x-axis and y-axis, which intersect at the center point.",
-  "This center point is where our circle will begin.",
-  "Imagine using a compass to draw the circle.",
-  "Extend the compass to a fixed radius, creating a perfect circular shape.",
-  "Now, let\u2019s remove the compass, leaving behind the outline of our circle.",
-  "Finally, we\u2019ll make the circle bold and clear for better visibility."
+  "Welcome to Class 10 English! Today, we\u2019ll explore how to create a perfect circle.",
+  "Every great creation starts with a clear space. Here\u2019s our blank canvas.",
+  "First, we need a center point. Think of it as the heart of our circle.",
+  "Using a compass, we\u2019ll draw a circle around this center point.",
+  "Watch as the compass expands, creating a smooth, even curve.",
+  "And there it is\u2014a perfect circle, ready for our lesson!"
 ]
 SCRIPT_LENGTH: 35
 Previous Code (for continuity):
@@ -99,7 +88,6 @@ just copy the code provided in EXAMPLE (REFERENCE)
 === GENERATED CODE ===
 
 from manim import *
-
 class ExpandingCircle(Scene):
     def construct(self):
         self.camera.background_color = "#1E1E1E"
