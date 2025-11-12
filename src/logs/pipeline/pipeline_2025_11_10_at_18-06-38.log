@@ -1,0 +1,260 @@
+[2025-11-10 18:10:17] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251110_180732_813d4df3/script_sequences/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251110_180732_813d4df3\script_sequences\ |
+| script_seq1\script_seq1.py:9 in construct                                   |
+|                                                                             |
+|    6         self.wait(1)                                                   |
+|    7                                                                        |
+|    8         # Fade in the title                                            |
+| >  9         title = Text("Understanding the Expression (aÂ² - bÂ²)", font_ |
+|   10         self.play(FadeIn(title))                                       |
+|   11         self.wait(2)                                                   |
+|   12                                                                        |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\text\text |
+| _mobject.py:514 in __init__                                                 |
+|                                                                             |
+|    511         color: ManimColor = ManimColor(color) if color else VMobject |
+|    512         file_name = self._text2svg(color.to_hex())                   |
+|    513         PangoUtils.remove_last_M(file_name)                          |
+| >  514         super().__init__(                                            |
+|    515             file_name,                                               |
+|    516             fill_opacity=fill_opacity,                               |
+|    517             stroke_width=stroke_width,                               |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\svg\svg_m |
+| object.py:113 in __init__                                                   |
+|                                                                             |
+|   110         use_svg_cache: bool = True,                                   |
+|   111         **kwargs,                                                     |
+|   112     ):                                                                |
+| > 113         super().__init__(color=None, stroke_color=None, fill_color=No |
+|   114                                                                       |
+|   115         # process keyword arguments                                   |
+|   116         self.file_name = Path(file_name) if file_name is not None els |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\types\vec |
+| torized_mobject.py:161 in __init__                                          |
+|                                                                             |
+|    158             0, 1, n_points_per_cubic_curve                           |
+|    159         )                                                            |
+|    160         self.cap_style: CapStyleType = cap_style                     |
+| >  161         super().__init__(**kwargs)                                   |
+|    162         self.submobjects: list[VMobject]                             |
+|    163                                                                      |
+|    164         # TODO: Find where color overwrites are happening and remove |
++-----------------------------------------------------------------------------+
+TypeError: Mobject.__init__() got an unexpected keyword argument 'font_weight'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/10/25 18:10:14] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Unde                         
+                             rstandingExpression\11858                         
+                             18338_1432596116_63182989                         
+                             6.mp4'
+──────────────────────────────────────────────
+
+[2025-11-10 18:10:33] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251110_180732_813d4df3/script_sequences/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\ArkMalay\Framework\tutor\.venv\Scripts\manim.exe\__main__.py", line 7, in <module>
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\click\core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\click\core.py", line 1082, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\click\core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\click\core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\click\core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\commands.py", line 121, in render
+    for SceneClass in scene_classes_from_file(file):
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\utils\module_ops.py", line 167, in scene_classes_from_file
+    module = get_module(file_path)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\utils\module_ops.py", line 67, in get_module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 994, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\ArkMalay\Framework\Video_data\20251110_180732_813d4df3\script_sequences\script_seq2\script_seq2.py", line 62, in <module>
+    UnderstandingExpression().render()
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py", line 237, in render
+    self.construct()
+  File "C:\ArkMalay\Framework\Video_data\20251110_180732_813d4df3\script_sequences\script_seq2\script_seq2.py", line 7, in construct
+    title = Text("Understanding the Expression (aÂ² - bÂ²)", font_size=48, font_weight=BOLD).to_edge(UP)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\text\text_mobject.py", line 514, in __init__
+    super().__init__(
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\svg\svg_mobject.py", line 113, in __init__
+    super().__init__(color=None, stroke_color=None, fill_color=None, **kwargs)
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\types\vectorized_mobject.py", line 161, in __init__
+    super().__init__(**kwargs)
+TypeError: Mobject.__init__() got an unexpected keyword argument 'font_weight'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/10/25 18:10:29] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq2\                         
+                             videos\script_seq2\480p15                         
+                             \partial_movie_files\Unde                         
+                             rstandingExpression\11858                         
+                             18338_1432596116_63182989                         
+                             6.mp4'
+──────────────────────────────────────────────
+
+[2025-11-10 18:10:51] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251110_180732_813d4df3/script_sequences/script_seq3/script_seq3.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: Indicate(Rectangle):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: Indicate(Rectangle):  80%|########  | 12/15 [00:00<00:00, 110.62it/s]
+                                                                                  
+
+Animation 2: Write(Text('(a + b)')), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 2: Write(Text('(a + b)')), etc.:  53%|#####3    | 8/15 [00:00<00:00, 78.85it/s]
+                                                                                         
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\ArkMalay\Framework\tutor\.venv\Scripts\manim.exe\__main__.py", line 7, in <module>
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\click\core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\click\core.py", line 1082, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\click\core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\click\core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\click\core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\commands.py", line 121, in render
+    for SceneClass in scene_classes_from_file(file):
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\utils\module_ops.py", line 167, in scene_classes_from_file
+    module = get_module(file_path)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\utils\module_ops.py", line 67, in get_module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 994, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\ArkMalay\Framework\Video_data\20251110_180732_813d4df3\script_sequences\script_seq3\script_seq3.py", line 49, in <module>
+    DifferenceOfSquares().render()
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py", line 237, in render
+    self.construct()
+  File "C:\ArkMalay\Framework\Video_data\20251110_180732_813d4df3\script_sequences\script_seq3\script_seq3.py", line 20, in construct
+    rect_parts = rect.copy().split(direction=RIGHT, num_cuts=1)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Mobject.split() got an unexpected keyword argument 'direction'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/10/25 18:10:46] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Diff                         
+                             erenceOfSquares\118581833                         
+                             8_3873891282_552559643.mp                         
+                             4'                                                
+                    INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Diff                         
+                             erenceOfSquares\624642324                         
+                             _4217992463_2076419165.mp                         
+                             4'                                                
+[11/10/25 18:10:50] INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Diff                         
+                             erenceOfSquares\624642324                         
+                             _640572919_806407826.mp4'                         
+                    INFO     Animation 3 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Diff                         
+                             erenceOfSquares\624642324                         
+                             _2844360058_2895398949.mp                         
+                             4'
+──────────────────────────────────────────────
+
+[2025-11-10 18:12:00] [ERROR] ❌ HTTP 500: {"detail":""}
+[2025-11-10 18:12:56] [ERROR] ❌ Video and audio lists must have the same length
+[2025-11-10 18:12:57] [ERROR] 💥 merge_all_videos_with_audio failed.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 247, in merge_all_videos_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-10 18:12:57] [ERROR] ⚠️ Final video merge failed — proceeding with Drive upload anyway.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\main.py", line 58, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 247, in merge_all_videos_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-10 18:12:57] [ERROR] ⚠️ Final video merge failed — proceeding with Drive upload anyway.

@@ -1,0 +1,25 @@
+[2025-11-07 16:20:36] [DEBUG] 📦 Input data sample: [{'script_seq': 1, 'script_for_manim': ['Start with a blank screen.', "Fade in the title 'Area of a Triangle' in bold, centered text.", "Below the title, animate a simple triangle with labeled sides (a, b, c) and height (h) from base 'a'.", "Highlight the base 'a' and height 'h' with a glowing effect.", 'Zoom out slightly to show the entire triangle clearly.'], 'script_voice_over': ['Welcome to this lesson on the area of a triangle, designed for Class 10 students.', "Today, we'll explore how to 
+[2025-11-07 16:20:36] [DEBUG] 🌍 Set Settings.TRANSACTION_FOLDER → C:\ArkMalay\Framework\Video_data\20251107_162036_c3d67bf3
+[2025-11-07 16:20:36] [DEBUG] 💾 Attempting to save JSON to C:\ArkMalay\Framework\Video_data\20251107_162036_c3d67bf3\input_data.json
+[2025-11-07 16:20:36] [DEBUG] ⚙️ Updated Settings.JSON_FILE_PATH → C:\ArkMalay\Framework\Video_data\20251107_162036_c3d67bf3\input_data.json
+[2025-11-07 16:20:36] [DEBUG] file_types: ['py', 'txt']
+[2025-11-07 16:20:36] [DEBUG] generated_files initialized: {'py_files': [], 'txt_files': []}
+[2025-11-07 16:20:36] [DEBUG] 🧮 File: script_seq1.py | Words: 122 | Tokens: 162
+[2025-11-07 16:20:36] [DEBUG] 🧮 File: script_seq1.txt | Words: 68 | Tokens: 90
+[2025-11-07 16:20:36] [DEBUG] 🧮 File: script_seq2.py | Words: 125 | Tokens: 166
+[2025-11-07 16:20:36] [DEBUG] 🧮 File: script_seq2.txt | Words: 64 | Tokens: 85
+[2025-11-07 16:20:36] [DEBUG] 🧮 File: script_seq3.py | Words: 129 | Tokens: 172
+[2025-11-07 16:20:36] [DEBUG] 🧮 File: script_seq3.txt | Words: 63 | Tokens: 84
+[2025-11-07 16:20:36] [DEBUG] 🧮 File: script_seq4.py | Words: 137 | Tokens: 182
+[2025-11-07 16:20:36] [DEBUG] 🧮 File: script_seq4.txt | Words: 71 | Tokens: 94
+[2025-11-07 16:20:36] [DEBUG] 🔁 Restored original Settings.JSON_FILE_PATH
+[2025-11-07 16:20:36] [DEBUG] 🔁 Restored original Settings.JSON_FILE_PATH and cleared TRANSACTION_FOLDER
+[2025-11-07 16:21:07] [DEBUG] 🧮 File: script_seq1.py | video_factory Words: 147 | Approx. GPT Tokens: 196
+[2025-11-07 16:21:17] [DEBUG] 🧮 File: script_seq2.py | video_factory Words: 139 | Approx. GPT Tokens: 185
+[2025-11-07 16:21:28] [DEBUG] 🧮 File: script_seq3.py | video_factory Words: 163 | Approx. GPT Tokens: 217
+[2025-11-07 16:21:30] [DEBUG] ✅ Generated full audio for: script_seq1.txt (in memory)
+[2025-11-07 16:21:42] [DEBUG] 🧮 File: script_seq4.py | video_factory Words: 177 | Approx. GPT Tokens: 236
+[2025-11-07 16:21:48] [DEBUG] ✅ Generated full audio for: script_seq2.txt (in memory)
+[2025-11-07 16:22:04] [DEBUG] ✅ Generated full audio for: script_seq3.txt (in memory)
+[2025-11-07 16:22:20] [DEBUG] ✅ Generated full audio for: script_seq4.txt (in memory)
+[2025-11-07 16:22:20] [DEBUG] Audio bytes count: 4

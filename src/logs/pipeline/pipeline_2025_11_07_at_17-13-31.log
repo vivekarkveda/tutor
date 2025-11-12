@@ -1,0 +1,529 @@
+[2025-11-07 17:16:15] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251104_131531/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
+latex: major issue: So far, you have not checked for MiKTeX updates.
+
+Animation 0: Create(Circle):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: Create(Circle):  67%|######6   | 10/15 [00:00<00:00, 86.54it/s]
+                                                                            
+
+Animation 1: Create(Line), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 1: Create(Line), etc.:  40%|####      | 6/15 [00:00<00:00, 55.30it/s]
+Animation 1: Create(Line), etc.:  80%|########  | 12/15 [00:00<00:00, 56.37it/s]
+                                                                                
+
+Animation 3: Transform(Circle), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 3: Transform(Circle), etc.:  73%|#######3  | 11/15 [00:00<00:00, 109.43it/s]
+                                                                                      
+
+Animation 5: Transform(Square):   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                      
+
+Animation 7: LaggedStart(Group):   0%|          | 0/519 [00:00<?, ?it/s]
+Animation 7: LaggedStart(Group):   0%|          | 2/519 [00:00<00:26, 19.52it/s]
+Animation 7: LaggedStart(Group):   1%|          | 5/519 [00:00<00:21, 23.77it/s]
+Animation 7: LaggedStart(Group):   2%|1         | 8/519 [00:00<00:23, 21.47it/s]
+Animation 7: LaggedStart(Group):   2%|2         | 11/519 [00:00<00:25, 19.86it/s]
+Animation 7: LaggedStart(Group):   3%|2         | 14/519 [00:00<00:24, 20.33it/s]
+Animation 7: LaggedStart(Group):   3%|3         | 17/519 [00:00<00:25, 19.81it/s]
+Animation 7: LaggedStart(Group):   4%|3         | 20/519 [00:00<00:24, 20.63it/s]
+Animation 7: LaggedStart(Group):   4%|4         | 23/519 [00:01<00:24, 19.96it/s]
+Animation 7: LaggedStart(Group):   5%|5         | 26/519 [00:01<00:30, 16.37it/s]
+Animation 7: LaggedStart(Group):   5%|5         | 28/519 [00:01<00:30, 15.88it/s]
+Animation 7: LaggedStart(Group):   6%|5         | 30/519 [00:01<00:32, 15.08it/s]
+Animation 7: LaggedStart(Group):   6%|6         | 32/519 [00:01<00:31, 15.38it/s]
+Animation 7: LaggedStart(Group):   7%|6         | 34/519 [00:01<00:31, 15.23it/s]
+Animation 7: LaggedStart(Group):   7%|6         | 36/519 [00:02<00:34, 14.19it/s]
+Animation 7: LaggedStart(Group):   7%|7         | 38/519 [00:02<00:39, 12.19it/s]
+Animation 7: LaggedStart(Group):   8%|7         | 40/519 [00:02<00:40, 11.89it/s]
+Animation 7: LaggedStart(Group):   8%|8         | 42/519 [00:02<00:42, 11.25it/s]
+Animation 7: LaggedStart(Group):   8%|8         | 44/519 [00:02<00:45, 10.40it/s]
+Animation 7: LaggedStart(Group):   9%|8         | 46/519 [00:03<00:47,  9.95it/s]
+Animation 7: LaggedStart(Group):   9%|9         | 48/519 [00:03<00:44, 10.69it/s]
+Animation 7: LaggedStart(Group):  10%|9         | 51/519 [00:03<00:34, 13.38it/s]
+Animation 7: LaggedStart(Group):  10%|#         | 54/519 [00:03<00:28, 16.42it/s]
+Animation 7: LaggedStart(Group):  11%|#         | 57/519 [00:03<00:24, 18.88it/s]
+Animation 7: LaggedStart(Group):  12%|#1        | 60/519 [00:03<00:23, 19.70it/s]
+Animation 7: LaggedStart(Group):  12%|#2        | 63/519 [00:03<00:22, 20.37it/s]
+Animation 7: LaggedStart(Group):  13%|#2        | 66/519 [00:04<00:21, 20.60it/s]
+Animation 7: LaggedStart(Group):  13%|#3        | 69/519 [00:04<00:28, 16.04it/s]
+Animation 7: LaggedStart(Group):  14%|#3        | 71/519 [00:04<00:27, 16.29it/s]
+Animation 7: LaggedStart(Group):  14%|#4        | 73/519 [00:04<00:26, 16.53it/s]
+Animation 7: LaggedStart(Group):  14%|#4        | 75/519 [00:04<00:27, 15.99it/s]
+Animation 7: LaggedStart(Group):  15%|#4        | 77/519 [00:04<00:29, 15.14it/s]
+Animation 7: LaggedStart(Group):  15%|#5        | 79/519 [00:05<00:31, 14.08it/s]
+Animation 7: LaggedStart(Group):  16%|#5        | 81/519 [00:05<00:31, 13.75it/s]
+Animation 7: LaggedStart(Group):  16%|#5        | 83/519 [00:05<00:37, 11.78it/s]
+Animation 7: LaggedStart(Group):  16%|#6        | 85/519 [00:05<00:39, 11.12it/s]
+Animation 7: LaggedStart(Group):  17%|#6        | 87/519 [00:05<00:35, 12.16it/s]
+Animation 7: LaggedStart(Group):  17%|#7        | 89/519 [00:05<00:36, 11.69it/s]
+Animation 7: LaggedStart(Group):  18%|#7        | 91/519 [00:06<00:35, 12.14it/s]
+Animation 7: LaggedStart(Group):  18%|#7        | 93/519 [00:06<00:40, 10.50it/s]
+Animation 7: LaggedStart(Group):  18%|#8        | 95/519 [00:06<00:38, 11.08it/s]
+Animation 7: LaggedStart(Group):  19%|#8        | 97/519 [00:06<00:34, 12.32it/s]
+Animation 7: LaggedStart(Group):  19%|#9        | 100/519 [00:06<00:27, 15.50it/s]
+Animation 7: LaggedStart(Group):  20%|#9        | 102/519 [00:06<00:27, 15.07it/s]
+Animation 7: LaggedStart(Group):  20%|##        | 104/519 [00:07<00:27, 15.05it/s]
+Animation 7: LaggedStart(Group):  20%|##        | 106/519 [00:07<00:27, 15.14it/s]
+Animation 7: LaggedStart(Group):  21%|##        | 108/519 [00:07<00:27, 15.17it/s]
+Animation 7: LaggedStart(Group):  21%|##1       | 110/519 [00:07<00:25, 15.77it/s]
+Animation 7: LaggedStart(Group):  22%|##1       | 112/519 [00:07<00:29, 13.90it/s]
+Animation 7: LaggedStart(Group):  22%|##1       | 114/519 [00:07<00:29, 13.61it/s]
+Animation 7: LaggedStart(Group):  22%|##2       | 116/519 [00:07<00:36, 11.04it/s]
+Animation 7: LaggedStart(Group):  23%|##2       | 118/519 [00:08<00:36, 10.98it/s]
+Animation 7: LaggedStart(Group):  23%|##3       | 120/519 [00:08<00:37, 10.70it/s]
+Animation 7: LaggedStart(Group):  24%|##3       | 122/519 [00:08<00:39, 10.06it/s]
+Animation 7: LaggedStart(Group):  24%|##3       | 124/519 [00:08<00:37, 10.42it/s]
+Animation 7: LaggedStart(Group):  24%|##4       | 126/519 [00:09<00:39,  9.92it/s]
+Animation 7: LaggedStart(Group):  25%|##4       | 128/519 [00:09<00:44,  8.70it/s]
+Animation 7: LaggedStart(Group):  25%|##4       | 129/519 [00:09<00:46,  8.47it/s]
+Animation 7: LaggedStart(Group):  25%|##5       | 130/519 [00:09<00:47,  8.24it/s]
+Animation 7: LaggedStart(Group):  25%|##5       | 132/519 [00:09<00:43,  8.89it/s]
+Animation 7: LaggedStart(Group):  26%|##5       | 134/519 [00:09<00:43,  8.80it/s]
+Animation 7: LaggedStart(Group):  26%|##6       | 135/519 [00:10<00:43,  8.82it/s]
+Animation 7: LaggedStart(Group):  26%|##6       | 136/519 [00:10<00:43,  8.90it/s]
+Animation 7: LaggedStart(Group):  27%|##6       | 138/519 [00:10<00:40,  9.48it/s]
+Animation 7: LaggedStart(Group):  27%|##6       | 140/519 [00:10<00:39,  9.49it/s]
+Animation 7: LaggedStart(Group):  27%|##7       | 141/519 [00:10<00:46,  8.21it/s]
+Animation 7: LaggedStart(Group):  27%|##7       | 142/519 [00:10<00:44,  8.40it/s]
+Animation 7: LaggedStart(Group):  28%|##7       | 143/519 [00:11<00:43,  8.66it/s]
+Animation 7: LaggedStart(Group):  28%|##7       | 145/519 [00:11<00:38,  9.66it/s]
+Animation 7: LaggedStart(Group):  28%|##8       | 147/519 [00:11<00:33, 10.98it/s]
+Animation 7: LaggedStart(Group):  29%|##8       | 149/519 [00:11<00:31, 11.71it/s]
+Animation 7: LaggedStart(Group):  29%|##9       | 151/519 [00:11<00:34, 10.76it/s]
+Animation 7: LaggedStart(Group):  29%|##9       | 153/519 [00:11<00:33, 10.81it/s]
+Animation 7: LaggedStart(Group):  30%|##9       | 155/519 [00:11<00:29, 12.18it/s]
+Animation 7: LaggedStart(Group):  30%|###       | 157/519 [00:12<00:26, 13.77it/s]
+Animation 7: LaggedStart(Group):  31%|###       | 159/519 [00:12<00:23, 15.21it/s]
+Animation 7: LaggedStart(Group):  31%|###1      | 161/519 [00:12<00:23, 15.30it/s]
+Animation 7: LaggedStart(Group):  31%|###1      | 163/519 [00:12<00:25, 14.00it/s]
+Animation 7: LaggedStart(Group):  32%|###1      | 165/519 [00:12<00:24, 14.70it/s]
+Animation 7: LaggedStart(Group):  32%|###2      | 167/519 [00:12<00:22, 15.73it/s]
+Animation 7: LaggedStart(Group):  33%|###2      | 170/519 [00:12<00:19, 17.87it/s]
+Animation 7: LaggedStart(Group):  33%|###3      | 172/519 [00:12<00:19, 18.19it/s]
+Animation 7: LaggedStart(Group):  34%|###3      | 174/519 [00:13<00:21, 15.87it/s]
+Animation 7: LaggedStart(Group):  34%|###3      | 176/519 [00:13<00:24, 13.78it/s]
+Animation 7: LaggedStart(Group):  34%|###4      | 178/519 [00:13<00:23, 14.33it/s]
+Animation 7: LaggedStart(Group):  35%|###4      | 180/519 [00:13<00:24, 14.11it/s]
+Animation 7: LaggedStart(Group):  35%|###5      | 182/519 [00:13<00:24, 13.91it/s]
+Animation 7: LaggedStart(Group):  35%|###5      | 184/519 [00:14<00:31, 10.52it/s]
+Animation 7: LaggedStart(Group):  36%|###5      | 186/519 [00:14<00:31, 10.42it/s]
+Animation 7: LaggedStart(Group):  36%|###6      | 188/519 [00:14<00:31, 10.49it/s]
+Animation 7: LaggedStart(Group):  37%|###6      | 190/519 [00:14<00:30, 10.91it/s]
+Animation 7: LaggedStart(Group):  37%|###6      | 192/519 [00:14<00:33,  9.68it/s]
+Animation 7: LaggedStart(Group):  37%|###7      | 194/519 [00:15<00:39,  8.26it/s]
+Animation 7: LaggedStart(Group):  38%|###7      | 195/519 [00:15<00:42,  7.62it/s]
+Animation 7: LaggedStart(Group):  38%|###7      | 196/519 [00:15<00:42,  7.51it/s]
+Animation 7: LaggedStart(Group):  38%|###7      | 197/519 [00:15<00:54,  5.92it/s]
+Animation 7: LaggedStart(Group):  38%|###8      | 198/519 [00:15<00:53,  5.95it/s]
+Animation 7: LaggedStart(Group):  38%|###8      | 199/519 [00:16<00:52,  6.12it/s]
+Animation 7: LaggedStart(Group):  39%|###8      | 200/519 [00:16<00:50,  6.32it/s]
+Animation 7: LaggedStart(Group):  39%|###8      | 201/519 [00:16<00:50,  6.33it/s]
+Animation 7: LaggedStart(Group):  39%|###9      | 203/519 [00:16<00:38,  8.19it/s]
+Animation 7: LaggedStart(Group):  39%|###9      | 205/519 [00:16<00:30, 10.32it/s]
+Animation 7: LaggedStart(Group):  40%|###9      | 207/519 [00:16<00:27, 11.31it/s]
+Animation 7: LaggedStart(Group):  40%|####      | 209/519 [00:16<00:24, 12.63it/s]
+Animation 7: LaggedStart(Group):  41%|####      | 211/519 [00:17<00:26, 11.77it/s]
+Animation 7: LaggedStart(Group):  41%|####1     | 213/519 [00:17<00:25, 11.84it/s]
+Animation 7: LaggedStart(Group):  41%|####1     | 215/519 [00:17<00:25, 12.04it/s]
+Animation 7: LaggedStart(Group):  42%|####1     | 217/519 [00:17<00:24, 12.15it/s]
+Animation 7: LaggedStart(Group):  42%|####2     | 219/519 [00:17<00:24, 12.41it/s]
+Animation 7: LaggedStart(Group):  43%|####2     | 221/519 [00:17<00:24, 12.07it/s]
+Animation 7: LaggedStart(Group):  43%|####2     | 223/519 [00:18<00:24, 12.01it/s]
+Animation 7: LaggedStart(Group):  43%|####3     | 225/519 [00:18<00:24, 12.18it/s]
+Animation 7: LaggedStart(Group):  44%|####3     | 227/519 [00:18<00:25, 11.50it/s]
+Animation 7: LaggedStart(Group):  44%|####4     | 229/519 [00:18<00:26, 10.81it/s]
+Animation 7: LaggedStart(Group):  45%|####4     | 231/519 [00:18<00:29,  9.83it/s]
+Animation 7: LaggedStart(Group):  45%|####4     | 233/519 [00:19<00:29,  9.56it/s]
+Animation 7: LaggedStart(Group):  45%|####5     | 234/519 [00:19<00:31,  9.12it/s]
+Animation 7: LaggedStart(Group):  45%|####5     | 235/519 [00:19<00:32,  8.86it/s]
+Animation 7: LaggedStart(Group):  45%|####5     | 236/519 [00:19<00:33,  8.56it/s]
+Animation 7: LaggedStart(Group):  46%|####5     | 237/519 [00:19<00:32,  8.55it/s]
+Animation 7: LaggedStart(Group):  46%|####6     | 239/519 [00:19<00:30,  9.09it/s]
+Animation 7: LaggedStart(Group):  46%|####6     | 241/519 [00:20<00:28,  9.88it/s]
+Animation 7: LaggedStart(Group):  47%|####6     | 243/519 [00:20<00:25, 10.85it/s]
+Animation 7: LaggedStart(Group):  47%|####7     | 245/519 [00:20<00:23, 11.62it/s]
+Animation 7: LaggedStart(Group):  48%|####7     | 247/519 [00:20<00:20, 12.96it/s]
+Animation 7: LaggedStart(Group):  48%|####7     | 249/519 [00:20<00:19, 14.03it/s]
+Animation 7: LaggedStart(Group):  48%|####8     | 251/519 [00:20<00:19, 13.96it/s]
+Animation 7: LaggedStart(Group):  49%|####8     | 253/519 [00:20<00:18, 14.66it/s]
+Animation 7: LaggedStart(Group):  49%|####9     | 255/519 [00:20<00:18, 13.99it/s]
+Animation 7: LaggedStart(Group):  50%|####9     | 258/519 [00:21<00:17, 14.97it/s]
+Animation 7: LaggedStart(Group):  50%|#####     | 260/519 [00:21<00:18, 14.36it/s]
+Animation 7: LaggedStart(Group):  50%|#####     | 262/519 [00:21<00:18, 13.84it/s]
+Animation 7: LaggedStart(Group):  51%|#####     | 264/519 [00:21<00:18, 13.81it/s]
+Animation 7: LaggedStart(Group):  51%|#####1    | 266/519 [00:21<00:18, 13.91it/s]
+Animation 7: LaggedStart(Group):  52%|#####1    | 268/519 [00:21<00:18, 13.44it/s]
+Animation 7: LaggedStart(Group):  52%|#####2    | 270/519 [00:22<00:20, 12.41it/s]
+Animation 7: LaggedStart(Group):  52%|#####2    | 272/519 [00:22<00:20, 12.07it/s]
+Animation 7: LaggedStart(Group):  53%|#####2    | 274/519 [00:22<00:19, 12.31it/s]
+Animation 7: LaggedStart(Group):  53%|#####3    | 276/519 [00:22<00:21, 11.29it/s]
+Animation 7: LaggedStart(Group):  54%|#####3    | 278/519 [00:22<00:21, 11.35it/s]
+Animation 7: LaggedStart(Group):  54%|#####3    | 280/519 [00:22<00:19, 12.17it/s]
+Animation 7: LaggedStart(Group):  54%|#####4    | 282/519 [00:23<00:18, 12.72it/s]
+Animation 7: LaggedStart(Group):  55%|#####4    | 284/519 [00:23<00:18, 12.54it/s]
+Animation 7: LaggedStart(Group):  55%|#####5    | 286/519 [00:23<00:18, 12.40it/s]
+Animation 7: LaggedStart(Group):  55%|#####5    | 288/519 [00:23<00:20, 11.18it/s]
+Animation 7: LaggedStart(Group):  56%|#####5    | 290/519 [00:23<00:19, 11.92it/s]
+Animation 7: LaggedStart(Group):  56%|#####6    | 292/519 [00:23<00:17, 12.96it/s]
+Animation 7: LaggedStart(Group):  57%|#####6    | 295/519 [00:24<00:14, 15.53it/s]
+Animation 7: LaggedStart(Group):  57%|#####7    | 297/519 [00:24<00:13, 16.34it/s]
+Animation 7: LaggedStart(Group):  58%|#####7    | 299/519 [00:24<00:13, 16.37it/s]
+Animation 7: LaggedStart(Group):  58%|#####7    | 301/519 [00:24<00:12, 17.14it/s]
+Animation 7: LaggedStart(Group):  58%|#####8    | 303/519 [00:24<00:13, 16.36it/s]
+Animation 7: LaggedStart(Group):  59%|#####8    | 305/519 [00:24<00:13, 16.29it/s]
+Animation 7: LaggedStart(Group):  59%|#####9    | 307/519 [00:24<00:13, 16.17it/s]
+Animation 7: LaggedStart(Group):  60%|#####9    | 309/519 [00:24<00:13, 15.89it/s]
+Animation 7: LaggedStart(Group):  60%|#####9    | 311/519 [00:25<00:13, 15.65it/s]
+Animation 7: LaggedStart(Group):  60%|######    | 313/519 [00:25<00:14, 14.35it/s]
+Animation 7: LaggedStart(Group):  61%|######    | 315/519 [00:25<00:15, 13.23it/s]
+Animation 7: LaggedStart(Group):  61%|######1   | 317/519 [00:25<00:16, 12.33it/s]
+Animation 7: LaggedStart(Group):  61%|######1   | 319/519 [00:25<00:16, 12.18it/s]
+Animation 7: LaggedStart(Group):  62%|######1   | 321/519 [00:25<00:17, 11.15it/s]
+Animation 7: LaggedStart(Group):  62%|######2   | 323/519 [00:26<00:19, 10.10it/s]
+Animation 7: LaggedStart(Group):  63%|######2   | 325/519 [00:26<00:21,  8.94it/s]
+Animation 7: LaggedStart(Group):  63%|######2   | 326/519 [00:26<00:22,  8.49it/s]
+Animation 7: LaggedStart(Group):  63%|######3   | 327/519 [00:26<00:23,  8.30it/s]
+Animation 7: LaggedStart(Group):  63%|######3   | 329/519 [00:26<00:21,  8.76it/s]
+Animation 7: LaggedStart(Group):  64%|######3   | 330/519 [00:27<00:21,  8.98it/s]
+Animation 7: LaggedStart(Group):  64%|######3   | 332/519 [00:27<00:19,  9.57it/s]
+Animation 7: LaggedStart(Group):  64%|######4   | 333/519 [00:27<00:19,  9.44it/s]
+Animation 7: LaggedStart(Group):  65%|######4   | 335/519 [00:27<00:17, 10.57it/s]
+Animation 7: LaggedStart(Group):  65%|######5   | 338/519 [00:27<00:12, 14.02it/s]
+Animation 7: LaggedStart(Group):  66%|######5   | 340/519 [00:27<00:12, 14.85it/s]
+Animation 7: LaggedStart(Group):  66%|######6   | 343/519 [00:27<00:10, 16.16it/s]
+Animation 7: LaggedStart(Group):  66%|######6   | 345/519 [00:28<00:11, 15.51it/s]
+Animation 7: LaggedStart(Group):  67%|######6   | 347/519 [00:28<00:11, 15.37it/s]
+Animation 7: LaggedStart(Group):  67%|######7   | 349/519 [00:28<00:11, 15.03it/s]
+Animation 7: LaggedStart(Group):  68%|######7   | 351/519 [00:28<00:11, 14.41it/s]
+Animation 7: LaggedStart(Group):  68%|######8   | 353/519 [00:28<00:11, 14.10it/s]
+Animation 7: LaggedStart(Group):  68%|######8   | 355/519 [00:28<00:12, 13.59it/s]
+Animation 7: LaggedStart(Group):  69%|######8   | 357/519 [00:28<00:12, 13.13it/s]
+Animation 7: LaggedStart(Group):  69%|######9   | 359/519 [00:29<00:13, 12.27it/s]
+Animation 7: LaggedStart(Group):  70%|######9   | 361/519 [00:29<00:13, 11.80it/s]
+Animation 7: LaggedStart(Group):  70%|######9   | 363/519 [00:29<00:13, 11.67it/s]
+Animation 7: LaggedStart(Group):  70%|#######   | 365/519 [00:29<00:13, 11.41it/s]
+Animation 7: LaggedStart(Group):  71%|#######   | 367/519 [00:29<00:15,  9.95it/s]
+Animation 7: LaggedStart(Group):  71%|#######1  | 369/519 [00:30<00:15,  9.54it/s]
+Animation 7: LaggedStart(Group):  71%|#######1  | 370/519 [00:30<00:15,  9.48it/s]
+Animation 7: LaggedStart(Group):  72%|#######1  | 372/519 [00:30<00:15,  9.54it/s]
+Animation 7: LaggedStart(Group):  72%|#######1  | 373/519 [00:30<00:15,  9.62it/s]
+Animation 7: LaggedStart(Group):  72%|#######2  | 375/519 [00:30<00:14, 10.05it/s]
+Animation 7: LaggedStart(Group):  73%|#######2  | 377/519 [00:30<00:13, 10.91it/s]
+Animation 7: LaggedStart(Group):  73%|#######3  | 379/519 [00:31<00:13, 10.68it/s]
+Animation 7: LaggedStart(Group):  73%|#######3  | 381/519 [00:31<00:12, 10.85it/s]
+Animation 7: LaggedStart(Group):  74%|#######3  | 383/519 [00:31<00:11, 12.32it/s]
+Animation 7: LaggedStart(Group):  74%|#######4  | 385/519 [00:31<00:10, 12.80it/s]
+Animation 7: LaggedStart(Group):  75%|#######4  | 387/519 [00:31<00:09, 13.70it/s]
+Animation 7: LaggedStart(Group):  75%|#######4  | 389/519 [00:31<00:09, 14.33it/s]
+Animation 7: LaggedStart(Group):  75%|#######5  | 391/519 [00:31<00:08, 14.39it/s]
+Animation 7: LaggedStart(Group):  76%|#######5  | 393/519 [00:32<00:08, 14.83it/s]
+Animation 7: LaggedStart(Group):  76%|#######6  | 395/519 [00:32<00:08, 14.84it/s]
+Animation 7: LaggedStart(Group):  76%|#######6  | 397/519 [00:32<00:08, 14.11it/s]
+Animation 7: LaggedStart(Group):  77%|#######6  | 399/519 [00:32<00:08, 14.47it/s]
+Animation 7: LaggedStart(Group):  77%|#######7  | 401/519 [00:32<00:08, 14.13it/s]
+Animation 7: LaggedStart(Group):  78%|#######7  | 404/519 [00:32<00:07, 16.39it/s]
+Animation 7: LaggedStart(Group):  78%|#######8  | 406/519 [00:32<00:06, 17.12it/s]
+Animation 7: LaggedStart(Group):  79%|#######8  | 408/519 [00:33<00:06, 17.29it/s]
+Animation 7: LaggedStart(Group):  79%|#######8  | 410/519 [00:33<00:06, 16.28it/s]
+Animation 7: LaggedStart(Group):  79%|#######9  | 412/519 [00:33<00:06, 15.94it/s]
+Animation 7: LaggedStart(Group):  80%|#######9  | 414/519 [00:33<00:07, 14.78it/s]
+Animation 7: LaggedStart(Group):  80%|########  | 416/519 [00:33<00:07, 13.31it/s]
+Animation 7: LaggedStart(Group):  81%|########  | 418/519 [00:33<00:07, 13.17it/s]
+Animation 7: LaggedStart(Group):  81%|########  | 420/519 [00:33<00:07, 12.80it/s]
+Animation 7: LaggedStart(Group):  81%|########1 | 422/519 [00:34<00:07, 12.37it/s]
+Animation 7: LaggedStart(Group):  82%|########1 | 424/519 [00:34<00:07, 11.93it/s]
+Animation 7: LaggedStart(Group):  82%|########2 | 426/519 [00:34<00:08, 10.54it/s]
+Animation 7: LaggedStart(Group):  82%|########2 | 428/519 [00:34<00:09,  9.85it/s]
+Animation 7: LaggedStart(Group):  83%|########2 | 430/519 [00:34<00:09,  9.72it/s]
+Animation 7: LaggedStart(Group):  83%|########3 | 431/519 [00:35<00:09,  9.71it/s]
+Animation 7: LaggedStart(Group):  83%|########3 | 432/519 [00:35<00:09,  9.20it/s]
+Animation 7: LaggedStart(Group):  83%|########3 | 433/519 [00:35<00:09,  8.80it/s]
+Animation 7: LaggedStart(Group):  84%|########3 | 435/519 [00:35<00:08,  9.69it/s]
+Animation 7: LaggedStart(Group):  84%|########4 | 437/519 [00:35<00:08,  9.90it/s]
+Animation 7: LaggedStart(Group):  84%|########4 | 438/519 [00:35<00:08,  9.48it/s]
+Animation 7: LaggedStart(Group):  85%|########4 | 439/519 [00:35<00:08,  9.32it/s]
+Animation 7: LaggedStart(Group):  85%|########4 | 441/519 [00:36<00:07, 10.15it/s]
+Animation 7: LaggedStart(Group):  85%|########5 | 443/519 [00:36<00:07, 10.43it/s]
+Animation 7: LaggedStart(Group):  86%|########5 | 445/519 [00:36<00:07, 10.29it/s]
+Animation 7: LaggedStart(Group):  86%|########6 | 447/519 [00:36<00:06, 11.15it/s]
+Animation 7: LaggedStart(Group):  87%|########6 | 449/519 [00:36<00:05, 11.92it/s]
+Animation 7: LaggedStart(Group):  87%|########6 | 451/519 [00:36<00:05, 13.06it/s]
+Animation 7: LaggedStart(Group):  87%|########7 | 453/519 [00:37<00:04, 14.21it/s]
+Animation 7: LaggedStart(Group):  88%|########7 | 455/519 [00:37<00:04, 15.44it/s]
+Animation 7: LaggedStart(Group):  88%|########8 | 457/519 [00:37<00:04, 13.94it/s]
+Animation 7: LaggedStart(Group):  88%|########8 | 459/519 [00:37<00:04, 13.82it/s]
+Animation 7: LaggedStart(Group):  89%|########8 | 461/519 [00:37<00:04, 13.26it/s]
+Animation 7: LaggedStart(Group):  89%|########9 | 463/519 [00:37<00:04, 12.50it/s]
+Animation 7: LaggedStart(Group):  90%|########9 | 465/519 [00:37<00:04, 12.01it/s]
+Animation 7: LaggedStart(Group):  90%|########9 | 467/519 [00:38<00:04, 11.32it/s]
+Animation 7: LaggedStart(Group):  90%|######### | 469/519 [00:38<00:04, 10.94it/s]
+Animation 7: LaggedStart(Group):  91%|######### | 471/519 [00:38<00:04, 10.63it/s]
+Animation 7: LaggedStart(Group):  91%|#########1| 473/519 [00:38<00:04, 10.42it/s]
+Animation 7: LaggedStart(Group):  92%|#########1| 475/519 [00:39<00:04,  9.85it/s]
+Animation 7: LaggedStart(Group):  92%|#########1| 477/519 [00:39<00:04,  8.88it/s]
+Animation 7: LaggedStart(Group):  92%|#########2| 478/519 [00:39<00:04,  8.67it/s]
+Animation 7: LaggedStart(Group):  92%|#########2| 479/519 [00:39<00:04,  8.51it/s]
+Animation 7: LaggedStart(Group):  93%|#########2| 481/519 [00:39<00:04,  9.17it/s]
+Animation 7: LaggedStart(Group):  93%|#########2| 482/519 [00:39<00:04,  8.91it/s]
+Animation 7: LaggedStart(Group):  93%|#########3| 484/519 [00:40<00:03,  9.34it/s]
+Animation 7: LaggedStart(Group):  93%|#########3| 485/519 [00:40<00:03,  9.28it/s]
+Animation 7: LaggedStart(Group):  94%|#########3| 487/519 [00:40<00:03,  9.56it/s]
+Animation 7: LaggedStart(Group):  94%|#########4| 488/519 [00:40<00:03,  9.53it/s]
+Animation 7: LaggedStart(Group):  94%|#########4| 490/519 [00:40<00:03,  9.56it/s]
+Animation 7: LaggedStart(Group):  95%|#########4| 491/519 [00:40<00:02,  9.60it/s]
+Animation 7: LaggedStart(Group):  95%|#########4| 493/519 [00:40<00:02, 10.95it/s]
+Animation 7: LaggedStart(Group):  95%|#########5| 495/519 [00:41<00:01, 12.89it/s]
+Animation 7: LaggedStart(Group):  96%|#########5| 497/519 [00:41<00:01, 13.47it/s]
+Animation 7: LaggedStart(Group):  96%|#########6| 499/519 [00:41<00:01, 13.94it/s]
+Animation 7: LaggedStart(Group):  97%|#########6| 501/519 [00:41<00:01, 13.09it/s]
+Animation 7: LaggedStart(Group):  97%|#########6| 503/519 [00:41<00:01, 13.73it/s]
+Animation 7: LaggedStart(Group):  97%|#########7| 505/519 [00:41<00:01, 13.57it/s]
+Animation 7: LaggedStart(Group):  98%|#########7| 507/519 [00:41<00:00, 13.53it/s]
+Animation 7: LaggedStart(Group):  98%|#########8| 509/519 [00:42<00:00, 12.62it/s]
+Animation 7: LaggedStart(Group):  98%|#########8| 511/519 [00:42<00:00, 11.90it/s]
+Animation 7: LaggedStart(Group):  99%|#########8| 513/519 [00:42<00:00, 10.79it/s]
+Animation 7: LaggedStart(Group):  99%|#########9| 515/519 [00:42<00:00, 10.26it/s]
+Animation 7: LaggedStart(Group): 100%|#########9| 517/519 [00:42<00:00,  9.65it/s]
+Animation 7: LaggedStart(Group): 100%|#########9| 518/519 [00:43<00:00,  9.36it/s]
+Animation 7: LaggedStart(Group): 100%|##########| 519/519 [00:43<00:00,  8.90it/s]
+                                                                                  
+latex: major issue: So far, you have not checked for MiKTeX updates.
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\input_data_20251104_131531\script_seq2 |
+| \script_seq2.py:36 in construct                                             |
+|                                                                             |
+|   33         self.wait(1)                                                   |
+|   34                                                                        |
+|   35         # Step 5: Label the total number of unit squares as '\u03c0r²'.     |
+| > 36         area_label = Tex(r"\pi r^2", color=YELLOW).scale(1.5).next_to( |
+|   37         self.play(Write(area_label))                                   |
+|   38         self.wait(2)                                                   |
+|   39                                                                        |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\text\tex_ |
+| mobject.py:452 in __init__                                                  |
+|                                                                             |
+|   449     def __init__(                                                     |
+|   450         self, *tex_strings, arg_separator="", tex_environment="center |
+|   451     ):                                                                |
+| > 452         super().__init__(                                             |
+|   453             *tex_strings,                                             |
+|   454             arg_separator=arg_separator,                              |
+|   455             tex_environment=tex_environment,                          |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\text\tex_ |
+| mobject.py:298 in __init__                                                  |
+|                                                                             |
+|   295                         """,                                          |
+|   296                     ),                                                |
+|   297                 )                                                     |
+| > 298             raise compilation_error                                   |
+|   299         self.set_color_by_tex_to_color_map(self.tex_to_color_map)     |
+|   300                                                                       |
+|   301         if self.organize_left_to_right:                               |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\text\tex_ |
+| mobject.py:277 in __init__                                                  |
+|                                                                             |
+|   274         self.brace_notation_split_occurred = False                    |
+|   275         self.tex_strings = self._break_up_tex_strings(tex_strings)    |
+|   276         try:                                                          |
+| > 277             super().__init__(                                         |
+|   278                 self.arg_separator.join(self.tex_strings),            |
+|   279                 tex_environment=self.tex_environment,                 |
+|   280                 tex_template=self.tex_template,                       |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\text\tex_ |
+| mobject.py:80 in __init__                                                   |
+|                                                                             |
+|    77                                                                       |
+|    78         assert isinstance(tex_string, str)                            |
+|    79         self.tex_string = tex_string                                  |
+| >  80         file_name = tex_to_svg_file(                                  |
+|    81             self._get_modified_expression(tex_string),                |
+|    82             environment=self.tex_environment,                         |
+|    83             tex_template=self.tex_template,                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\utils\tex_file_wr |
+| iting.py:65 in tex_to_svg_file                                              |
+|                                                                             |
+|    62     if svg_file.exists():                                             |
+|    63         return svg_file                                               |
+|    64                                                                       |
+| >  65     dvi_file = compile_tex(                                           |
+|    66         tex_file,                                                     |
+|    67         tex_template.tex_compiler,                                    |
+|    68         tex_template.output_format,                                   |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\utils\tex_file_wr |
+| iting.py:212 in compile_tex                                                 |
+|                                                                             |
+|   209         if cp.returncode != 0:                                        |
+|   210             log_file = tex_file.with_suffix(".log")                   |
+|   211             print_all_tex_errors(log_file, tex_compiler, tex_file)    |
+| > 212             raise ValueError(                                         |
+|   213                 f"{tex_compiler} error converting to"                 |
+|   214                 f" {output_format[1:]}. See log output above or"      |
+|   215                 f" the log file: {log_file}",                         |
++-----------------------------------------------------------------------------+
+ValueError: latex error converting to dvi. See log output above or the log 
+file: 
+C:\ArkMalay\Framework\tutor\src\media\videos\input_data_20251104_131531\script_
+seq2\Tex\9dda24c404f3e880.log
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/07/25 17:15:17] INFO     Writing r to               tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\input_d                        
+                             ata_20251104_131531\script                        
+                             _seq2\Tex\937b81def052c03a                        
+                             .tex                                              
+[11/07/25 17:15:20] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\inpu                         
+                             t_data_20251104_131531\sc                         
+                             ript_seq2\videos\script_s                         
+                             eq2\480p15\partial_movie_                         
+                             files\CircleToArea\118581                         
+                             8338_359695016_223132457.                         
+                             mp4'                                              
+[11/07/25 17:15:21] INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\inpu                         
+                             t_data_20251104_131531\sc                         
+                             ript_seq2\videos\script_s                         
+                             eq2\480p15\partial_movie_                         
+                             files\CircleToArea\624642                         
+                             324_4140826040_3425753932                         
+                             .mp4'                                             
+                    INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\inpu                         
+                             t_data_20251104_131531\sc                         
+                             ript_seq2\videos\script_s                         
+                             eq2\480p15\partial_movie_                         
+                             files\CircleToArea\624642                         
+                             324_4217992463_3427593496                         
+                             .mp4'                                             
+                    INFO     Animation 3 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\inpu                         
+                             t_data_20251104_131531\sc                         
+                             ript_seq2\videos\script_s                         
+                             eq2\480p15\partial_movie_                         
+                             files\CircleToArea\624642                         
+                             324_3857169934_316430752.                         
+                             mp4'                                              
+                    INFO     Animation 4 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\inpu                         
+                             t_data_20251104_131531\sc                         
+                             ript_seq2\videos\script_s                         
+                             eq2\480p15\partial_movie_                         
+                             files\CircleToArea\624642                         
+                             324_4217992463_3947720037                         
+                             .mp4'                                             
+[11/07/25 17:15:22] INFO     Animation 5 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\inpu                         
+                             t_data_20251104_131531\sc                         
+                             ript_seq2\videos\script_s                         
+                             eq2\480p15\partial_movie_                         
+                             files\CircleToArea\624642                         
+                             324_121596672_230043802.m                         
+                             p4'                                               
+                    INFO     Animation 6 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\inpu                         
+                             t_data_20251104_131531\sc                         
+                             ript_seq2\videos\script_s                         
+                             eq2\480p15\partial_movie_                         
+                             files\CircleToArea\624642                         
+                             324_4217992463_1735907812                         
+                             .mp4'                                             
+[11/07/25 17:16:10] INFO     Animation 7 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\inpu                         
+                             t_data_20251104_131531\sc                         
+                             ript_seq2\videos\script_s                         
+                             eq2\480p15\partial_movie_                         
+                             files\CircleToArea\624642                         
+                             324_3617714921_3421388021                         
+                             .mp4'                                             
+[11/07/25 17:16:12] INFO     Animation 8 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\inpu                         
+                             t_data_20251104_131531\sc                         
+                             ript_seq2\videos\script_s                         
+                             eq2\480p15\partial_movie_                         
+                             files\CircleToArea\624642                         
+                             324_4217992463_489576280.                         
+                             mp4'                                              
+                    INFO     Writing \pi r^2 to         tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\input_d                        
+                             ata_20251104_131531\script                        
+                             _seq2\Tex\9dda24c404f3e880                        
+                             .tex                                              
+[11/07/25 17:16:13] ERROR    LaTeX compilation error:   tex_file_writing.py:314
+                             Missing $ inserted.                               
+                                                                               
+                    ERROR    Context of error:          tex_file_writing.py:348
+                             \usepackage{amssymb}                              
+                             \begin{document}                                  
+                             -> \begin{center}                                 
+                             \pi r^2                                           
+                             \end{center}                                      
+                             \end{document}
+──────────────────────────────────────────────
+
+[2025-11-07 17:16:35] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\routes\video_routes.py", line 29, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\main.py", line 53, in process_pipeline
+    Table_gen.table_generator(generated_files, PathList)
+  File "C:\ArkMalay\Framework\tutor\src\table_gen.py", line 123, in table_generator
+    if cur:
+       ^^^
+UnboundLocalError: cannot access local variable 'cur' where it is not associated with a value
+[2025-11-07 17:16:35] [ERROR] ❌ HTTP 500: {"detail":"cannot access local variable 'cur' where it is not associated with a value"}
+[2025-11-07 17:16:35] [ERROR] 💥 Error in /write-scripts endpoint
+[2025-11-07 17:16:35] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"cannot access local variable 'cur' where it is not associated with a value\"}"}
+[2025-11-07 17:16:36] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: {\\\"detail\\\":\\\"cannot access local variable 'cur' where it is not associated with a value\\\"}\"}"}

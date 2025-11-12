@@ -1,0 +1,23 @@
+[2025-10-28 14:51:08] [DEBUG] file_types: ['py', 'txt']
+[2025-10-28 14:51:08] [DEBUG] generated_files: {'py_files': [], 'txt_files': []}
+[2025-10-28 14:51:08] [DEBUG] 🧮 File: script_seq1.py | base_handler Words: 264 | Approx. GPT Tokens: 352
+[2025-10-28 14:51:08] [DEBUG] 🧮 File: script_seq1.txt | base_handler Words: 110 | Approx. GPT Tokens: 146
+[2025-10-28 14:51:08] [DEBUG] 🧮 File: script_seq2.py | base_handler Words: 257 | Approx. GPT Tokens: 342
+[2025-10-28 14:51:08] [DEBUG] 🧮 File: script_seq2.txt | base_handler Words: 109 | Approx. GPT Tokens: 145
+[2025-10-28 14:51:08] [DEBUG] 🧮 File: script_seq3.py | base_handler Words: 285 | Approx. GPT Tokens: 380
+[2025-10-28 14:51:08] [DEBUG] 🧮 File: script_seq3.txt | base_handler Words: 138 | Approx. GPT Tokens: 184
+[2025-10-28 14:51:08] [DEBUG] 🧮 File: script_seq4.py | base_handler Words: 327 | Approx. GPT Tokens: 436
+[2025-10-28 14:51:08] [DEBUG] 🧮 File: script_seq4.txt | base_handler Words: 140 | Approx. GPT Tokens: 186
+[2025-10-28 14:51:08] [DEBUG] 🧮 File: script_seq5.py | base_handler Words: 251 | Approx. GPT Tokens: 334
+[2025-10-28 14:51:08] [DEBUG] 🧮 File: script_seq5.txt | base_handler Words: 107 | Approx. GPT Tokens: 142
+[2025-10-28 14:56:19] [DEBUG] 🧮 File: script_seq1.py | video_factory Words: 0 | Approx. GPT Tokens: 0
+[2025-10-28 14:56:32] [DEBUG] 🧮 File: script_seq2.py | video_factory Words: 1 | Approx. GPT Tokens: 1
+[2025-10-28 14:56:33] [DEBUG] 🧮 File: script_seq3.py | video_factory Words: 285 | Approx. GPT Tokens: 380
+[2025-10-28 14:56:33] [DEBUG] 🧮 File: script_seq4.py | video_factory Words: 327 | Approx. GPT Tokens: 436
+[2025-10-28 14:56:33] [DEBUG] 🧮 File: script_seq5.py | video_factory Words: 251 | Approx. GPT Tokens: 334
+[2025-10-28 14:57:19] [DEBUG] ✅ Generated full audio for: script_seq1.txt (in memory)
+[2025-10-28 14:57:45] [DEBUG] ✅ Generated full audio for: script_seq2.txt (in memory)
+[2025-10-28 14:58:16] [DEBUG] ✅ Generated full audio for: script_seq3.txt (in memory)
+[2025-10-28 14:59:01] [DEBUG] ✅ Generated full audio for: script_seq4.txt (in memory)
+[2025-10-28 14:59:46] [DEBUG] ✅ Generated full audio for: script_seq5.txt (in memory)
+[2025-10-28 14:59:46] [DEBUG] Audio bytes count: 5

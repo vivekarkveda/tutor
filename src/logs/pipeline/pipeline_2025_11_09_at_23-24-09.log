@@ -1,0 +1,57 @@
+[2025-11-09 23:27:21] [INFO] 🧠 Generating script for topic='explain simple cube root expression', class='10'
+[2025-11-09 23:27:35] [INFO] 🚀 Sending generated script to /generate-files-api and /Generator ...
+[2025-11-09 23:27:35] [INFO] 🟢 [generate-files-api] New request received
+[2025-11-09 23:27:35] [INFO] 📁 Created folder: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be
+[2025-11-09 23:27:35] [INFO] ✅ JSON saved successfully at C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\input_data.json
+[2025-11-09 23:27:35] [INFO] 🧩 Starting file preparation process via prepare_files()
+[2025-11-09 23:27:35] [INFO] 📝 Generating Python and TXT files from JSON: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\input_data.json
+[2025-11-09 23:27:36] [INFO] 📂 Using existing transaction folder for script sequences: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences
+[2025-11-09 23:27:36] [INFO] 📁 Created script sequence folder: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences\script_seq1
+[2025-11-09 23:27:36] [INFO] ✅ Created PY file: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences\script_seq1\script_seq1.py
+[2025-11-09 23:27:36] [INFO] ✅ Created TXT file: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences\script_seq1\script_seq1.txt
+[2025-11-09 23:27:36] [INFO] 📁 Created script sequence folder: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences\script_seq2
+[2025-11-09 23:27:36] [INFO] ✅ Created PY file: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences\script_seq2\script_seq2.py
+[2025-11-09 23:27:36] [INFO] ✅ Created TXT file: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences\script_seq2\script_seq2.txt
+[2025-11-09 23:27:36] [INFO] 📁 Created script sequence folder: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences\script_seq3
+[2025-11-09 23:27:36] [INFO] ✅ Created PY file: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences\script_seq3\script_seq3.py
+[2025-11-09 23:27:36] [INFO] ✅ Created TXT file: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences\script_seq3\script_seq3.txt
+[2025-11-09 23:27:36] [INFO] 📁 Created script sequence folder: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences\script_seq4
+[2025-11-09 23:27:36] [INFO] ✅ Created PY file: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences\script_seq4\script_seq4.py
+[2025-11-09 23:27:36] [INFO] ✅ Created TXT file: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences\script_seq4\script_seq4.txt
+[2025-11-09 23:27:36] [INFO] 🎯 Total Words: 754 | Approx. Total GPT Tokens: 1003
+[2025-11-09 23:27:36] [INFO] 🎉 All files generated inside: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences
+[2025-11-09 23:27:36] [INFO] ✅ File preparation completed. Output: {'py_files': ['C:\\ArkMalay\\Framework\\Video_data\\20251109_232735_71ca83be\\script_sequences\\script_seq1\\script_seq1.py', 'C:\\ArkMalay\\Framework\\Video_data\\20251109_232735_71ca83be\\script_sequences\\script_seq2\\script_seq2.py', 'C:\\ArkMalay\\Framework\\Video_data\\20251109_232735_71ca83be\\script_sequences\\script_seq3\\script_seq3.py', 'C:\\ArkMalay\\Framework\\Video_data\\20251109_232735_71ca83be\\script_sequences\\script_seq4\\script_seq4.py'], 'txt_files': ['C:\\ArkMalay\\Framework\\Video_data\\20251109_232735_71ca83be\\script_sequences\\script_seq1\\script_seq1.txt', 'C:\\ArkMalay\\Framework\\Video_data\\20251109_232735_71ca83be\\script_sequences\\script_seq2\\script_seq2.txt', 'C:\\ArkMalay\\Framework\\Video_data\\20251109_232735_71ca83be\\script_sequences\\script_seq3\\script_seq3.txt', 'C:\\ArkMalay\\Framework\\Video_data\\20251109_232735_71ca83be\\script_sequences\\script_seq4\\script_seq4.txt']}
+[2025-11-09 23:27:36] [INFO] 🎯 Transaction 71ca83be completed successfully. Folder: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be
+[2025-11-09 23:28:06] [INFO] 🎬 Generated Manim Code Successfully
+[2025-11-09 23:28:06] [INFO] 🔍 TRANSACTION_FOLDER currently: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be
+[2025-11-09 23:28:06] [INFO] 🟢 Using TRANSACTION_FOLDER for writing scripts: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences
+[2025-11-09 23:28:06] [INFO] ✅ Manim script written: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences\script_seq1\script_seq1.py
+[2025-11-09 23:28:06] [INFO] ✅ Manim script written: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences\script_seq2\script_seq2.py
+[2025-11-09 23:28:06] [INFO] ✅ Manim script written: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences\script_seq3\script_seq3.py
+[2025-11-09 23:28:06] [INFO] ✅ Manim script written: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences\script_seq4\script_seq4.py
+[2025-11-09 23:28:06] [INFO] 🎥 Triggering video generation for folder: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences
+[2025-11-09 23:28:08] [INFO] 🚀 Received video generation request.
+[2025-11-09 23:28:08] [INFO] 📂 Using provided input path: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences
+[2025-11-09 23:28:08] [INFO] 🧩 Found 4 .py files and 4 .txt files under C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be\script_sequences
+[2025-11-09 23:28:08] [INFO] 🎬 Starting video + audio processing pipeline...
+[2025-11-09 23:28:08] [INFO] 🎬 Video callable prepared for: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be
+[2025-11-09 23:28:08] [INFO] 🎬 Running Manim on C:/ArkMalay/Framework/Video_data/20251109_232735_71ca83be/script_sequences/script_seq1/script_seq1.py ...
+[2025-11-09 23:28:08] [INFO] 🧹 Cleaned old media folder: C:\ArkMalay\Framework\tutor\src\media\videos\script_sequences\script_seq1
+[2025-11-09 23:28:16] [INFO] 🎬 Running Manim on C:/ArkMalay/Framework/Video_data/20251109_232735_71ca83be/script_sequences/script_seq2/script_seq2.py ...
+[2025-11-09 23:28:16] [INFO] 🧹 Cleaned old media folder: C:\ArkMalay\Framework\tutor\src\media\videos\script_sequences\script_seq2
+[2025-11-09 23:28:38] [INFO] 🎞️ Detected Scene class: CubeRootAnimation
+[2025-11-09 23:28:38] [INFO] ✅ Found video: C:\ArkMalay\Framework\tutor\src\media\videos\script_sequences\script_seq2\videos\script_seq2\480p15\CubeRootAnimation.mp4
+[2025-11-09 23:28:38] [INFO] 🎬 Running Manim on C:/ArkMalay/Framework/Video_data/20251109_232735_71ca83be/script_sequences/script_seq3/script_seq3.py ...
+[2025-11-09 23:28:38] [INFO] 🧹 Cleaned old media folder: C:\ArkMalay\Framework\tutor\src\media\videos\script_sequences\script_seq3
+[2025-11-09 23:28:58] [INFO] 🎬 Running Manim on C:/ArkMalay/Framework/Video_data/20251109_232735_71ca83be/script_sequences/script_seq4/script_seq4.py ...
+[2025-11-09 23:28:58] [INFO] 🧹 Cleaned old media folder: C:\ArkMalay\Framework\tutor\src\media\videos\script_sequences\script_seq4
+[2025-11-09 23:29:22] [INFO] ✅ Total words: 576 | Approx. GPT tokens: 767 | Total videos collected: 1
+[2025-11-09 23:29:23] [INFO] 🎬 Video saved at: C:\ArkMalay\Framework\tutor\output\Videos\20251109_232735_71ca83be_script_seq1.mp4
+[2025-11-09 23:29:23] [INFO] 🎵 Audio saved at: C:\ArkMalay\Framework\tutor\output\Audios\20251109_232735_71ca83be_script_seq1.mp3
+[2025-11-09 23:29:23] [INFO] Trying to merge final video/audio
+[2025-11-09 23:29:23] [INFO] Trying Drive upload!
+[2025-11-09 23:29:23] [INFO] 📂 Using Settings.TRANSACTION_FOLDER: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be
+[2025-11-09 23:29:23] [INFO] 🚀 Starting Drive upload for folder: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be
+[2025-11-09 23:29:23] [INFO] 🔍 [Drive Upload Debug] Entered upload_folder_to_drive() with folder_path=C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be
+[2025-11-09 23:29:23] [INFO] 🚀 Starting Drive upload for folder: C:\ArkMalay\Framework\Video_data\20251109_232735_71ca83be
+[2025-11-09 23:29:23] [INFO] ✅ Script pipeline completed successfully for topic='explain simple cube root expression'

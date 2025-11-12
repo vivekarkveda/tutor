@@ -1,0 +1,179 @@
+[2025-11-09 12:47:37] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251109_124656_fc75083d/script_sequences/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+
+Animation 0: Create(Rectangle):   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                      
+
+Animation 1: Write(Tex('L')), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 1: Write(Tex('L')), etc.:  80%|########  | 12/15 [00:00<00:00, 116.94it/s]
+                                                                                    
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251109_124656_fc75083d\script_sequences\ |
+| script_seq2\script_seq2.py:15 in construct                                  |
+|                                                                             |
+|   12         self.wait(1)                                                   |
+|   13                                                                        |
+|   14         # Zoom into the rectangle                                      |
+| > 15         self.play(CameraFrame.frame_center.animate.move_to(rect.get_ce |
+|   16         self.wait(1)                                                   |
+|   17                                                                        |
+|   18         # Animate multiplication sign appearing                        |
++-----------------------------------------------------------------------------+
+NameError: name 'CameraFrame' is not defined
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/09/25 12:47:28] INFO     Writing L to               tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq2\Tex\                        
+                             04dd6bb840e27b07.tex                              
+[11/09/25 12:47:33] INFO     Writing W to               tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq2\Tex\                        
+                             05acfc6ac03c88b4.tex                              
+[11/09/25 12:47:36] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq2\                         
+                             videos\script_seq2\480p15                         
+                             \partial_movie_files\Rect                         
+                             angleAreaAnimation\118581                         
+                             8338_406577954_223132457.                         
+                             mp4'                                              
+                    INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq2\                         
+                             videos\script_seq2\480p15                         
+                             \partial_movie_files\Rect                         
+                             angleAreaAnimation\624642                         
+                             324_1954182006_2429796867                         
+                             .mp4'                                             
+[11/09/25 12:47:37] INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq2\                         
+                             videos\script_seq2\480p15                         
+                             \partial_movie_files\Rect                         
+                             angleAreaAnimation\624642                         
+                             324_4217992463_2934131127                         
+                             .mp4'
+──────────────────────────────────────────────
+
+[2025-11-09 12:48:07] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251109_124656_fc75083d/script_sequences/script_seq4/script_seq4.py
+──────────────────────────────────────────────
+STDERR:
+C:\ArkMalay\Framework\Video_data\20251109_124656_fc75083d\script_sequences\script_seq4\script_seq4.py:17: SyntaxWarning: invalid escape sequence '\,'
+  example = MathTex("8 \times 5 = 40\,\text{sq. units}", font_size=24).move_to(summary_box.get_center() + DOWN*0.5)
+
+Animation 0: Create(Rectangle), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                            
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251109_124656_fc75083d\script_sequences\ |
+| script_seq4\script_seq4.py:10 in construct                                  |
+|                                                                             |
+|    7         area_label = Text("Area", font_size=24).move_to(rectangle.get_ |
+|    8         self.play(Create(rectangle), Write(area_label))                |
+|    9         self.wait(1)                                                   |
+| > 10         self.play(self.camera.frame.animate.scale(1.5).move_to(rectang |
+|   11         self.wait(1)                                                   |
+|   12                                                                        |
+|   13         # Step 2: Fade in a summary box on the right side with the for |
++-----------------------------------------------------------------------------+
+AttributeError: 'Camera' object has no attribute 'frame'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/09/25 12:48:07] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq4\                         
+                             videos\script_seq4\480p15                         
+                             \partial_movie_files\Rect                         
+                             angleAreaSummary\11858183                         
+                             38_2675962813_223132457.m                         
+                             p4'                                               
+                    INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq4\                         
+                             videos\script_seq4\480p15                         
+                             \partial_movie_files\Rect                         
+                             angleAreaSummary\62464232                         
+                             4_4217992463_620689920.mp                         
+                             4'
+──────────────────────────────────────────────
+
+[2025-11-09 12:48:07] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\routes\video_routes.py", line 29, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\main.py", line 50, in process_pipeline
+    Table_gen.table_generator(generated_files, PathList)
+  File "C:\ArkMalay\Framework\tutor\src\table_gen.py", line 123, in table_generator
+    if cur:
+       ^^^
+UnboundLocalError: cannot access local variable 'cur' where it is not associated with a value
+[2025-11-09 12:48:07] [ERROR] ❌ HTTP 500: {"detail":"cannot access local variable 'cur' where it is not associated with a value"}
+[2025-11-09 12:48:07] [ERROR] 💥 Error in /write-scripts endpoint
+[2025-11-09 12:48:07] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"cannot access local variable 'cur' where it is not associated with a value\"}"}
+[2025-11-09 12:48:07] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: {\\\"detail\\\":\\\"cannot access local variable 'cur' where it is not associated with a value\\\"}\"}"}

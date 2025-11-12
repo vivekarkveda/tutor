@@ -1,0 +1,78 @@
+[2025-11-10 18:36:38] [INFO] 🧠 Generating script for topic='explain the expression (a^2 - b^2)', class='10'
+[2025-11-10 18:36:50] [INFO] 🚀 Sending generated script to /generate-files-api and /Generator ...
+[2025-11-10 18:36:51] [INFO] 🟢 [generate-files-api] New request received
+[2025-11-10 18:36:51] [INFO] 📁 Created folder: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df
+[2025-11-10 18:36:51] [INFO] ✅ JSON saved successfully at C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\input_data.json
+[2025-11-10 18:36:51] [INFO] 🧩 Starting file preparation process via prepare_files()
+[2025-11-10 18:36:51] [INFO] 📝 Generating Python and TXT files from JSON: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\input_data.json
+[2025-11-10 18:36:51] [INFO] 📂 Using existing transaction folder for script sequences: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences
+[2025-11-10 18:36:51] [INFO] 📁 Created script sequence folder: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences\script_seq1
+[2025-11-10 18:36:51] [INFO] ✅ Created PY file: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences\script_seq1\script_seq1.py
+[2025-11-10 18:36:51] [INFO] ✅ Created TXT file: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences\script_seq1\script_seq1.txt
+[2025-11-10 18:36:51] [INFO] 📁 Created script sequence folder: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences\script_seq2
+[2025-11-10 18:36:51] [INFO] ✅ Created PY file: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences\script_seq2\script_seq2.py
+[2025-11-10 18:36:51] [INFO] ✅ Created TXT file: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences\script_seq2\script_seq2.txt
+[2025-11-10 18:36:51] [INFO] 📁 Created script sequence folder: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences\script_seq3
+[2025-11-10 18:36:51] [INFO] ✅ Created PY file: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences\script_seq3\script_seq3.py
+[2025-11-10 18:36:51] [INFO] ✅ Created TXT file: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences\script_seq3\script_seq3.txt
+[2025-11-10 18:36:51] [INFO] 📁 Created script sequence folder: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences\script_seq4
+[2025-11-10 18:36:51] [INFO] ✅ Created PY file: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences\script_seq4\script_seq4.py
+[2025-11-10 18:36:51] [INFO] ✅ Created TXT file: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences\script_seq4\script_seq4.txt
+[2025-11-10 18:36:51] [INFO] 🎯 Total Words: 775 | Approx. Total GPT Tokens: 1030
+[2025-11-10 18:36:51] [INFO] 🎉 All files generated inside: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences
+[2025-11-10 18:36:51] [INFO] ✅ File preparation completed. Output: {'py_files': ['C:\\ArkMalay\\Framework\\Video_data\\20251110_183651_2e54a9df\\script_sequences\\script_seq1\\script_seq1.py', 'C:\\ArkMalay\\Framework\\Video_data\\20251110_183651_2e54a9df\\script_sequences\\script_seq2\\script_seq2.py', 'C:\\ArkMalay\\Framework\\Video_data\\20251110_183651_2e54a9df\\script_sequences\\script_seq3\\script_seq3.py', 'C:\\ArkMalay\\Framework\\Video_data\\20251110_183651_2e54a9df\\script_sequences\\script_seq4\\script_seq4.py'], 'txt_files': ['C:\\ArkMalay\\Framework\\Video_data\\20251110_183651_2e54a9df\\script_sequences\\script_seq1\\script_seq1.txt', 'C:\\ArkMalay\\Framework\\Video_data\\20251110_183651_2e54a9df\\script_sequences\\script_seq2\\script_seq2.txt', 'C:\\ArkMalay\\Framework\\Video_data\\20251110_183651_2e54a9df\\script_sequences\\script_seq3\\script_seq3.txt', 'C:\\ArkMalay\\Framework\\Video_data\\20251110_183651_2e54a9df\\script_sequences\\script_seq4\\script_seq4.txt']}
+[2025-11-10 18:36:51] [INFO] 🎯 Transaction 2e54a9df completed successfully. Folder: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df
+[2025-11-10 18:38:29] [INFO] 🎬 Generated Manim Code Successfully
+[2025-11-10 18:38:29] [INFO] 🔍 TRANSACTION_FOLDER currently: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df
+[2025-11-10 18:38:29] [INFO] 🟢 Using TRANSACTION_FOLDER for writing scripts: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences
+[2025-11-10 18:38:29] [INFO] ✅ Manim script written: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences\script_seq1\script_seq1.py
+[2025-11-10 18:38:29] [INFO] ✅ Manim script written: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences\script_seq2\script_seq2.py
+[2025-11-10 18:38:29] [INFO] ✅ Manim script written: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences\script_seq3\script_seq3.py
+[2025-11-10 18:38:29] [INFO] ✅ Manim script written: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences\script_seq4\script_seq4.py
+[2025-11-10 18:38:29] [INFO] 🎥 Triggering video generation for folder: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences
+[2025-11-10 18:38:31] [INFO] 🚀 Received video generation request.
+[2025-11-10 18:38:31] [INFO] 📂 Using provided input path: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences
+[2025-11-10 18:38:31] [INFO] 🧩 Found 4 .py files and 4 .txt files under C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df\script_sequences
+[2025-11-10 18:38:31] [INFO] 🎬 Starting video + audio processing pipeline...
+[2025-11-10 18:38:31] [INFO] 🎬 Video callable prepared for: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df
+[2025-11-10 18:38:31] [INFO] 🎬 Running Manim on C:/ArkMalay/Framework/Video_data/20251110_183651_2e54a9df/script_sequences/script_seq1/script_seq1.py ...
+[2025-11-10 18:38:31] [INFO] 🧹 Cleaned old media folder: C:\ArkMalay\Framework\tutor\src\media\videos\script_sequences\script_seq1
+[2025-11-10 18:38:44] [INFO] 🎬 Running Manim on C:/ArkMalay/Framework/Video_data/20251110_183651_2e54a9df/script_sequences/script_seq2/script_seq2.py ...
+[2025-11-10 18:38:44] [INFO] 🧹 Cleaned old media folder: C:\ArkMalay\Framework\tutor\src\media\videos\script_sequences\script_seq2
+[2025-11-10 18:39:28] [INFO] 🎬 Running Manim on C:/ArkMalay/Framework/Video_data/20251110_183651_2e54a9df/script_sequences/script_seq3/script_seq3.py ...
+[2025-11-10 18:39:28] [INFO] 🧹 Cleaned old media folder: C:\ArkMalay\Framework\tutor\src\media\videos\script_sequences\script_seq3
+[2025-11-10 18:40:12] [INFO] 🎬 Running Manim on C:/ArkMalay/Framework/Video_data/20251110_183651_2e54a9df/script_sequences/script_seq4/script_seq4.py ...
+[2025-11-10 18:40:12] [INFO] 🧹 Cleaned old media folder: C:\ArkMalay\Framework\tutor\src\media\videos\script_sequences\script_seq4
+[2025-11-10 18:40:32] [INFO] ✅ Total words: 449 | Approx. GPT tokens: 597 | Total videos collected: 0
+[2025-11-10 18:40:32] [INFO] Trying to merge final video/audio
+[2025-11-10 18:40:32] [INFO] Trying Drive upload!
+[2025-11-10 18:40:32] [INFO] 📂 Using Settings.TRANSACTION_FOLDER: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df
+[2025-11-10 18:40:32] [INFO] 🚀 Starting Drive upload for folder: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df
+[2025-11-10 18:40:32] [INFO] 🔍 upload_folder_to_drive called with: C:\ArkMalay\Framework\Video_data\20251110_183651_2e54a9df
+[2025-11-10 18:40:32] [INFO] ✅ Drive auth successful (mode=service)
+[2025-11-10 18:40:32] [INFO] 📁 Service-mode: uploading '20251110_183651_2e54a9df' under Drive parent ID 1fSIa3LHaUZ6ElWywNuyHRnyj1ohr_gjj
+[2025-11-10 18:40:35] [INFO] 📁 Created Drive subfolder '20251110_183651_2e54a9df' under parent 1fSIa3LHaUZ6ElWywNuyHRnyj1ohr_gjj -> id=1tsuq8A5EtXJDtaexopWuJhNky5BatgZr
+[2025-11-10 18:40:37] [INFO] 📁 Created Drive subfolder 'script_sequences' under parent 1tsuq8A5EtXJDtaexopWuJhNky5BatgZr -> id=17ci9PrvI5o6zVhyXYix2sB0PyPAXJbxW
+[2025-11-10 18:40:40] [INFO] ✅ Uploaded (service): input_data.json → https://drive.google.com/file/d/1lIPoVzKzrNlX62w2OCR77yYjJjEFhZIE/view?usp=drivesdk
+[2025-11-10 18:40:41] [INFO] 📁 Created Drive subfolder 'script_seq1' under parent 17ci9PrvI5o6zVhyXYix2sB0PyPAXJbxW -> id=10tMeZqG_HFfzqK4DGWsRoF0KcnXyTkXd
+[2025-11-10 18:40:43] [INFO] 📁 Created Drive subfolder 'script_seq2' under parent 17ci9PrvI5o6zVhyXYix2sB0PyPAXJbxW -> id=1telZiLWlPOIvpGwUbDNq589IXBl_tdc6
+[2025-11-10 18:40:44] [INFO] 📁 Created Drive subfolder 'script_seq3' under parent 17ci9PrvI5o6zVhyXYix2sB0PyPAXJbxW -> id=1v-YAIXLxbEolKFtsDZqIpfRaxLfMNP2z
+[2025-11-10 18:40:45] [INFO] 📁 Created Drive subfolder 'script_seq4' under parent 17ci9PrvI5o6zVhyXYix2sB0PyPAXJbxW -> id=1azSAIzbsa7WbnxaBRpMO7CGb8AgKK--e
+[2025-11-10 18:40:47] [INFO] 📁 Created Drive subfolder '__pycache__' under parent 10tMeZqG_HFfzqK4DGWsRoF0KcnXyTkXd -> id=12eP0eAZ0MaXTGr5xHVpHoHwnOqUwYYay
+[2025-11-10 18:40:49] [INFO] ✅ Uploaded (service): script_seq1.py → https://drive.google.com/file/d/1pXFulMF_06GAX5_UOXNZBwdj1jLX8wH-/view?usp=drivesdk
+[2025-11-10 18:40:52] [INFO] ✅ Uploaded (service): script_seq1.txt → https://drive.google.com/file/d/13b8aEyZyYyXG_mCwpTqrbQnoXlJiGdIh/view?usp=drivesdk
+[2025-11-10 18:40:54] [INFO] ✅ Uploaded (service): script_seq1.cpython-312.pyc → https://drive.google.com/file/d/1R50d3UMW_uXoUFehOLwhRO3_uR-HcGrh/view?usp=drivesdk
+[2025-11-10 18:40:55] [INFO] 📁 Created Drive subfolder '__pycache__' under parent 1telZiLWlPOIvpGwUbDNq589IXBl_tdc6 -> id=1blTk3gUmggWy2b5_hO08-td5AnqDxCcB
+[2025-11-10 18:40:58] [INFO] ✅ Uploaded (service): script_seq2.py → https://drive.google.com/file/d/1uGEOC4rE_yEZpqjo_sZgIfVQAGmd58HT/view?usp=drivesdk
+[2025-11-10 18:41:00] [INFO] ✅ Uploaded (service): script_seq2.txt → https://drive.google.com/file/d/1qb5VJC3FavvsMtny-kr5i1OMKrIPJ-ta/view?usp=drivesdk
+[2025-11-10 18:41:03] [INFO] ✅ Uploaded (service): script_seq2.cpython-312.pyc → https://drive.google.com/file/d/1p_MMvwcl5VQH-gwJPH_QXCVzNQl_NEAH/view?usp=drivesdk
+[2025-11-10 18:41:04] [INFO] 📁 Created Drive subfolder '__pycache__' under parent 1v-YAIXLxbEolKFtsDZqIpfRaxLfMNP2z -> id=1ysCgYkWl9fRlxWL_4ZKO9Al7F-SSRtla
+[2025-11-10 18:41:07] [INFO] ✅ Uploaded (service): script_seq3.py → https://drive.google.com/file/d/1tHzYvgxIP9vwa1Wsiotb07gERpc-Gh-9/view?usp=drivesdk
+[2025-11-10 18:41:09] [INFO] ✅ Uploaded (service): script_seq3.txt → https://drive.google.com/file/d/1c2b6NV-OW8w9u4WWztOIZlTELyczpyoe/view?usp=drivesdk
+[2025-11-10 18:41:12] [INFO] ✅ Uploaded (service): script_seq3.cpython-312.pyc → https://drive.google.com/file/d/1o7x2o0AquURYE_QR6nd3uDulIuTrvpK-/view?usp=drivesdk
+[2025-11-10 18:41:13] [INFO] 📁 Created Drive subfolder '__pycache__' under parent 1azSAIzbsa7WbnxaBRpMO7CGb8AgKK--e -> id=1u7act7rmQXEJ6OwrmgYohOwV2AuXWliD
+[2025-11-10 18:41:15] [INFO] ✅ Uploaded (service): script_seq4.py → https://drive.google.com/file/d/1IbNBqp2fh4Bmp8ZK9zLT98-oUGoT8GTX/view?usp=drivesdk
+[2025-11-10 18:41:18] [INFO] ✅ Uploaded (service): script_seq4.txt → https://drive.google.com/file/d/1cj7hAmj4vRNuksHYe_cJ4d4Q9Jy_9JlH/view?usp=drivesdk
+[2025-11-10 18:41:20] [INFO] ✅ Uploaded (service): script_seq4.cpython-312.pyc → https://drive.google.com/file/d/1KQPCxVUtBmg1PY_tHWr6nQuB01s3pyg_/view?usp=drivesdk
+[2025-11-10 18:41:20] [INFO] 🎉 Service-mode upload complete. Session folder link: https://drive.google.com/drive/folders/1tsuq8A5EtXJDtaexopWuJhNky5BatgZr
+[2025-11-10 18:41:20] [INFO] ✅ Folder successfully uploaded to Google Drive.

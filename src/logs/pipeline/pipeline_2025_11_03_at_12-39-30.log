@@ -1,0 +1,168 @@
+[2025-11-03 12:43:48] [ERROR] ❌ HTTP 500: {"detail":""}
+[2025-11-03 12:45:51] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251103_124109/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: FadeIn(Text('Understanding Circles - Class 10')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: FadeIn(Text('Understanding Circles - Class 10')):  47%|####6     | 7/15 [00:00<00:00, 61.03it/s]
+                                                                                                             
+
+Animation 2: GrowFromCenter(Circle):   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                           
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\input_data_20251103_124109\script_seq1 |
+| \script_seq1.py:25 in construct                                             |
+|                                                                             |
+|   22         radius_line = Line(circle.get_center(), circle.point_at_angle( |
+|   23         radius_label = Text("r", font_size=36, color=BLACK).next_to(ra |
+|   24                                                                        |
+| > 25         self.play(FadeIn(circle), GrowArrow(radius_line), Write(radius |
+|   26         self.wait(1)                                                   |
+|   27                                                                        |
+|   28         # Highlight the radius line with a glowing effect              |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:1125 in   |
+| play                                                                        |
+|                                                                             |
+|   1122             return                                                   |
+|   1123                                                                      |
+|   1124         start_time = self.time                                       |
+| > 1125         self.renderer.play(self, *args, **kwargs)                    |
+|   1126         run_time = self.time - start_time                            |
+|   1127         if subcaption:                                               |
+|   1128             if subcaption_duration is None:                          |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\renderer\cairo_renderer. |
+| py:104 in play                                                              |
+|                                                                             |
+|   101         )                                                             |
+|   102                                                                       |
+|   103         self.file_writer.begin_animation(not self.skip_animations)    |
+| > 104         scene.begin_animations()                                      |
+|   105                                                                       |
+|   106         # Save a static image, to avoid rendering non moving objects. |
+|   107         self.save_static_frame_data(scene, scene.static_mobjects)     |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:1260 in   |
+| begin_animations                                                            |
+|                                                                             |
+|   1257         """Start the animations of the scene."""                     |
+|   1258         for animation in self.animations:                            |
+|   1259             animation._setup_scene(self)                             |
+| > 1260             animation.begin()                                        |
+|   1261                                                                      |
+|   1262         if config.renderer == RendererType.CAIRO:                    |
+|   1263             # Paint all non-moving objects onto the screen, so they  |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\animation\transform.py:2 |
+| 05 in begin                                                                 |
+|                                                                             |
+|   202             self.mobject.align_data_and_family(self.target_copy)      |
+|   203         else:                                                         |
+|   204             self.mobject.align_data(self.target_copy)                 |
+| > 205         super().begin()                                               |
+|   206                                                                       |
+|   207     def create_target(self) -> Mobject:                               |
+|   208         # Has no meaningful effect here, but may be useful            |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\animation\animation.py:2 |
+| 10 in begin                                                                 |
+|                                                                             |
+|   207         method.                                                       |
+|   208                                                                       |
+|   209         """                                                           |
+| > 210         self.starting_mobject = self.create_starting_mobject()        |
+|   211         if self.suspend_mobject_updating:                             |
+|   212             # All calls to self.mobject's internal updaters           |
+|   213             # during the animation, either from this Animation        |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\animation\growing.py:192 |
+| in create_starting_mobject                                                  |
+|                                                                             |
+|   189                                                                       |
+|   190     def create_starting_mobject(self) -> Mobject:                     |
+|   191         start_arrow = self.mobject.copy()                             |
+| > 192         start_arrow.scale(0, scale_tips=True, about_point=self.point) |
+|   193         if self.point_color:                                          |
+|   194             start_arrow.set_color(self.point_color)                   |
+|   195         return start_arrow                                            |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\mobject\types\vectorized |
+| _mobject.py:530 in scale                                                    |
+|                                                                             |
+|    527                 width=abs(scale_factor) * self.get_stroke_width(back |
+|    528                 background=True,                                     |
+|    529             )                                                        |
+| >  530         super().scale(scale_factor, **kwargs)                        |
+|    531         return self                                                  |
+|    532                                                                      |
+|    533     def fade(self, darkness: float = 0.5, family: bool = True) -> Se |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\mobject\mobject.py:1269  |
+| in scale                                                                    |
+|                                                                             |
+|   1266         :meth:`move_to`                                              |
+|   1267                                                                      |
+|   1268         """                                                          |
+| > 1269         self.apply_points_function_about_point(                      |
+|   1270             lambda points: scale_factor * points, **kwargs           |
+|   1271         )                                                            |
+|   1272         return self                                                  |
++-----------------------------------------------------------------------------+
+TypeError: Mobject.apply_points_function_about_point() got an unexpected 
+keyword argument 'scale_tips'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/03/25 12:41:59] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251103_124109\script_se                         
+                             q1\videos\script_seq1\480                         
+                             p15\partial_movie_files\C                         
+                             ircleLesson\931832650_368                         
+                             7421735_223132457.mp4'                            
+                    INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251103_124109\script_se                         
+                             q1\videos\script_seq1\480                         
+                             p15\partial_movie_files\C                         
+                             ircleLesson\1905288516_14                         
+                             36906429_1779573898.mp4'                          
+[11/03/25 12:42:00] INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251103_124109\script_se                         
+                             q1\videos\script_seq1\480                         
+                             p15\partial_movie_files\C                         
+                             ircleLesson\1905288516_38                         
+                             04199853_102202804.mp4'
+──────────────────────────────────────────────
+

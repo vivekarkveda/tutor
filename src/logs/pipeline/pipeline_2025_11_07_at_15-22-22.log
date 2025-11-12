@@ -1,0 +1,17 @@
+[2025-11-07 15:22:53] [DEBUG] 📦 Input data sample: [{'script_seq': 1, 'script_for_manim': ['Start with a blank canvas.', "Fade in the title 'Area of a Triangle' in the center.", "Below the title, animate a simple triangle with labeled sides (a, b, c) and height (h) from base 'a'.", 'Zoom out slightly to show the entire triangle and labels clearly.'], 'script_voice_over': ['Welcome to today’s lesson on the area of a triangle, designed for Class 10 students.', 'Understanding how to calculate the area of a triangle is a fundamental skill in geometr
+[2025-11-07 15:22:53] [DEBUG] 💾 Attempting to save JSON to C:\ArkMalay\Framework\Video_data\20251107_152253_266f89c6\input_data.json
+[2025-11-07 15:22:53] [DEBUG] Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\routes\file_routes.py", line 49, in generate_files_endpoint
+    old_path = Settings.JSON_FILE_PATH
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'Settings' has no attribute 'JSON_FILE_PATH'
+
+[2025-11-07 15:23:26] [DEBUG] 🧮 File: script_seq1.py | video_factory Words: 155 | Approx. GPT Tokens: 206
+[2025-11-07 15:23:35] [DEBUG] 🧮 File: script_seq2.py | video_factory Words: 211 | Approx. GPT Tokens: 281
+[2025-11-07 15:23:45] [DEBUG] 🧮 File: script_seq3.py | video_factory Words: 152 | Approx. GPT Tokens: 202
+[2025-11-07 15:23:47] [DEBUG] ✅ Generated full audio for: script_seq1.txt (in memory)
+[2025-11-07 15:23:56] [DEBUG] 🧮 File: script_seq4.py | video_factory Words: 156 | Approx. GPT Tokens: 208
+[2025-11-07 15:24:04] [DEBUG] ✅ Generated full audio for: script_seq2.txt (in memory)
+[2025-11-07 15:24:18] [DEBUG] ✅ Generated full audio for: script_seq3.txt (in memory)
+[2025-11-07 15:24:33] [DEBUG] ✅ Generated full audio for: script_seq4.txt (in memory)
+[2025-11-07 15:24:33] [DEBUG] Audio bytes count: 4

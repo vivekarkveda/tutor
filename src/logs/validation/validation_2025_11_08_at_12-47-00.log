@@ -1,0 +1,2 @@
+[2025-11-08 12:49:32] [ERROR] ❌ Database error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "vivek"
+

@@ -1,0 +1,16 @@
+[2025-11-07 15:19:39] [DEBUG] 📦 Input data sample: [{'script_seq': 1, 'script_for_manim': ['Start with a blank screen.', "Fade in the title 'Area of a Triangle' in large, bold text.", "Below the title, animate a simple triangle with labeled sides (a, b, c) and height (h) from base 'a'.", "Highlight the base 'a' and height 'h' with a glowing effect.", 'Zoom out slightly to show the entire triangle clearly.'], 'script_voice_over': ['Welcome to our lesson on the area of a triangle, designed for Class 10 students.', "Today, we'll explore how to calc
+[2025-11-07 15:19:39] [DEBUG] Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\routes\file_routes.py", line 25, in generate_files_endpoint
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                ^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'now'
+
+[2025-11-07 15:20:15] [DEBUG] 🧮 File: script_seq1.py | video_factory Words: 123 | Approx. GPT Tokens: 164
+[2025-11-07 15:20:24] [DEBUG] 🧮 File: script_seq2.py | video_factory Words: 203 | Approx. GPT Tokens: 270
+[2025-11-07 15:20:36] [DEBUG] ✅ Generated full audio for: script_seq1.txt (in memory)
+[2025-11-07 15:20:40] [DEBUG] 🧮 File: script_seq3.py | video_factory Words: 181 | Approx. GPT Tokens: 241
+[2025-11-07 15:20:54] [DEBUG] ✅ Generated full audio for: script_seq2.txt (in memory)
+[2025-11-07 15:20:55] [DEBUG] 🧮 File: script_seq4.py | video_factory Words: 138 | Approx. GPT Tokens: 184
+[2025-11-07 15:21:11] [DEBUG] ✅ Generated full audio for: script_seq3.txt (in memory)
+[2025-11-07 15:21:32] [DEBUG] ✅ Generated full audio for: script_seq4.txt (in memory)
+[2025-11-07 15:21:32] [DEBUG] Audio bytes count: 4

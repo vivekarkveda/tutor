@@ -1,0 +1,100 @@
+[2025-11-11 18:15:23] [INFO] 🧠 Generating script for topic='create a circle', class='10'
+[2025-11-11 18:15:31] [INFO] 🚀 Sending generated script to /generate-files-api and /Generator ...
+[2025-11-11 18:15:32] [INFO] 🟢 [generate-files-api] New request received
+[2025-11-11 18:15:32] [INFO] 📁 Created folder: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848
+[2025-11-11 18:15:32] [INFO] ✅ JSON saved successfully at C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848\input_data.json
+[2025-11-11 18:15:32] [INFO] 🧩 Starting file preparation process via prepare_files()
+[2025-11-11 18:15:32] [INFO] 📝 Generating Python and TXT files from JSON: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848\input_data.json
+[2025-11-11 18:15:32] [INFO] 📂 Using existing transaction folder for script sequences: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848\script_sequences
+[2025-11-11 18:15:32] [INFO] 📁 Created script sequence folder: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848\script_sequences\script_seq1
+[2025-11-11 18:15:32] [INFO] ✅ Created PY file: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848\script_sequences\script_seq1\script_seq1.py
+[2025-11-11 18:15:32] [INFO] ✅ Created TXT file: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848\script_sequences\script_seq1\script_seq1.txt
+[2025-11-11 18:15:32] [INFO] 📁 Created script sequence folder: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848\script_sequences\script_seq2
+[2025-11-11 18:15:32] [INFO] ✅ Created PY file: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848\script_sequences\script_seq2\script_seq2.py
+[2025-11-11 18:15:32] [INFO] ✅ Created TXT file: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848\script_sequences\script_seq2\script_seq2.txt
+[2025-11-11 18:15:32] [INFO] 🎯 Total Words: 573 | Approx. Total GPT Tokens: 763
+[2025-11-11 18:15:32] [INFO] 🎉 All files generated inside: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848\script_sequences
+[2025-11-11 18:15:32] [INFO] ✅ File preparation completed. Output: {'py_files': ['C:\\ArkMalay\\Framework\\Video_data\\20251111_181532_0f840848\\script_sequences\\script_seq1\\script_seq1.py', 'C:\\ArkMalay\\Framework\\Video_data\\20251111_181532_0f840848\\script_sequences\\script_seq2\\script_seq2.py'], 'txt_files': ['C:\\ArkMalay\\Framework\\Video_data\\20251111_181532_0f840848\\script_sequences\\script_seq1\\script_seq1.txt', 'C:\\ArkMalay\\Framework\\Video_data\\20251111_181532_0f840848\\script_sequences\\script_seq2\\script_seq2.txt']}
+[2025-11-11 18:15:32] [INFO] 🎯 Transaction 0f840848 completed successfully. Folder: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848
+[2025-11-11 18:15:45] [INFO] 🎬 Generated Manim Code Successfully
+[2025-11-11 18:15:45] [INFO] 🔍 TRANSACTION_FOLDER currently: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848
+[2025-11-11 18:15:45] [INFO] 🟢 Using TRANSACTION_FOLDER for writing scripts: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848\script_sequences
+[2025-11-11 18:15:45] [INFO] ✅ Manim script written: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848\script_sequences\script_seq1\script_seq1.py
+[2025-11-11 18:15:45] [INFO] ✅ Manim script written: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848\script_sequences\script_seq2\script_seq2.py
+[2025-11-11 18:15:45] [INFO] 🎥 Triggering video generation for folder: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848\script_sequences
+[2025-11-11 18:15:47] [INFO] 🚀 Received video generation request.
+[2025-11-11 18:15:47] [INFO] 📂 Using provided input path: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848\script_sequences
+[2025-11-11 18:15:47] [INFO] 🧩 Found 2 .py files and 2 .txt files under C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848\script_sequences
+[2025-11-11 18:15:47] [INFO] 🎬 Starting video + audio processing pipeline...
+[2025-11-11 18:15:47] [INFO] 🎬 Video callable prepared for: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848
+[2025-11-11 18:15:47] [INFO] 🎬 Running Manim on C:/ArkMalay/Framework/Video_data/20251111_181532_0f840848/script_sequences/script_seq1/script_seq1.py ...
+[2025-11-11 18:15:47] [INFO] 🧹 Cleaned old media folder: C:\ArkMalay\Framework\tutor\src\media\videos\script_sequences\script_seq1
+[2025-11-11 18:15:59] [INFO] 🎞️ Detected Scene class: ExpandingCircle
+[2025-11-11 18:15:59] [INFO] ✅ Found video: C:\ArkMalay\Framework\tutor\src\media\videos\script_sequences\script_seq1\videos\script_seq1\480p15\ExpandingCircle.mp4
+[2025-11-11 18:16:00] [INFO] 🎬 Running Manim on C:/ArkMalay/Framework/Video_data/20251111_181532_0f840848/script_sequences/script_seq2/script_seq2.py ...
+[2025-11-11 18:16:00] [INFO] 🧹 Cleaned old media folder: C:\ArkMalay\Framework\tutor\src\media\videos\script_sequences\script_seq2
+[2025-11-11 18:16:16] [INFO] 🎞️ Detected Scene class: MovingCircle
+[2025-11-11 18:16:16] [INFO] ✅ Found video: C:\ArkMalay\Framework\tutor\src\media\videos\script_sequences\script_seq2\videos\script_seq2\480p15\MovingCircle.mp4
+[2025-11-11 18:16:17] [INFO] ✅ Total words: 46 | Approx. GPT tokens: 60 | Total videos collected: 2
+[2025-11-11 18:17:12] [INFO] Entering save_all_script_media.
+[2025-11-11 18:17:12] [INFO] Video Path:[WindowsPath('C:/ArkMalay/Framework/tutor/output/Videos')]
+[2025-11-11 18:17:12] [INFO] Audio Path:[WindowsPath('C:/ArkMalay/Framework/tutor/output/Audios')]
+[2025-11-11 18:17:12] [INFO] 🎬 Video saved at: C:\ArkMalay\Framework\tutor\output\Videos\20251111_181532_0f840848_script_seq1.mp4
+[2025-11-11 18:17:12] [INFO] 🎵 Audio saved at: C:\ArkMalay\Framework\tutor\output\Audios\20251111_181532_0f840848_script_seq1.mp3
+[2025-11-11 18:17:12] [INFO] 🎬 Video saved at: C:\ArkMalay\Framework\tutor\output\Videos\20251111_181532_0f840848_script_seq2.mp4
+[2025-11-11 18:17:12] [INFO] 🎵 Audio saved at: C:\ArkMalay\Framework\tutor\output\Audios\20251111_181532_0f840848_script_seq2.mp3
+[2025-11-11 18:17:12] [INFO] 🎞️ [MERGE] Starting final video/audio merge process...
+[2025-11-11 18:17:12] [INFO] 🎬 [MERGE] Video clips: 2, Audio clips: 2
+[2025-11-11 18:17:12] [INFO] 🎞️ Starting merge_all_videos_with_audio
+[2025-11-11 18:17:12] [INFO] 🎬 Total video segments: 2, Total audio segments: 2
+[2025-11-11 18:17:12] [INFO] 📏 Total video bytes: 30,554, Total audio bytes: 3,511,288
+[2025-11-11 18:17:12] [INFO] 🎞️ Merging video/audio pair 1
+[2025-11-11 18:17:12] [INFO] 📦 Pair 1 -> Video bytes: 13,813, Audio bytes: 1,648,844
+[2025-11-11 18:17:12] [INFO] 🎞️ [MERGE] Entering merge_video_with_audio
+[2025-11-11 18:17:12] [INFO] 📦 [MERGE] Starting merge for 1 pair(s).
+[2025-11-11 18:17:12] [INFO] 🎬 [PAIR 1] Preparing temporary files for merge. Video size = 13,813 bytes, Audio size = 1,648,844 bytes.
+[2025-11-11 18:17:12] [INFO] 🔧 [PAIR 1] Running ffmpeg to merge video/audio:
+  → Video file: C:\Users\malay\AppData\Local\Temp\tmp7lge_sov.mp4
+  → Audio file: C:\Users\malay\AppData\Local\Temp\tmpth6ukoxi.mp3
+  → Output file: C:\Users\malay\AppData\Local\Temp\tmpem0hsf7k.mp4
+[2025-11-11 18:17:13] [INFO] ✅ [PAIR 1] Merge successful. Output size = 39,942 bytes.
+[2025-11-11 18:17:13] [INFO] 🎬 [MERGE] Only one merged video, returning directly.
+[2025-11-11 18:17:13] [INFO] 🎞️ Merging video/audio pair 2
+[2025-11-11 18:17:13] [INFO] 📦 Pair 2 -> Video bytes: 16,741, Audio bytes: 1,862,444
+[2025-11-11 18:17:13] [INFO] 🎞️ [MERGE] Entering merge_video_with_audio
+[2025-11-11 18:17:13] [INFO] 📦 [MERGE] Starting merge for 1 pair(s).
+[2025-11-11 18:17:13] [INFO] 🎬 [PAIR 1] Preparing temporary files for merge. Video size = 16,741 bytes, Audio size = 1,862,444 bytes.
+[2025-11-11 18:17:13] [INFO] 🔧 [PAIR 1] Running ffmpeg to merge video/audio:
+  → Video file: C:\Users\malay\AppData\Local\Temp\tmp04k9k8wh.mp4
+  → Audio file: C:\Users\malay\AppData\Local\Temp\tmprzrr_oxc.mp3
+  → Output file: C:\Users\malay\AppData\Local\Temp\tmpvc4ri6sb.mp4
+[2025-11-11 18:17:14] [INFO] ✅ [PAIR 1] Merge successful. Output size = 60,198 bytes.
+[2025-11-11 18:17:14] [INFO] 🎬 [MERGE] Only one merged video, returning directly.
+[2025-11-11 18:17:14] [INFO] 🎬 Concatenating 2 merged videos...
+[2025-11-11 18:17:14] [INFO] Entering concatenate_videos
+[2025-11-11 18:17:14] [INFO] 🎬 Final concatenated MP4 video returned as bytes
+[2025-11-11 18:17:14] [INFO] ✅ [MERGE] Merge completed successfully in 2.63s.
+[2025-11-11 18:17:14] [INFO] 💾 [MERGE] Preparing to save final video as 'final_video_20251111_181714.mp4' (mode: local).
+[2025-11-11 18:17:14] [INFO] Entering save_final_video
+[2025-11-11 18:17:14] [INFO] ✅ Final video saved locally at: C:\ArkMalay\Framework\tutor\src\output\final_video_20251111_181714.mp4
+[2025-11-11 18:17:14] [INFO] 🎉 [MERGE] Final video saved successfully → C:\ArkMalay\Framework\tutor\src\output\final_video_20251111_181714.mp4
+[2025-11-11 18:17:14] [INFO] 🚀 Starting Drive upload process
+[2025-11-11 18:17:14] [INFO] 📂 Using Settings.TRANSACTION_FOLDER: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848
+[2025-11-11 18:17:14] [INFO] 📦 Final video copied to transaction folder: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848\final_video_20251111_181714.mp4
+[2025-11-11 18:17:14] [INFO] 🔍 upload_folder_to_drive called with: C:\ArkMalay\Framework\Video_data\20251111_181532_0f840848
+[2025-11-11 18:17:14] [INFO] ✅ Drive auth successful (mode=service)
+[2025-11-11 18:17:14] [INFO] 📁 Service-mode: uploading '20251111_181532_0f840848' under Drive parent ID 1fSIa3LHaUZ6ElWywNuyHRnyj1ohr_gjj
+[2025-11-11 18:17:17] [INFO] 📁 Created Drive subfolder '20251111_181532_0f840848' under parent 1fSIa3LHaUZ6ElWywNuyHRnyj1ohr_gjj -> id=13s6Xd4DWVck_pHcUBg8brFj_dmc70QIk
+[2025-11-11 18:17:19] [INFO] 📁 Created Drive subfolder 'script_sequences' under parent 13s6Xd4DWVck_pHcUBg8brFj_dmc70QIk -> id=1ozcbJ8WDrlKLM5qRZS428C7PSzK6imvI
+[2025-11-11 18:17:21] [INFO] ✅ Uploaded (service): final_video_20251111_181714.mp4 → https://drive.google.com/file/d/1NbIauLDpZFFqZymI6TKeTsSz19Z35rWV/view?usp=drivesdk
+[2025-11-11 18:17:23] [INFO] ✅ Uploaded (service): input_data.json → https://drive.google.com/file/d/1RQ3ErrFsko3so3PzjGX16z1whhbym-aN/view?usp=drivesdk
+[2025-11-11 18:17:24] [INFO] 📁 Created Drive subfolder 'script_seq1' under parent 1ozcbJ8WDrlKLM5qRZS428C7PSzK6imvI -> id=1I0kh3XpRn0dsQ_I8dadw17EAD1WC2tuT
+[2025-11-11 18:17:26] [INFO] 📁 Created Drive subfolder 'script_seq2' under parent 1ozcbJ8WDrlKLM5qRZS428C7PSzK6imvI -> id=1PNPfLTKPlBhNNJ6HXGCxrJkNdZ6yemYV
+[2025-11-11 18:17:28] [INFO] ✅ Uploaded (service): script_seq1.py → https://drive.google.com/file/d/1ug9RGGS7uBdHL36h3ErYAVrUOqX-AYSX/view?usp=drivesdk
+[2025-11-11 18:17:31] [INFO] ✅ Uploaded (service): script_seq1.txt → https://drive.google.com/file/d/1IT8TPipzzZy5qeB32b1eN8fqD4jdFW4g/view?usp=drivesdk
+[2025-11-11 18:17:33] [INFO] ✅ Uploaded (service): script_seq2.py → https://drive.google.com/file/d/1wqg_6TPgv75u1F2xiFcD9RGCdxEROvsp/view?usp=drivesdk
+[2025-11-11 18:17:36] [INFO] ✅ Uploaded (service): script_seq2.txt → https://drive.google.com/file/d/1ufvc3EopthEqt2AdQwyY7BTzYoDpZwlB/view?usp=drivesdk
+[2025-11-11 18:17:36] [INFO] 🎉 Service-mode upload complete. Session folder link: https://drive.google.com/drive/folders/13s6Xd4DWVck_pHcUBg8brFj_dmc70QIk
+[2025-11-11 18:17:36] [INFO] ✅ Folder (with final video) successfully uploaded to Google Drive.
+[2025-11-11 18:17:36] [INFO] ✅ Pipeline completed successfully. Final video saved at: C:\ArkMalay\Framework\tutor\src\output\final_video_20251111_181714.mp4
+[2025-11-11 18:17:36] [INFO] ✅ Script pipeline completed successfully for topic='create a circle'

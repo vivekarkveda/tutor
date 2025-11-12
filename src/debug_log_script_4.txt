@@ -1,0 +1,150 @@
+=== FINAL PROMPT SENT ===
+
+You are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).
+Your goal is to turn a provided topic script into a visually clear, accurate, and fully executable Python animation that communicates concepts step-by-step.
+Follow these CRITICAL INSTRUCTIONS exactly as described:
+...
+Now, based on the following structured input:
+CATALOG: def construct(self):
+        # Balloon body
+        balloon = Circle(radius=0.3, color="#FF0000", fill_opacity=0.8)
+        
+        # Balloon string
+        balloon_string = Line(ORIGIN, DOWN * 0.5, color="#808080", stroke_width=1)
+        
+        # Position balloon and string
+        balloon.shift(RIGHT * 3 + UP * 1.5)
+        balloon_string.next_to(balloon, DOWN, buff=0)
+        
+        # Group balloon and string
+        balloon_group = VGroup(balloon, balloon_string)
+        
+        # Animate
+        self.play(GrowFromCenter(balloon_group), run_time=1)
+        self.wait(1)
+SCRIPT_SEQ: 4
+SCRIPT_FOR_MANIM: [
+  "Fade out the formula and triangle.",
+  "Draw a smaller circle inside the original circle.",
+  "Label the smaller circle 'Inner Circle' and the original 'Outer Circle'.",
+  "Highlight the area between the two circles and label it 'Ring'.",
+  "Animate the ring expanding and contracting.",
+  "Fade in a recap of key terms: Circle, Center, Radius, Diameter, Chord, Segment, Circumference.",
+  "End with the text 'Thank you for watching!' in the center."
+]
+SCRIPT_VOICE_OVER: [
+  "To wrap up, let\u2019s consider a practical example: a ring.",
+  "A ring is the area between two concentric circles, like these.",
+  "The outer circle and inner circle share the same center.",
+  "The ring\u2019s area is the difference between the areas of the outer and inner circles.",
+  "Let\u2019s review the key terms we\u2019ve learned today: Circle, Center, Radius, Diameter, Chord, Segment, and Circumference.",
+  "Understanding these concepts will help you master circle geometry.",
+  "Thank you for watching, and happy learning!"
+]
+SCRIPT_LENGTH: 30
+Generate the FULL Manim Python code that:
+- Follows all layout, geometry, boundary, and animation rules.
+- Produces a step-by-step educational animation.
+- Uses correct scaling and non-overlapping text.
+- Is self-contained and executable without errors.
+- Returns ONLY valid Python code (no explanations or Markdown formatting).
+:pushpin: Previous Code (for continuity):
+import numpy as np
+
+class CircleCircumference(Scene):
+    def construct(self):
+        # Set up title and canvas
+        title = Text("Circle Circumference", font_size=48, font_color=GOLD).to_edge(UP)
+        self.add(title)
+        self.camera.frame.save_state()
+
+        # Zoom back to the full circle
+        self.camera.frame.restore()
+
+        # Create circle and center
+        circle = Circle(radius=2, color=BLUE)
+        center = Dot(circle.get_center(), color=RED)
+        center_label = MathTex("O", font_size=36).next_to(center, LEFT*0.4)
+
+        # Draw right-angled triangle
+        triangle = Polygon(center, circle.get_right(), circle.point_at_angle(PI/2), color=GREEN, fill_opacity=0.3)
+        hypotenuse_label = MathTex("Hypotenuse", font_size=24).next_to(triangle.get_edge_center(circle.get_right(), circle.point_at_angle(PI/2)), UP*0.3)
+        opposite_label = MathTex("Opposite", font_size=24).next_to(triangle.get_edge_center(center, circle.get_right()), DOWN*0.3)
+        adjacent_label = MathTex("Adjacent", font_size=24).next_to(triangle.get_edge_center(center, circle.point_at_angle(PI/2)), LEFT*0.3)
+
+        # Animate circle and triangle
+        self.play(DrawBorderThenFill(circle), FadeIn(center, scale=0.6), Write(center_label))
+        self.play(Create(triangle), Write(hypotenuse_label), Write(opposite_label), Write(adjacent_label))
+
+        # Rotate triangle around center
+        triangle_copy = triangle.copy()
+        self.play(Rotate(triangle_copy, PI, about_point=center.get_center()), run_time=2, rate_func=linear)
+
+        # Fade in circumference formula
+        circumference_formula = MathTex("C = 2\\pi r", font_size=36).to_edge(DOWN)
+        radius_label = circumference_formula.get_part_by_tex('r', substring=False)
+        self.play(FadeIn(circumference_formula))
+        self.play(Indicate(radius_label, scale_factor=1.2))
+
+        # Animate circle's circumference pulsating
+        self.play(circle.animate.scale(1.05).scale(1), run_time=0.7)
+
+        # Voice-over and wait
+        self.wait(45)
+
+=== GENERATED CODE ===
+
+```python
+import numpy as np
+
+class CircleGeometry(Scene):
+    def construct(self):
+        # Set up title and canvas
+        self.title = Text("Circle Geometry: Rings and Key Terms", font_size=48, font_color=GOLD).to_edge(UP)
+        self.camera.frame.save_state()
+
+        # Zoom back to full canvas
+        self.camera.frame.restore()
+
+        # Create outer and inner circles
+        outer_circle = Circle(radius=2, color="#FF0000", fill_opacity=0.8)
+        inner_circle = Circle(radius=1.5, color="#00FF00", fill_opacity=0.6)
+        outer_circle.shift(LEFT * 2)  # Adjust position
+
+        # Create labels for circles
+        outer_label = Text("Outer Circle", font_size=24).next_to(outer_circle, UP)
+        inner_label = Text("Inner Circle", font_size=24).next_to(inner_circle, DOWN)
+
+        # Highlight the ring area
+        ring_area = AnnularSector(outer_radius=outer_circle.radius, inner_radius=inner_circle.radius, angle=0, fill_opacity=0.4, color=YELLOW)
+
+        # Create key terms text
+        key_terms = [
+            "Circle", "Center", "Radius", "Diameter", "Chord", "Segment", "Circumference"
+        ]
+        key_terms_text = VGroup(*[Text(term, font_size=20) for term in key_terms]).arrange(DOWN, aligned_edge=LEFT)
+        key_terms_text.to_edge(RIGHT)
+
+        # Animate the scene
+        self.add(self.title)
+        self.play(FadeIn(outer_circle), FadeIn(inner_circle), FadeIn(outer_label), FadeIn(inner_label))
+        self.play(FadeIn(ring_area))
+        self.play(Write(key_terms_text))
+        self.wait(2)
+
+        # Animate ring expansion and contraction
+        for _ in range(2):
+            self.play(ring_area.animate.set_width(ring_area.get_width() * 1.2), run_time=1)
+            self.play(ring_area.animate.set_width(ring_area.get_width() / 1.2), run_time=1)
+
+        # Fade out formula and triangle (from previous scene)
+        self.play(FadeOut(self.get_mobjects()))
+
+        # Voice-over and wait
+        self.wait(45)
+
+        # End with thank you message
+        thank_you = Text("Thank you for watching!", font_size=36, font_color=GOLD).to_edge(DOWN)
+        self.play(FadeIn(thank_you))
+        self.wait()
+```

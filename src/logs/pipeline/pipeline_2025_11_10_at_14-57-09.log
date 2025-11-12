@@ -1,0 +1,912 @@
+[2025-11-10 14:58:23] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251110_145741_27e9fd98/script_sequences/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: FadeIn(Text('Understanding the Area of a Square')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: FadeIn(Text('Understanding the Area of a Square')):  13%|#3        | 2/15 [00:00<00:00, 19.99it/s]
+Animation 0: FadeIn(Text('Understanding the Area of a Square')):  33%|###3      | 5/15 [00:00<00:00, 22.50it/s]
+Animation 0: FadeIn(Text('Understanding the Area of a Square')):  53%|#####3    | 8/15 [00:00<00:00, 24.86it/s]
+Animation 0: FadeIn(Text('Understanding the Area of a Square')):  73%|#######3  | 11/15 [00:00<00:00, 23.40it/s]
+Animation 0: FadeIn(Text('Understanding the Area of a Square')):  93%|#########3| 14/15 [00:00<00:00, 23.86it/s]
+                                                                                                                
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251110_145741_27e9fd98\script_sequences\ |
+| script_seq1\script_seq1.py:18 in construct                                  |
+|                                                                             |
+|   15         square_side_length = 2                                         |
+|   16         square = Square(side_length=square_side_length, stroke_width=2 |
+|   17         dotted_square = Square(side_length=square_side_length, stroke_ |
+| > 18         dotted_square.set_stroke(dash_pattern=[0.1, 0.1])              |
+|   19         self.play(DrawBorderThenFill(square), DrawBorderThenFill(dotte |
+|   20         self.wait(1)                                                   |
+|   21                                                                        |
++-----------------------------------------------------------------------------+
+TypeError: VMobject.set_stroke() got an unexpected keyword argument 
+'dash_pattern'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/10/25 14:58:22] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaAnimation\931832650                         
+                             _1168224404_223132457.mp4                         
+                             '                                                 
+                    INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaAnimation\190528851                         
+                             6_1436906429_1911188527.m                         
+                             p4'
+──────────────────────────────────────────────
+
+[2025-11-10 14:59:14] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251110_145741_27e9fd98/script_sequences/script_seq3/script_seq3.py
+──────────────────────────────────────────────
+STDERR:
+C:\ArkMalay\Framework\Video_data\20251110_145741_27e9fd98\script_sequences\script_seq3\script_seq3.py:10: SyntaxWarning: invalid escape sequence '\,'
+  side_label = Tex("5\,\text{units}").next_to(square.get_corner(UR), UR, buff=0.1)
+C:\ArkMalay\Framework\Video_data\20251110_145741_27e9fd98\script_sequences\script_seq3\script_seq3.py:20: SyntaxWarning: invalid escape sequence '\,'
+  area_label = Tex("25\,\text{square units}").next_to(square, DOWN, buff=1.2)
+C:\ArkMalay\Framework\Video_data\20251110_145741_27e9fd98\script_sequences\script_seq3\script_seq3.py:26: SyntaxWarning: invalid escape sequence '\,'
+  tile_label = Tex("5\,\text{units} \times 5\,\text{units}").next_to(tile, DOWN, buff=0.5)
+latex: major issue: So far, you have not checked for MiKTeX updates.
+
+Animation 0: Create(Square), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: Create(Square), etc.:  53%|#####3    | 8/15 [00:00<00:00, 78.42it/s]
+                                                                                 
+latex: major issue: So far, you have not checked for MiKTeX updates.
+
+Animation 2: _MethodAnimation(Square), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 2: _MethodAnimation(Square), etc.:  67%|######6   | 10/15 [00:00<00:00, 87.61it/s]
+                                                                                            
+latex: major issue: So far, you have not checked for MiKTeX updates.
+
+Animation 4: Write(Tex('25\\,\text{square units}')):   0%|          | 0/30 [00:00<?, ?it/s]
+Animation 4: Write(Tex('25\\,\text{square units}')):  23%|##3       | 7/30 [00:00<00:00, 67.31it/s]
+Animation 4: Write(Tex('25\\,\text{square units}')):  50%|#####     | 15/30 [00:00<00:00, 73.48it/s]
+Animation 4: Write(Tex('25\\,\text{square units}')):  77%|#######6  | 23/30 [00:00<00:00, 71.25it/s]
+                                                                                                    
+latex: major issue: So far, you have not checked for MiKTeX updates.
+
+Animation 6: ReplacementTransform(Square), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 6: ReplacementTransform(Square), etc.:  20%|##        | 3/15 [00:00<00:00, 21.17it/s]
+Animation 6: ReplacementTransform(Square), etc.:  40%|####      | 6/15 [00:00<00:00, 25.32it/s]
+Animation 6: ReplacementTransform(Square), etc.:  60%|######    | 9/15 [00:00<00:00, 23.72it/s]
+Animation 6: ReplacementTransform(Square), etc.:  80%|########  | 12/15 [00:00<00:00, 20.53it/s]
+Animation 6: ReplacementTransform(Square), etc.: 100%|##########| 15/15 [00:00<00:00, 21.61it/s]
+                                                                                                
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251110_145741_27e9fd98\script_sequences\ |
+| script_seq3\script_seq3.py:28 in construct                                  |
+|                                                                             |
+|   25         tile = Square(side_length=6, color=GRAY, fill_opacity=1)       |
+|   26         tile_label = Tex("5\,\text{units} \times 5\,\text{units}").nex |
+|   27         self.play(ReplacementTransform(square, tile), ReplacementTrans |
+| > 28         self.play(self.camera.frame.animate.scale(1.5).move_to(tile))  |
+|   29         self.wait(1)                                                   |
+|   30                                                                        |
+|   31         # Add voiceover text for context                               |
++-----------------------------------------------------------------------------+
+AttributeError: 'Camera' object has no attribute 'frame'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/10/25 14:58:58] INFO     Writing 5\,     ext{units} tex_file_writing.py:111
+                             to                                                
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq3\Tex\                        
+                             34452033e5d3bd02.tex                              
+[11/10/25 14:59:02] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Area                         
+                             OfSquare\931832650_182492                         
+                             3217_223132457.mp4'                               
+                    INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Area                         
+                             OfSquare\1905288516_14369                         
+                             06429_3306659326.mp4'                             
+                    INFO     Writing 5       imes 5 =   tex_file_writing.py:111
+                             25 to                                             
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq3\Tex\                        
+                             f68e1d1116424270.tex                              
+[11/10/25 14:59:05] INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Area                         
+                             OfSquare\1905288516_36463                         
+                             97973_339872256.mp4'                              
+                    INFO     Animation 3 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Area                         
+                             OfSquare\1905288516_14369                         
+                             06429_822637255.mp4'                              
+                    INFO     Writing 25\,    ext{square tex_file_writing.py:111
+                             units} to                                         
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq3\Tex\                        
+                             49af0a228ea8c19a.tex                              
+[11/10/25 14:59:09] INFO     Animation 4 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Area                         
+                             OfSquare\1905288516_29450                         
+                             62040_2121892305.mp4'                             
+                    INFO     Animation 5 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Area                         
+                             OfSquare\1905288516_14369                         
+                             06429_1595987040.mp4'                             
+                    INFO     Writing 5\,     ext{units} tex_file_writing.py:111
+                             imes 5\,        ext{units}                        
+                             to                                                
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq3\Tex\                        
+                             b5aaa60a03ac4f34.tex                              
+[11/10/25 14:59:14] INFO     Animation 6 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Area                         
+                             OfSquare\1905288516_10498                         
+                             0198_2522801826.mp4'
+──────────────────────────────────────────────
+
+[2025-11-10 14:59:57] [ERROR] ❌ Video and audio lists must have the same length
+[2025-11-10 14:59:57] [ERROR] 💥 merge_all_videos_with_audio failed.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 247, in merge_all_videos_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-10 14:59:57] [ERROR] ⚠️ Final video merge failed — proceeding with Drive upload anyway.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\main.py", line 58, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 247, in merge_all_videos_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-10 14:59:57] [ERROR] ⚠️ Final video merge failed — proceeding with Drive upload anyway.
+[2025-11-10 15:00:57] [ERROR] ❌ Unexpected error in /search endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "C:\Users\malay\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\routes\search_routes.py", line 67, in search
+    file_resp, code_resp = await asyncio.gather(gen_task, code_task)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\utils.py", line 11, in async_post
+    resp = await client.post(url, json=payload, headers={"Content-Type": "application/json"})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\malay\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+[2025-11-10 15:03:37] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251110_150241_bfe82ca1/script_sequences/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+Animation 1: FadeIn(Text('Understanding Trigonometry for Class 10')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 1: FadeIn(Text('Understanding Trigonometry for Class 10')):  60%|######    | 9/15 [00:00<00:00, 83.47it/s]
+                                                                                                                    
+
+Animation 3: FadeOut(Text('Understanding Trigonometry for Class 10')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 3: FadeOut(Text('Understanding Trigonometry for Class 10')):  47%|####6     | 7/15 [00:00<00:00, 64.77it/s]
+Animation 3: FadeOut(Text('Understanding Trigonometry for Class 10')):  93%|#########3| 14/15 [00:00<00:00, 61.95it/s]
+                                                                                                                      
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+
+Animation 4: Create(VGroup of 3 submobjects), etc.:   0%|          | 0/30 [00:00<?, ?it/s]
+Animation 4: Create(VGroup of 3 submobjects), etc.:  23%|##3       | 7/30 [00:00<00:00, 67.90it/s]
+Animation 4: Create(VGroup of 3 submobjects), etc.:  47%|####6     | 14/30 [00:00<00:00, 67.65it/s]
+Animation 4: Create(VGroup of 3 submobjects), etc.:  77%|#######6  | 23/30 [00:00<00:00, 73.61it/s]
+                                                                                                   
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251110_150241_bfe82ca1\script_sequences\ |
+| script_seq1\script_seq1.py:30 in construct                                  |
+|                                                                             |
+|   27                                                                        |
+|   28         # Animate a rotating angle (theta) at the triangle's base      |
+|   29         angle = Angle(triangle[0], triangle[2], radius=1.5, other_angl |
+| > 30         theta = angle.angle_text(r" heta", font_size=36)               |
+|   31         self.play(Create(angle), Write(theta))                         |
+|   32         self.play(Rotate(angle, PI/4, about_point=ORIGIN), run_time=2) |
+|   33         self.wait(2)                                                   |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\mobject.p |
+| y:723 in __getattr__                                                        |
+|                                                                             |
+|    720             return types.MethodType(setter, self)                    |
+|    721                                                                      |
+|    722         # Unhandled attribute, therefore error                       |
+| >  723         raise AttributeError(f"{type(self).__name__} object has no a |
+|    724                                                                      |
+|    725     @property                                                        |
+|    726     def width(self) -> float:                                        |
++-----------------------------------------------------------------------------+
+AttributeError: Angle object has no attribute 'angle_text'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/10/25 15:03:25] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Trig                         
+                             onometryAnimation\1185818                         
+                             338_1432596116_631829896.                         
+                             mp4'                                              
+[11/10/25 15:03:27] INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Trig                         
+                             onometryAnimation\1185818                         
+                             338_3166049924_1666280314                         
+                             .mp4'                                             
+                    INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Trig                         
+                             onometryAnimation\6246423                         
+                             24_2844360058_544241745.m                         
+                             p4'                                               
+[11/10/25 15:03:28] INFO     Animation 3 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Trig                         
+                             onometryAnimation\6246423                         
+                             24_1333366001_2763709140.                         
+                             mp4'                                              
+                    INFO     Writing ext{adjacent} to   tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq1\Tex\                        
+                             ec6c2c4d80a772b5.tex                              
+[11/10/25 15:03:30] INFO     Writing ext{opposite} to   tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq1\Tex\                        
+                             8bb13b705a170f89.tex                              
+[11/10/25 15:03:31] INFO     Writing ext{hypotenuse} to tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq1\Tex\                        
+                             e45c3b0eac2563c9.tex                              
+[11/10/25 15:03:36] INFO     Animation 4 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Trig                         
+                             onometryAnimation\6246423                         
+                             24_190868582_691969773.mp                         
+                             4'                                                
+                    INFO     Animation 5 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Trig                         
+                             onometryAnimation\6246423                         
+                             24_2552855209_2518467190.                         
+                             mp4'
+──────────────────────────────────────────────
+
+[2025-11-10 15:03:53] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251110_150241_bfe82ca1/script_sequences/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+
+Animation 0: Create(VGroup of 2 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: Create(VGroup of 2 submobjects):  80%|########  | 12/15 [00:00<00:00, 109.48it/s]
+                                                                                              
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251110_150241_bfe82ca1\script_sequences\ |
+| script_seq2\script_seq2.py:11 in construct                                  |
+|                                                                             |
+|    8         self.wait(2)                                                   |
+|    9                                                                        |
+|   10         # Animate sine ratio                                           |
+| > 11         self.animate_ratio(triangle, "sin(Î¸) = opposite / hypotenuse" |
+|   12                                                                        |
+|   13         # Animate cosine ratio                                         |
+|   14         self.animate_ratio(triangle, "cos(Î¸) = adjacent / hypotenuse" |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\mobject.p |
+| y:2291 in __getitem__                                                       |
+|                                                                             |
+|   2288         if isinstance(value, slice):                                 |
+|   2289             GroupClass = self.get_group_class()                      |
+|   2290             return GroupClass(*self_list.__getitem__(value))         |
+| > 2291         return self_list.__getitem__(value)                          |
+|   2292                                                                      |
+|   2293     def __iter__(self):                                              |
+|   2294         return iter(self.split())                                    |
++-----------------------------------------------------------------------------+
+IndexError: list index out of range
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/10/25 15:03:46] INFO     Writing A to               tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq2\Tex\                        
+                             90f07b07e57adf79.tex                              
+[11/10/25 15:03:49] INFO     Writing O to               tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq2\Tex\                        
+                             54bd793acfb7026b.tex                              
+[11/10/25 15:03:51] INFO     Writing H to               tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq2\Tex\                        
+                             40d3015135341434.tex                              
+[11/10/25 15:03:53] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq2\                         
+                             videos\script_seq2\480p15                         
+                             \partial_movie_files\Trig                         
+                             onometricRatios\118581833                         
+                             8_2737039147_223132457.mp                         
+                             4'                                                
+                    INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq2\                         
+                             videos\script_seq2\480p15                         
+                             \partial_movie_files\Trig                         
+                             onometricRatios\624642324                         
+                             _2844360058_3702408966.mp                         
+                             4'
+──────────────────────────────────────────────
+
+[2025-11-10 15:04:12] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251110_150241_bfe82ca1/script_sequences/script_seq3/script_seq3.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: FadeIn(Rectangle), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                            
+
+Animation 1: Create(Line):   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                 
+
+Animation 3: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                                              
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+
+Animation 5: Write(Tex('Height')), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 5: Write(Tex('Height')), etc.:  67%|######6   | 10/15 [00:00<00:00, 90.15it/s]
+                                                                                        
+latex: major issue: So far, you have not checked for MiKTeX updates.
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251110_150241_bfe82ca1\script_sequences\ |
+| script_seq3\script_seq3.py:36 in construct                                  |
+|                                                                             |
+|   33         height = ladder_length * np.sin(angle)                         |
+|   34                                                                        |
+|   35         # Show calculations step-by-step                               |
+| > 36         sine_ratio = MathTex(r"\sin(60^\circ) = rac{   ext{Height}}{10 |
+|   37         calculation = MathTex(r"    ext{Height} = 10    imes \sin(60^\ |
+|   38         result = MathTex(r" ext{Height} pprox 8.66 \,  ext{meters}", c |
+|   39                                                                        |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\text\tex_ |
+| mobject.py:298 in __init__                                                  |
+|                                                                             |
+|   295                         """,                                          |
+|   296                     ),                                                |
+|   297                 )                                                     |
+| > 298             raise compilation_error                                   |
+|   299         self.set_color_by_tex_to_color_map(self.tex_to_color_map)     |
+|   300                                                                       |
+|   301         if self.organize_left_to_right:                               |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\text\tex_ |
+| mobject.py:277 in __init__                                                  |
+|                                                                             |
+|   274         self.brace_notation_split_occurred = False                    |
+|   275         self.tex_strings = self._break_up_tex_strings(tex_strings)    |
+|   276         try:                                                          |
+| > 277             super().__init__(                                         |
+|   278                 self.arg_separator.join(self.tex_strings),            |
+|   279                 tex_environment=self.tex_environment,                 |
+|   280                 tex_template=self.tex_template,                       |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\text\tex_ |
+| mobject.py:80 in __init__                                                   |
+|                                                                             |
+|    77                                                                       |
+|    78         assert isinstance(tex_string, str)                            |
+|    79         self.tex_string = tex_string                                  |
+| >  80         file_name = tex_to_svg_file(                                  |
+|    81             self._get_modified_expression(tex_string),                |
+|    82             environment=self.tex_environment,                         |
+|    83             tex_template=self.tex_template,                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\utils\tex_file_wr |
+| iting.py:65 in tex_to_svg_file                                              |
+|                                                                             |
+|    62     if svg_file.exists():                                             |
+|    63         return svg_file                                               |
+|    64                                                                       |
+| >  65     dvi_file = compile_tex(                                           |
+|    66         tex_file,                                                     |
+|    67         tex_template.tex_compiler,                                    |
+|    68         tex_template.output_format,                                   |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\utils\tex_file_wr |
+| iting.py:212 in compile_tex                                                 |
+|                                                                             |
+|   209         if cp.returncode != 0:                                        |
+|   210             log_file = tex_file.with_suffix(".log")                   |
+|   211             print_all_tex_errors(log_file, tex_compiler, tex_file)    |
+| > 212             raise ValueError(                                         |
+|   213                 f"{tex_compiler} error converting to"                 |
+|   214                 f" {output_format[1:]}. See log output above or"      |
+|   215                 f" the log file: {log_file}",                         |
++-----------------------------------------------------------------------------+
+ValueError: latex error converting to dvi. See log output above or the log 
+file: 
+C:\ArkMalay\Framework\tutor\src\media\videos\script_sequences\script_seq3\Tex\5
+bc763d70bd72f3e.log
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/10/25 15:04:01] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Trig                         
+                             onometryAnimation\9318326                         
+                             50_1245392145_223132457.m                         
+                             p4'                                               
+                    INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Trig                         
+                             onometryAnimation\1905288                         
+                             516_3022636265_1555278614                         
+                             .mp4'                                             
+                    INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Trig                         
+                             onometryAnimation\1905288                         
+                             516_1436906429_2384907270                         
+                             .mp4'                                             
+                    INFO     Animation 3 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Trig                         
+                             onometryAnimation\1905288                         
+                             516_1521359536_1101682277                         
+                             .mp4'                                             
+[11/10/25 15:04:02] INFO     Animation 4 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Trig                         
+                             onometryAnimation\1905288                         
+                             516_1436906429_1709212462                         
+                             .mp4'                                             
+                    INFO     Writing Height to          tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq3\Tex\                        
+                             af6221090edf189b.tex                              
+[11/10/25 15:04:04] INFO     Writing Base to            tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq3\Tex\                        
+                             b6584fdb63674867.tex                              
+[11/10/25 15:04:06] INFO     Writing Ladder to          tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq3\Tex\                        
+                             5008c09d30e454d1.tex                              
+[11/10/25 15:04:09] INFO     Animation 5 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Trig                         
+                             onometryAnimation\1905288                         
+                             516_2676887728_1659739615                         
+                             .mp4'                                             
+[11/10/25 15:04:10] INFO     Animation 6 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Trig                         
+                             onometryAnimation\1905288                         
+                             516_1219373736_1555744066                         
+                             .mp4'                                             
+                    INFO     Writing \sin(60^\circ) =   tex_file_writing.py:111
+                             rac{   ext{Height}}{10} to                        
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq3\Tex\                        
+                             5bc763d70bd72f3e.tex                              
+[11/10/25 15:04:11] ERROR    LaTeX compilation error:   tex_file_writing.py:314
+                             Missing $ inserted.                               
+                                                                               
+                    ERROR    Context of error:          tex_file_writing.py:348
+                             -> \sin(60^\circ) = rac{                          
+                             ext{Height}}{10}                                  
+                             \end{align*}                                      
+                             \end{document}
+──────────────────────────────────────────────
+
+[2025-11-10 15:04:20] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251110_150241_bfe82ca1/script_sequences/script_seq4/script_seq4.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\ArkMalay\Framework\tutor\.venv\Scripts\manim.exe\__main__.py", line 7, in <module>
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\click\core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\click\core.py", line 1082, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\click\core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\click\core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\click\core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\commands.py", line 121, in render
+    for SceneClass in scene_classes_from_file(file):
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\utils\module_ops.py", line 167, in scene_classes_from_file
+    module = get_module(file_path)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\utils\module_ops.py", line 67, in get_module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 990, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1128, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1058, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\ArkMalay\Framework\Video_data\20251110_150241_bfe82ca1\script_sequences\script_seq4\script_seq4.py", line 53
+    **Note:** Replace `"ladder_example.png"`, `"triangle.svg"`, and `"unit_circle.svg"` with the actual file paths or create the corresponding Mobjects using Manim's geometric shapes or SVG imports. Ensure the files exist in the correct directory or provide the full path.
+                                                                                                                                                                   ^
+SyntaxError: unterminated string literal (detected at line 53)
+
+STDOUT:
+Manim Community v0.19.0
+──────────────────────────────────────────────
+
+[2025-11-10 15:04:47] [ERROR] ❌ Video and audio lists must have the same length
+[2025-11-10 15:04:47] [ERROR] 💥 merge_all_videos_with_audio failed.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 247, in merge_all_videos_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-10 15:04:48] [ERROR] ⚠️ Final video merge failed — proceeding with Drive upload anyway.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\main.py", line 58, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 247, in merge_all_videos_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-10 15:04:48] [ERROR] ⚠️ Final video merge failed — proceeding with Drive upload anyway.
+[2025-11-10 15:05:46] [ERROR] ❌ Unexpected error in /search endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "C:\Users\malay\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\routes\search_routes.py", line 67, in search
+    file_resp, code_resp = await asyncio.gather(gen_task, code_task)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\utils.py", line 11, in async_post
+    resp = await client.post(url, json=payload, headers={"Content-Type": "application/json"})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\malay\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout

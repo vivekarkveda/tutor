@@ -1,0 +1,131 @@
+=== FINAL PROMPT SENT ===
+
+You are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).
+Your goal is to turn a provided topic script into a visually clear, accurate, and fully executable Python animation that communicates concepts step-by-step.
+Follow these CRITICAL INSTRUCTIONS exactly as described:
+...
+Now, based on the following structured input:
+CATALOG: plane = NumberPlane(
+           x_range=[-6, 6, 1],
+           y_range=[-4, 6, 1],
+           axis_config={"include_numbers": True}
+       ).scale(0.8)
+       self.play(Create(plane))
+       self.wait(1)
+SCRIPT_SEQ: 5
+SCRIPT_FOR_MANIM: [
+  "Fade out the geometric problem and return to the labeled rectangle from Scene 3.",
+  "Animate the rectangle transforming back into the squares around circles 'a' and 'b'.",
+  "Highlight the expression '(a\u00b2 - b\u00b2)' in bold text above the squares.",
+  "Fade in the text: 'Difference of Squares: (a + b)(a - b)' below the expression.",
+  "End with a fade to black, displaying 'Thank you for watching!' in centered text."
+]
+SCRIPT_VOICE_OVER: [
+  "In summary, the expression (a squared minus b squared) represents the difference between the areas of two squares.",
+  "It can be factored into (a plus b) times (a minus b), providing a useful tool for simplifying algebraic expressions.",
+  "This concept has applications in geometry and various mathematical problems.",
+  "Thank you for joining us today. Keep exploring the fascinating world of mathematics!",
+  "Goodbye!"
+]
+SCRIPT_LENGTH: 35
+Generate the FULL Manim Python code that:
+- Follows all layout, geometry, boundary, and animation rules.
+- Produces a step-by-step educational animation.
+- Uses correct scaling and non-overlapping text.
+- Is self-contained and executable without errors.
+- Returns ONLY valid Python code (no explanations or Markdown formatting).
+:pushpin: Previous Code (for continuity):
+from manim import *
+
+class GeometricProblem(Scene):
+    def construct(self):
+        # Create the large square and smaller square
+        large_square = Square(side_length=6, color=BLUE)
+        small_square = Square(side_length=2, color=GREEN).move_to(UP + LEFT)
+
+        # Position the squares
+        large_square.move_to(ORIGIN)
+        small_square.next_to(large_square, RIGHT, buff=0)
+
+        # Create the remaining rectangle
+        remaining_rect = Rectangle(height=4, width=2, color=YELLOW)
+        remaining_rect.move_to(LEFT + DOWN)
+
+        # Label the side lengths
+        large_side = Text('a + b', font_size=24).next_to(large_square, UP, buff=0.5)
+        small_side = Text('b', font_size=24).next_to(small_square, UP, buff=0.5)
+
+        # Fade in the scene
+        self.play(FadeIn(large_square), FadeIn(small_square), FadeIn(large_side), FadeIn(small_side))
+        self.wait(2)
+
+        # Animate the remaining rectangle
+        self.play(Create(remaining_rect))
+        self.wait(1)
+
+        # Label the rectangle's area
+        rect_area = Text('(a + b)(a - b)', font_size=24).next_to(remaining_rect, RIGHT, buff=0.5)
+        self.play(Write(rect_area))
+        self.wait(3)
+
+        # Fade back to the original rectangle
+        self.play(FadeOut(large_square), FadeOut(small_square), FadeOut(large_side), FadeOut(small_side))
+        self.play(Transform(remaining_rect, rect_area.copy().surround(remaining_rect, buff=0.2)))
+        self.wait(2)
+
+# Run the animation
+GeometricProblem().render()
+
+=== GENERATED CODE ===
+
+```python
+from manim import *
+
+class SquaresAndCircles(Scene):
+    def construct(self):
+        # Create the plane
+        plane = NumberPlane(
+            x_range=[-6, 6, 1],
+            y_range=[-4, 6, 1],
+            axis_config={"include_numbers": True}
+        ).scale(0.8)
+        self.play(Create(plane))
+        self.wait(1)
+
+        # Create squares and circles
+        square_a = Square(side_length=2, color=RED).move_to(LEFT + UP)
+        circle_a = Circle(color=RED).surround(square_a)
+        square_b = Square(side_length=2, color=BLUE).move_to(RIGHT + UP)
+        circle_b = Circle(color=BLUE).surround(square_b)
+        squares = VGroup(square_a, square_b)
+        circles = VGroup(circle_a, circle_b)
+
+        # Label the squares
+        label_a = Text('a', font_size=24, color=RED).next_to(square_a, UP)
+        label_b = Text('b', font_size=24, color=BLUE).next_to(square_b, UP)
+
+        # Fade in the squares and labels
+        self.play(FadeIn(squares), FadeIn(circles), FadeIn(label_a), FadeIn(label_b))
+        self.wait(2)
+
+        # Highlight the expression
+        expression = MathTex(r"(a^2 - b^2)", font_size=36).to_edge(UP)
+        self.play(Write(expression))
+        self.wait(2)
+
+        # Show the difference of squares text
+        diff_text = Text("Difference of Squares:", font_size=24).next_to(expression, DOWN)
+        factorized_expr = MathTex(r"(a + b)(a - b)", font_size=36).next_to(diff_text, DOWN)
+        self.play(Write(diff_text), Write(factorized_expr))
+        self.wait(3)
+
+        # Fade to black with ending text
+        ending_text = Text("Thank you for watching!", font_size=36).scale(1.5).to_edge(DOWN)
+        self.play(FadeOut(plane), FadeOut(squares), FadeOut(circles), FadeOut(label_a), FadeOut(label_b))
+        self.play(Write(ending_text))
+        self.wait(2)
+        self.play(FadeOut(expression, diff_text, factorized_expr, ending_text))
+
+# Run the animation
+SquaresAndCircles().render()
+```

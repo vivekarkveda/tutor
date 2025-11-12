@@ -1,0 +1,77 @@
+[2025-10-31 17:09:23] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251031_170814/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
+(no stderr)
+
+STDOUT:
+(no stdout)
+──────────────────────────────────────────────
+
+[2025-10-31 17:09:23] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251031_170814/script_seq3/script_seq3.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\vivek_vslen2j\AppData\Roaming\Python\Scripts\poetry.exe\__main__.py", line 2, in <module>
+  File "C:\Users\vivek_vslen2j\AppData\Roaming\pypoetry\venv\Lib\site-packages\poetry\console\application.py", line 4, in <module>
+    import logging
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 29, in <module>
+    from string import Template
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1118, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1217, in get_data
+KeyboardInterrupt
+
+STDOUT:
+(no stdout)
+──────────────────────────────────────────────
+
+[2025-10-31 17:09:26] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251031_170814/script_seq4/script_seq4.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\vivek_vslen2j\AppData\Roaming\Python\Scripts\poetry.exe\__main__.py", line 2, in <module>
+    from poetry.console.application import main
+  File "C:\Users\vivek_vslen2j\AppData\Roaming\pypoetry\venv\Lib\site-packages\poetry\console\application.py", line 22, in <module>
+    from poetry.__version__ import __version__
+  File "C:\Users\vivek_vslen2j\AppData\Roaming\pypoetry\venv\Lib\site-packages\poetry\__version__.py", line 6, in <module>
+    __version__ = metadata.version("poetry")
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python313\Lib\importlib\metadata\__init__.py", line 987, in version
+    return distribution(distribution_name).version
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python313\Lib\importlib\metadata\__init__.py", line 486, in version
+    return self.metadata['Version']
+           ^^^^^^^^^^^^^
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python313\Lib\importlib\metadata\__init__.py", line 460, in metadata
+    from . import _adapters
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python313\Lib\importlib\metadata\_adapters.py", line 5, in <module>
+    import email.message
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python313\Lib\email\message.py", line 17, in <module>
+    from email._policybase import compat32
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python313\Lib\email\_policybase.py", line 7, in <module>
+    from email import header
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python313\Lib\email\header.py", line 17, in <module>
+    import email.base64mime
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python313\Lib\email\base64mime.py", line 37, in <module>
+    from base64 import b64encode
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1118, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1218, in get_data
+KeyboardInterrupt
+
+STDOUT:
+(no stdout)
+──────────────────────────────────────────────
+

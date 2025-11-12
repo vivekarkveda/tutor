@@ -1,0 +1,36 @@
+[2025-11-11 17:36:56] [ERROR] ❌ [MERGE] Mismatch: 13813 video(s) vs 1719644 audio(s).
+[2025-11-11 17:36:56] [ERROR] 💥 [MERGE] merge_video_with_audio failed unexpectedly: ❌ [MERGE] Mismatch: 13813 video(s) vs 1719644 audio(s).
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 140, in merge_video_with_audio
+    raise ValueError(error_msg)
+ValueError: ❌ [MERGE] Mismatch: 13813 video(s) vs 1719644 audio(s).
+[2025-11-11 17:36:56] [ERROR] 💥 merge_all_videos_with_audio failed.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 329, in merge_all_videos_with_audio
+    merged_bytes = MergerFactory.merge_video_with_audio(v_bytes, a_bytes, idx=idx)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 140, in merge_video_with_audio
+    raise ValueError(error_msg)
+ValueError: ❌ [MERGE] Mismatch: 13813 video(s) vs 1719644 audio(s).
+[2025-11-11 17:36:56] [ERROR] 💥 [MERGE] Final video merge failed due to unexpected error.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\main.py", line 64, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 329, in merge_all_videos_with_audio
+    merged_bytes = MergerFactory.merge_video_with_audio(v_bytes, a_bytes, idx=idx)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 140, in merge_video_with_audio
+    raise ValueError(error_msg)
+ValueError: ❌ [MERGE] Mismatch: 13813 video(s) vs 1719644 audio(s).
+[2025-11-11 17:36:56] [ERROR] ❌ [MERGE] Error details: ❌ [MERGE] Mismatch: 13813 video(s) vs 1719644 audio(s).
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\main.py", line 64, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 329, in merge_all_videos_with_audio
+    merged_bytes = MergerFactory.merge_video_with_audio(v_bytes, a_bytes, idx=idx)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 140, in merge_video_with_audio
+    raise ValueError(error_msg)
+ValueError: ❌ [MERGE] Mismatch: 13813 video(s) vs 1719644 audio(s).

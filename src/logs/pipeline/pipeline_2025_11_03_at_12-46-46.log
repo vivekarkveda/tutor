@@ -1,0 +1,169 @@
+[2025-11-03 12:51:13] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251103_125032/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: Create(Circle), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: Create(Circle), etc.:  73%|#######3  | 11/15 [00:00<00:00, 103.36it/s]
+                                                                                   
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\input_data_20251103_125032\script_seq2 |
+| \script_seq2.py:16 in construct                                             |
+|                                                                             |
+|   13         self.wait(1)                                                   |
+|   14                                                                        |
+|   15         # Zoom into the circle                                         |
+| > 16         self.play(CameraFrame.frame.animate.scale(0.5).move_to(circle. |
+|   17         self.wait(1)                                                   |
+|   18                                                                        |
+|   19         # Animate chord AB                                             |
++-----------------------------------------------------------------------------+
+NameError: name 'CameraFrame' is not defined
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/03/25 12:51:07] INFO     Writing r to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\input_data_202                        
+                             51103_125032\script_seq2\T                        
+                             ex\937b81def052c03a.tex                           
+[11/03/25 12:51:10] INFO     Writing d to               tex_file_writing.py:111
+                             C:\Vivek_Main\tutter\src\m                        
+                             edia\videos\input_data_202                        
+                             51103_125032\script_seq2\T                        
+                             ex\ec09a882942b7da6.tex                           
+[11/03/25 12:51:12] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251103_125032\script_se                         
+                             q2\videos\script_seq2\480                         
+                             p15\partial_movie_files\C                         
+                             ircleChordAnimation\11858                         
+                             18338_2965278692_22313245                         
+                             7.mp4'                                            
+[11/03/25 12:51:13] INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251103_125032\script_se                         
+                             q2\videos\script_seq2\480                         
+                             p15\partial_movie_files\C                         
+                             ircleChordAnimation\62464                         
+                             2324_4217992463_142959409                         
+                             7.mp4'
+──────────────────────────────────────────────
+
+[2025-11-03 12:51:23] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251103_125032/script_seq3/script_seq3.py
+──────────────────────────────────────────────
+STDERR:
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\input_data_20251103_125032\script_seq3 |
+| \script_seq3.py:14 in construct                                             |
+|                                                                             |
+|   11         OP = Line(O, P, color=RED)                                     |
+|   12         Q = P + RIGHT*2                                                |
+|   13         PQ = Line(P, Q, color=BLACK)                                   |
+| > 14         alpha = Angle(OP, PQ, radius=0.5, color=YELLOW)                |
+|   15         alpha_label = Tex(r"$lpha$").next_to(alpha, RIGHT).scale(0.8)  |
+|   16         tangent_text = Text("Tangent to a Circle", color=BLACK).to_edg |
+|   17         track_image = ImageMobject("circular_track.png").scale(0.5).to |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\mobject\geometry\line.py |
+| :973 in __init__                                                            |
+|                                                                             |
+|    970         self.quadrant = quadrant                                     |
+|    971         self.dot_distance = dot_distance                             |
+|    972         self.elbow = elbow                                           |
+| >  973         inter = line_intersection(                                   |
+|    974             [line1.get_start(), line1.get_end()],                    |
+|    975             [line2.get_start(), line2.get_end()],                    |
+|    976         )                                                            |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\utils\space_ops.py:584   |
+| in line_intersection                                                        |
+|                                                                             |
+|   581     x, y, z = cross(line1, line2)                                     |
+|   582                                                                       |
+|   583     if z == 0:                                                        |
+| > 584         raise ValueError(                                             |
+|   585             "The lines are parallel, there is no unique intersection  |
+|   586         )                                                             |
+|   587                                                                       |
++-----------------------------------------------------------------------------+
+ValueError: The lines are parallel, there is no unique intersection point.
+
+STDOUT:
+Manim Community v0.19.0
+──────────────────────────────────────────────
+
+[2025-11-03 12:51:43] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\video_routes.py", line 29, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\main.py", line 56, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\merger_factory.py", line 250, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\merger_factory.py", line 130, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-03 12:51:43] [ERROR] ❌ HTTP 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-03 12:51:43] [ERROR] ❌ Error writing scripts
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\write_routes.py", line 27, in write_scripts
+    video_result = await async_post(video_url, {"path": str(folder)}, timeout=300)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 14, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-03 12:51:44] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-03 12:51:44] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: {\\\"detail\\\":\\\"Video and audio lists must have the same length\\\"}\"}"}

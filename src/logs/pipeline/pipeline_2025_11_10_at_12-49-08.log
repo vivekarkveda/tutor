@@ -1,0 +1,440 @@
+[2025-11-10 12:50:54] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251110_124955_a7722793/script_sequences/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+Animation 1: FadeIn(Text('Understanding the Area of a Triangle')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 1: FadeIn(Text('Understanding the Area of a Triangle')):  27%|##6       | 4/15 [00:00<00:00, 31.27it/s]
+Animation 1: FadeIn(Text('Understanding the Area of a Triangle')):  53%|#####3    | 8/15 [00:00<00:00, 28.02it/s]
+Animation 1: FadeIn(Text('Understanding the Area of a Triangle')):  73%|#######3  | 11/15 [00:00<00:00, 28.53it/s]
+Animation 1: FadeIn(Text('Understanding the Area of a Triangle')):  93%|#########3| 14/15 [00:00<00:00, 27.83it/s]
+                                                                                                                  
+latex: major issue: So far, you have not checked for MiKTeX updates.
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251110_124955_a7722793\script_sequences\ |
+| script_seq1\script_seq1.py:21 in construct                                  |
+|                                                                             |
+|   18             fill_opacity=0.2                                           |
+|   19         )                                                              |
+|   20         labels = VGroup(                                               |
+| > 21             MathTex("a").next_to(triangle.get_side(0), DOWN, buff=0.2) |
+|   22             MathTex("b").next_to(triangle.get_side(1), DOWN, buff=0.2) |
+|   23             MathTex("c").next_to(triangle.get_side(2), LEFT, buff=0.2) |
+|   24             MathTex("h").next_to(Line(triangle.get_vertices()[0], tria |
++-----------------------------------------------------------------------------+
+TypeError: Mobject.__getattr__.<locals>.getter() takes 1 positional argument 
+but 2 were given
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/10/25 12:50:39] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Tria                         
+                             ngleAreaAnimation\1185818                         
+                             338_1432596116_631829896.                         
+                             mp4'                                              
+[11/10/25 12:50:47] INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Tria                         
+                             ngleAreaAnimation\1185818                         
+                             338_3966490624_1666280314                         
+                             .mp4'                                             
+[11/10/25 12:50:48] INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Tria                         
+                             ngleAreaAnimation\6246423                         
+                             24_2844360058_1161983669.                         
+                             mp4'                                              
+                    INFO     Writing a to               tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq1\Tex\                        
+                             8bb2a9c5ac9d5a80.tex
+──────────────────────────────────────────────
+
+[2025-11-10 12:51:04] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251110_124955_a7722793/script_sequences/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: Create(Polygon):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: Create(Polygon): 100%|##########| 15/15 [00:00<00:00, 137.46it/s]
+                                                                              
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251110_124955_a7722793\script_sequences\ |
+| script_seq2\script_seq2.py:11 in construct                                  |
+|                                                                             |
+|    8         self.wait(1)                                                   |
+|    9                                                                        |
+|   10         # Animate the height (h) extending from base 'a' to the opposi |
+| > 11         height = Line(triangle.get_vertices()[0], triangle.get_vertice |
+|   12         self.play(Create(height))                                      |
+|   13         self.wait(1)                                                   |
+|   14                                                                        |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\geometry\ |
+| line.py:80 in __init__                                                      |
+|                                                                             |
+|     77         self.buff = buff                                             |
+|     78         self.path_arc = path_arc                                     |
+|     79         self._set_start_and_end_attrs(start, end)                    |
+| >   80         super().__init__(**kwargs)                                   |
+|     81         # TODO: Deal with the situation where path_arc is None       |
+|     82                                                                      |
+|     83     def generate_points(self) -> None:                               |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\geometry\ |
+| arc.py:109 in __init__                                                      |
+|                                                                             |
+|    106         self.tip_length: float = tip_length                          |
+|    107         self.normal_vector: Vector3D = normal_vector                 |
+|    108         self.tip_style: dict = tip_style                             |
+| >  109         super().__init__(**kwargs)                                   |
+|    110                                                                      |
+|    111     # Adding, Creating, Modifying tips                               |
+|    112                                                                      |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\types\vec |
+| torized_mobject.py:161 in __init__                                          |
+|                                                                             |
+|    158             0, 1, n_points_per_cubic_curve                           |
+|    159         )                                                            |
+|    160         self.cap_style: CapStyleType = cap_style                     |
+| >  161         super().__init__(**kwargs)                                   |
+|    162         self.submobjects: list[VMobject]                             |
+|    163                                                                      |
+|    164         # TODO: Find where color overwrites are happening and remove |
++-----------------------------------------------------------------------------+
+TypeError: Mobject.__init__() got an unexpected keyword argument 'dash_length'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/10/25 12:51:03] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq2\                         
+                             videos\script_seq2\480p15                         
+                             \partial_movie_files\Tria                         
+                             ngleAreaScene\1185818338_                         
+                             620561690_223132457.mp4'                          
+                    INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq2\                         
+                             videos\script_seq2\480p15                         
+                             \partial_movie_files\Tria                         
+                             ngleAreaScene\624642324_4                         
+                             217992463_3440080096.mp4'
+──────────────────────────────────────────────
+
+[2025-11-10 12:51:20] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251110_124955_a7722793/script_sequences/script_seq3/script_seq3.py
+──────────────────────────────────────────────
+STDERR:
+latex: major issue: So far, you have not checked for MiKTeX updates.
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251110_124955_a7722793\script_sequences\ |
+| script_seq3\script_seq3.py:7 in construct                                   |
+|                                                                             |
+|    4     def construct(self):                                               |
+|    5         # Start with the triangle and formula from Scene 2             |
+|    6         triangle = Polygon([0, 0, 0], [2, 0, 0], [1, 1.732, 0], color= |
+| >  7         formula = MathTex(r"    ext{Area} = rac{1}{2}  imes b  imes h" |
+|    8                                                                        |
+|    9         self.play(DrawBorderThenFill(triangle), Write(formula))        |
+|   10         self.wait(2)                                                   |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\text\tex_ |
+| mobject.py:298 in __init__                                                  |
+|                                                                             |
+|   295                         """,                                          |
+|   296                     ),                                                |
+|   297                 )                                                     |
+| > 298             raise compilation_error                                   |
+|   299         self.set_color_by_tex_to_color_map(self.tex_to_color_map)     |
+|   300                                                                       |
+|   301         if self.organize_left_to_right:                               |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\text\tex_ |
+| mobject.py:277 in __init__                                                  |
+|                                                                             |
+|   274         self.brace_notation_split_occurred = False                    |
+|   275         self.tex_strings = self._break_up_tex_strings(tex_strings)    |
+|   276         try:                                                          |
+| > 277             super().__init__(                                         |
+|   278                 self.arg_separator.join(self.tex_strings),            |
+|   279                 tex_environment=self.tex_environment,                 |
+|   280                 tex_template=self.tex_template,                       |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\text\tex_ |
+| mobject.py:80 in __init__                                                   |
+|                                                                             |
+|    77                                                                       |
+|    78         assert isinstance(tex_string, str)                            |
+|    79         self.tex_string = tex_string                                  |
+| >  80         file_name = tex_to_svg_file(                                  |
+|    81             self._get_modified_expression(tex_string),                |
+|    82             environment=self.tex_environment,                         |
+|    83             tex_template=self.tex_template,                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\utils\tex_file_wr |
+| iting.py:65 in tex_to_svg_file                                              |
+|                                                                             |
+|    62     if svg_file.exists():                                             |
+|    63         return svg_file                                               |
+|    64                                                                       |
+| >  65     dvi_file = compile_tex(                                           |
+|    66         tex_file,                                                     |
+|    67         tex_template.tex_compiler,                                    |
+|    68         tex_template.output_format,                                   |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\utils\tex_file_wr |
+| iting.py:212 in compile_tex                                                 |
+|                                                                             |
+|   209         if cp.returncode != 0:                                        |
+|   210             log_file = tex_file.with_suffix(".log")                   |
+|   211             print_all_tex_errors(log_file, tex_compiler, tex_file)    |
+| > 212             raise ValueError(                                         |
+|   213                 f"{tex_compiler} error converting to"                 |
+|   214                 f" {output_format[1:]}. See log output above or"      |
+|   215                 f" the log file: {log_file}",                         |
++-----------------------------------------------------------------------------+
+ValueError: latex error converting to dvi. See log output above or the log 
+file: 
+C:\ArkMalay\Framework\tutor\src\media\videos\script_sequences\script_seq3\Tex\f
+07bb38de37cf1bf.log
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/10/25 12:51:16] INFO     Writing ext{Area} =        tex_file_writing.py:111
+                             rac{1}{2}   imes b  imes h                        
+                             to                                                
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq3\Tex\                        
+                             f07bb38de37cf1bf.tex                              
+[11/10/25 12:51:18] ERROR    LaTeX compilation error:   tex_file_writing.py:314
+                             Missing $ inserted.                               
+                                                                               
+                    ERROR    Context of error:          tex_file_writing.py:348
+                             -> ext{Area} = rac{1}{2}                          
+                             imes b  imes h                                    
+                             \end{align*}                                      
+                             \end{document}
+──────────────────────────────────────────────
+
+[2025-11-10 12:51:31] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251110_124955_a7722793/script_sequences/script_seq4/script_seq4.py
+──────────────────────────────────────────────
+STDERR:
+latex: major issue: So far, you have not checked for MiKTeX updates.
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251110_124955_a7722793\script_sequences\ |
+| script_seq4\script_seq4.py:7 in construct                                   |
+|                                                                             |
+|    4     def construct(self):                                               |
+|    5         # Start with the final frame from Scene 3 (assuming it's a gro |
+|    6         triangles_and_formulas = VGroup(                               |
+| >  7             VGroup(Triangle().scale(0.5), MathTex("Area = \frac{1}{2}  |
+|    8             VGroup(Triangle().scale(0.5), MathTex("Area = \frac{1}{2}  |
+|    9         ).arrange(RIGHT, buff=1.5).move_to(UP * 0.5)                   |
+|   10                                                                        |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\text\tex_ |
+| mobject.py:298 in __init__                                                  |
+|                                                                             |
+|   295                         """,                                          |
+|   296                     ),                                                |
+|   297                 )                                                     |
+| > 298             raise compilation_error                                   |
+|   299         self.set_color_by_tex_to_color_map(self.tex_to_color_map)     |
+|   300                                                                       |
+|   301         if self.organize_left_to_right:                               |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\text\tex_ |
+| mobject.py:277 in __init__                                                  |
+|                                                                             |
+|   274         self.brace_notation_split_occurred = False                    |
+|   275         self.tex_strings = self._break_up_tex_strings(tex_strings)    |
+|   276         try:                                                          |
+| > 277             super().__init__(                                         |
+|   278                 self.arg_separator.join(self.tex_strings),            |
+|   279                 tex_environment=self.tex_environment,                 |
+|   280                 tex_template=self.tex_template,                       |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\text\tex_ |
+| mobject.py:80 in __init__                                                   |
+|                                                                             |
+|    77                                                                       |
+|    78         assert isinstance(tex_string, str)                            |
+|    79         self.tex_string = tex_string                                  |
+| >  80         file_name = tex_to_svg_file(                                  |
+|    81             self._get_modified_expression(tex_string),                |
+|    82             environment=self.tex_environment,                         |
+|    83             tex_template=self.tex_template,                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\utils\tex_file_wr |
+| iting.py:65 in tex_to_svg_file                                              |
+|                                                                             |
+|    62     if svg_file.exists():                                             |
+|    63         return svg_file                                               |
+|    64                                                                       |
+| >  65     dvi_file = compile_tex(                                           |
+|    66         tex_file,                                                     |
+|    67         tex_template.tex_compiler,                                    |
+|    68         tex_template.output_format,                                   |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\utils\tex_file_wr |
+| iting.py:212 in compile_tex                                                 |
+|                                                                             |
+|   209         if cp.returncode != 0:                                        |
+|   210             log_file = tex_file.with_suffix(".log")                   |
+|   211             print_all_tex_errors(log_file, tex_compiler, tex_file)    |
+| > 212             raise ValueError(                                         |
+|   213                 f"{tex_compiler} error converting to"                 |
+|   214                 f" {output_format[1:]}. See log output above or"      |
+|   215                 f" the log file: {log_file}",                         |
++-----------------------------------------------------------------------------+
+ValueError: latex error converting to dvi. See log output above or the log 
+file: 
+C:\ArkMalay\Framework\tutor\src\media\videos\script_sequences\script_seq4\Tex\d
+d9602fd6fa11864.log
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/10/25 12:51:28] INFO     Writing Area = rac{1}{2}   tex_file_writing.py:111
+                             imes 4  imes 3 = 6 to                             
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq4\Tex\                        
+                             dd9602fd6fa11864.tex                              
+[11/10/25 12:51:29] ERROR    LaTeX compilation error:   tex_file_writing.py:314
+                             Missing $ inserted.                               
+                                                                               
+                    ERROR    Context of error:          tex_file_writing.py:348
+                             -> Area = rac{1}{2}                               
+                             imes 4  imes 3 = 6                                
+                             \end{align*}                                      
+                             \end{document}
+──────────────────────────────────────────────
+
+[2025-11-10 12:51:50] [ERROR] ❌ Video and audio lists must have the same length
+[2025-11-10 12:51:50] [ERROR] 💥 merge_all_videos_with_audio failed.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 247, in merge_all_videos_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-10 12:51:50] [ERROR] ⚠️ Final video merge failed — proceeding with Drive upload anyway.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\main.py", line 58, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 247, in merge_all_videos_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-10 12:51:50] [ERROR] ⚠️ Final video merge failed — proceeding with Drive upload anyway.
+[2025-11-10 12:52:36] [ERROR] ❌ HTTP 500: {"detail":""}

@@ -1,0 +1,238 @@
+[2025-11-09 23:35:21] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251109_233434_2145cc52/script_sequences/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: FadeIn(Text('Finding the Area of a Square')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: FadeIn(Text('Finding the Area of a Square')):  20%|##        | 3/15 [00:00<00:00, 27.92it/s]
+Animation 0: FadeIn(Text('Finding the Area of a Square')):  47%|####6     | 7/15 [00:00<00:00, 30.86it/s]
+Animation 0: FadeIn(Text('Finding the Area of a Square')):  73%|#######3  | 11/15 [00:00<00:00, 32.80it/s]
+                                                                                                          
+
+Animation 2: DrawBorderThenFill(Square):   0%|          | 0/30 [00:00<?, ?it/s]
+Animation 2: DrawBorderThenFill(Square):  47%|####6     | 14/30 [00:00<00:00, 135.25it/s]
+                                                                                         
+
+Animation 4: Create(Line):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 4: Create(Line):  93%|#########3| 14/15 [00:00<00:00, 137.44it/s]
+                                                                           
+
+Animation 6: Write(Text('s')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 6: Write(Text('s')):  60%|######    | 9/15 [00:00<00:00, 80.97it/s]
+                                                                             
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251109_233434_2145cc52\script_sequences\ |
+| script_seq1\script_seq1.py:29 in construct                                  |
+|                                                                             |
+|   26         self.wait(1)                                                   |
+|   27                                                                        |
+|   28         # Zoom out slightly to show the entire square with the label   |
+| > 29         self.play(self.camera.frame.animate.scale(1.2).move_to(square) |
+|   30         self.wait(2)                                                   |
+|   31                                                                        |
+|   32         # Clean up for the next scene                                  |
++-----------------------------------------------------------------------------+
+AttributeError: 'Camera' object has no attribute 'frame'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/09/25 23:35:16] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaScene\931832650_207                         
+                             3188331_223132457.mp4'                            
+[11/09/25 23:35:17] INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaScene\1905288516_14                         
+                             36906429_1530849186.mp4'                          
+                    INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaScene\1905288516_28                         
+                             76646133_226826517.mp4'                           
+[11/09/25 23:35:18] INFO     Animation 3 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaScene\1905288516_14                         
+                             36906429_222982381.mp4'                           
+                    INFO     Animation 4 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaScene\1905288516_26                         
+                             13263670_2867431252.mp4'                          
+[11/09/25 23:35:19] INFO     Animation 5 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaScene\1905288516_14                         
+                             36906429_3435797813.mp4'                          
+                    INFO     Animation 6 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaScene\1905288516_21                         
+                             76621140_2240584354.mp4'                          
+[11/09/25 23:35:20] INFO     Animation 7 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaScene\1905288516_14                         
+                             36906429_772295777.mp4'
+──────────────────────────────────────────────
+
+[2025-11-09 23:35:50] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251109_233434_2145cc52/script_sequences/script_seq3/script_seq3.py
+──────────────────────────────────────────────
+STDERR:
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251109_233434_2145cc52\script_sequences\ |
+| script_seq3\script_seq3.py:6 in construct                                   |
+|                                                                             |
+|    3 class SquareAreaAnimation(Scene):                                      |
+|    4     def construct(self):                                               |
+|    5         # Define colors and styles                                     |
+| >  6         BLUE = BLUE                                                    |
+|    7         GREEN = GREEN                                                  |
+|    8         RED = RED                                                      |
+|    9         FONT_SIZE = 24                                                 |
++-----------------------------------------------------------------------------+
+UnboundLocalError: cannot access local variable 'BLUE' where it is not 
+associated with a value
+
+STDOUT:
+Manim Community v0.19.0
+──────────────────────────────────────────────
+
+[2025-11-09 23:36:13] [ERROR] ❌ Video and audio lists must have the same length
+[2025-11-09 23:36:13] [ERROR] 💥 merge_all_videos_with_audio failed.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 247, in merge_all_videos_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-09 23:36:13] [ERROR] ⚠️ Final video merge failed — proceeding with Drive upload anyway.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\main.py", line 58, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 247, in merge_all_videos_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-09 23:36:13] [ERROR] ⚠️ Final video merge failed — proceeding with Drive upload anyway.
+[2025-11-09 23:36:13] [ERROR] ❌ Google Drive authentication failed.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\drive_utils.py", line 40, in get_drive_service
+    creds = service_account.Credentials.from_service_account_file(credentials_path, scopes=SCOPES)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\google\oauth2\service_account.py", line 264, in from_service_account_file
+    info, signer = _service_account_info.from_filename(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\google\auth\_service_account_info.py", line 78, in from_filename
+    with io.open(filename, "r", encoding="utf-8") as json_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\ArkMalay\\Framework\\tutor\\src\\credentials\\client_secret.json'
+[2025-11-09 23:36:13] [ERROR] ❌ Folder upload failed.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\drive_utils.py", line 89, in upload_folder_to_drive
+    service = get_drive_service(auth_mode, drive_credentials, token_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\drive_utils.py", line 40, in get_drive_service
+    creds = service_account.Credentials.from_service_account_file(credentials_path, scopes=SCOPES)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\google\oauth2\service_account.py", line 264, in from_service_account_file
+    info, signer = _service_account_info.from_filename(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\google\auth\_service_account_info.py", line 78, in from_filename
+    with io.open(filename, "r", encoding="utf-8") as json_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\ArkMalay\\Framework\\tutor\\src\\credentials\\client_secret.json'
+[2025-11-09 23:36:13] [ERROR] ❌ Failed to upload folder to Google Drive.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\main.py", line 110, in process_pipeline
+    upload_folder_to_drive(
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\drive_utils.py", line 89, in upload_folder_to_drive
+    service = get_drive_service(auth_mode, drive_credentials, token_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\drive_utils.py", line 40, in get_drive_service
+    creds = service_account.Credentials.from_service_account_file(credentials_path, scopes=SCOPES)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\google\oauth2\service_account.py", line 264, in from_service_account_file
+    info, signer = _service_account_info.from_filename(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\google\auth\_service_account_info.py", line 78, in from_filename
+    with io.open(filename, "r", encoding="utf-8") as json_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\ArkMalay\\Framework\\tutor\\src\\credentials\\client_secret.json'

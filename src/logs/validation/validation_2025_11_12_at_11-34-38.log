@@ -1,0 +1,10 @@
+[2025-11-12 11:37:44] [ERROR] ❌ [TABLE_GEN] Database connection or execution error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\table_gen.py", line 53, in table_generator
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+

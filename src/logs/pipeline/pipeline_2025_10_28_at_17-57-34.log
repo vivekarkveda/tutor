@@ -1,0 +1,19 @@
+[2025-10-28 17:58:05] [DEBUG] file_types: ['py', 'txt']
+[2025-10-28 17:58:05] [DEBUG] generated_files: {'py_files': [], 'txt_files': []}
+[2025-10-28 17:58:05] [DEBUG] 🧮 File: script_seq1.py | base_handler Words: 101 | Approx. GPT Tokens: 134
+[2025-10-28 17:58:05] [DEBUG] 🧮 File: script_seq1.txt | base_handler Words: 58 | Approx. GPT Tokens: 77
+[2025-10-28 17:58:05] [DEBUG] 🧮 File: script_seq2.py | base_handler Words: 136 | Approx. GPT Tokens: 181
+[2025-10-28 17:58:05] [DEBUG] 🧮 File: script_seq2.txt | base_handler Words: 68 | Approx. GPT Tokens: 90
+[2025-10-28 17:58:05] [DEBUG] 🧮 File: script_seq3.py | base_handler Words: 129 | Approx. GPT Tokens: 172
+[2025-10-28 17:58:05] [DEBUG] 🧮 File: script_seq3.txt | base_handler Words: 69 | Approx. GPT Tokens: 92
+[2025-10-28 17:58:05] [DEBUG] 🧮 File: script_seq4.py | base_handler Words: 117 | Approx. GPT Tokens: 156
+[2025-10-28 17:58:05] [DEBUG] 🧮 File: script_seq4.txt | base_handler Words: 64 | Approx. GPT Tokens: 85
+[2025-10-28 17:58:34] [DEBUG] 🧮 File: script_seq1.py | video_factory Words: 111 | Approx. GPT Tokens: 148
+[2025-10-28 17:58:49] [DEBUG] 🧮 File: script_seq2.py | video_factory Words: 321 | Approx. GPT Tokens: 428
+[2025-10-28 17:59:20] [DEBUG] ✅ Generated full audio for: script_seq1.txt (in memory)
+[2025-10-28 17:59:44] [DEBUG] ✅ Generated full audio for: script_seq2.txt (in memory)
+[2025-10-28 18:00:13] [DEBUG] ✅ Generated full audio for: script_seq3.txt (in memory)
+[2025-10-28 18:00:16] [DEBUG] 🧮 File: script_seq3.py | video_factory Words: 237 | Approx. GPT Tokens: 316
+[2025-10-28 18:00:32] [DEBUG] 🧮 File: script_seq4.py | video_factory Words: 227 | Approx. GPT Tokens: 302
+[2025-10-28 18:00:37] [DEBUG] ✅ Generated full audio for: script_seq4.txt (in memory)
+[2025-10-28 18:00:37] [DEBUG] Audio bytes count: 4

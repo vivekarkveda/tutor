@@ -1,0 +1,459 @@
+[2025-11-09 23:41:17] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251109_234106_7cfb1713/script_sequences/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: FadeIn(Text('Finding the Area of a Square')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: FadeIn(Text('Finding the Area of a Square')):  33%|###3      | 5/15 [00:00<00:00, 49.51it/s]
+Animation 0: FadeIn(Text('Finding the Area of a Square')):  73%|#######3  | 11/15 [00:00<00:00, 53.64it/s]
+                                                                                                          
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251109_234106_7cfb1713\script_sequences\ |
+| script_seq1\script_seq1.py:15 in construct                                  |
+|                                                                             |
+|   12                                                                        |
+|   13         # Animate a simple square with dotted lines and a question mar |
+|   14         square = Square(side_length=4, stroke_width=2, stroke_color=BL |
+| > 15         dotted_square = square.copy().set_stroke(dash_length=0.1)      |
+|   16         question_mark = Text("?", font_size=48, color=BLACK).move_to(s |
+|   17         self.play(Create(dotted_square), Write(question_mark))         |
+|   18         self.wait(1)                                                   |
++-----------------------------------------------------------------------------+
+TypeError: VMobject.set_stroke() got an unexpected keyword argument 
+'dash_length'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/09/25 23:41:15] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaScene\931832650_207                         
+                             3188331_223132457.mp4'                            
+[11/09/25 23:41:16] INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaScene\1905288516_14                         
+                             36906429_1530849186.mp4'
+──────────────────────────────────────────────
+
+[2025-11-09 23:42:08] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251109_234106_7cfb1713/script_sequences/script_seq3/script_seq3.py
+──────────────────────────────────────────────
+STDERR:
+C:\ArkMalay\Framework\Video_data\20251109_234106_7cfb1713\script_sequences\script_seq3\script_seq3.py:16: SyntaxWarning: invalid escape sequence '\,'
+  side_length_text = MathTex("s = 5\,\text{units}").next_to(ruler, DOWN, buff=0.5)
+C:\ArkMalay\Framework\Video_data\20251109_234106_7cfb1713\script_sequences\script_seq3\script_seq3.py:27: SyntaxWarning: invalid escape sequence '\,'
+  result = MathTex("Area = 25\,\text{square units}").next_to(calculation, DOWN, buff=0.5)
+
+Animation 0: FadeOut(NumberPlane of 4 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: FadeOut(NumberPlane of 4 submobjects):  93%|#########3| 14/15 [00:00<00:00, 129.63it/s]
+                                                                                                    
+latex: major issue: So far, you have not checked for MiKTeX updates.
+
+Animation 1: Create(Line), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 1: Create(Line), etc.:  40%|####      | 6/15 [00:00<00:00, 57.06it/s]
+Animation 1: Create(Line), etc.:  87%|########6 | 13/15 [00:00<00:00, 62.26it/s]
+                                                                                
+
+Animation 3: FadeOut(Line), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 3: FadeOut(Line), etc.:  33%|###3      | 5/15 [00:00<00:00, 41.55it/s]
+Animation 3: FadeOut(Line), etc.:  67%|######6   | 10/15 [00:00<00:00, 41.56it/s]
+Animation 3: FadeOut(Line), etc.: 100%|##########| 15/15 [00:00<00:00, 44.24it/s]
+                                                                                 
+latex: major issue: So far, you have not checked for MiKTeX updates.
+
+Animation 4: Write(MathTex('Area = 5 \times 5')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 4: Write(MathTex('Area = 5 \times 5')):  53%|#####3    | 8/15 [00:00<00:00, 79.47it/s]
+                                                                                                
+latex: major issue: So far, you have not checked for MiKTeX updates.
+
+Animation 6: Write(MathTex('Area = 25\\,\text{square units}')), etc.:   0%|          | 0/30 [00:00<?, ?it/s]
+Animation 6: Write(MathTex('Area = 25\\,\text{square units}')), etc.:  20%|##        | 6/30 [00:00<00:00, 50.71it/s]
+Animation 6: Write(MathTex('Area = 25\\,\text{square units}')), etc.:  40%|####      | 12/30 [00:00<00:00, 40.93it/s]
+Animation 6: Write(MathTex('Area = 25\\,\text{square units}')), etc.:  57%|#####6    | 17/30 [00:00<00:00, 40.62it/s]
+Animation 6: Write(MathTex('Area = 25\\,\text{square units}')), etc.:  73%|#######3  | 22/30 [00:00<00:00, 40.53it/s]
+Animation 6: Write(MathTex('Area = 25\\,\text{square units}')), etc.:  90%|######### | 27/30 [00:00<00:00, 38.20it/s]
+                                                                                                                     
+
+Animation 7: Indicate(MathTex('Area = 25\\,\text{square units}')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 7: Indicate(MathTex('Area = 25\\,\text{square units}')):  40%|####      | 6/15 [00:00<00:00, 48.92it/s]
+Animation 7: Indicate(MathTex('Area = 25\\,\text{square units}')):  80%|########  | 12/15 [00:00<00:00, 51.10it/s]
+                                                                                                                  
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251109_234106_7cfb1713\script_sequences\ |
+| script_seq3\script_seq3.py:34 in construct                                  |
+|                                                                             |
+|   31         self.wait(1)                                                   |
+|   32                                                                        |
+|   33         # Step 5: Zoom in on the result for emphasis                   |
+| > 34         self.play(FrameZoom(result), run_time=2)                       |
+|   35         self.wait(2)                                                   |
+|   36         self.play(Restore(self.camera.frame))                          |
+|   37                                                                        |
++-----------------------------------------------------------------------------+
+NameError: name 'FrameZoom' is not defined
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/09/25 23:41:53] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaAnimation\118581833                         
+                             8_1630846147_547216920.mp                         
+                             4'                                                
+                    INFO     Writing s = 5\, ext{units} tex_file_writing.py:111
+                             to                                                
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq3\Tex\                        
+                             d9a40683e7e9f386.tex                              
+[11/09/25 23:41:56] INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaAnimation\624642324                         
+                             _992230159_4169884673.mp4                         
+                             '                                                 
+[11/09/25 23:41:57] INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaAnimation\624642324                         
+                             _4217992463_1003742438.mp                         
+                             4'                                                
+                    INFO     Animation 3 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaAnimation\624642324                         
+                             _55809832_2645772830.mp4'                         
+                    INFO     Writing Area = 5           tex_file_writing.py:111
+                             imes 5 to                                         
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq3\Tex\                        
+                             42438d6ec12668ce.tex                              
+[11/09/25 23:42:00] INFO     Animation 4 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaAnimation\624642324                         
+                             _1518634262_2921266398.mp                         
+                             4'                                                
+[11/09/25 23:42:01] INFO     Animation 5 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaAnimation\624642324                         
+                             _4217992463_1814834575.mp                         
+                             4'                                                
+                    INFO     Writing Area = 25\,        tex_file_writing.py:111
+                             ext{square units} to                              
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq3\Tex\                        
+                             0263c2962981a527.tex                              
+[11/09/25 23:42:06] INFO     Animation 6 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaAnimation\624642324                         
+                             _3486142628_3386388774.mp                         
+                             4'                                                
+[11/09/25 23:42:07] INFO     Animation 7 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaAnimation\624642324                         
+                             _2826725836_4173256755.mp                         
+                             4'                                                
+[11/09/25 23:42:08] INFO     Animation 8 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaAnimation\624642324                         
+                             _4217992463_4196962171.mp                         
+                             4'
+──────────────────────────────────────────────
+
+[2025-11-09 23:42:23] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251109_234106_7cfb1713/script_sequences/script_seq4/script_seq4.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: FadeIn(Text('Area of a Square: Summary')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: FadeIn(Text('Area of a Square: Summary')):  33%|###3      | 5/15 [00:00<00:00, 48.26it/s]
+Animation 0: FadeIn(Text('Area of a Square: Summary')):  73%|#######3  | 11/15 [00:00<00:00, 51.34it/s]
+                                                                                                       
+
+Animation 2: FadeIn(Text('1. Area of a square = side length Ã\x97 side length')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 2: FadeIn(Text('1. Area of a square = side length Ã\x97 side length')):  20%|##        | 3/15 [00:00<00:00, 25.99it/s]
+Animation 2: FadeIn(Text('1. Area of a square = side length Ã\x97 side length')):  40%|####      | 6/15 [00:00<00:00, 25.64it/s]
+Animation 2: FadeIn(Text('1. Area of a square = side length Ã\x97 side length')):  60%|######    | 9/15 [00:00<00:00, 24.10it/s]
+Animation 2: FadeIn(Text('1. Area of a square = side length Ã\x97 side length')):  80%|########  | 12/15 [00:00<00:00, 18.96it/s]
+Animation 2: FadeIn(Text('1. Area of a square = side length Ã\x97 side length')): 100%|##########| 15/15 [00:00<00:00, 20.35it/s]
+                                                                                                                                 
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251109_234106_7cfb1713\script_sequences\ |
+| script_seq4\script_seq4.py:32 in construct                                  |
+|                                                                             |
+|   29             self.wait(0.5)                                             |
+|   30                                                                        |
+|   31             # Animate checkmark                                        |
+| > 32             checkmark = SVGMobject("checkmark.svg").scale(0.5).set_col |
+|   33             checkmark.next_to(mob, RIGHT, buff=0.5)                    |
+|   34             self.play(FadeIn(checkmark))                               |
+|   35             self.wait(0.5)                                             |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\svg\svg_m |
+| object.py:145 in __init__                                                   |
+|                                                                             |
+|   142             path_string_config = {}                                   |
+|   143         self.path_string_config = path_string_config                  |
+|   144                                                                       |
+| > 145         self.init_svg_mobject(use_svg_cache=use_svg_cache)            |
+|   146                                                                       |
+|   147         self.set_style(                                               |
+|   148             fill_color=fill_color,                                    |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\svg\svg_m |
+| object.py:171 in init_svg_mobject                                           |
+|                                                                             |
+|   168                 self.add(*mob)                                        |
+|   169                 return                                                |
+|   170                                                                       |
+| > 171         self.generate_mobject()                                       |
+|   172         if use_svg_cache:                                             |
+|   173             SVG_HASH_TO_MOB_MAP[hash_val] = self.copy()               |
+|   174                                                                       |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\svg\svg_m |
+| object.py:192 in generate_mobject                                           |
+|                                                                             |
+|   189                                                                       |
+|   190     def generate_mobject(self) -> None:                               |
+|   191         """Parse the SVG and translate its elements to submobjects."" |
+| > 192         file_path = self.get_file_path()                              |
+|   193         element_tree = ET.parse(file_path)                            |
+|   194         new_tree = self.modify_xml_tree(element_tree)                 |
+|   195         # Create a temporary svg file to dump modified svg to be pars |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\svg\svg_m |
+| object.py:210 in get_file_path                                              |
+|                                                                             |
+|   207         """Search for an existing file based on the specified file na |
+|   208         if self.file_name is None:                                    |
+|   209             raise ValueError("Must specify file for SVGMobject")      |
+| > 210         return get_full_vector_image_path(self.file_name)             |
+|   211                                                                       |
+|   212     def modify_xml_tree(self, element_tree: ET.ElementTree) -> ET.Ele |
+|   213         """Modifies the SVG element tree to include default           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\utils\images.py:3 |
+| 6 in get_full_vector_image_path                                             |
+|                                                                             |
+|   33                                                                        |
+|   34                                                                        |
+|   35 def get_full_vector_image_path(image_file_name: str | PurePath) -> Pat |
+| > 36     return seek_full_path_from_defaults(                               |
+|   37         image_file_name,                                               |
+|   38         default_dir=config.get_dir("assets_dir"),                      |
+|   39         extensions=[".svg"],                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\utils\file_ops.py |
+| :182 in seek_full_path_from_defaults                                        |
+|                                                                             |
+|   179         f"From: {Path.cwd()}, could not find {file_name} at either "  |
+|   180         f"of these locations: {list(map(str, possible_paths))}"       |
+|   181     )                                                                 |
+| > 182     raise OSError(error)                                              |
+|   183                                                                       |
+|   184                                                                       |
+|   185 def modify_atime(file_path: str) -> None:                             |
++-----------------------------------------------------------------------------+
+OSError: From: C:\ArkMalay\Framework\tutor\src, could not find checkmark.svg at
+either of these locations: ['checkmark.svg', 'checkmark.svg', 
+'checkmark.svg.svg']
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/09/25 23:42:19] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq4\                         
+                             videos\script_seq4\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaSummary\1185818338_                         
+                             670162447_223132457.mp4'                          
+                    INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq4\                         
+                             videos\script_seq4\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaSummary\624642324_4                         
+                             217992463_2843703299.mp4'                         
+[11/09/25 23:42:21] INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq4\                         
+                             videos\script_seq4\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaSummary\624642324_3                         
+                             190277753_3997400545.mp4'                         
+[11/09/25 23:42:22] INFO     Animation 3 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq4\                         
+                             videos\script_seq4\480p15                         
+                             \partial_movie_files\Squa                         
+                             reAreaSummary\624642324_3                         
+                             394500337_2757526960.mp4'
+──────────────────────────────────────────────
+
+[2025-11-09 23:42:29] [ERROR] ❌ Video and audio lists must have the same length
+[2025-11-09 23:42:29] [ERROR] 💥 merge_all_videos_with_audio failed.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 247, in merge_all_videos_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-09 23:42:29] [ERROR] ⚠️ Final video merge failed — proceeding with Drive upload anyway.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\main.py", line 58, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 247, in merge_all_videos_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-09 23:42:29] [ERROR] ⚠️ Final video merge failed — proceeding with Drive upload anyway.
+[2025-11-09 23:42:35] [ERROR] ❌ Folder upload failed.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\drive_utils.py", line 127, in upload_folder_to_drive
+    ).execute()
+      ^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\googleapiclient\_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\googleapiclient\http.py", line 938, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id%2C+name%2C+webViewLink&alt=json&uploadType=multipart returned "Service Accounts do not have storage quota. Leverage shared drives (https://developers.google.com/workspace/drive/api/guides/about-shareddrives), or use OAuth delegation (http://support.google.com/a/answer/7281227) instead.". Details: "[{'message': 'Service Accounts do not have storage quota. Leverage shared drives (https://developers.google.com/workspace/drive/api/guides/about-shareddrives), or use OAuth delegation (http://support.google.com/a/answer/7281227) instead.', 'domain': 'usageLimits', 'reason': 'storageQuotaExceeded'}]">
+[2025-11-09 23:42:35] [ERROR] ❌ Failed to upload folder to Google Drive.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\main.py", line 110, in process_pipeline
+    upload_folder_to_drive(
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\drive_utils.py", line 127, in upload_folder_to_drive
+    ).execute()
+      ^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\googleapiclient\_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\googleapiclient\http.py", line 938, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id%2C+name%2C+webViewLink&alt=json&uploadType=multipart returned "Service Accounts do not have storage quota. Leverage shared drives (https://developers.google.com/workspace/drive/api/guides/about-shareddrives), or use OAuth delegation (http://support.google.com/a/answer/7281227) instead.". Details: "[{'message': 'Service Accounts do not have storage quota. Leverage shared drives (https://developers.google.com/workspace/drive/api/guides/about-shareddrives), or use OAuth delegation (http://support.google.com/a/answer/7281227) instead.', 'domain': 'usageLimits', 'reason': 'storageQuotaExceeded'}]">

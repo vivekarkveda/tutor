@@ -1,0 +1,17 @@
+[2025-11-11 15:32:16] [DEBUG] 📦 Input data sample: [{'script_seq': 1, 'script_for_manim': ['Start with a blank canvas.', "Fade in the text 'Creating a Circle for Class 10' at the center.", 'Zoom out slightly to make space for the animation.', 'Draw a faint grid in the background to provide a reference.', 'Place a small dot at the center of the grid, representing the center of the circle.', 'Animate a compass tool appearing and opening to a fixed radius.', "Show the compass rotating 360 degrees, leaving a faint trace of the circle's path.", 'Soli
+[2025-11-11 15:32:16] [DEBUG] 🌍 Set Settings.TRANSACTION_FOLDER → C:\ArkMalay\Framework\Video_data\20251111_153216_2d9c8aa7
+[2025-11-11 15:32:16] [DEBUG] 💾 Attempting to save JSON to C:\ArkMalay\Framework\Video_data\20251111_153216_2d9c8aa7\input_data.json
+[2025-11-11 15:32:16] [DEBUG] ⚙️ Updated Settings.JSON_FILE_PATH → C:\ArkMalay\Framework\Video_data\20251111_153216_2d9c8aa7\input_data.json
+[2025-11-11 15:32:16] [DEBUG] file_types: ['py', 'txt']
+[2025-11-11 15:32:16] [DEBUG] generated_files initialized: {'py_files': [], 'txt_files': []}
+[2025-11-11 15:32:16] [DEBUG] 🧮 File: script_seq1.py | Words: 198 | Tokens: 264
+[2025-11-11 15:32:16] [DEBUG] 🧮 File: script_seq1.txt | Words: 100 | Tokens: 133
+[2025-11-11 15:32:16] [DEBUG] 🧮 File: script_seq2.py | Words: 251 | Tokens: 334
+[2025-11-11 15:32:16] [DEBUG] 🧮 File: script_seq2.txt | Words: 131 | Tokens: 174
+[2025-11-11 15:32:16] [DEBUG] 🔁 Restored original Settings.JSON_FILE_PATH
+[2025-11-11 15:32:16] [DEBUG] 🔒 Keeping TRANSACTION_FOLDER active for upload: C:\ArkMalay\Framework\Video_data\20251111_153216_2d9c8aa7
+[2025-11-11 15:32:31] [DEBUG] 🧮 File: script_seq1.py | video_factory Words: 20 | Approx. GPT Tokens: 26
+[2025-11-11 15:32:43] [DEBUG] 🧮 File: script_seq2.py | video_factory Words: 26 | Approx. GPT Tokens: 34
+[2025-11-11 15:33:19] [DEBUG] ✅ Generated full audio for: script_seq1.txt (in memory)
+[2025-11-11 15:34:04] [DEBUG] ✅ Generated full audio for: script_seq2.txt (in memory)
+[2025-11-11 15:34:04] [DEBUG] Audio bytes count: 2

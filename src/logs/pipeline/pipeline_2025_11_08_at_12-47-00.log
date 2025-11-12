@@ -1,0 +1,127 @@
+[2025-11-08 12:49:03] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251108_124746_0926f746/script_sequences/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: Create(Rectangle):   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                      
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251108_124746_0926f746\script_sequences\ |
+| script_seq2\script_seq2.py:16 in construct                                  |
+|                                                                             |
+|   13         self.wait(1)                                                   |
+|   14                                                                        |
+|   15         # Zoom into the rectangle                                      |
+| > 16         self.play(CameraFrame.move_to, rectangle.get_center(), run_tim |
+|   17         self.wait(1)                                                   |
+|   18                                                                        |
+|   19         # Animate the rectangle being divided into smaller squares     |
++-----------------------------------------------------------------------------+
+NameError: name 'CameraFrame' is not defined
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/08/25 12:49:02] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq2\                         
+                             videos\script_seq2\480p15                         
+                             \partial_movie_files\Rect                         
+                             angleAreaAnimation\118581                         
+                             8338_4015072173_223132457                         
+                             .mp4'                                             
+                    INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq2\                         
+                             videos\script_seq2\480p15                         
+                             \partial_movie_files\Rect                         
+                             angleAreaAnimation\624642                         
+                             324_4217992463_2152778830                         
+                             .mp4'
+──────────────────────────────────────────────
+
+[2025-11-08 12:49:32] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251108_124746_0926f746/script_sequences/script_seq4/script_seq4.py
+──────────────────────────────────────────────
+STDERR:
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251108_124746_0926f746\script_sequences\ |
+| script_seq4\script_seq4.py:6 in construct                                   |
+|                                                                             |
+|    3 class RectangleAreaAnimation(Scene):                                   |
+|    4     def construct(self):                                               |
+|    5         # Define colors                                                |
+| >  6         BLUE = BLUE                                                    |
+|    7         GREEN = GREEN                                                  |
+|    8         RED = RED                                                      |
+|    9         YELLOW = YELLOW                                                |
++-----------------------------------------------------------------------------+
+UnboundLocalError: cannot access local variable 'BLUE' where it is not 
+associated with a value
+
+STDOUT:
+Manim Community v0.19.0
+──────────────────────────────────────────────
+
+[2025-11-08 12:49:32] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\routes\video_routes.py", line 29, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\main.py", line 53, in process_pipeline
+    Table_gen.table_generator(generated_files, PathList)
+  File "C:\ArkMalay\Framework\tutor\src\table_gen.py", line 123, in table_generator
+    if cur:
+       ^^^
+UnboundLocalError: cannot access local variable 'cur' where it is not associated with a value
+[2025-11-08 12:49:32] [ERROR] ❌ HTTP 500: {"detail":"cannot access local variable 'cur' where it is not associated with a value"}
+[2025-11-08 12:49:32] [ERROR] 💥 Error in /write-scripts endpoint
+[2025-11-08 12:49:32] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"cannot access local variable 'cur' where it is not associated with a value\"}"}
+[2025-11-08 12:49:32] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: {\\\"detail\\\":\\\"cannot access local variable 'cur' where it is not associated with a value\\\"}\"}"}

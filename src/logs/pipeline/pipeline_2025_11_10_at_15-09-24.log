@@ -1,0 +1,470 @@
+[2025-11-10 15:11:37] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251110_151043_44227c1e/script_sequences/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: FadeIn(Text('Understanding (a+b)^2')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: FadeIn(Text('Understanding (a+b)^2')):  13%|#3        | 2/15 [00:00<00:00, 13.50it/s]
+Animation 0: FadeIn(Text('Understanding (a+b)^2')):  33%|###3      | 5/15 [00:00<00:00, 21.04it/s]
+Animation 0: FadeIn(Text('Understanding (a+b)^2')):  53%|#####3    | 8/15 [00:00<00:00, 20.08it/s]
+Animation 0: FadeIn(Text('Understanding (a+b)^2')):  73%|#######3  | 11/15 [00:00<00:00, 20.92it/s]
+                                                                                                   
+
+Animation 2: FadeOut(Text('Understanding (a+b)^2')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 2: FadeOut(Text('Understanding (a+b)^2')):  27%|##6       | 4/15 [00:00<00:00, 34.55it/s]
+Animation 2: FadeOut(Text('Understanding (a+b)^2')):  60%|######    | 9/15 [00:00<00:00, 41.12it/s]
+Animation 2: FadeOut(Text('Understanding (a+b)^2')): 100%|##########| 15/15 [00:00<00:00, 47.86it/s]
+                                                                                                    
+latex: major issue: So far, you have not checked for MiKTeX updates.
+
+Animation 3: Write(MathTex('(a+b)^2')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 3: Write(MathTex('(a+b)^2')):  47%|####6     | 7/15 [00:00<00:00, 63.35it/s]
+Animation 3: Write(MathTex('(a+b)^2')):  93%|#########3| 14/15 [00:00<00:00, 53.43it/s]
+                                                                                       
+
+Animation 5: _MethodAnimation(SingleStringMathTex('(a+b)^2')):   0%|          | 0/8 [00:00<?, ?it/s]
+Animation 5: _MethodAnimation(SingleStringMathTex('(a+b)^2')): 100%|##########| 8/8 [00:00<00:00, 72.74it/s]
+                                                                                                            
+
+Animation 7: _MethodAnimation(VGroup of 0 submobject):   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                                            
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251110_151043_44227c1e\script_sequences\ |
+| script_seq1\script_seq1.py:24 in construct                                  |
+|                                                                             |
+|   21         self.wait(0.5)                                                 |
+|   22         self.play(expr[1:3].animate.set_color(GREEN), run_time=0.5)  # |
+|   23         self.wait(0.5)                                                 |
+| > 24         self.play(expr[3].animate.set_color(RED), run_time=0.5)  # Exp |
+|   25         self.wait(1)                                                   |
+|   26                                                                        |
+|   27         # Draw a simple grid                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\mobject.p |
+| y:2291 in __getitem__                                                       |
+|                                                                             |
+|   2288         if isinstance(value, slice):                                 |
+|   2289             GroupClass = self.get_group_class()                      |
+|   2290             return GroupClass(*self_list.__getitem__(value))         |
+| > 2291         return self_list.__getitem__(value)                          |
+|   2292                                                                      |
+|   2293     def __iter__(self):                                              |
+|   2294         return iter(self.split())                                    |
++-----------------------------------------------------------------------------+
+IndexError: list index out of range
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/10/25 15:11:29] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Unde                         
+                             rstandingABSquared\931832                         
+                             650_3079712600_223132457.                         
+                             mp4'                                              
+                    INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Unde                         
+                             rstandingABSquared\190528                         
+                             8516_1436906429_310723935                         
+                             0.mp4'                                            
+[11/10/25 15:11:30] INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Unde                         
+                             rstandingABSquared\190528                         
+                             8516_687515192_125109962.                         
+                             mp4'                                              
+                    INFO     Writing (a+b)^2 to         tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq1\Tex\                        
+                             baa077316e7c458b.tex                              
+[11/10/25 15:11:34] INFO     Animation 3 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Unde                         
+                             rstandingABSquared\190528                         
+                             8516_318789052_1666280314                         
+                             .mp4'                                             
+[11/10/25 15:11:35] INFO     Animation 4 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Unde                         
+                             rstandingABSquared\190528                         
+                             8516_1436906429_206005830                         
+                             0.mp4'                                            
+                    INFO     Animation 5 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Unde                         
+                             rstandingABSquared\190528                         
+                             8516_3063213791_403850430                         
+                             0.mp4'                                            
+                    INFO     Animation 6 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Unde                         
+                             rstandingABSquared\190528                         
+                             8516_1295674776_349929821                         
+                             6.mp4'                                            
+                    INFO     Animation 7 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Unde                         
+                             rstandingABSquared\190528                         
+                             8516_3475421852_932808438                         
+                             .mp4'                                             
+[11/10/25 15:11:36] INFO     Animation 8 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq1\                         
+                             videos\script_seq1\480p15                         
+                             \partial_movie_files\Unde                         
+                             rstandingABSquared\190528                         
+                             8516_1295674776_351705482                         
+                             8.mp4'
+──────────────────────────────────────────────
+
+[2025-11-10 15:11:57] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251110_151043_44227c1e/script_sequences/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
+C:\ArkMalay\Framework\Video_data\20251110_151043_44227c1e\script_sequences\script_seq2\script_seq2.py:19: SyntaxWarning: invalid escape sequence '\c'
+  expr = MathTex("{{(a+b)}}^2 = {{(a+b)}} \cdot {{(a+b)}}", isolate=["(a+b)", "(a+b)"]).scale(1.5)
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251110_151043_44227c1e\script_sequences\ |
+| script_seq2\script_seq2.py:13 in construct                                  |
+|                                                                             |
+|   10             MathTex("ab").shift(UP*2 + RIGHT*2),                       |
+|   11             MathTex("ab").shift(DOWN*2 + LEFT*2),                      |
+|   12             MathTex("b^2").shift(DOWN*2 + RIGHT*2),                    |
+| > 13         ).set_color_by_tex("a", BLUE).set_color_by_tex("b", GREEN)     |
+|   14                                                                        |
+|   15         self.play(FadeIn(grid))                                        |
+|   16         self.wait(1)                                                   |
++-----------------------------------------------------------------------------+
+TypeError: Mobject.__getattr__.<locals>.setter() takes 2 positional arguments 
+but 3 were given
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/10/25 15:11:48] INFO     Writing (a+b) to           tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq2\Tex\                        
+                             0c8a0b2e2935eff5.tex                              
+[11/10/25 15:11:50] INFO     Writing a^2 to             tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq2\Tex\                        
+                             4cd880482a26144d.tex                              
+[11/10/25 15:11:52] INFO     Writing ab to              tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq2\Tex\                        
+                             46bbdc09f3311d83.tex                              
+[11/10/25 15:11:55] INFO     Writing b^2 to             tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq2\Tex\                        
+                             252a52111768029a.tex
+──────────────────────────────────────────────
+
+[2025-11-10 15:12:26] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251110_151043_44227c1e/script_sequences/script_seq3/script_seq3.py
+──────────────────────────────────────────────
+STDERR:
+latex: major issue: So far, you have not checked for MiKTeX updates.
+
+Animation 0: Write(MathTex('a^2 + 2ab + b^2')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: Write(MathTex('a^2 + 2ab + b^2')):  60%|######    | 9/15 [00:00<00:00, 84.67it/s]
+                                                                                              
+
+Animation 2: FadeOut(MathTex('a^2 + 2ab + b^2')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 2: FadeOut(MathTex('a^2 + 2ab + b^2')):  53%|#####3    | 8/15 [00:00<00:00, 79.54it/s]
+                                                                                                
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+
+Animation 3: Create(Rectangle), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 3: Create(Rectangle), etc.:  67%|######6   | 10/15 [00:00<00:00, 97.76it/s]
+                                                                                     
+
+Animation 5: Create(Square):   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                   
+
+Animation 6: Create(Rectangle), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 6: Create(Rectangle), etc.:  87%|########6 | 13/15 [00:00<00:00, 125.27it/s]
+                                                                                      
+
+Animation 7: Create(Square):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 7: Create(Square): 100%|##########| 15/15 [00:00<00:00, 127.01it/s]
+                                                                             
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+
+Animation 8: Write(MathTex('a^2')), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 8: Write(MathTex('a^2')), etc.:  93%|#########3| 14/15 [00:00<00:00, 134.85it/s]
+                                                                                          
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251110_151043_44227c1e\script_sequences\ |
+| script_seq3\script_seq3.py:38 in construct                                  |
+|                                                                             |
+|   35         self.wait(2)                                                   |
+|   36                                                                        |
+|   37         # Step 5: Zoom out to show the entire rectangle with labels    |
+| > 38         self.play(self.camera.frame.animate.scale(1.5).move_to(rectang |
+|   39         self.wait(2)                                                   |
+|   40                                                                        |
+|   41         # Voiceover synchronization (assuming voiceover is handled ext |
++-----------------------------------------------------------------------------+
+AttributeError: 'Camera' object has no attribute 'frame'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/10/25 15:12:08] INFO     Writing a^2 + 2ab + b^2 to tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq3\Tex\                        
+                             2b35cd1e5e65f5ce.tex                              
+[11/10/25 15:12:10] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Rect                         
+                             angleExpansion\1185818338                         
+                             _2508895394_223132457.mp4                         
+                             '                                                 
+                    INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Rect                         
+                             angleExpansion\624642324_                         
+                             2844360058_3296939884.mp4                         
+                             '                                                 
+                    INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Rect                         
+                             angleExpansion\624642324_                         
+                             3363647906_308870750.mp4'                         
+                    INFO     Writing (a+b) (a+b) to     tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq3\Tex\                        
+                             d27ae0c6b548d0d4.tex                              
+[11/10/25 15:12:14] INFO     Writing (a+b) to           tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq3\Tex\                        
+                             0c8a0b2e2935eff5.tex                              
+[11/10/25 15:12:16] INFO     Animation 3 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Rect                         
+                             angleExpansion\624642324_                         
+                             4289101998_1666280314.mp4                         
+                             '                                                 
+[11/10/25 15:12:17] INFO     Animation 4 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Rect                         
+                             angleExpansion\624642324_                         
+                             2844360058_1502758072.mp4                         
+                             '                                                 
+                    INFO     Animation 5 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Rect                         
+                             angleExpansion\624642324_                         
+                             3485871619_3816415294.mp4                         
+                             '                                                 
+                    INFO     Animation 6 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Rect                         
+                             angleExpansion\624642324_                         
+                             4288140291_2445662085.mp4                         
+                             '                                                 
+[11/10/25 15:12:18] INFO     Animation 7 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Rect                         
+                             angleExpansion\624642324_                         
+                             3518466694_634260151.mp4'                         
+                    INFO     Writing a^2 to             tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq3\Tex\                        
+                             4cd880482a26144d.tex                              
+[11/10/25 15:12:20] INFO     Writing 2ab to             tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq3\Tex\                        
+                             3c51aa2cfa82c86f.tex                              
+[11/10/25 15:12:23] INFO     Writing b^2 to             tex_file_writing.py:111
+                             C:\ArkMalay\Framework\tuto                        
+                             r\src\media\videos\script_                        
+                             sequences\script_seq3\Tex\                        
+                             252a52111768029a.tex                              
+[11/10/25 15:12:26] INFO     Animation 8 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Rect                         
+                             angleExpansion\624642324_                         
+                             3318727400_1895600183.mp4                         
+                             '                                                 
+                    INFO     Animation 9 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Rect                         
+                             angleExpansion\624642324_                         
+                             2844360058_2996610094.mp4                         
+                             '
+──────────────────────────────────────────────
+
+[2025-11-10 15:12:48] [ERROR] ❌ Video and audio lists must have the same length
+[2025-11-10 15:12:48] [ERROR] 💥 merge_all_videos_with_audio failed.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 247, in merge_all_videos_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-10 15:12:48] [ERROR] ⚠️ Final video merge failed — proceeding with Drive upload anyway.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\main.py", line 58, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 247, in merge_all_videos_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-10 15:12:48] [ERROR] ⚠️ Final video merge failed — proceeding with Drive upload anyway.
+[2025-11-10 15:13:47] [ERROR] ❌ HTTP 500: {"detail":""}

@@ -1,0 +1,24 @@
+[2025-11-11 17:52:00] [ERROR] 💥 merge_all_videos_with_audio failed.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 353, in merge_all_videos_with_audio
+    return MergerFactory.concatenate_videos(merged_videos_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'MergerFactory' has no attribute 'concatenate_videos'
+[2025-11-11 17:52:00] [ERROR] 💥 [MERGE] Final video merge failed due to unexpected error.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\main.py", line 64, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 353, in merge_all_videos_with_audio
+    return MergerFactory.concatenate_videos(merged_videos_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'MergerFactory' has no attribute 'concatenate_videos'
+[2025-11-11 17:52:00] [ERROR] ❌ [MERGE] Error details: type object 'MergerFactory' has no attribute 'concatenate_videos'
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\main.py", line 64, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 353, in merge_all_videos_with_audio
+    return MergerFactory.concatenate_videos(merged_videos_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'MergerFactory' has no attribute 'concatenate_videos'

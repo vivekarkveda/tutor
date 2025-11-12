@@ -1,0 +1,270 @@
+[2025-11-10 13:17:07] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251110_131640_6d9f2a93/script_sequences/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251110_131640_6d9f2a93\script_sequences\ |
+| script_seq2\script_seq2.py:7 in construct                                   |
+|                                                                             |
+|    4     def construct(self):                                               |
+|    5         # Setup                                                        |
+|    6         circle = Circle(radius=2, color=BLUE)                          |
+| >  7         sector = Sector(outer_radius=2, inner_radius=0, start_angle=0, |
+|    8         triangle = Polygon(np.array([0, 0, 0]), np.array([2, 0, 0]), n |
+|    9         rectangle = Rectangle(width=2, height=2*PI/4, color=YELLOW)    |
+|   10         parallelogram = VGroup(triangle, rectangle).arrange(buff=0).sh |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\geometry\ |
+| arc.py:940 in __init__                                                      |
+|                                                                             |
+|    937     """                                                              |
+|    938                                                                      |
+|    939     def __init__(self, radius: float = 1, **kwargs: Any) -> None:    |
+| >  940         super().__init__(inner_radius=0, outer_radius=radius, **kwar |
+|    941                                                                      |
+|    942                                                                      |
+|    943 class Annulus(Circle):                                               |
++-----------------------------------------------------------------------------+
+TypeError: manim.mobject.geometry.arc.AnnularSector.__init__() got multiple 
+values for keyword argument 'outer_radius'
+
+STDOUT:
+Manim Community v0.19.0
+──────────────────────────────────────────────
+
+[2025-11-10 13:17:16] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251110_131640_6d9f2a93/script_sequences/script_seq3/script_seq3.py
+──────────────────────────────────────────────
+STDERR:
+C:\ArkMalay\Framework\Video_data\20251110_131640_6d9f2a93\script_sequences\script_seq3\script_seq3.py:69: SyntaxWarning: invalid escape sequence '\p'
+  width_label = MathTex("2\pi", color=WHITE).scale(0.7).next_to(larger_rectangle, DOWN, buff=0.1)
+C:\ArkMalay\Framework\Video_data\20251110_131640_6d9f2a93\script_sequences\script_seq3\script_seq3.py:75: SyntaxWarning: invalid escape sequence '\p'
+  area_label = MathTex("2\pi r^2", color=WHITE).scale(0.8).next_to(larger_rectangle, UP, buff=0.5)
+C:\ArkMalay\Framework\Video_data\20251110_131640_6d9f2a93\script_sequences\script_seq3\script_seq3.py:84: SyntaxWarning: invalid escape sequence '\p'
+  final_formula = MathTex("\text{Area} = \pi r^2", color=WHITE).scale(1.2).move_to(ORIGIN)
+
+Animation 0: Create(Circle):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: Create(Circle):  80%|########  | 12/15 [00:00<00:00, 119.68it/s]
+                                                                             
+
+Animation 2: FadeOut(Circle):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 2: FadeOut(Circle):  60%|######    | 9/15 [00:00<00:00, 88.00it/s]
+                                                                            
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\comman |
+| ds.py:125 in render                                                         |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\scene\scene.py:23 |
+| 7 in render                                                                 |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework\Video_data\20251110_131640_6d9f2a93\script_sequences\ |
+| script_seq3\script_seq3.py:22 in construct                                  |
+|                                                                             |
+|   19         # Divide the circle into sectors                               |
+|   20         sectors = VGroup()                                             |
+|   21         for i in range(num_sectors):                                   |
+| > 22             sector = Sector(                                           |
+|   23                 outer_radius=radius,                                   |
+|   24                 inner_radius=0,                                        |
+|   25                 angle=DEGREES * sector_angle,                          |
+|                                                                             |
+| C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\mobject\geometry\ |
+| arc.py:940 in __init__                                                      |
+|                                                                             |
+|    937     """                                                              |
+|    938                                                                      |
+|    939     def __init__(self, radius: float = 1, **kwargs: Any) -> None:    |
+| >  940         super().__init__(inner_radius=0, outer_radius=radius, **kwar |
+|    941                                                                      |
+|    942                                                                      |
+|    943 class Annulus(Circle):                                               |
++-----------------------------------------------------------------------------+
+TypeError: manim.mobject.geometry.arc.AnnularSector.__init__() got multiple 
+values for keyword argument 'outer_radius'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/10/25 13:17:14] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Circ                         
+                             leAreaAnimation\118581833                         
+                             8_1295220008_223132457.mp                         
+                             4'                                                
+                    INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Circ                         
+                             leAreaAnimation\624642324                         
+                             _4217992463_1416099019.mp                         
+                             4'                                                
+[11/10/25 13:17:15] INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Circ                         
+                             leAreaAnimation\624642324                         
+                             _2131231839_475981244.mp4                         
+                             '                                                 
+                    INFO     Animation 3 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework\tu                         
+                             tor\src\media\videos\scri                         
+                             pt_sequences\script_seq3\                         
+                             videos\script_seq3\480p15                         
+                             \partial_movie_files\Circ                         
+                             leAreaAnimation\624642324                         
+                             _4217992463_210259938.mp4                         
+                             '
+──────────────────────────────────────────────
+
+[2025-11-10 13:17:24] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework/Video_data/20251110_131640_6d9f2a93/script_sequences/script_seq4/script_seq4.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\ArkMalay\Framework\tutor\.venv\Scripts\manim.exe\__main__.py", line 7, in <module>
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\click\core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\click\core.py", line 1082, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\click\core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\click\core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\click\core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\cli\render\commands.py", line 121, in render
+    for SceneClass in scene_classes_from_file(file):
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\utils\module_ops.py", line 167, in scene_classes_from_file
+    module = get_module(file_path)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\manim\utils\module_ops.py", line 67, in get_module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 990, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1128, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1058, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\ArkMalay\Framework\Video_data\20251110_131640_6d9f2a93\script_sequences\script_seq4\script_seq4.py", line 42
+    **Note:** Replace `"pizza.png"` with the actual path to a pizza image file in your project directory. You can use any image format supported by Manim (e.g., PNG, JPEG). If you don't have an image, you can create a simple pizza shape using Manim's geometric objects.
+    ^^
+SyntaxError: invalid syntax
+
+STDOUT:
+Manim Community v0.19.0
+──────────────────────────────────────────────
+
+[2025-11-10 13:18:10] [ERROR] ❌ Video and audio lists must have the same length
+[2025-11-10 13:18:11] [ERROR] 💥 merge_all_videos_with_audio failed.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 247, in merge_all_videos_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-10 13:18:11] [ERROR] ⚠️ Final video merge failed — proceeding with Drive upload anyway.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\main.py", line 58, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\merger_factory.py", line 247, in merge_all_videos_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-10 13:18:11] [ERROR] ⚠️ Final video merge failed — proceeding with Drive upload anyway.
+[2025-11-10 13:18:11] [ERROR] ❌ Google Drive authentication failed.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\drive_utils.py", line 26, in get_drive_service
+    creds.refresh(Request())
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\google\oauth2\credentials.py", line 409, in refresh
+    ) = reauth.refresh_grant(
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\google\oauth2\reauth.py", line 366, in refresh_grant
+    _client._handle_error_response(response_data, retryable_error)
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\google\oauth2\_client.py", line 69, in _handle_error_response
+    raise exceptions.RefreshError(
+google.auth.exceptions.RefreshError: ('invalid_scope: Bad Request', {'error': 'invalid_scope', 'error_description': 'Bad Request'})
+[2025-11-10 13:18:11] [ERROR] ❌ Folder upload failed.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\drive_utils.py", line 91, in upload_folder_to_drive
+    service = get_drive_service(auth_mode, drive_credentials, token_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\drive_utils.py", line 26, in get_drive_service
+    creds.refresh(Request())
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\google\oauth2\credentials.py", line 409, in refresh
+    ) = reauth.refresh_grant(
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\google\oauth2\reauth.py", line 366, in refresh_grant
+    _client._handle_error_response(response_data, retryable_error)
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\google\oauth2\_client.py", line 69, in _handle_error_response
+    raise exceptions.RefreshError(
+google.auth.exceptions.RefreshError: ('invalid_scope: Bad Request', {'error': 'invalid_scope', 'error_description': 'Bad Request'})
+[2025-11-10 13:18:11] [ERROR] ❌ Failed to upload folder to Google Drive.
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework\tutor\src\main.py", line 110, in process_pipeline
+    upload_folder_to_drive(
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\drive_utils.py", line 91, in upload_folder_to_drive
+    service = get_drive_service(auth_mode, drive_credentials, token_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\src\video_pipeline\drive_utils.py", line 26, in get_drive_service
+    creds.refresh(Request())
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\google\oauth2\credentials.py", line 409, in refresh
+    ) = reauth.refresh_grant(
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\google\oauth2\reauth.py", line 366, in refresh_grant
+    _client._handle_error_response(response_data, retryable_error)
+  File "C:\ArkMalay\Framework\tutor\.venv\Lib\site-packages\google\oauth2\_client.py", line 69, in _handle_error_response
+    raise exceptions.RefreshError(
+google.auth.exceptions.RefreshError: ('invalid_scope: Bad Request', {'error': 'invalid_scope', 'error_description': 'Bad Request'})

@@ -1,0 +1,172 @@
+=== FINAL PROMPT SENT ===
+
+You are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).
+Your goal is to turn a provided topic script into a visually clear, accurate, and fully executable Python animation that communicates concepts step-by-step.
+Follow these CRITICAL INSTRUCTIONS exactly as described:
+...
+Now, based on the following structured input:
+CATALOG:     def construct(self):
+        # Set radius
+        r = 2  # You can change this
+        d = 2 * r
+
+        # Create circle
+        circle = Circle(radius=r, color=BLUE)
+        
+        # Center dot
+        center = Dot(circle.get_center(), color=RED)
+        
+        # Move the center label slightly to the left
+        center_label = MathTex("O", font_size=36).next_to(center, LEFT*0.4)
+
+        # Draw a diameter line (top to bottom)
+        diameter_line = Line(circle.get_top(), circle.get_bottom(), color=YELLOW)
+        diameter_label = MathTex("d", font_size=32).next_to(diameter_line.get_center(), RIGHT*0.3)
+
+        # Animate circle and center
+        self.play(DrawBorderThenFill(circle), run_time=2)
+        self.play(FadeIn(center, scale=0.6), Write(center_label))
+
+        # Animate diameter line and label
+        self.play(Create(diameter_line), Write(diameter_label))
+
+        # Optional subtle bounce for emphasis
+        self.play(circle.animate.scale(1.03).scale(0.97), run_time=0.5)
+
+        self.wait(2)
+
+SCRIPT_SEQ: 3
+SCRIPT_FOR_MANIM: [
+  "Zoom back to the full circle.",
+  "Draw a right-angled triangle within the circle, with one side as the radius.",
+  "Label the triangle\u2019s sides: hypotenuse, opposite, and adjacent.",
+  "Animate the triangle rotating around the center, leaving a trail that forms the circle.",
+  "Fade in the formula for the circumference: C = 2\u03c0r.",
+  "Highlight the radius 'r' in the formula.",
+  "Animate the circle\u2019s circumference pulsating slightly to emphasize its length."
+]
+SCRIPT_VOICE_OVER: [
+  "Let\u2019s apply what we\u2019ve learned to calculate the circumference of the circle.",
+  "Imagine a right-angled triangle formed by the radius and a tangent line.",
+  "As the triangle rotates around the center, it traces the circle\u2019s circumference.",
+  "The formula for the circumference is C = 2\u03c0r, where 'r' is the radius.",
+  "Here, '\u03c0' (pi) is a constant approximately equal to 3.14.",
+  "The circumference is the total distance around the circle.",
+  "Let\u2019s visualize the circumference as it expands and contracts."
+]
+SCRIPT_LENGTH: 45
+Generate the FULL Manim Python code that:
+- Follows all layout, geometry, boundary, and animation rules.
+- Produces a step-by-step educational animation.
+- Uses correct scaling and non-overlapping text.
+- Is self-contained and executable without errors.
+- Returns ONLY valid Python code (no explanations or Markdown formatting).
+:pushpin: Previous Code (for continuity):
+import numpy as np
+
+class CircleParts(Scene):
+    def construct(self):
+        # Set up title and canvas
+        title = Text("Exploring Circle Parts", font_size=48, font_color=GOLD).to_edge(UP)
+        self.add(title)
+        self.camera.frame.save_state()
+        self.camera.frame.scale(1.1)
+
+        # Grid background
+        grid = NumberPlane(color=GREY_E, faded_line_ratio=0.9).set_opacity(0.6)
+        self.add(grid)
+
+        # Circle and center
+        circle = Circle(radius=2, color=BLUE)
+        center = Dot(circle.get_center(), color=RED)
+        center_label = MathTex("O", font_size=36).next_to(center, LEFT*0.4)
+
+        # Radius line and label
+        radius_line = Line(center, circle.get_right(), color=YELLOW)
+        radius_label = MathTex("Radius", font_size=32).next_to(radius_line, RIGHT*0.3)
+
+        # Diameter line and label
+        diameter_line = Line(circle.get_top(), circle.get_bottom(), color=YELLOW)
+        diameter_label = MathTex("Diameter", font_size=32).next_to(diameter_line.get_center(), RIGHT*0.3)
+
+        # Chord and label
+        chord = Line(circle.point_at_angle(PI/4), circle.point_at_angle(3*PI/4), color=GREEN)
+        chord_label = MathTex("Chord", font_size=32).next_to(chord.get_center(), UP*0.4)
+
+        # Segment and label
+        arc = Arc(circle.get_center(), radius=2, angle=PI/2, color=BLUE)
+        segment = Sector(arc=arc, color=BLUE, opacity=0.3)
+        segment_label = MathTex("Segment", font_size=32).next_to(segment.point_from_proportion(0.5), DOWN*0.4)
+
+        # Animate the sequence
+        self.play(DrawBorderThenFill(circle), FadeIn(center, scale=0.6), Write(center_label))
+        self.play(ShowCreation(radius_line), Write(radius_label))
+        self.play(Create(diameter_line), Write(diameter_label))
+        self.play(Create(chord), Write(chord_label))
+        self.play(Create(segment), Write(segment_label))
+        self.play(circle.animate.scale(1.05).scale(1), run_time=0.5)
+
+        # Highlight radius and diameter
+        self.play(radius_line.animate.set_color(YELLOW).scale(1.1).scale(1), run_time=0.7)
+        self.play(diameter_line.animate.set_color(YELLOW).scale(1.1).scale(1), run_time=0.7)
+
+        # Animate diameter shrinking and expanding
+        self.play(diameter_line.animate.scale(0.5, about_edge=DOWN), run_time=1.5)
+        self.play(diameter_line.animate.scale(2, about_edge=DOWN), run_time=1.5)
+
+        # Zoom in on the segment
+        self.play(self.camera.frame.animate.scale(0.3).move_to(segment.get_center()))
+        self.wait(2)
+
+        # Final styling and labels
+        self.play(FadeOut(radius_label), FadeOut(chord), FadeOut(chord_label))
+        self.play(FadeIn(Text("Radius = Diameter/2", font_size=24, font_color=YELLOW).next_to(diameter_label, DOWN)))
+        self.wait(2)
+        self.camera.frame.restore()
+
+=== GENERATED CODE ===
+
+```python
+import numpy as np
+
+class CircleCircumference(Scene):
+    def construct(self):
+        # Set up title and canvas
+        title = Text("Circle Circumference", font_size=48, font_color=GOLD).to_edge(UP)
+        self.add(title)
+        self.camera.frame.save_state()
+
+        # Zoom back to the full circle
+        self.camera.frame.restore()
+
+        # Create circle and center
+        circle = Circle(radius=2, color=BLUE)
+        center = Dot(circle.get_center(), color=RED)
+        center_label = MathTex("O", font_size=36).next_to(center, LEFT*0.4)
+
+        # Draw right-angled triangle
+        triangle = Polygon(center, circle.get_right(), circle.point_at_angle(PI/2), color=GREEN, fill_opacity=0.3)
+        hypotenuse_label = MathTex("Hypotenuse", font_size=24).next_to(triangle.get_edge_center(circle.get_right(), circle.point_at_angle(PI/2)), UP*0.3)
+        opposite_label = MathTex("Opposite", font_size=24).next_to(triangle.get_edge_center(center, circle.get_right()), DOWN*0.3)
+        adjacent_label = MathTex("Adjacent", font_size=24).next_to(triangle.get_edge_center(center, circle.point_at_angle(PI/2)), LEFT*0.3)
+
+        # Animate circle and triangle
+        self.play(DrawBorderThenFill(circle), FadeIn(center, scale=0.6), Write(center_label))
+        self.play(Create(triangle), Write(hypotenuse_label), Write(opposite_label), Write(adjacent_label))
+
+        # Rotate triangle around center
+        triangle_copy = triangle.copy()
+        self.play(Rotate(triangle_copy, PI, about_point=center.get_center()), run_time=2, rate_func=linear)
+
+        # Fade in circumference formula
+        circumference_formula = MathTex("C = 2\\pi r", font_size=36).to_edge(DOWN)
+        radius_label = circumference_formula.get_part_by_tex('r', substring=False)
+        self.play(FadeIn(circumference_formula))
+        self.play(Indicate(radius_label, scale_factor=1.2))
+
+        # Animate circle's circumference pulsating
+        self.play(circle.animate.scale(1.05).scale(1), run_time=0.7)
+
+        # Voice-over and wait
+        self.wait(45)
+```

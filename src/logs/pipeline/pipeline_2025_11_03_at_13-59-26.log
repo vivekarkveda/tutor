@@ -1,0 +1,137 @@
+[2025-11-03 14:01:45] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251103_140101/script_seq3/script_seq3.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: Create(Circle):   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                   
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\input_data_20251103_140101\script_seq3 |
+| \script_seq3.py:18 in construct                                             |
+|                                                                             |
+|   15                                                                        |
+|   16         # Step 2: Draw inscribed angle â\x88 ABC                           |
+|   17         arc_ABC = ArcBetweenPoints(B, C, angle=PI/3, color=GREEN)      |
+| > 18         angle_ABC = Angle(B, A, C, radius=0.5, color=GREEN)            |
+|   19         angle_label = Tex(r"ngle ABC").next_to(angle_ABC, UR, buff=0.1 |
+|   20         self.play(Create(angle_ABC), Create(arc_ABC), Write(angle_labe |
+|   21         self.wait(1)                                                   |
++-----------------------------------------------------------------------------+
+TypeError: Angle.__init__() got multiple values for argument 'radius'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/03/25 14:01:45] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251103_140101\script_se                         
+                             q3\videos\script_seq3\480                         
+                             p15\partial_movie_files\I                         
+                             nscribedAngleAnimation\11                         
+                             85818338_359695016_223132                         
+                             457.mp4'                                          
+                    INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\tutter\src                         
+                             \media\videos\input_data_                         
+                             20251103_140101\script_se                         
+                             q3\videos\script_seq3\480                         
+                             p15\partial_movie_files\I                         
+                             nscribedAngleAnimation\62                         
+                             4642324_4217992463_149792                         
+                             949.mp4'
+──────────────────────────────────────────────
+
+[2025-11-03 14:01:54] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Manim_project/inputbox/input_data_20251103_140101/script_seq4/script_seq4.py
+──────────────────────────────────────────────
+STDERR:
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\cli\render\commands.py:1 |
+| 25 in render                                                                |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Vivek_Main\tutter\.venv\Lib\site-packages\manim\scene\scene.py:237 in    |
+| render                                                                      |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Vivek_Main\Manim_project\inputbox\input_data_20251103_140101\script_seq4 |
+| \script_seq4.py:11 in construct                                             |
+|                                                                             |
+|    8         radius = Line(circle.get_center(), circle.point_at_angle(0), c |
+|    9         diameter = Line(circle.point_at_angle(0), circle.point_at_angl |
+|   10         chord = Line(circle.point_at_angle(30), circle.point_at_angle( |
+| > 11         inscribed_angle = Angle(radius, chord, radius.copy().shift(0.1 |
+|   12         central_angle = Angle(radius, diameter, radius.copy().shift(0. |
+|   13                                                                        |
+|   14         # Step 1: Return to the original circle with radius and diamet |
++-----------------------------------------------------------------------------+
+TypeError: Angle.__init__() got multiple values for argument 'radius'
+
+STDOUT:
+Manim Community v0.19.0
+──────────────────────────────────────────────
+
+[2025-11-03 14:01:57] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\video_routes.py", line 29, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\main.py", line 56, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\merger_factory.py", line 251, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\merger_factory.py", line 130, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length", extra={"part_name": "MergerFactory"})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ValueError() takes no keyword arguments
+[2025-11-03 14:01:57] [ERROR] ❌ HTTP 500: {"detail":"ValueError() takes no keyword arguments"}
+[2025-11-03 14:01:57] [ERROR] ❌ Error writing scripts
+Traceback (most recent call last):
+  File "C:\Vivek_Main\tutter\src\video_pipeline\routes\write_routes.py", line 27, in write_scripts
+    video_result = await async_post(video_url, {"path": str(folder)}, timeout=300)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\tutter\src\video_pipeline\utils.py", line 14, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"ValueError() takes no keyword arguments"}
+[2025-11-03 14:01:58] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"ValueError() takes no keyword arguments\"}"}
+[2025-11-03 14:01:58] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: {\\\"detail\\\":\\\"ValueError() takes no keyword arguments\\\"}\"}"}
