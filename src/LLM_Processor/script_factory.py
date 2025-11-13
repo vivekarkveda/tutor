@@ -1,20 +1,17 @@
 import cohere
 from abc import ABC, abstractmethod
+from config import Settings
 from logger import pipeline_logger, validation_logger
 from Transaction.transaction_handler import transaction
 from Transaction.excepetion import exception
+from logger import pipeline_logger, validation_logger
 import traceback
-
-
 # === Abstract Base Product ===
 class ScriptGenerator(ABC):
     """Abstract base class for all script generators."""
-
     @abstractmethod
-    def generate_script(self, topic: str, unique_id: str) -> str:
+    def generate_script(self, topic: str,unique_id: str) -> str:
         pass
-
-
 # === Concrete Product: Cohere ===
 class CohereScriptGenerator(ScriptGenerator):
     """Concrete implementation using Cohere's Command model."""
@@ -22,87 +19,87 @@ class CohereScriptGenerator(ScriptGenerator):
     def __init__(self, api_key: str):
         self.client = cohere.ClientV2(api_key)
 
-    def generate_script(self, topic: str, unique_id: str) -> str:
-        prompt = f"""
-You are an expert in storytelling and Manim Community Edition animation design.
-Your task:
-Generate a JSON script that describes the full video in a step-by-step, highly detailed way.
-Each scene/sequence should have a flexible length between 25 to 45 seconds.
-You can break the video into multiple sequences/scenes if needed to explain the concept clearly.
-Narration and animations must be tightly synchronized:
-Step i in "script_for_manim" must align exactly with step i in "script_voice_over".
-Ensure pacing: narration should match animation timing naturally.
-"script_length" should reflect the realistic duration of each scene.
+    def generate_script(
+        self,
+        topic: str,
+        unique_id: str,
+        scene_duration_range: str = Settings.DEFAULT_SCENE_DURATION_RANGE,
+        total_video_length_target: str = Settings.DEFAULT_TOTAL_VIDEO_LENGTH_TARGET,
+    ) -> str:
+        """Generate a parameterized video JSON script using Cohere."""
 
-Each JSON object must include:
-- "script_seq" → scene number.
-- "script_for_manim" → array of detailed English animation steps (no Manim code).
-- "script_voice_over" → array of narration lines aligned step-by-step with visuals.
-- "script_length" → approximate duration of the scene (25–45 seconds).
-
-Rules:
-- Use descriptive English for visuals (no code).
-- Narration must align with visuals.
-- Describe each animation step precisely.
-- Break complex ideas into smaller, smooth transitions.
-- Maintain consistent references between scenes.
-- Scene 1: Introduction
-- Scene 2: Concept Demonstration
-- Scene 3: Application/Example
-- Scene 4: Recap/Closing
-📌 Continuity Rule: The last frame of a scene becomes the first frame of the next.
-
-Output format:
-Return only a valid JSON array (no extra text).
-
-📌 Topic: {topic}
-"""
-
-        print(f"🧠 Generating script for topic: {topic}")
-        pipeline_logger.info(f"Prompt for generation: {prompt}")
-
+        # === Load prompt from file ===
         try:
-            # === Cohere API Call ===
+            with open(Settings.TEST_JSON_PROMPT_PATH, "r", encoding="utf-8") as f:
+                prompt_template = f.read()
+        except Exception as e:
+            error_trace = traceback.format_exc()
+            transaction(
+                unique_id=unique_id,
+                script_gen_status="script generation failed",
+                exception_message=str(e),
+                trace=error_trace
+            )
+            raise RuntimeError(f"Failed to load prompt template: {e}")
+
+        # === Fill placeholders dynamically ===
+        try:
+            prompt = prompt_template.format(
+                topic=topic,
+                scene_duration_range=scene_duration_range,
+                total_video_length_target=total_video_length_target
+            )
+        except KeyError as e:
+            raise ValueError(f"Missing placeholder in prompt file: {e}")
+
+        print(f":brain: Generating script for topic: {topic}")
+        print(f":stopwatch: Scene duration range: {scene_duration_range}")
+        print(f":clapper: Total video length target: {total_video_length_target}")
+
+        # === Call Cohere inside try/except ===
+        try:
             response = self.client.chat(
                 model="command-a-03-2025",
                 messages=[{"role": "user", "content": prompt}]
             )
 
-            # Extract the generated text
+            # Extract result text
             script_json = response.message.content[0].text.strip()
-            print("✅ Script generated successfully.")
-            pipeline_logger.info(f"Generated Script JSON: {script_json}")
 
-            # ✅ Log transaction success
-            transaction(unique_id, script_gen_status="Script generated successfully")
+            print(":white_check_mark: Script generated successfully.")
+
+            transaction(
+                unique_id,
+                script_gen_status="script generated successfully"
+            )
 
             return script_json
 
         except Exception as e:
-            error_msg = f"❌ Error during script generation for topic '{topic}': {e}"
-            validation_logger.error(error_msg)
-            pipeline_logger.error(error_msg)
-            pipeline_logger.error(traceback.format_exc())
+            # Capture traceback + log
+            error_trace = traceback.format_exc()
 
-            # ❌ Log to exception table with traceback
-            exception(
+            transaction(
                 unique_id,
-                script_gen_status="Script generation failed",
+                script_gen_status="script generation failed",
                 exception_message=str(e),
-                trace=traceback.format_exc()
+                trace=error_trace
             )
 
-            # Reraise so upstream knows something went wrong
-            raise RuntimeError(f"Script generation failed for topic '{topic}': {e}")
-
-
-# === Concrete Product: Mock Generator (for testing) ===
+            print(f":x: Script generation failed: {e}")
+            raise RuntimeError(f"Script generation failed: {e}")
+# === Concrete Product: Mock Generator ===
 class MockScriptGenerator(ScriptGenerator):
-    """Mock generator for testing without calling external APIs."""
-
-    def generate_script(self, topic: str, unique_id: str) -> str:
+    """Mock generator for offline testing."""
+    def generate_script(
+        self,
+        topic: str,
+        unique_id: str,
+        scene_duration_range: str = "25–45 seconds",
+        total_video_length_target: str = "2–3 minutes",
+        ) -> str:
         try:
-            print(f"🧪 Mock generating script for topic: {topic}")
+            print(f":test_tube: Mock generating script for topic: {topic}")
             mock_script = f"""[
                 {{
                     "script_seq": 1,
@@ -111,11 +108,11 @@ class MockScriptGenerator(ScriptGenerator):
                     "script_length": 30
                 }}
             ]"""
-            # ✅ Log success
+            # :white_check_mark: Log success
             transaction(unique_id, script_gen_status="Mock script generated successfully")
             return mock_script
         except Exception as e:
-            # ❌ Log error
+            # :x: Log error
             exception(
                 unique_id,
                 script_gen_status="Mock script generation failed",
@@ -123,12 +120,9 @@ class MockScriptGenerator(ScriptGenerator):
                 trace=traceback.format_exc()
             )
             raise
-
-
-# === Factory Class ===
+# === Factory ===
 class ScriptGeneratorFactory:
-    """Factory class for creating appropriate ScriptGenerator instances."""
-
+    """Factory to create a script generator instance."""
     @staticmethod
     def get_generator(generator_type: str, **kwargs) -> ScriptGenerator:
         if generator_type == "cohere":

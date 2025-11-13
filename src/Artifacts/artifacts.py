@@ -5,6 +5,7 @@ import psycopg2.extras
 from datetime import datetime
 import uuid
 import traceback
+from config import Settings
 
 psycopg2.extras.register_uuid()
 
@@ -148,7 +149,7 @@ class ScriptDataHandler:
             narration_data = narrations.get(seq_label, "")
 
             self.cursor.execute("""
-                INSERT INTO script_store (id, unique_id, time, folder_name, scripts, sequence, code, narration)
+                INSERT INTO script_store (id, Transaction_id, time, folder_name, scripts, sequence, code, narration)
                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
             """, (
                 str(self.batch_id),
@@ -188,8 +189,8 @@ def run_script_data_process(unique_id):
         print("\n🚀 Starting Script Data Pipeline...\n")
 
         handler = ScriptDataHandler(
-            json_base=r"C:\Vivek_Main\Temp_Data",
-            manim_base=r"C:\Vivek_Main\Manim_project\inputbox",
+            json_base=Settings.TEMP_GENERATED_FOLDER,
+            manim_base=Settings.TEMP_GENERATED_FOLDER,
             db_config=db_config,
             unique_id=unique_id
         )

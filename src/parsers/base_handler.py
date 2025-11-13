@@ -8,12 +8,13 @@ import traceback
 from logger import pipeline_logger, validation_logger
 from Transaction.transaction_handler import transaction
 from Transaction.excepetion import exception # ✅ fixed spelling ("exception", not "excepetion")
+from config import Settings
 
 
 class InputHandler(ABC):
     """Abstract base for input handlers."""
 
-    BASE_INPUT_PATH = Path(r"C:\Vivek_Main\Manim_project\inputbox")
+    BASE_INPUT_PATH = Path(Settings.TEMP_GENERATED_FOLDER)
 
     def __init__(self, unique_id: str = None):
         """Initialize handler with an optional unique transaction ID."""
@@ -33,7 +34,7 @@ class InputHandler(ABC):
         """Helper for creating files dynamically from scripts. Logs both success and exceptions."""
         print("🔧 File generation started for:", self.unique_id)
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        base_path = self.BASE_INPUT_PATH / f"{base_name}_{timestamp}"
+        base_path = self.BASE_INPUT_PATH / f"{timestamp}_{base_name}"
 
         try:
             base_path.mkdir(parents=True, exist_ok=True)

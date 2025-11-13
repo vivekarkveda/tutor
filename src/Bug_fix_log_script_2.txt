@@ -1,0 +1,200 @@
+=== FINAL PROMPT SENT ===
+
+You are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).
+Your task is to generate a complete, runnable Manim Python animation script based on the provided structured input.
+Follow ALL instructions exactly — NO explanations, NO markdown, NO extra text.
+Return ONLY the final Python code that can run successfully with:
+    manim -pql <filename>.py <SceneName>
+====================
+OBJECTIVE
+====================
+copy the code from example if SCRIPT_SEQ is 1 then copy script 1
+if SCRIPT_SEQ is 2 then copy script 2
+====================
+EXAMPLE (REFERENCE)
+====================
+[script 1 :- from manim import *
+class ExpandingCircle(Scene):
+    def construct(self):
+        self.camera.background_color = "#1E1E1E"
+        circle = Circle(radius=0.5, color=YELLOW)
+        self.play(Create(circle), run_time=0.5)
+        self.play(circle.animate.scale(2).fade(1), run_time=1.2)
+        self.wait(0.3)
+script 2 :- from manim import *
+class MovingCircle(Scene):
+    def construct(self):
+        self.camera.background_color = "#1E1E1E"
+        path = Circle(radius=2, color=GRAY, stroke_opacity=0.3)
+        dot = Dot(color=RED).move_to(path.point_at_angle(0))
+        self.add(path, dot)
+        self.play(MoveAlongPath(dot, path), run_time=3, rate_func=linear)
+        self.wait(0.3)
+]
+If the topic and script content match this example, reproduce this exact code — line by line.
+====================
+:inbox_tray: STRUCTURED INPUT
+====================
+catalog_placeholder:     def construct(self):
+        # Set radius
+        r = 2  # You can change this
+        d = 2 * r
+
+        # Create circle
+        circle = Circle(radius=r, color=BLUE)
+        
+        # Center dot
+        center = Dot(circle.get_center(), color=RED)
+        
+        # Move the center label slightly to the left
+        center_label = MathTex("O", font_size=36).next_to(center, LEFT*0.4)
+
+        # Draw a diameter line (top to bottom)
+        diameter_line = Line(circle.get_top(), circle.get_bottom(), color=YELLOW)
+        diameter_label = MathTex("d", font_size=32).next_to(diameter_line.get_center(), RIGHT*0.3)
+
+        # Animate circle and center
+        self.play(DrawBorderThenFill(circle), run_time=2)
+        self.play(FadeIn(center, scale=0.6), Write(center_label))
+
+        # Animate diameter line and label
+        self.play(Create(diameter_line), Write(diameter_label))
+
+        # Optional subtle bounce for emphasis
+        self.play(circle.animate.scale(1.03).scale(0.97), run_time=0.5)
+
+        self.wait(2)
+
+Bug_fix_placeholder: # Original Bug Snippet:
+```python
+# -----------------------------
+# 1️⃣ Title
+# -----------------------------
+title = Tex("Constructing a Circumscribed Circle (Circumcircle)", color=BLUE).to_edge(UP)
+
+# -----------------------------
+# 2️⃣ Step 1 Text
+# -----------------------------
+step1_text = Tex("Step 1: Draw Perpendicular Bisectors", color=GREEN).next_to(title, DOWN, buff=0.5)
+
+# -----------------------------
+# 3️⃣ Step 2 Text
+# -----------------------------
+step2_text = Tex("Step 2: Intersection = Circumcenter O", color=GREEN).next_to(title, DOWN, buff=0.5)
+
+# -----------------------------
+# 4️⃣ Step 3 Text
+# -----------------------------
+step3_text = Tex("Step 3: Draw Circumcircle", color=GREEN).next_to(title, DOWN, buff=0.5)
+
+# -----------------------------
+# 5️⃣ O Label
+# -----------------------------
+O_label = Tex("O", color=WHITE).next_to(O_dot, RIGHT)
+
+# -----------------------------
+# 6️⃣ Final Explanation
+# -----------------------------
+final_text = Tex("The circle through A, B, C with center O is the Circumcircle", color=ORANGE).to_edge(DOWN)
+```
+
+# Fixed Bug Snippet:
+```python
+# -----------------------------
+# 1️⃣ Title
+# -----------------------------
+title = Tex(
+    "Constructing a Circumscribed Circle (Circumcircle)",
+    color=BLUE,
+    font_size=40
+).to_edge(UP)
+
+# -----------------------------
+# 2️⃣ Step 1 Text
+# -----------------------------
+step1_text = Tex(
+    "Step 1: Draw Perpendicular Bisectors",
+    color=GREEN,
+    font_size=20
+).to_edge(RIGHT, buff=1.2).shift(UP*1.2)
+
+# -----------------------------
+# 3️⃣ Step 2 Text
+# -----------------------------
+step2_text = Tex(
+    "Step 2: Intersection = Circumcenter O",
+    color=GREEN,
+    font_size=20
+).to_edge(RIGHT, buff=1.2).shift(UP*0.2)
+
+# -----------------------------
+# 4️⃣ Step 3 Text
+# -----------------------------
+step3_text = Tex(
+    "Step 3: Draw Circumcircle",
+    color=GREEN,
+    font_size=20
+).to_edge(RIGHT, buff=1.2).shift(DOWN*0.7)
+
+# -----------------------------
+# 5️⃣ O Label
+# -----------------------------
+O_label = Tex("O", color=WHITE, font_size=20).next_to(O_dot, RIGHT)
+
+# -----------------------------
+# 6️⃣ Final Explanation
+# -----------------------------
+final_text = Tex(
+    "The circle through A, B, C with center O is the Circumcircle",
+    color=ORANGE,
+    font_size=26
+).to_edge(DOWN)
+```
+SCRIPT_SEQ: 2
+SCRIPT_FOR_MANIM: [
+  "Start with the circle from the previous scene.",
+  "Label the center of the circle as 'O'.",
+  "Draw a horizontal diameter line across the circle, labeling the endpoints as 'A' and 'B'.",
+  "Highlight the radius from the center to point 'A'.",
+  "Animate the radius extending and contracting to show different circle sizes.",
+  "Introduce the formula 'Circumference = 2 * \u03c0 * r' below the circle.",
+  "Highlight the radius 'r' in the formula as it changes.",
+  "End with the final circle and formula on the screen."
+]
+SCRIPT_VOICE_OVER: [
+  "Let's explore the circle further.",
+  "The center of the circle is labeled as 'O'.",
+  "A diameter line is drawn from point 'A' to point 'B', passing through the center.",
+  "The radius is the distance from the center to any point on the circle, like point 'A'.",
+  "By changing the radius, we can create circles of different sizes.",
+  "The circumference of a circle is calculated using the formula: Circumference equals 2 times pi times the radius.",
+  "This formula helps us understand the relationship between the radius and the circle's perimeter."
+]
+SCRIPT_LENGTH: 30 seconds
+Previous Code (for continuity):
+from manim import *
+
+class ExpandingCircle(Scene):
+    def construct(self):
+        self.camera.background_color = "#1E1E1E"
+        circle = Circle(radius=0.5, color=YELLOW)
+        self.play(Create(circle), run_time=0.5)
+        self.play(circle.animate.scale(2).fade(1), run_time=1.2)
+        self.wait(0.3)
+====================
+:gear: OUTPUT REQUIREMENTS
+====================
+just copy the code provided in EXAMPLE (REFERENCE)
+
+=== GENERATED CODE ===
+
+from manim import *
+
+class MovingCircle(Scene):
+    def construct(self):
+        self.camera.background_color = "#1E1E1E"
+        path = Circle(radius=2, color=GRAY, stroke_opacity=0.3)
+        dot = Dot(color=RED).move_to(path.point_at_angle(0))
+        self.add(path, dot)
+        self.play(MoveAlongPath(dot, path), run_time=3, rate_func=linear)
+        self.wait(0.3)

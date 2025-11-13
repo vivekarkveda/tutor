@@ -7,9 +7,11 @@ from logger import pipeline_logger, validation_logger
 from Transaction.transaction_handler import transaction
 from Transaction.excepetion import exception
 import traceback
+from config import Settings
+
 
 router = APIRouter(prefix="", tags=["Write Scripts"])
-BASE_INPUT_ROOT = Path(r"C:\Vivek_Main\Manim_project\inputbox")
+BASE_INPUT_ROOT = Path(Settings.TEMP_GENERATED_FOLDER)
 
 
 class GenerateFilesRequest(BaseModel):

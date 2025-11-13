@@ -13,7 +13,10 @@ from Artifacts.artifacts import run_script_data_process
 from Transaction.transaction_handler import transaction
 from Transaction.excepetion import exception
 import traceback
-
+from video_pipeline.drive_utils import upload_folder_to_drive
+from shutil import copy2
+from pathlib import Path
+from video_pipeline.utils import async_post, latest_input_folder
 
 async def run_in_executor(executor, func, *args):
     loop = asyncio.get_event_loop()
@@ -56,8 +59,7 @@ async def process_pipeline(generated_files, video: str, audio: str, run_from: st
     print("PathList =>", PathList)
 
     Table_gen.table_generator(generated_files, PathList,)
-    print("mainUid",unique_id )
-    run_script_data_process(unique_id)
+
 
     # --- Merge final video/audio ---
     final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list,unique_id)
@@ -73,6 +75,13 @@ async def process_pipeline(generated_files, video: str, audio: str, run_from: st
         save_to=run_from,
         db_credentials=Settings.POSTGRES if run_from == "postgres" else None
     )
+
+    upload_folder_to_drive(
+        folder_path=str(latest_input_folder(Settings.TEMP_GENERATED_FOLDER, unique_id)),
+        auth_mode=Settings.DRIVE_AUTH_MODE
+    )
+    print("mainUid",unique_id )
+    run_script_data_process(unique_id)
 
     pipeline_logger.info(f"🎉 Final video saved at: {output_path}")
     return output_path

@@ -1,0 +1,52 @@
+[2025-11-13 16:26:57] [ERROR] ❌ Failed to locate input folder for f4b54ed7-e57e-4899-904d-f0c9db73312a: No f4b54ed7-e57e-4899-904d-f0c9db73312a found in C:\Vivek_Main\Temp_Data
+[2025-11-13 16:26:57] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\write_routes.py", line 41, in write_scripts
+    folder = latest_input_folder(BASE_INPUT_ROOT, unique_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\utils.py", line 22, in latest_input_folder
+    raise FileNotFoundError(f"No {pattern} found in {base_dir}")
+FileNotFoundError: No f4b54ed7-e57e-4899-904d-f0c9db73312a found in C:\Vivek_Main\Temp_Data
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\write_routes.py", line 52, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Failed to locate input folder for f4b54ed7-e57e-4899-904d-f0c9db73312a: No f4b54ed7-e57e-4899-904d-f0c9db73312a found in C:\Vivek_Main\Temp_Data
+[2025-11-13 16:26:57] [ERROR] ❌ HTTP 500: {"detail":"500: ❌ Failed to locate input folder for f4b54ed7-e57e-4899-904d-f0c9db73312a: No f4b54ed7-e57e-4899-904d-f0c9db73312a found in C:\\Vivek_Main\\Temp_Data"}
+[2025-11-13 16:26:57] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\generator_routes.py", line 30, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: ❌ Failed to locate input folder for f4b54ed7-e57e-4899-904d-f0c9db73312a: No f4b54ed7-e57e-4899-904d-f0c9db73312a found in C:\\Vivek_Main\\Temp_Data"}
+[2025-11-13 16:26:57] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: ❌ Failed to locate input folder for f4b54ed7-e57e-4899-904d-f0c9db73312a: No f4b54ed7-e57e-4899-904d-f0c9db73312a found in C:\\\\Vivek_Main\\\\Temp_Data\"}"}
+[2025-11-13 16:29:37] [ERROR] ❌ Failed to locate input folder for 2d9338d4-b91c-46c7-a540-fb74caad9396: No 2d9338d4-b91c-46c7-a540-fb74caad9396 found in C:\Vivek_Main\Temp_Data
+[2025-11-13 16:29:37] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\write_routes.py", line 41, in write_scripts
+    folder = latest_input_folder(BASE_INPUT_ROOT, unique_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\utils.py", line 22, in latest_input_folder
+    raise FileNotFoundError(f"No {pattern} found in {base_dir}")
+FileNotFoundError: No 2d9338d4-b91c-46c7-a540-fb74caad9396 found in C:\Vivek_Main\Temp_Data
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\write_routes.py", line 52, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Failed to locate input folder for 2d9338d4-b91c-46c7-a540-fb74caad9396: No 2d9338d4-b91c-46c7-a540-fb74caad9396 found in C:\Vivek_Main\Temp_Data
+[2025-11-13 16:29:38] [ERROR] ❌ HTTP 500: {"detail":"500: ❌ Failed to locate input folder for 2d9338d4-b91c-46c7-a540-fb74caad9396: No 2d9338d4-b91c-46c7-a540-fb74caad9396 found in C:\\Vivek_Main\\Temp_Data"}
+[2025-11-13 16:29:38] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\generator_routes.py", line 30, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: ❌ Failed to locate input folder for 2d9338d4-b91c-46c7-a540-fb74caad9396: No 2d9338d4-b91c-46c7-a540-fb74caad9396 found in C:\\Vivek_Main\\Temp_Data"}
+[2025-11-13 16:29:38] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: ❌ Failed to locate input folder for 2d9338d4-b91c-46c7-a540-fb74caad9396: No 2d9338d4-b91c-46c7-a540-fb74caad9396 found in C:\\\\Vivek_Main\\\\Temp_Data\"}"}
