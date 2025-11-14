@@ -54,121 +54,107 @@ catalog_placeholder: def construct(self):
         self.wait(1)
 Bug_fix_placeholder: # Original Bug Snippet:
 ```python
-# Radius line (before)
-radius_start = cylinder.get_zenith() + UP * (cylinder_height / 2)
-radius_end = radius_start + RIGHT * cylinder_radius
-radius_line = Line(
-    radius_start,
-    radius_end,
-    color="#3498DB",
-    stroke_width=6
-)
+# -----------------------------
+# 1️⃣ Title
+# -----------------------------
+title = Tex("Constructing a Circumscribed Circle (Circumcircle)", color=BLUE).to_edge(UP)
 
-# Top and bottom circles (before)
-top_circle = Circle(
-    radius=cylinder_radius,
-    fill_color="#00FF00",
-    fill_opacity=0.6,
-    stroke_color="#00CC00",
-    stroke_width=3
-)
-top_circle.rotate(90 * DEGREES, axis=RIGHT)
-top_circle.shift(UP * (cylinder_height / 2 - 0.3))
+# -----------------------------
+# 2️⃣ Step 1 Text
+# -----------------------------
+step1_text = Tex("Step 1: Draw Perpendicular Bisectors", color=GREEN).next_to(title, DOWN, buff=0.5)
 
-bottom_circle = Circle(
-    radius=cylinder_radius,
-    fill_color="#00FF00",
-    fill_opacity=0.6,
-    stroke_color="#00CC00",
-    stroke_width=3
-)
-bottom_circle.rotate(90 * DEGREES, axis=RIGHT)
-bottom_circle.shift(DOWN * (cylinder_height / 2 + 0.3))
+# -----------------------------
+# 3️⃣ Step 2 Text
+# -----------------------------
+step2_text = Tex("Step 2: Intersection = Circumcenter O", color=GREEN).next_to(title, DOWN, buff=0.5)
 
-# Separation animation (before)
-self.play(
-    top_circle.animate.shift(UP * 0.8),
-    bottom_circle.animate.shift(DOWN * 0.8),
-    run_time=2.0
-)
+# -----------------------------
+# 4️⃣ Step 3 Text
+# -----------------------------
+step3_text = Tex("Step 3: Draw Circumcircle", color=GREEN).next_to(title, DOWN, buff=0.5)
+
+# -----------------------------
+# 5️⃣ O Label
+# -----------------------------
+O_label = Tex("O", color=WHITE).next_to(O_dot, RIGHT)
+
+# -----------------------------
+# 6️⃣ Final Explanation
+# -----------------------------
+final_text = Tex("The circle through A, B, C with center O is the Circumcircle", color=ORANGE).to_edge(DOWN)
 ```
 
 # Fixed Bug Snippet:
 ```python
-# Axis and centers (after)
-axis_dir = cylinder.get_direction()
-axis_dir = axis_dir / np.linalg.norm(axis_dir)
+# -----------------------------
+# 1️⃣ Title
+# -----------------------------
+title = Tex(
+    "Constructing a Circumscribed Circle (Circumcircle)",
+    color=BLUE,
+    font_size=40
+).to_edge(UP)
 
-top_center = cylinder.get_center() + axis_dir * (cylinder_height / 2 - 0.001)
-bottom_center = cylinder.get_center() - axis_dir * (cylinder_height / 2 + 0.001)
+# -----------------------------
+# 2️⃣ Step 1 Text
+# -----------------------------
+step1_text = Tex(
+    "Step 1: Draw Perpendicular Bisectors",
+    color=GREEN,
+    font_size=20
+).to_edge(RIGHT, buff=1.2).shift(UP*1.2)
 
-# Radius line in face plane (after)
-v = np.cross(axis_dir, UP)
-if np.linalg.norm(v) < 1e-6:
-    v = np.cross(axis_dir, RIGHT)
-v = v / np.linalg.norm(v)
+# -----------------------------
+# 3️⃣ Step 2 Text
+# -----------------------------
+step2_text = Tex(
+    "Step 2: Intersection = Circumcenter O",
+    color=GREEN,
+    font_size=20
+).to_edge(RIGHT, buff=1.2).shift(UP*0.2)
 
-radius_start = top_center
-radius_end = radius_start + v * cylinder_radius
-radius_line = Line(radius_start, radius_end, color="#3498DB", stroke_width=6)
+# -----------------------------
+# 4️⃣ Step 3 Text
+# -----------------------------
+step3_text = Tex(
+    "Step 3: Draw Circumcircle",
+    color=GREEN,
+    font_size=20
+).to_edge(RIGHT, buff=1.2).shift(DOWN*0.7)
 
-# Oriented top and bottom circles (after)
-def orient_disc_to_normal(disc, n):
-    n = n / np.linalg.norm(n)
-    default = OUT
-    axis = np.cross(default, n)
-    if np.linalg.norm(axis) < 1e-6:
-        angle = 0 if np.dot(default, n) > 0 else PI
-        axis = RIGHT
-    else:
-        axis = axis / np.linalg.norm(axis)
-        angle = np.arccos(np.dot(default, n))
-    disc.rotate(angle, axis=axis)
-    return disc
+# -----------------------------
+# 5️⃣ O Label
+# -----------------------------
+O_label = Tex("O", color=WHITE, font_size=20).next_to(O_dot, RIGHT)
 
-top_circle = Circle(
-    radius=cylinder_radius,
-    fill_color="#00FF00",
-    fill_opacity=0.6,
-    stroke_color="#00CC00",
-    stroke_width=3
-)
-orient_disc_to_normal(top_circle, axis_dir).move_to(top_center)
-
-bottom_circle = Circle(
-    radius=cylinder_radius,
-    fill_color="#00FF00",
-    fill_opacity=0.6,
-    stroke_color="#00CC00",
-    stroke_width=3
-)
-orient_disc_to_normal(bottom_circle, axis_dir).move_to(bottom_center)
-
-# Separation animation along cylinder axis (after)
-self.play(
-    top_circle.animate.shift(axis_dir * 0.8),
-    bottom_circle.animate.shift(-axis_dir * 0.8),
-    run_time=2.0
-)
+# -----------------------------
+# 6️⃣ Final Explanation
+# -----------------------------
+final_text = Tex(
+    "The circle through A, B, C with center O is the Circumcircle",
+    color=ORANGE,
+    font_size=26
+).to_edge(DOWN)
 ```
 SCRIPT_SEQ: 1
 SCRIPT_FOR_MANIM: [
   "Start with a blank canvas.",
   "Fade in the text 'Creating a Circle' in the center of the screen.",
   "Zoom out slightly to make space for the upcoming animation.",
-  "Draw a small dot at the center of the screen, representing the center of the circle.",
-  "Introduce a radius line extending from the center dot to the right.",
-  "Animate the radius line rotating 360 degrees around the center dot, leaving a faint trace to form a circle.",
-  "Thicken the trace to create a solid circle.",
-  "Fade out the radius line, leaving only the circle on the screen."
+  "Draw a small dot in the center of the screen, representing the center of the circle.",
+  "Animate a radius extending from the center dot to the right, forming a horizontal line.",
+  "Rotate the radius 360 degrees around the center dot, leaving a faint trace to suggest the circle's path.",
+  "Solidify the trace into a perfect circle, filling it with a light color.",
+  "Hold the final frame with the circle and center dot visible."
 ]
 SCRIPT_VOICE_OVER: [
   "Welcome to today's lesson on creating a circle.",
   "To begin, we need a center point.",
   "From this center, we extend a radius.",
-  "As the radius rotates around the center, it traces the path of a circle.",
-  "This path is then filled to form a complete circle.",
-  "Now, we have a perfect circle ready for further exploration."
+  "As we rotate this radius around the center, it traces a path.",
+  "This path forms the shape of a circle.",
+  "And there we have it\u2014a perfect circle!"
 ]
 SCRIPT_LENGTH: 30 seconds
 Previous Code (for continuity):

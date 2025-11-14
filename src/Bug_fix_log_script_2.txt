@@ -152,23 +152,21 @@ final_text = Tex(
 ```
 SCRIPT_SEQ: 2
 SCRIPT_FOR_MANIM: [
-  "Start with the circle from the previous scene.",
-  "Label the center of the circle as 'O'.",
-  "Draw a horizontal diameter line across the circle, labeling the endpoints as 'A' and 'B'.",
-  "Highlight the radius from the center to point 'A'.",
-  "Animate the radius extending and contracting to show different circle sizes.",
-  "Introduce the formula 'Circumference = 2 * \u03c0 * r' below the circle.",
-  "Highlight the radius 'r' in the formula as it changes.",
-  "End with the final circle and formula on the screen."
+  "Start with the final frame of Scene 1: a circle with a center dot.",
+  "Animate the radius shrinking and expanding to demonstrate its role in circle size.",
+  "Label the radius with the text 'Radius' near its midpoint.",
+  "Draw a diameter line across the circle, passing through the center dot.",
+  "Label the diameter with the text 'Diameter' near its midpoint.",
+  "Highlight the relationship between radius and diameter by briefly flashing the equation 'Diameter = 2 \u00d7 Radius'.",
+  "Zoom out to show the entire circle with labels, then fade out the labels.",
+  "End with the circle and center dot visible, ready for further exploration."
 ]
 SCRIPT_VOICE_OVER: [
-  "Let's explore the circle further.",
-  "The center of the circle is labeled as 'O'.",
-  "A diameter line is drawn from point 'A' to point 'B', passing through the center.",
-  "The radius is the distance from the center to any point on the circle, like point 'A'.",
-  "By changing the radius, we can create circles of different sizes.",
-  "The circumference of a circle is calculated using the formula: Circumference equals 2 times pi times the radius.",
-  "This formula helps us understand the relationship between the radius and the circle's perimeter."
+  "The size of a circle depends on its radius.",
+  "The radius can vary, making the circle larger or smaller.",
+  "The diameter is twice the length of the radius.",
+  "This relationship is key to understanding circle measurements.",
+  "With these basics, you're now equipped to explore more about circles."
 ]
 SCRIPT_LENGTH: 30 seconds
 Previous Code (for continuity):
