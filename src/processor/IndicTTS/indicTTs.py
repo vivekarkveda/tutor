@@ -11,7 +11,7 @@ class AudioFactory:
     """Generates Hindi audio (WAV bytes in memory) using your FastPitch + HiFi-GAN model."""
 
     @staticmethod
-    def text_files_to_audio_bytes(generated_files):
+    def text_files_to_audio_bytes(generated_files, unique_id):
         audio_bytes_list = []
 
         # Load your local Hindi model (not multilingual)

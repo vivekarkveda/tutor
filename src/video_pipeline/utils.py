@@ -7,13 +7,35 @@ from logger import pipeline_logger
 from config import Settings
 import uuid
 
-async def async_post(url: str, payload: dict, timeout: int = 180):
-    async with httpx.AsyncClient(timeout=timeout) as client:
-        resp = await client.post(url, json=payload, headers={"Content-Type": "application/json"})
+async def async_post(url: str, payload: dict, timeout: int = 300):
+    """Send async POST request with clean logging + timeout tracking."""
+    try:
+        print(f"\n➡️ POST {url}  (timeout={timeout}s)")
+        if isinstance(payload, dict):
+            print(f"   • Payload keys: {list(payload.keys())}")
+        else:
+            print(f"   • Payload type: {type(payload)}")
+
+        async with httpx.AsyncClient(timeout=timeout) as client:
+            print(f"📡 Sending request...")
+            resp = await client.post(
+                url,
+                json=payload,
+                headers={"Content-Type": "application/json"}
+            )
+
+        print(f"⬅️ Response {resp.status_code} from {url}")
+
         if resp.status_code != 200:
             pipeline_logger.error(f"❌ HTTP {resp.status_code}: {resp.text}")
             raise HTTPException(status_code=resp.status_code, detail=resp.text)
+
         return resp.json()
+
+    except httpx.ReadTimeout:
+        print(f"⏳❌ ReadTimeout → {url} (timeout={timeout}s)")
+        raise
+
 
 def latest_input_folder(base_dir: Path, unique_id: str) -> Path:
     pattern = f"{unique_id}"

@@ -1,0 +1,141 @@
+[2025-11-14 16:37:48] [ERROR] :x: Pipeline failed for UID c33ce57f-4975-4f79-929e-9209439f8540: VideoFactory.run_manim_on_files() takes 1 positional argument but 2 were given
+[2025-11-14 16:37:48] [ERROR] Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 55, in process_pipeline
+    video_bytes_list, audio_bytes_list = await asyncio.gather(video_task, audio_task)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 23, in run_in_executor
+    return await loop.run_in_executor(executor, func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\malay\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\processor\process_factory.py", line 16, in <lambda>
+    return lambda: VideoFactory.run_manim_on_files(generated_files, unique_id)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: VideoFactory.run_manim_on_files() takes 1 positional argument but 2 were given
+
+[2025-11-14 16:37:48] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\video_routes.py", line 36, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 55, in process_pipeline
+    video_bytes_list, audio_bytes_list = await asyncio.gather(video_task, audio_task)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 23, in run_in_executor
+    return await loop.run_in_executor(executor, func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\malay\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\processor\process_factory.py", line 16, in <lambda>
+    return lambda: VideoFactory.run_manim_on_files(generated_files, unique_id)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: VideoFactory.run_manim_on_files() takes 1 positional argument but 2 were given
+[2025-11-14 16:37:48] [ERROR] ❌ HTTP 500: {"detail":"VideoFactory.run_manim_on_files() takes 1 positional argument but 2 were given"}
+[2025-11-14 16:37:48] [ERROR] ❌ Video generation failed for c33ce57f-4975-4f79-929e-9209439f8540: 500: {"detail":"VideoFactory.run_manim_on_files() takes 1 positional argument but 2 were given"}
+[2025-11-14 16:37:48] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 101, in write_scripts
+    video_result = await async_post(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"VideoFactory.run_manim_on_files() takes 1 positional argument but 2 were given"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 120, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Video generation failed for c33ce57f-4975-4f79-929e-9209439f8540: 500: {"detail":"VideoFactory.run_manim_on_files() takes 1 positional argument but 2 were given"}
+[2025-11-14 16:37:48] [ERROR] ❌ Unexpected error in /search endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "C:\Users\malay\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\search_routes.py", line 81, in search
+    file_resp, code_resp = await asyncio.gather(gen_task, code_task)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 12, in async_post
+    resp = await client.post(url, json=payload, headers={"Content-Type": "application/json"})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\malay\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+[2025-11-14 16:37:49] [ERROR] ❌ HTTP 500: {"detail":"500: ❌ Video generation failed for c33ce57f-4975-4f79-929e-9209439f8540: 500: {\"detail\":\"VideoFactory.run_manim_on_files() takes 1 positional argument but 2 were given\"}"}
+[2025-11-14 16:37:49] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\generator_routes.py", line 30, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: ❌ Video generation failed for c33ce57f-4975-4f79-929e-9209439f8540: 500: {\"detail\":\"VideoFactory.run_manim_on_files() takes 1 positional argument but 2 were given\"}"}
+[2025-11-14 16:41:31] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\generator_routes.py", line 25, in generate_code_endpoint
+    result = {"result_data" :generator.generate_code(request.input_data) ,"unique_id" :request.unique_id  }
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\LLM_Processor\codeGen_factory.py", line 131, in generate_code
+    final_prompt = merge_qdrant_snippets_into_prompt(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\LLM_Processor\codeGen_factory.py", line 56, in merge_qdrant_snippets_into_prompt
+    bug_snip = Bug_fix_match.get("BUG SNIPPET", "").strip()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+[2025-11-14 16:41:31] [ERROR] ❌ HTTP 500: {"detail":"'NoneType' object has no attribute 'strip'"}

@@ -1,7 +1,7 @@
 import json
 import pytest
 from pathlib import Path
-from parsers.base_handler import JsonHandler, PostgresHandler, InputHandlerFactory
+from src.parsers.base_handler import JsonHandler, PostgresHandler, InputHandlerFactory
 
 
 @pytest.fixture

@@ -1,30 +1,54 @@
-"""
 You are an expert in storytelling and Manim Community Edition animation design.
-Your task:
+Parameters:
+scene_duration_range = "{scene_duration_range}"
+total_video_length_target = "{total_video_length_target}"
+Your task :-
 Generate a JSON script that describes the full video in a step-by-step, highly detailed way.
 Each scene/sequence should have a flexible length between 25 to 45 seconds.
 You can break the video into multiple sequences/scenes if needed to explain the concept clearly.
 Narration and animations must be tightly synchronized:
 Step i in "script_for_manim" must align exactly with step i in "script_voice_over".
-Ensure pacing: narration should match animation timing naturally.
+Ensure pacing:
+ narration should match animation timing naturally.
 "script_length" should reflect the realistic duration of each scene.
-Each JSON object must include:
-- "script_seq" → scene number.
-- "script_for_manim" → array of detailed English animation steps (no Manim code).
-- "script_voice_over" → array of narration lines aligned step-by-step with visuals.
-- "script_length" → approximate duration of the scene (25–45 seconds).
-Rules:
-- Use descriptive English for visuals (no code).
-- Narration must align with visuals.
-- Describe each animation step precisely.
-- Break complex ideas into smaller, smooth transitions.
-- Maintain consistent references between scenes.
-- Scene 1: Introduction
-- Scene 2: Concept Demonstration
-- Scene 3: Application/Example
-- Scene 4: Recap/Closing
-:pushpin: Continuity Rule: The last frame of a scene becomes the first frame of the next.
-Output format:
-Return only a valid JSON array (no extra text).
-:pushpin: Topic: {topic}
-"""
+Each JSON object must include :-
+ "script_seq" → scene number. Use multiple scenes if needed to convey the concept clearly.
+- "script_for_manim" → an ordered array of detailed English animation steps, not code. Each step should describe everything that happens visually in detail, including transitions, highlights, and emphasis.
+- "script_voice_over" → an ordered array of narration lines, aligned step-by-step with "script_for_manim". Narration should be natural, explanatory, and reference each visual element explicitly.
+- "script_length" → approximate duration of the scene (between 25-45 seconds per scene).
+Rules :-
+- Use clear descriptive English for animations, not Manim syntax.
+- Narration must be aligned with visuals at each step.
+- Describe all visual actions in sufficient detail so that someone could recreate the animation accurately.
+- Break complex ideas into smaller visual steps with smooth transitions.
+- Maintain consistent references to objects and elements throughout the video.
+- Avoid redundant repetition in narration and visuals.
+- When providing examples, keep them simple (one or two maximum).
+- If the topic is a question, show it clearly and then solve it step-by-step.
+Story flow (Conceptual Stages) :-
+The story should naturally progress through the following phases:
+1. **Introduction and setup of key objects or diagrams**
+2. **Step-by-step demonstration of the concept**
+3. **Comparison or application (if relevant)**
+4. **Recap and closing message**
+Each of these stages can be divided into as many scenes as needed to explain the concept clearly and maintain smooth pacing.
+Do **not** assume each stage must correspond to exactly one scene — expand or merge scenes based on the complexity of the topic.
+Ensure smooth visual continuity between scenes so that the ending of one connects seamlessly to the beginning of the next.
+If there are angles, define the angle position correctly and specify whether it is interior or exterior.
+Continuity Rule :-
+Ensure smooth visual continuity between scenes — the last frame of a scene must become the first frame of the next scene.
+If there are angles, define the angle position correctly and specify whether it is interior or exterior.
+Tone :-
+Educational and visually descriptive — like a professional explainer video.
+Output format :
+Return **only** a valid JSON array, no markdown, no code fences, no extra explanation.
+JSON Schema reminder:
+[
+  {
+    "script_seq": int,
+    "script_for_manim": [ "..." ],
+    "script_voice_over": [ "..." ],
+    "script_length": "30s"
+  }
+]
+ Insert Topic Here:-  {topic}

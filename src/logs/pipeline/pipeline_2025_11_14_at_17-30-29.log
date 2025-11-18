@@ -1,0 +1,108 @@
+[2025-11-14 17:32:26] [ERROR] ❌ Video and audio list length mismatch
+[2025-11-14 17:32:27] [ERROR] :x: Pipeline failed for UID a3291035-4f4a-4e27-836b-f1ea1f19d3ad: Video and audio lists must have the same length
+[2025-11-14 17:32:27] [ERROR] Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 66, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list,unique_id)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 211, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list, unique_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 134, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+
+[2025-11-14 17:32:27] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\video_routes.py", line 36, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 66, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list,unique_id)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 211, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list, unique_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 134, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-14 17:32:27] [ERROR] ❌ HTTP 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-14 17:32:27] [ERROR] ❌ Video generation failed for a3291035-4f4a-4e27-836b-f1ea1f19d3ad: 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-14 17:32:27] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 101, in write_scripts
+    video_result = await async_post(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"Video and audio lists must have the same length"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 120, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Video generation failed for a3291035-4f4a-4e27-836b-f1ea1f19d3ad: 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-14 17:32:27] [ERROR] ❌ HTTP 500: {"detail":"500: ❌ Video generation failed for a3291035-4f4a-4e27-836b-f1ea1f19d3ad: 500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-14 17:32:27] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\generator_routes.py", line 25, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: ❌ Video generation failed for a3291035-4f4a-4e27-836b-f1ea1f19d3ad: 500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-14 17:32:27] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: ❌ Video generation failed for a3291035-4f4a-4e27-836b-f1ea1f19d3ad: 500: {\\\"detail\\\":\\\"Video and audio lists must have the same length\\\"}\"}"}
+[2025-11-14 17:35:37] [ERROR] ❌ Video and audio list length mismatch
+[2025-11-14 17:35:37] [ERROR] :x: Pipeline failed for UID 5779e959-346b-4cd4-9066-5b4434214745: Video and audio lists must have the same length
+[2025-11-14 17:35:38] [ERROR] Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 66, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list,unique_id)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 211, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list, unique_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 134, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+
+[2025-11-14 17:35:38] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\video_routes.py", line 36, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 66, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list,unique_id)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 211, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list, unique_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 134, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-14 17:35:38] [ERROR] ❌ HTTP 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-14 17:35:38] [ERROR] ❌ Video generation failed for 5779e959-346b-4cd4-9066-5b4434214745: 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-14 17:35:38] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 101, in write_scripts
+    video_result = await async_post(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"Video and audio lists must have the same length"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 120, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Video generation failed for 5779e959-346b-4cd4-9066-5b4434214745: 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-14 17:35:38] [ERROR] ❌ HTTP 500: {"detail":"500: ❌ Video generation failed for 5779e959-346b-4cd4-9066-5b4434214745: 500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-14 17:35:38] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\generator_routes.py", line 25, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: ❌ Video generation failed for 5779e959-346b-4cd4-9066-5b4434214745: 500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-14 17:35:38] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: ❌ Video generation failed for 5779e959-346b-4cd4-9066-5b4434214745: 500: {\\\"detail\\\":\\\"Video and audio lists must have the same length\\\"}\"}"}

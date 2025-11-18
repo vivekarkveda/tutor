@@ -12,7 +12,7 @@ from Transaction.transaction_handler import transaction
 
 router = APIRouter(prefix="", tags=["Script Generation"])
 
-API_KEY = "dZfHrqzrU2lw32MX2RPRiG8ARSKqavpiqpLsU2b0"
+API_KEY = Settings.API_KEY
 
 
 # 🧩 Request Model (no mock flag)
@@ -48,7 +48,7 @@ async def search(request: SearchRequest):
         # === Step 2️⃣: Generate the storytelling JSON
         full_prompt = f"{topic} for class {class_level} in {language} language"
 
-        raw_script = generator.generate_script(full_prompt,unique_id )
+        raw_script = generator.generate_script(full_prompt, unique_id)
 
         # === Step 3️⃣: Clean up and parse JSON safely
         cleaned_script = (
@@ -76,8 +76,11 @@ async def search(request: SearchRequest):
 
         pipeline_logger.info("🚀 Sending generated script to /generate-files-api and /Generator ...")
 
-        gen_task = async_post(gen_url, parsed_json)
-        code_task = async_post(code_url, parsed_json)
+        gen_task = async_post(gen_url, parsed_json, timeout=300)
+        print("➡️ Calling /generate-files-api...")
+        code_task = async_post(code_url, parsed_json, timeout=600)
+        print("➡️ Calling /Generator...")
+
         file_resp, code_resp = await asyncio.gather(gen_task, code_task)
 
         # === Step 5️⃣: Final response

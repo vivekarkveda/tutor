@@ -1,0 +1,602 @@
+[2025-11-17 14:56:58] [ERROR] ⚠️ Invalid JSON output from Cohere: Expecting property name enclosed in double quotes: line 13 column 5 (char 727)
+[2025-11-17 15:02:59] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework_1/Video_data/20251117_150247_0bcba25b-38cf-4d18-b80b-237a98ee8cc9/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\cli\render\comm |
+| ands.py:125 in render                                                       |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\scene\scene.py: |
+| 237 in render                                                               |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework_1\Video_data\20251117_150247_0bcba25b-38cf-4d18-b80b- |
+| 237a98ee8cc9\script_seq1\script_seq1.py:9 in construct                      |
+|                                                                             |
+|    6     def construct(self):                                               |
+|    7         # Canvas and grid background                                   |
+|    8         canvas = Rectangle(width=14, height=8, color="#F0F0F0")        |
+| >  9         grid = NumberPlane(                                            |
+|   10             x_range=[-7, 7, 1],                                        |
+|   11             y_range=[-4, 4, 1],                                        |
+|   12             color_coordinates=False,                                   |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\mobject\graphin |
+| g\coordinate_systems.py:2774 in __init__                                    |
+|                                                                             |
+|   2771         self.make_smooth_after_applying_functions = make_smooth_afte |
+|   2772                                                                      |
+|   2773         # init                                                       |
+| > 2774         super().__init__(                                            |
+|   2775             x_range=x_range,                                         |
+|   2776             y_range=y_range,                                         |
+|   2777             x_length=x_length,                                       |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\mobject\graphin |
+| g\coordinate_systems.py:1922 in __init__                                    |
+|                                                                             |
+|   1919         tips: bool = True,                                           |
+|   1920         **kwargs: Any,                                               |
+|   1921     ) -> None:                                                       |
+| > 1922         VGroup.__init__(self, **kwargs)                              |
+|   1923         CoordinateSystem.__init__(self, x_range, y_range, x_length,  |
+|   1924                                                                      |
+|   1925         self.axis_config = {                                         |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\mobject\types\v |
+| ectorized_mobject.py:2118 in __init__                                       |
+|                                                                             |
+|   2115     def __init__(                                                    |
+|   2116         self, *vmobjects: VMobject | Iterable[VMobject], **kwargs: A |
+|   2117     ) -> None:                                                       |
+| > 2118         super().__init__(**kwargs)                                   |
+|   2119         self.add(*vmobjects)                                         |
+|   2120                                                                      |
+|   2121     def __repr__(self) -> str:                                       |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\mobject\types\v |
+| ectorized_mobject.py:161 in __init__                                        |
+|                                                                             |
+|    158             0, 1, n_points_per_cubic_curve                           |
+|    159         )                                                            |
+|    160         self.cap_style: CapStyleType = cap_style                     |
+| >  161         super().__init__(**kwargs)                                   |
+|    162         self.submobjects: list[VMobject]                             |
+|    163                                                                      |
+|    164         # TODO: Find where color overwrites are happening and remove |
++-----------------------------------------------------------------------------+
+TypeError: Mobject.__init__() got an unexpected keyword argument 
+'color_coordinates'
+
+STDOUT:
+Manim Community v0.19.0
+──────────────────────────────────────────────
+
+[2025-11-17 15:03:35] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework_1/Video_data/20251117_150247_0bcba25b-38cf-4d18-b80b-237a98ee8cc9/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\cli\render\comm |
+| ands.py:125 in render                                                       |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\scene\scene.py: |
+| 237 in render                                                               |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework_1\Video_data\20251117_150247_0bcba25b-38cf-4d18-b80b- |
+| 237a98ee8cc9\script_seq2\script_seq2.py:74 in construct                     |
+|                                                                             |
+|    71         arrow = Arrow(arrow_start, arrow_end, color=RED, buff=0.1)    |
+|    72                                                                       |
+|    73         # Animations                                                  |
+| >  74         n = len(SCRIPT_FOR_MANIM)                                     |
+|    75         base_time_per_action = 35 / n                                 |
+|    76         complexity_factors = [1, 1, 2, 1, 1]  # Adjust based on compl |
+|    77                                                                       |
++-----------------------------------------------------------------------------+
+NameError: name 'SCRIPT_FOR_MANIM' is not defined
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/17/25 15:03:16] INFO     Writing Arrow Precision    tex_file_writing.py:111
+                             Challenge to                                      
+                             C:\ArkMalay\Framework_1\tu                        
+                             tor\src\media\videos\20251                        
+                             117_150247_0bcba25b-38cf-4                        
+                             d18-b80b-237a98ee8cc9\scri                        
+                             pt_seq2\Tex\b98d00ce55592f                        
+                             23.tex                                            
+[11/17/25 15:03:20] INFO     Writing Step 1: Arrow      tex_file_writing.py:111
+                             Enters Outer Circle to                            
+                             C:\ArkMalay\Framework_1\tu                        
+                             tor\src\media\videos\20251                        
+                             117_150247_0bcba25b-38cf-4                        
+                             d18-b80b-237a98ee8cc9\scri                        
+                             pt_seq2\Tex\0a8551d6a05eac                        
+                             c0.tex                                            
+[11/17/25 15:03:24] INFO     Writing Step 2: Slow Down  tex_file_writing.py:111
+                             in Inner Circle to                                
+                             C:\ArkMalay\Framework_1\tu                        
+                             tor\src\media\videos\20251                        
+                             117_150247_0bcba25b-38cf-4                        
+                             d18-b80b-237a98ee8cc9\scri                        
+                             pt_seq2\Tex\e2d15661552c4b                        
+                             b7.tex                                            
+[11/17/25 15:03:27] INFO     Writing Step 3: Compare    tex_file_writing.py:111
+                             Outcomes to                                       
+                             C:\ArkMalay\Framework_1\tu                        
+                             tor\src\media\videos\20251                        
+                             117_150247_0bcba25b-38cf-4                        
+                             d18-b80b-237a98ee8cc9\scri                        
+                             pt_seq2\Tex\a78cb0227eb751                        
+                             c4.tex                                            
+[11/17/25 15:03:30] INFO     Writing Step 4: Stabilize  tex_file_writing.py:111
+                             at Center to                                      
+                             C:\ArkMalay\Framework_1\tu                        
+                             tor\src\media\videos\20251                        
+                             117_150247_0bcba25b-38cf-4                        
+                             d18-b80b-237a98ee8cc9\scri                        
+                             pt_seq2\Tex\cf7c0a065f12d5                        
+                             12.tex
+──────────────────────────────────────────────
+
+[2025-11-17 15:04:59] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework_1/Video_data/20251117_150247_0bcba25b-38cf-4d18-b80b-237a98ee8cc9/script_seq5/script_seq5.py
+──────────────────────────────────────────────
+STDERR:
+latex: major issue: So far, you have not checked for MiKTeX updates.
+
+Animation 0: FadeIn(Circle):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: FadeIn(Circle):  80%|########  | 12/15 [00:00<00:00, 119.28it/s]
+                                                                             
+
+Animation 1: Transform(Circle):   0%|          | 0/30 [00:00<?, ?it/s]
+Animation 1: Transform(Circle):  33%|###3      | 10/30 [00:00<00:00, 91.87it/s]
+Animation 1: Transform(Circle):  67%|######6   | 20/30 [00:00<00:00, 91.99it/s]
+Animation 1: Transform(Circle): 100%|##########| 30/30 [00:00<00:00, 89.66it/s]
+                                                                               
+
+Animation 2: GrowArrow(Arrow):   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                     
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\cli\render\comm |
+| ands.py:125 in render                                                       |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\scene\scene.py: |
+| 237 in render                                                               |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework_1\Video_data\20251117_150247_0bcba25b-38cf-4d18-b80b- |
+| 237a98ee8cc9\script_seq5\script_seq5.py:57 in construct                     |
+|                                                                             |
+|   54             run_time=1                                                 |
+|   55         )                                                              |
+|   56         self.play(                                                     |
+| > 57             ShowCreation(ring_path),                                   |
+|   58             LaggedStart(                                               |
+|   59                 *[FadeIn(area) for area in highlighted_areas],         |
+|   60                 lag_ratio=0.1,                                         |
++-----------------------------------------------------------------------------+
+NameError: name 'ShowCreation' is not defined
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/17/25 15:04:52] INFO     Writing 3D Target          tex_file_writing.py:111
+                             Transformation to                                 
+                             C:\ArkMalay\Framework_1\tu                        
+                             tor\src\media\videos\20251                        
+                             117_150247_0bcba25b-38cf-4                        
+                             d18-b80b-237a98ee8cc9\scri                        
+                             pt_seq5\Tex\752b05e1872780                        
+                             d4.tex                                            
+[11/17/25 15:04:57] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework_1\                         
+                             tutor\src\media\videos\20                         
+                             251117_150247_0bcba25b-38                         
+                             cf-4d18-b80b-237a98ee8cc9                         
+                             \script_seq5\videos\scrip                         
+                             t_seq5\480p15\partial_mov                         
+                             ie_files\ScriptStep5\1185                         
+                             818338_2341826036_1311332                         
+                             713.mp4'                                          
+[11/17/25 15:04:58] INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework_1\                         
+                             tutor\src\media\videos\20                         
+                             251117_150247_0bcba25b-38                         
+                             cf-4d18-b80b-237a98ee8cc9                         
+                             \script_seq5\videos\scrip                         
+                             t_seq5\480p15\partial_mov                         
+                             ie_files\ScriptStep5\6246                         
+                             42324_2257007999_14581670                         
+                             90.mp4'                                           
+                    INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework_1\                         
+                             tutor\src\media\videos\20                         
+                             251117_150247_0bcba25b-38                         
+                             cf-4d18-b80b-237a98ee8cc9                         
+                             \script_seq5\videos\scrip                         
+                             t_seq5\480p15\partial_mov                         
+                             ie_files\ScriptStep5\6246                         
+                             42324_3436902214_23577381                         
+                             85.mp4'
+──────────────────────────────────────────────
+
+[2025-11-17 15:05:44] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework_1/Video_data/20251117_150247_0bcba25b-38cf-4d18-b80b-237a98ee8cc9/script_seq6/script_seq6.py
+──────────────────────────────────────────────
+STDERR:
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+latex: major issue: So far, you have not checked for MiKTeX updates.
+
+Animation 0: Create(NumberPlane of 4 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: Create(NumberPlane of 4 submobjects):  40%|####      | 6/15 [00:00<00:00, 59.20it/s]
+Animation 0: Create(NumberPlane of 4 submobjects):  87%|########6 | 13/15 [00:00<00:00, 64.20it/s]
+                                                                                                  
+
+Animation 1: FadeIn(Circle):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 1: FadeIn(Circle):  87%|########6 | 13/15 [00:00<00:00, 129.55it/s]
+                                                                             
+
+Animation 2: GrowArrow(Arrow):   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                     
+
+Animation 3: FadeOut(NumberPlane of 4 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 3: FadeOut(NumberPlane of 4 submobjects):  20%|##        | 3/15 [00:00<00:00, 23.01it/s]
+Animation 3: FadeOut(NumberPlane of 4 submobjects):  40%|####      | 6/15 [00:00<00:00, 25.56it/s]
+Animation 3: FadeOut(NumberPlane of 4 submobjects):  60%|######    | 9/15 [00:00<00:00, 23.50it/s]
+Animation 3: FadeOut(NumberPlane of 4 submobjects):  80%|########  | 12/15 [00:00<00:00, 24.65it/s]
+Animation 3: FadeOut(NumberPlane of 4 submobjects): 100%|##########| 15/15 [00:00<00:00, 25.87it/s]
+                                                                                                   
+
+Animation 4: Write(Tex('Precision')):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 4: Write(Tex('Precision')):  53%|#####3    | 8/15 [00:00<00:00, 77.06it/s]
+                                                                                    
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\scene\scene.py: |
+| 907 in compile_animations                                                   |
+|                                                                             |
+|    904         # Allow passing a generator to self.play instead of comma se |
+|    905         for arg in arg_anims:                                        |
+|    906             try:                                                     |
+| >  907                 animations.append(prepare_animation(arg))            |
+|    908             except TypeError as e:                                   |
+|    909                 if inspect.ismethod(arg):                            |
+|    910                     raise TypeError(                                 |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\animation\anima |
+| tion.py:581 in prepare_animation                                            |
+|                                                                             |
+|   578     if isinstance(anim, Animation):                                   |
+|   579         return anim                                                   |
+|   580                                                                       |
+| > 581     raise TypeError(f"Object {anim} cannot be converted to an animati |
+|   582                                                                       |
+|   583                                                                       |
+|   584 class Wait(Animation):                                                |
++-----------------------------------------------------------------------------+
+TypeError: Object SurroundingRectangle cannot be converted to an animation
+
+The above exception was the direct cause of the following exception:
+
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\cli\render\comm |
+| ands.py:125 in render                                                       |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\scene\scene.py: |
+| 237 in render                                                               |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework_1\Video_data\20251117_150247_0bcba25b-38cf-4d18-b80b- |
+| 237a98ee8cc9\script_seq6\script_seq6.py:52 in construct                     |
+|                                                                             |
+|   49         self.play(GrowArrow(arrow))                                    |
+|   50         self.play(FadeOut(grid))                                       |
+|   51         self.play(Write(precision_text))                               |
+| > 52         self.play(SurroundingRectangle(precision_text, color=ORANGE, b |
+|   53         self.wait(0.5)                                                 |
+|   54         self.play(Uncreate(precision_text))                            |
+|   55         self.wait()                                                    |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\scene\scene.py: |
+| 1125 in play                                                                |
+|                                                                             |
+|   1122             return                                                   |
+|   1123                                                                      |
+|   1124         start_time = self.time                                       |
+| > 1125         self.renderer.play(self, *args, **kwargs)                    |
+|   1126         run_time = self.time - start_time                            |
+|   1127         if subcaption:                                               |
+|   1128             if subcaption_duration is None:                          |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\renderer\cairo_ |
+| renderer.py:71 in play                                                      |
+|                                                                             |
+|    68         self.skip_animations = self._original_skipping_status         |
+|    69         self.update_skipping_status()                                 |
+|    70                                                                       |
+| >  71         scene.compile_animation_data(*args, **kwargs)                 |
+|    72                                                                       |
+|    73         if self.skip_animations:                                      |
+|    74             logger.debug(f"Skipping animation {self.num_plays}")      |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\scene\scene.py: |
+| 1236 in compile_animation_data                                              |
+|                                                                             |
+|   1233         if len(animations) == 0:                                     |
+|   1234             raise ValueError("Called Scene.play with no animations") |
+|   1235                                                                      |
+| > 1236         self.animations = self.compile_animations(*animations, **pla |
+|   1237         self.add_mobjects_from_animations(self.animations)           |
+|   1238                                                                      |
+|   1239         self.last_t = 0                                              |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\scene\scene.py: |
+| 915 in compile_animations                                                   |
+|                                                                             |
+|    912                         " supported. Use Mobject.animate instead.",  |
+|    913                     ) from e                                         |
+|    914                 else:                                                |
+| >  915                     raise TypeError(                                 |
+|    916                         f"Unexpected argument {arg} passed to Scene. |
+|    917                     ) from e                                         |
+|    918                                                                      |
++-----------------------------------------------------------------------------+
+TypeError: Unexpected argument SurroundingRectangle passed to Scene.play().
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/17/25 15:05:11] INFO     Writing Precision in       tex_file_writing.py:111
+                             Targeting to                                      
+                             C:\ArkMalay\Framework_1\tu                        
+                             tor\src\media\videos\20251                        
+                             117_150247_0bcba25b-38cf-4                        
+                             d18-b80b-237a98ee8cc9\scri                        
+                             pt_seq6\Tex\e96aa597f5942c                        
+                             9a.tex                                            
+[11/17/25 15:05:15] INFO     Writing - to               tex_file_writing.py:111
+                             C:\ArkMalay\Framework_1\tu                        
+                             tor\src\media\videos\20251                        
+                             117_150247_0bcba25b-38cf-4                        
+                             d18-b80b-237a98ee8cc9\scri                        
+                             pt_seq6\Tex\ba96de15f98acf                        
+                             c8.tex                                            
+[11/17/25 15:05:17] INFO     Writing 6 to               tex_file_writing.py:111
+                             C:\ArkMalay\Framework_1\tu                        
+                             tor\src\media\videos\20251                        
+                             117_150247_0bcba25b-38cf-4                        
+                             d18-b80b-237a98ee8cc9\scri                        
+                             pt_seq6\Tex\b330e3953bf029                        
+                             d7.tex                                            
+[11/17/25 15:05:20] INFO     Writing 5 to               tex_file_writing.py:111
+                             C:\ArkMalay\Framework_1\tu                        
+                             tor\src\media\videos\20251                        
+                             117_150247_0bcba25b-38cf-4                        
+                             d18-b80b-237a98ee8cc9\scri                        
+                             pt_seq6\Tex\5683d89f396abe                        
+                             50.tex                                            
+[11/17/25 15:05:23] INFO     Writing 4 to               tex_file_writing.py:111
+                             C:\ArkMalay\Framework_1\tu                        
+                             tor\src\media\videos\20251                        
+                             117_150247_0bcba25b-38cf-4                        
+                             d18-b80b-237a98ee8cc9\scri                        
+                             pt_seq6\Tex\31d3165490bf34                        
+                             04.tex                                            
+[11/17/25 15:05:26] INFO     Writing 3 to               tex_file_writing.py:111
+                             C:\ArkMalay\Framework_1\tu                        
+                             tor\src\media\videos\20251                        
+                             117_150247_0bcba25b-38cf-4                        
+                             d18-b80b-237a98ee8cc9\scri                        
+                             pt_seq6\Tex\8de07035cb22c9                        
+                             03.tex                                            
+[11/17/25 15:05:28] INFO     Writing 2 to               tex_file_writing.py:111
+                             C:\ArkMalay\Framework_1\tu                        
+                             tor\src\media\videos\20251                        
+                             117_150247_0bcba25b-38cf-4                        
+                             d18-b80b-237a98ee8cc9\scri                        
+                             pt_seq6\Tex\2b7ffb3c38a5a6                        
+                             e0.tex                                            
+[11/17/25 15:05:31] INFO     Writing 1 to               tex_file_writing.py:111
+                             C:\ArkMalay\Framework_1\tu                        
+                             tor\src\media\videos\20251                        
+                             117_150247_0bcba25b-38cf-4                        
+                             d18-b80b-237a98ee8cc9\scri                        
+                             pt_seq6\Tex\6ecf9f51170c1a                        
+                             70.tex                                            
+[11/17/25 15:05:34] INFO     Writing Precision to       tex_file_writing.py:111
+                             C:\ArkMalay\Framework_1\tu                        
+                             tor\src\media\videos\20251                        
+                             117_150247_0bcba25b-38cf-4                        
+                             d18-b80b-237a98ee8cc9\scri                        
+                             pt_seq6\Tex\3a47b9254604f1                        
+                             ce.tex                                            
+[11/17/25 15:05:38] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework_1\                         
+                             tutor\src\media\videos\20                         
+                             251117_150247_0bcba25b-38                         
+                             cf-4d18-b80b-237a98ee8cc9                         
+                             \script_seq6\videos\scrip                         
+                             t_seq6\480p15\partial_mov                         
+                             ie_files\ScriptStep6\1185                         
+                             818338_4194209656_1878815                         
+                             719.mp4'                                          
+[11/17/25 15:05:39] INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework_1\                         
+                             tutor\src\media\videos\20                         
+                             251117_150247_0bcba25b-38                         
+                             cf-4d18-b80b-237a98ee8cc9                         
+                             \script_seq6\videos\scrip                         
+                             t_seq6\480p15\partial_mov                         
+                             ie_files\ScriptStep6\6246                         
+                             42324_860951908_377656748                         
+                             5.mp4'                                            
+[11/17/25 15:05:40] INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework_1\                         
+                             tutor\src\media\videos\20                         
+                             251117_150247_0bcba25b-38                         
+                             cf-4d18-b80b-237a98ee8cc9                         
+                             \script_seq6\videos\scrip                         
+                             t_seq6\480p15\partial_mov                         
+                             ie_files\ScriptStep6\6246                         
+                             42324_1247851484_41897712                         
+                             14.mp4'                                           
+[11/17/25 15:05:42] INFO     Animation 3 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework_1\                         
+                             tutor\src\media\videos\20                         
+                             251117_150247_0bcba25b-38                         
+                             cf-4d18-b80b-237a98ee8cc9                         
+                             \script_seq6\videos\scrip                         
+                             t_seq6\480p15\partial_mov                         
+                             ie_files\ScriptStep6\6246                         
+                             42324_1058099508_25361490                         
+                             31.mp4'                                           
+                    INFO     Animation 4 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework_1\                         
+                             tutor\src\media\videos\20                         
+                             251117_150247_0bcba25b-38                         
+                             cf-4d18-b80b-237a98ee8cc9                         
+                             \script_seq6\videos\scrip                         
+                             t_seq6\480p15\partial_mov                         
+                             ie_files\ScriptStep6\6246                         
+                             42324_1033394955_41462497                         
+                             54.mp4'
+──────────────────────────────────────────────
+
+[2025-11-17 15:05:52] [ERROR] ❌ Video and audio list length mismatch
+[2025-11-17 15:05:53] [ERROR] :x: Pipeline failed for UID 0bcba25b-38cf-4d18-b80b-237a98ee8cc9: Video and audio lists must have the same length
+[2025-11-17 15:05:53] [ERROR] Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 66, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list,unique_id)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 211, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list, unique_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 134, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+
+[2025-11-17 15:05:53] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\video_routes.py", line 36, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 66, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list,unique_id)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 211, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list, unique_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 134, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-17 15:05:53] [ERROR] ❌ HTTP 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-17 15:05:53] [ERROR] ❌ Video generation failed for 0bcba25b-38cf-4d18-b80b-237a98ee8cc9: 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-17 15:05:53] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 101, in write_scripts
+    video_result = await async_post(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 31, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"Video and audio lists must have the same length"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 120, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Video generation failed for 0bcba25b-38cf-4d18-b80b-237a98ee8cc9: 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-17 15:05:53] [ERROR] ❌ HTTP 500: {"detail":"500: ❌ Video generation failed for 0bcba25b-38cf-4d18-b80b-237a98ee8cc9: 500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-17 15:05:53] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\generator_routes.py", line 29, in generate_code_endpoint
+    write_result = await async_post(write_url, payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 31, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: ❌ Video generation failed for 0bcba25b-38cf-4d18-b80b-237a98ee8cc9: 500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-17 15:05:53] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: ❌ Video generation failed for 0bcba25b-38cf-4d18-b80b-237a98ee8cc9: 500: {\\\"detail\\\":\\\"Video and audio lists must have the same length\\\"}\"}"}

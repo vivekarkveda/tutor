@@ -1,0 +1,306 @@
+[2025-11-17 14:50:36] [ERROR] ❌ Unexpected error in /search endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "C:\Users\malay\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\search_routes.py", line 84, in search
+    file_resp, code_resp = await asyncio.gather(gen_task, code_task)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 21, in async_post
+    resp = await client.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\malay\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+[2025-11-17 14:50:49] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework_1/Video_data/20251117_144139_7e806bfe-7227-4772-afe1-b5333a073564/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+latex: major issue: So far, you have not checked for MiKTeX updates.
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\cli\render\comm |
+| ands.py:125 in render                                                       |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\scene\scene.py: |
+| 237 in render                                                               |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework_1\Video_data\20251117_144139_7e806bfe-7227-4772-afe1- |
+| b5333a073564\script_seq1\script_seq1.py:20 in construct                     |
+|                                                                             |
+|   17         circle.move_to(ORIGIN)                                         |
+|   18                                                                        |
+|   19         # Create the grid background                                   |
+| > 20         grid = NumberPlane(                                            |
+|   21             x_range=[-5, 5, 1],                                        |
+|   22             y_range=[-5, 5, 1],                                        |
+|   23             color=GREY,                                                |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\mobject\graphin |
+| g\coordinate_systems.py:2774 in __init__                                    |
+|                                                                             |
+|   2771         self.make_smooth_after_applying_functions = make_smooth_afte |
+|   2772                                                                      |
+|   2773         # init                                                       |
+| > 2774         super().__init__(                                            |
+|   2775             x_range=x_range,                                         |
+|   2776             y_range=y_range,                                         |
+|   2777             x_length=x_length,                                       |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\mobject\graphin |
+| g\coordinate_systems.py:1922 in __init__                                    |
+|                                                                             |
+|   1919         tips: bool = True,                                           |
+|   1920         **kwargs: Any,                                               |
+|   1921     ) -> None:                                                       |
+| > 1922         VGroup.__init__(self, **kwargs)                              |
+|   1923         CoordinateSystem.__init__(self, x_range, y_range, x_length,  |
+|   1924                                                                      |
+|   1925         self.axis_config = {                                         |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\mobject\types\v |
+| ectorized_mobject.py:2118 in __init__                                       |
+|                                                                             |
+|   2115     def __init__(                                                    |
+|   2116         self, *vmobjects: VMobject | Iterable[VMobject], **kwargs: A |
+|   2117     ) -> None:                                                       |
+| > 2118         super().__init__(**kwargs)                                   |
+|   2119         self.add(*vmobjects)                                         |
+|   2120                                                                      |
+|   2121     def __repr__(self) -> str:                                       |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\mobject\types\v |
+| ectorized_mobject.py:161 in __init__                                        |
+|                                                                             |
+|    158             0, 1, n_points_per_cubic_curve                           |
+|    159         )                                                            |
+|    160         self.cap_style: CapStyleType = cap_style                     |
+| >  161         super().__init__(**kwargs)                                   |
+|    162         self.submobjects: list[VMobject]                             |
+|    163                                                                      |
+|    164         # TODO: Find where color overwrites are happening and remove |
++-----------------------------------------------------------------------------+
+TypeError: Mobject.__init__() got an unexpected keyword argument 'fade_rate'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/17/25 14:50:44] INFO     Writing Geometric          tex_file_writing.py:111
+                             Fundamentals: The Circle                          
+                             to                                                
+                             C:\ArkMalay\Framework_1\tu                        
+                             tor\src\media\videos\20251                        
+                             117_144139_7e806bfe-7227-4                        
+                             772-afe1-b5333a073564\scri                        
+                             pt_seq1\Tex\651c1fc04133c2                        
+                             f1.tex
+──────────────────────────────────────────────
+
+[2025-11-17 14:51:28] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework_1/Video_data/20251117_144139_7e806bfe-7227-4772-afe1-b5333a073564/script_seq4/script_seq4.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Scripts\manim.exe\__main__.py", line 7, in <module>
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\click\core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\click\core.py", line 1082, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\click\core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\click\core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\click\core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\cli\render\commands.py", line 121, in render
+    for SceneClass in scene_classes_from_file(file):
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\utils\module_ops.py", line 167, in scene_classes_from_file
+    module = get_module(file_path)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\utils\module_ops.py", line 67, in get_module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 994, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\ArkMalay\Framework_1\Video_data\20251117_144139_7e806bfe-7227-4772-afe1-b5333a073564\script_seq4\script_seq4.py", line 57, in <module>
+    self.play(FadeIn(theta), FadeIn(triangle), run_time=run_time)
+    ^^^^
+NameError: name 'self' is not defined
+
+STDOUT:
+Manim Community v0.19.0
+──────────────────────────────────────────────
+
+[2025-11-17 14:52:04] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework_1/Video_data/20251117_144139_7e806bfe-7227-4772-afe1-b5333a073564/script_seq6/script_seq6.py
+──────────────────────────────────────────────
+STDERR:
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\cli\render\comm |
+| ands.py:125 in render                                                       |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\scene\scene.py: |
+| 237 in render                                                               |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework_1\Video_data\20251117_144139_7e806bfe-7227-4772-afe1- |
+| b5333a073564\script_seq6\script_seq6.py:9 in construct                      |
+|                                                                             |
+|    6     def construct(self):                                               |
+|    7         # Constants                                                    |
+|    8         target_duration = 42                                           |
+| >  9         n = len(SCRIPT_FOR_MANIM)                                      |
+|   10         base_time_per_action = target_duration / n                     |
+|   11                                                                        |
+|   12         # Circle, radius, and angle                                    |
++-----------------------------------------------------------------------------+
+NameError: name 'SCRIPT_FOR_MANIM' is not defined
+
+STDOUT:
+Manim Community v0.19.0
+──────────────────────────────────────────────
+
+[2025-11-17 14:52:59] [ERROR] ❌ Video and audio list length mismatch
+[2025-11-17 14:52:59] [ERROR] :x: Pipeline failed for UID 7e806bfe-7227-4772-afe1-b5333a073564: Video and audio lists must have the same length
+[2025-11-17 14:53:00] [ERROR] Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 66, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list,unique_id)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 211, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list, unique_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 134, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+
+[2025-11-17 14:53:00] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\video_routes.py", line 36, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 66, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list,unique_id)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 211, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list, unique_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 134, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-17 14:53:00] [ERROR] ❌ HTTP 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-17 14:53:00] [ERROR] ❌ Video generation failed for 7e806bfe-7227-4772-afe1-b5333a073564: 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-17 14:53:00] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 101, in write_scripts
+    video_result = await async_post(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 31, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"Video and audio lists must have the same length"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 120, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Video generation failed for 7e806bfe-7227-4772-afe1-b5333a073564: 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-17 14:53:00] [ERROR] ❌ HTTP 500: {"detail":"500: ❌ Video generation failed for 7e806bfe-7227-4772-afe1-b5333a073564: 500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-17 14:53:00] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\generator_routes.py", line 29, in generate_code_endpoint
+    write_result = await async_post(write_url, payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 31, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: ❌ Video generation failed for 7e806bfe-7227-4772-afe1-b5333a073564: 500: {\"detail\":\"Video and audio lists must have the same length\"}"}

@@ -1,0 +1,2 @@
+[2025-11-14 17:26:12] [ERROR] ❌ Unexpected error while processing file C:/ArkMalay/Framework_1/Video_data/20251114_172612_911a8610-a077-47d3-bfca-38c607a47982/script_seq1/script_seq1.py: type object 'VideoFactory' has no attribute 'count_words_in_file'
+[2025-11-14 17:26:13] [ERROR] ❌ Unexpected error while processing file C:/ArkMalay/Framework_1/Video_data/20251114_172612_911a8610-a077-47d3-bfca-38c607a47982/script_seq2/script_seq2.py: type object 'VideoFactory' has no attribute 'count_words_in_file'

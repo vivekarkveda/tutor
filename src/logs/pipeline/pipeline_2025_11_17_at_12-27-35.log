@@ -1,0 +1,6 @@
+[2025-11-17 12:28:03] [ERROR] ❌ Unexpected error in /search endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\search_routes.py", line 51, in search
+    raw_script = generator.generate_script(full_prompt)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: CohereScriptGenerator.generate_script() missing 1 required positional argument: 'unique_id'

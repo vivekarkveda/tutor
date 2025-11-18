@@ -1,0 +1,532 @@
+=== FINAL PROMPT SENT ===
+
+Role :-
+You are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).
+Your job is to convert a provided topic script into a visually clear, accurate, and fully executable Manim Python file that a beginner can run. Produce only the Python code as the final output (no explanations, no comments).
+Essential Guidelines :-
+Complete and runnable code
+Output must be self-contained, error-free, and executable by a beginner in Manim.
+Include all necessary imports, class definitions, and the construct method.
+Frame management and positioning :-
+CRITICAL: All objects must remain fully visible within the frame at all times.
+Keep objects inside safe bounds (X, Y ∈ [-5, 5]) to prevent clipping.
+Auto-scale objects where necessary to prevent any part from going off-screen.
+Use .scale() method to reduce size of oversized objects before positioning.
+Test all coordinates to ensure they stay within visible bounds.
+Use .get_center(), .get_edge_center(), or .get_boundary_point() methods for accurate positioning.
+ALWAYS use this layout for ALL content types (diagrams, tables, graphs, equations, etc.):
+- LEFT 60-65% of screen: Main content (diagram/table/graph/any mathematical figure)
+- RIGHT 35-40% of screen: Text explanations only
+Zone Definitions ;-
+Left Content Zone: For ALL visual content
+- X position range: -6.5 to 0
+- Y position range: -3.5 to 3.5
+- Takes 60-65% of screen width
+- Use for: diagrams, tables, graphs, equations, shapes, animations, data displays
+Right Text Zone: For necessary on-screen text explanations and annotations only
+X position range: 1.5 to 6.5
+Y position range: -3.5 to 3.5
+Takes: 35–40% of screen width
+Use for:
+Explanations of visual steps
+Key definitions or important mathematical notes
+Annotation of important objects or procedures
+Bullet points about steps in a process
+Conclusions or summary statements
+All other explanatory text essential for understanding the visual content
+Do NOT use for:
+Full voice-over/narration script (unless explicitly requested)
+Title Zone (Optional): Y = 3.8 using .to_edge(UP, buff=0.2) - spans full width if needed
+Layout and text overlap prevention :-
+MANDATORY: Text must NEVER overlap with diagrams, objects, or other text.
+Use .arrange(), .next_to(), or .shift() with adequate spacing (buff ≥ 0.8).
+Center objects by default unless specified otherwise.
+Place text labels at sufficient distance from objects (buff ≥ 1.0) to prevent overlap.
+If there is insufficient space for text labels, prioritize the most important labels and remove less critical text.
+Use strategic positioning: place labels above, below, left, or right of objects where space permits.
+For point labels or annotations near multiple objects, alternate sides (LEFT/RIGHT or UP/DOWN) to prevent clustering.
+For complex diagrams, use leader lines or arrows to connect distant labels to their objects.
+Do not include unnecessary background shapes.
+Text management and clarity:-
+Check text positioning after each object placement to ensure no overlaps.
+Text should appear near related objects without covering them or other text.
+If no figure exists, center the text.
+Use VGroup and .arrange() for alignment with proper spacing.
+When multiple text elements exist, arrange them in non-overlapping positions using .arrange(DOWN, buff=0.5) or similar.
+Consider using smaller font sizes (scale=0.8 or scale=0.6) if needed to fit text properly.
+For measurement labels (e.g., "10 cm", "5 units"), position them to the side (LEFT/RIGHT) of horizontal objects or above/below for vertical objects.
+Mathematical and geometric accuracy :-
+CRITICAL: When creating geometric shapes that must satisfy mathematical relationships (circles, triangles, polygons, etc.), calculate positions using proper mathematical formulas.
+For objects that must lie ON other objects (e.g., points on circles, vertices on curves), use the object's mathematical properties to calculate exact positions.
+Do not use arbitrary or estimated positions when mathematical precision is required.
+Verify that calculated positions satisfy the defining equations or constraints of the shapes.
+Use numpy functions (np.sqrt, np.sin, np.cos, etc.) for accurate calculations.
+Proportional relationships :-
+When dealing with measurements or sizes with specific values (e.g., "10 cm" vs "24 cm"), maintain their proportional relationships accurately.
+Scale all related objects proportionally to fit within the frame while preserving their relative sizes.
+Larger values should visually appear larger; smaller values should appear smaller in proportion.
+Animation behavior :-
+Animate appearances and transformations using self.play.
+Include smooth animations: FadeIn, FadeOut, Write, Transform, ReplacementTransform, Create, GrowFromCenter, etc.
+Include short pauses to emphasize points.
+Introduce one idea at a time.
+Automatically pace each animation so that the total video duration is between 30-45 seconds and aligns with the voice-over.
+Timing rules for exact duration (30-45 seconds) :-
+Count all animation actions in SCRIPT FOR MANIM (each FadeIn, Write, Create, Transform, etc.).
+Let n = number of animation actions.
+Target duration should be between 30-45 seconds per scene based on content complexity.
+Compute base_time_per_action = target_duration ÷ n.
+Apply run_time for each animation step = base_time_per_action × complexity_factor (1 for normal, >1 for multi-step animations).
+Add short .wait() pauses (0.3–0.7 sec) proportionally scaled so that the sum of all run_time + wait falls within 30-45 seconds.
+Ensure each step duration roughly matches the length of the corresponding narration in SCRIPT VOICE OVER
+Adjust all times automatically to fall within the 30-45 second range, allowing flexibility based on content complexity.
+Visual styling and screen boundaries :-
+Use colors (hex values), arrows, highlights, semi-transparent fills.
+Maintain consistent visual style throughout.
+Double-check that all visual elements fit within screen boundaries before finalizing positions.
+Use .get_boundary_point() or .get_edge_center() methods to position objects relative to screen edges safely.
+Coding conventions :-
+Name each class using SCRIPT SEQ (e.g., ScriptStep2).
+Use supported Manim primitives: Line, Dot, Circle, Polygon, Rectangle, Square, Arrow, Text, MathTex, NumberPlane, Triangle, VGroup.
+Avoid deprecated methods and out-of-bounds operations.
+Always include bounds checking in your positioning logic.
+Topic constraints and quality assurance:-
+Remove unnecessary background shapes.
+FINAL CHECK: Ensure all text labels are positioned clearly outside objects with no overlaps.
+FINAL CHECK: Ensure all objects and text remain within screen boundaries.
+FINAL CHECK: If there is not enough space for all text, remove less important text elements.
+FINAL CHECK: Verify mathematical accuracy - objects that should lie on other objects must be calculated to do so precisely.
+FINAL CHECK: Verify proportional relationships are maintained for all measurements and sizes.
+Write hex values for all colors used
+Placeholders :-
+catalog_placeholder: def construct(self):
+        # Balloon body
+        balloon = Circle(radius=0.3, color="#FF0000", fill_opacity=0.8)
+        
+        # Balloon string
+        balloon_string = Line(ORIGIN, DOWN * 0.5, color="#808080", stroke_width=1)
+        
+        # Position balloon and string
+        balloon.shift(RIGHT * 3 + UP * 1.5)
+        balloon_string.next_to(balloon, DOWN, buff=0)
+        
+        # Group balloon and string
+        balloon_group = VGroup(balloon, balloon_string)
+        
+        # Animate
+        self.play(GrowFromCenter(balloon_group), run_time=1)
+        self.wait(1)
+Bug_fix_placeholder: # Original Bug Snippet:
+```python
+# Step 1: Triangle vertices
+C = np.array([-2, -1, 0])  # Bottom left (right angle)
+A = np.array([-2, 2, 0])   # Top left
+B = np.array([2, -1, 0])   # Bottom right
+
+# Label positioning
+label_C = Text("C", font_size=20, color="#FFFFFF").next_to(C, DOWN+LEFT, buff=0.3)
+
+# Step 3: Real-world applications montage (4.5 seconds)
+self.play(FadeOut(triangle), FadeOut(label_A), FadeOut(label_B), FadeOut(label_C), 
+          FadeOut(label_a), FadeOut(label_b), FadeOut(label_c), run_time=0.5)
+
+# Ladder against wall - NO CONTEXT OR MEASUREMENTS
+wall = Line(np.array([-3, -2, 0]), np.array([-3, 2, 0]), color="#8B4513", stroke_width=8)
+ground = Line(np.array([-3, -2, 0]), np.array([1, -2, 0]), color="#228B22", stroke_width=6)
+ladder = Line(np.array([-3, 1.5, 0]), np.array([0.5, -2, 0]), color="#DAA520", stroke_width=6)
+
+ladder_group = VGroup(wall, ground, ladder)
+app_text1 = Text("Construction & Safety", font_size=16, color="#FFFFFF").next_to(ladder_group, RIGHT, buff=0.5)
+
+self.play(Create(ladder_group), Write(app_text1), run_time=1.5)
+self.wait(0.2)  # TOO SHORT
+
+# GPS triangulation - NO CLEAR VISUALIZATION
+self.play(FadeOut(ladder_group), FadeOut(app_text1), run_time=0.3)  # TOO FAST
+
+tower1 = Line(np.array([-2, -1, 0]), np.array([-2, 0, 0]), color="#FF6B6B", stroke_width=4)
+tower2 = Line(np.array([1, -1, 0]), np.array([1, 0, 0]), color="#FF6B6B", stroke_width=4)
+tower3 = Line(np.array([-0.5, 1, 0]), np.array([-0.5, 2, 0]), color="#FF6B6B", stroke_width=4)
+
+signal1 = Circle(radius=1.5, color="#4ECDC4", stroke_opacity=0.5).move_to(tower1.get_end())
+signal2 = Circle(radius=1.8, color="#4ECDC4", stroke_opacity=0.5).move_to(tower2.get_end())
+signal3 = Circle(radius=1.3, color="#4ECDC4", stroke_opacity=0.5).move_to(tower3.get_end())
+
+gps_group = VGroup(tower1, tower2, tower3, signal1, signal2, signal3)
+app_text2 = Text("GPS & Navigation", font_size=16, color="#FFFFFF").shift(2.5*DOWN)
+
+self.play(Create(gps_group), Write(app_text2), run_time=1.5)
+self.wait(0.2)  # TOO SHORT
+
+self.play(FadeOut(gps_group), FadeOut(app_text2), run_time=0.3)  # TOO FAST
+
+# Step 4: Practical problem solving - NO CONTEXT
+problem_text = Text("Distance Calculations", font_size=20, color="#FFFFFF")
+calculation = MathTex(r"\sqrt{3^2 + 4^2} = \sqrt{9 + 16} = 5", font_size=20, color="#4ECDC4").shift(DOWN)
+
+self.play(Write(problem_text), run_time=2.0)
+self.play(Write(calculation), run_time=1.5)
+self.wait(0.2)
+```
+
+# Fixed Bug Snippet:
+```python
+# Step 1: Triangle vertices - REDUCED SIZE
+C = np.array([-1.5, -0.8, 0])  # Bottom left (right angle)
+A = np.array([-1.5, 1.2, 0])   # Top left
+B = np.array([1.5, -0.8, 0])   # Bottom right
+
+# Label positioning - IMPROVED
+label_C = Text("C", font_size=20, color="#FFFFFF").next_to(C, LEFT, buff=0.2)
+
+# Step 3: Real-world applications - EXTENDED (7 seconds total)
+self.play(
+    FadeOut(triangle), FadeOut(label_A), FadeOut(label_B), FadeOut(label_C), 
+    FadeOut(label_a), FadeOut(label_b), FadeOut(label_c), FadeOut(main_equation),
+    run_time=0.5
+)
+
+# ADDED: Context header
+context_text1 = Text("Real-World Applications", font_size=24, color="#FFD700").shift(3*UP)
+self.play(Write(context_text1), run_time=1.0)
+self.wait(0.3)
+
+# Ladder against wall - WITH MEASUREMENTS AND CALCULATION
+wall = Line(np.array([-2.5, -1.8, 0]), np.array([-2.5, 1.5, 0]), color="#8B4513", stroke_width=8)
+ground = Line(np.array([-2.5, -1.8, 0]), np.array([1, -1.8, 0]), color="#228B22", stroke_width=6)
+ladder = Line(np.array([-2.5, 1.2, 0]), np.array([0.5, -1.8, 0]), color="#DAA520", stroke_width=7)
+
+# ADDED: Measurement labels
+height_label = MathTex("12m", font_size=20, color="#FF4040").next_to(wall.get_center(), LEFT, buff=0.3)
+base_label = MathTex("5m", font_size=20, color="#00FF40").next_to(ground.get_center(), DOWN, buff=0.3)
+ladder_label = MathTex("13m", font_size=20, color="#FFD700").next_to(ladder.get_center(), RIGHT, buff=0.2)
+
+ladder_group = VGroup(wall, ground, ladder)
+# IMPROVED: Added question context
+app_text1 = Text("Construction: How long is the ladder?", font_size=16, color="#FFFFFF").shift(2*DOWN)
+# ADDED: Show calculation
+calculation1 = MathTex(r"\sqrt{5^2 + 12^2} = \sqrt{25 + 144} = 13m", font_size=18, color="#4ECDC4").shift(2.7*DOWN)
+
+self.play(Create(ladder_group), run_time=1.0)
+self.play(Write(height_label), Write(base_label), run_time=0.8)
+self.play(Write(app_text1), run_time=0.8)
+self.wait(0.6)
+self.play(Write(calculation1), run_time=1.0)
+self.play(Write(ladder_label), run_time=0.5)
+self.wait(1.0)  # LONGER VISIBILITY
+
+# GPS triangulation - MUCH CLEARER VISUALIZATION
+self.play(
+    FadeOut(ladder_group), FadeOut(app_text1), FadeOut(calculation1),
+    FadeOut(height_label), FadeOut(base_label), FadeOut(ladder_label),
+    run_time=0.5  # SLOWER FADE
+)
+
+# IMPROVED: Better tower visualization with antennas
+tower1 = VGroup(
+    Line(np.array([-2.5, -1.5, 0]), np.array([-2.5, 0, 0]), color="#FF6B6B", stroke_width=6),
+    Polygon(np.array([-2.5, 0, 0]), np.array([-2.3, -0.3, 0]), np.array([-2.7, -0.3, 0]), 
+           color="#FF6B6B", fill_opacity=0.8)
+)
+tower2 = VGroup(
+    Line(np.array([2.5, -1.5, 0]), np.array([2.5, 0, 0]), color="#FF6B6B", stroke_width=6),
+    Polygon(np.array([2.5, 0, 0]), np.array([2.7, -0.3, 0]), np.array([2.3, -0.3, 0]), 
+           color="#FF6B6B", fill_opacity=0.8)
+)
+
+signal1 = Circle(radius=1.5, color="#4ECDC4", stroke_opacity=0.5, stroke_width=3).move_to(np.array([-2.5, 0, 0]))
+signal2 = Circle(radius=1.5, color="#95E1D3", stroke_opacity=0.5, stroke_width=3).move_to(np.array([2.5, 0, 0]))
+
+# ADDED: User position and distance lines
+user_dot = Dot(np.array([0, 0.8, 0]), color="#FFD700", radius=0.15)
+user_label = Text("You", font_size=16, color="#FFD700").next_to(user_dot, UP, buff=0.2)
+
+dist1 = DashedLine(np.array([-2.5, 0, 0]), np.array([0, 0.8, 0]), color="#FFFFFF", stroke_width=2)
+dist2 = DashedLine(np.array([2.5, 0, 0]), np.array([0, 0.8, 0]), color="#FFFFFF", stroke_width=2)
+
+gps_group = VGroup(tower1, tower2, signal1, signal2, dist1, dist2, user_dot)
+# IMPROVED: Better description
+app_text2 = Text("GPS: Finding your position using distances", font_size=16, color="#FFFFFF").shift(2.2*DOWN)
+
+self.play(Create(tower1), Create(tower2), run_time=0.8)
+self.play(Create(signal1), Create(signal2), run_time=0.8)
+self.play(Create(dist1), Create(dist2), FadeIn(user_dot), Write(user_label), run_time=0.8)
+self.play(Write(app_text2), run_time=0.8)
+self.wait(1.5)  # MUCH LONGER VISIBILITY
+
+self.play(FadeOut(gps_group), FadeOut(app_text2), FadeOut(user_label), FadeOut(context_text1), run_time=0.5)
+
+# Step 4: Practical problem solving - WITH CONTEXT
+problem_text = Text("Distance Calculations", font_size=22, color="#FFFFFF").shift(1.5*UP)
+# ADDED: Specific question
+example_problem = Text("How far to walk diagonally across a field?", font_size=16, color="#FFFFFF").shift(0.7*UP)
+# IMPROVED: Added units
+calculation = MathTex(r"\sqrt{3^2 + 4^2} = \sqrt{9 + 16} = 5 \text{ units}", font_size=26, color="#4ECDC4").shift(0.5*DOWN)
+
+self.play(Write(problem_text), run_time=1.5)
+self.play(Write(example_problem), run_time=1.0)  # NEW LINE
+self.play(Write(calculation), run_time=1.0)
+self.wait(0.8)  # LONGER VISIBILITY
+```
+SCRIPT_SEQ: 4
+SCRIPT_FOR_MANIM: [
+  "Focus on the bell curve, animating it to emphasize its shape and significance.",
+  "Draw a vertical line at the peak, representing the ideal accuracy.",
+  "Introduce a moving pointer, starting from the left, traveling along the x-axis, and stopping at various points.",
+  "For each stop, highlight the corresponding area on the bell curve, showing the frequency of outcomes.",
+  "End with the pointer at the peak, emphasizing the desired outcome."
+]
+SCRIPT_VOICE_OVER: [
+  "The bell curve reveals a story of precision. Its shape indicates the likelihood of different accuracy levels.",
+  "The peak represents the ideal, where most successful outcomes reside. This is the sweet spot we aim for.",
+  "Imagine a pointer traveling along the accuracy spectrum. As it moves, we see the corresponding frequency.",
+  "At the far left, we find rare, exceptional precision. Moving right, we encounter more common results.",
+  "The pointer reaches the peak, signifying the highest probability of success, the ultimate goal of our journey."
+]
+SCRIPT_LENGTH: 35s
+Previous Code (for continuity):
+import numpy as np
+
+from manim import *
+
+
+class ScriptStep3(Scene):
+    def construct(self):
+        # Colors
+        BLUE = "#007BFF"
+        GREEN = "#28A745"
+        RED = "#FF4500"
+        YELLOW = "#FFC107"
+        GRAY = "#808080"
+
+        # Constants
+        SCREEN_WIDTH = 16
+        SCREEN_HEIGHT = 9
+        LEFT_ZONE_WIDTH = 0.65 * SCREEN_WIDTH
+        RIGHT_ZONE_WIDTH = 0.4 * SCREEN_WIDTH
+        TEXT_BUFFER = 0.8
+        ARROW_SPEED = 0.5  # Adjust for slow motion
+
+        # Title
+        title = Tex(
+            "Arrow Precision Challenge",
+            color=BLUE,
+            font_size=40
+        ).to_edge(UP)
+
+        # Step 5 Text
+        step5_text = Tex(
+            "Step 5: Introducing Variability",
+            color=GREEN,
+            font_size=24
+        ).next_to(title, DOWN, buff=TEXT_BUFFER)
+
+        # Target circle
+        target_radius = 1
+        target_circle = Circle(radius=target_radius, color=BLUE)
+        target_circle.set_fill(color=BLUE, opacity=0.5)
+        target_circle.move_to(LEFT * (LEFT_ZONE_WIDTH / 2))
+
+        # Successful arrow
+        successful_arrow_start = LEFT * (LEFT_ZONE_WIDTH / 2) + UP * (target_radius + 1)
+        successful_arrow_end = target_circle.get_center()
+        successful_arrow = Arrow(
+            successful_arrow_start,
+            successful_arrow_end,
+            color=RED,
+            buff=0.1
+        )
+
+        # Group successful arrow and target circle
+        successful_group = VGroup(successful_arrow, target_circle)
+
+        # Add title and step 5 text
+        self.add(title, step5_text)
+
+        # Animate successful arrow
+        self.play(
+            GrowFromCenter(successful_group),
+            run_time=1
+        )
+        self.wait(1)
+
+        # Variable arrows
+        variable_arrows = VGroup()
+        for i in range(5):
+            arrow_start = LEFT * (LEFT_ZONE_WIDTH / 2) + UP * (target_radius + 1)
+            angle = np.pi / 6 * (i - 2)  # Varying angles
+            arrow_end = target_circle.get_center() + RIGHT * target_radius * np.sin(angle) + UP * target_radius * np.cos(angle)
+            arrow = Arrow(arrow_start, arrow_end, color=GRAY, buff=0.1)
+            variable_arrows.add(arrow)
+
+        # Animate variable arrows in slow motion
+        self.play(
+            LaggedStart(
+                *[GrowFromCenter(arrow) for arrow in variable_arrows],
+                lag_ratio=0.5,
+                run_time=5 * ARROW_SPEED
+            )
+        )
+        self.wait(1)
+
+        # Bell curve
+        bell_curve = VGroup()
+        bell_curve_x = np.linspace(-3, 3, 100)
+        bell_curve_y = np.exp(-bell_curve_x**2 / 2) / np.sqrt(2 * np.pi)
+        for x, y in zip(bell_curve_x, bell_curve_y):
+            dot = Dot(color=YELLOW, radius=0.05)
+            dot.move_to(RIGHT * x + UP * y)
+            bell_curve.add(dot)
+
+        # Bell curve labels
+        x_label = Tex("Accuracy", color=YELLOW, font_size=20).next_to(bell_curve, DOWN, buff=0.5)
+        y_label = Tex("Frequency", color=YELLOW, font_size=20).next_to(bell_curve, LEFT, buff=0.5)
+
+        # Map arrows to bell curve
+        mapped_dots = VGroup()
+        for arrow in variable_arrows:
+            distance = np.linalg.norm(arrow.get_end() - target_circle.get_center())
+            accuracy = 1 - distance / target_radius  # Normalize accuracy to [0, 1]
+            x_pos = np.clip(accuracy * 3, -3, 3)  # Map to bell curve x range
+            dot = Dot(color=GRAY, radius=0.1)
+            dot.move_to(RIGHT * x_pos + UP * bell_curve_y[np.abs(bell_curve_x - x_pos).argmin()])
+            mapped_dots.add(dot)
+
+        # Animate bell curve and mapped dots
+        self.play(
+            LaggedStart(
+                *[GrowFromCenter(dot) for dot in bell_curve],
+                *[GrowFromCenter(dot) for dot in mapped_dots],
+                lag_ratio=0.1,
+                run_time=3
+            )
+        )
+        self.play(
+            LaggedStart(
+                Write(x_label),
+                Write(y_label),
+                lag_ratio=0.5,
+                run_time=1
+            )
+        )
+        self.wait(2)
+Procedure:-
+Read SCRIPT FOR MANIM carefully and identify the mathematical/geometric requirements.
+Calculate all positions mathematically where precision is required (don't estimate).
+Generate Manim code that is fully frame-safe and visually clear.
+Prioritize preventing overlaps: text-to-text, text-to-diagram, and object-to-object.
+Ensure all elements stay within screen boundaries through proper scaling and positioning.
+Verify proportional relationships are maintained for measurements and sizes.
+Animate step-by-step according to instructions.
+Set run_time and .wait() durations for total animation duration between 30-45 seconds, matching SCRIPT VOICE OVER pacing.
+Name classes using SCRIPT SEQ.
+Only include shapes necessary for the topic.
+Perform final quality checks for overlaps, boundary violations, and mathematical accuracy.
+Additional Instructions :-
+Generate only the Manim Python code.
+Do not include explanations, comments, or extra text outside the code.
+Code must be overlap-free, screen-boundary compliant, and mathematically accurate.
+All geometric relationships must be calculated, not approximated
+Common Errors to avoid :-
+TypeError: Mobject.__init__() got an unexpected keyword argument 'weight'
+IndexError: list index out of range
+ValueError: latex error converting to dvi. See log output above or the log file: media\Tex\b92e2d7f7f7a1052.log
+NameError: name 'run_time' is not defined
+
+=== GENERATED CODE ===
+
+```python
+import numpy as np
+
+from manim import *
+
+
+class ScriptStep4(Scene):
+    def construct(self):
+        # Colors
+        BLUE = "#007BFF"
+        GREEN = "#28A745"
+        RED = "#FF4500"
+        YELLOW = "#FFC107"
+
+        # Constants
+        SCREEN_WIDTH = 16
+        SCREEN_HEIGHT = 9
+        LEFT_ZONE_WIDTH = 0.65 * SCREEN_WIDTH
+        RIGHT_ZONE_WIDTH = 0.4 * SCREEN_WIDTH
+        TEXT_BUFFER = 0.8
+
+        # Title
+        title = Tex(
+            "Understanding the Bell Curve",
+            color=BLUE,
+            font_size=40
+        ).to_edge(UP)
+
+        # Step 1: Bell curve
+        bell_curve = VGroup()
+        bell_curve_x = np.linspace(-3, 3, 100)
+        bell_curve_y = np.exp(-bell_curve_x**2 / 2) / np.sqrt(2 * np.pi)
+        for x, y in zip(bell_curve_x, bell_curve_y):
+            dot = Dot(color=YELLOW, radius=0.05)
+            dot.move_to(RIGHT * x + UP * y)
+            bell_curve.add(dot)
+
+        bell_curve.move_to(LEFT * (LEFT_ZONE_WIDTH / 2))
+
+        # Bell curve labels
+        x_label = Tex("Accuracy", color=YELLOW, font_size=20).next_to(bell_curve, DOWN, buff=0.5)
+        y_label = Tex("Frequency", color=YELLOW, font_size=20).next_to(bell_curve, LEFT, buff=0.5)
+
+        # Step 2: Vertical line at peak
+        peak_x = bell_curve_x[np.argmax(bell_curve_y)]
+        peak_y = bell_curve_y.max()
+        peak_line = Line(RIGHT * peak_x, UP * peak_y, color=RED)
+
+        # Step 3: Moving pointer
+        pointer_start = LEFT * (LEFT_ZONE_WIDTH / 2)
+        pointer_end = RIGHT * peak_x
+        pointer = Line(pointer_start, pointer_end, color=GREEN)
+
+        # Step 4: Highlighted areas
+        highlighted_areas = VGroup()
+        for dot in bell_curve:
+            distance = np.linalg.norm(dot.get_center() - pointer.get_end())
+            opacity = 1 - distance / 2  # Adjust opacity based on distance
+            highlighted_area = Rectangle(
+                width=0.1,
+                height=bell_curve_y.max() - dot.get_center()[1],
+                color=GREEN,
+                fill_opacity=opacity,
+                stroke_width=0
+            )
+            highlighted_area.move_to(dot.get_center())
+            highlighted_areas.add(highlighted_area)
+
+        # Animate
+        self.add(title)
+        self.play(
+            LaggedStart(
+                *[GrowFromCenter(dot) for dot in bell_curve],
+                lag_ratio=0.1,
+                run_time=3
+            ),
+            LaggedStart(
+                Write(x_label),
+                Write(y_label),
+                lag_ratio=0.5,
+                run_time=1
+            )
+        )
+        self.play(GrowFromCenter(peak_line))
+        self.play(
+            GrowFromCenter(pointer),
+            LaggedStart(
+                *[GrowFromCenter(area) for area in highlighted_areas],
+                lag_ratio=0.1,
+                run_time=3
+            ),
+            run_time=5
+        )
+        self.wait(2)
+```

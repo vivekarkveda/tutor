@@ -1,0 +1,54 @@
+[2025-11-17 17:15:57] [ERROR] ❌ Video and audio list length mismatch
+[2025-11-17 17:15:57] [ERROR] :x: Pipeline failed for UID 4b13c340-7766-4be7-9e88-465e85984712: exception() got an unexpected keyword argument 'merge_status'
+[2025-11-17 17:15:57] [ERROR] Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 66, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list,unique_id)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 211, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list, unique_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 132, in merge_video_with_audio
+    exception(unique_id, merge_status="Final video merge failed", exception_message="FFmpeg error: missing audio stream",trace=traceback.format_exc())
+TypeError: exception() got an unexpected keyword argument 'merge_status'
+
+[2025-11-17 17:15:57] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\video_routes.py", line 36, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 66, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list,unique_id)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 211, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list, unique_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 132, in merge_video_with_audio
+    exception(unique_id, merge_status="Final video merge failed", exception_message="FFmpeg error: missing audio stream",trace=traceback.format_exc())
+TypeError: exception() got an unexpected keyword argument 'merge_status'
+[2025-11-17 17:15:57] [ERROR] ❌ HTTP 500: {"detail":"exception() got an unexpected keyword argument 'merge_status'"}
+[2025-11-17 17:15:57] [ERROR] ❌ Video generation failed for 4b13c340-7766-4be7-9e88-465e85984712: 500: {"detail":"exception() got an unexpected keyword argument 'merge_status'"}
+[2025-11-17 17:15:57] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 101, in write_scripts
+    video_result = await async_post(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 31, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"exception() got an unexpected keyword argument 'merge_status'"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 120, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Video generation failed for 4b13c340-7766-4be7-9e88-465e85984712: 500: {"detail":"exception() got an unexpected keyword argument 'merge_status'"}
+[2025-11-17 17:15:57] [ERROR] ❌ HTTP 500: {"detail":"500: ❌ Video generation failed for 4b13c340-7766-4be7-9e88-465e85984712: 500: {\"detail\":\"exception() got an unexpected keyword argument 'merge_status'\"}"}
+[2025-11-17 17:15:57] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\generator_routes.py", line 29, in generate_code_endpoint
+    write_result = await async_post(write_url, payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 31, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: ❌ Video generation failed for 4b13c340-7766-4be7-9e88-465e85984712: 500: {\"detail\":\"exception() got an unexpected keyword argument 'merge_status'\"}"}
+[2025-11-17 17:15:58] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: ❌ Video generation failed for 4b13c340-7766-4be7-9e88-465e85984712: 500: {\\\"detail\\\":\\\"exception() got an unexpected keyword argument 'merge_status'\\\"}\"}"}

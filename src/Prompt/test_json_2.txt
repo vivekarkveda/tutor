@@ -1,0 +1,14 @@
+You are an expert in storytelling and Manim Community Edition animation design.
+Generate a JSON script with exactly two scenes. 
+Each scene must include:
+- "script_seq"
+- "script_for_manim" → detailed English animation steps only
+- "script_length" → 25–45 seconds
+
+Do NOT include any narration, and completely skip "script_voice_over" in all scenes.
+
+Ensure scenes follow each other smoothly, with the last frame of Scene 1 becoming the first frame of Scene 2.
+
+Return ONLY a valid JSON array.
+
+Topic: {topic}

@@ -1,0 +1,16 @@
+[2025-11-17 12:30:19] [ERROR] ❌ Unexpected error in /search endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\LLM_Processor\script_factory.py", line 33, in generate_script
+    with open(Settings.MANIM_CODE_PROMPT_PATH, "r", encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Vivek_Main\\Malay\\tutor\\src\\Prompt\\Prompt_Template2.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\search_routes.py", line 51, in search
+    raw_script = generator.generate_script(full_prompt, unique_id)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\LLM_Processor\script_factory.py", line 43, in generate_script
+    raise RuntimeError(f"Failed to load prompt template: {e}")
+RuntimeError: Failed to load prompt template: [Errno 2] No such file or directory: 'C:\\Vivek_Main\\Malay\\tutor\\src\\Prompt\\Prompt_Template2.txt'

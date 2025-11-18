@@ -1,0 +1,53 @@
+[2025-11-17 18:33:44] [ERROR] :x: Pipeline failed for UID 72a45316-c02b-4682-b147-38f11b564a3f: a bytes-like object is required, not 'NoneType'
+[2025-11-17 18:33:44] [ERROR] Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 73, in process_pipeline
+    output_path = SaverFactory.save_final_video(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\saver_factory.py", line 87, in save_final_video
+    return saver.save(video_bytes, filename, db_credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\saver_factory.py", line 26, in save
+    f.write(video_bytes)
+TypeError: a bytes-like object is required, not 'NoneType'
+
+[2025-11-17 18:33:45] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\video_routes.py", line 36, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 73, in process_pipeline
+    output_path = SaverFactory.save_final_video(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\saver_factory.py", line 87, in save_final_video
+    return saver.save(video_bytes, filename, db_credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\saver_factory.py", line 26, in save
+    f.write(video_bytes)
+TypeError: a bytes-like object is required, not 'NoneType'
+[2025-11-17 18:33:45] [ERROR] ❌ HTTP 500: {"detail":"a bytes-like object is required, not 'NoneType'"}
+[2025-11-17 18:33:45] [ERROR] ❌ Video generation failed for 72a45316-c02b-4682-b147-38f11b564a3f: 500: {"detail":"a bytes-like object is required, not 'NoneType'"}
+[2025-11-17 18:33:45] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 101, in write_scripts
+    video_result = await async_post(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 31, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"a bytes-like object is required, not 'NoneType'"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 120, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Video generation failed for 72a45316-c02b-4682-b147-38f11b564a3f: 500: {"detail":"a bytes-like object is required, not 'NoneType'"}
+[2025-11-17 18:33:45] [ERROR] ❌ HTTP 500: {"detail":"500: ❌ Video generation failed for 72a45316-c02b-4682-b147-38f11b564a3f: 500: {\"detail\":\"a bytes-like object is required, not 'NoneType'\"}"}
+[2025-11-17 18:33:45] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\generator_routes.py", line 29, in generate_code_endpoint
+    write_result = await async_post(write_url, payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 31, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: ❌ Video generation failed for 72a45316-c02b-4682-b147-38f11b564a3f: 500: {\"detail\":\"a bytes-like object is required, not 'NoneType'\"}"}
+[2025-11-17 18:33:45] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: ❌ Video generation failed for 72a45316-c02b-4682-b147-38f11b564a3f: 500: {\\\"detail\\\":\\\"a bytes-like object is required, not 'NoneType'\\\"}\"}"}

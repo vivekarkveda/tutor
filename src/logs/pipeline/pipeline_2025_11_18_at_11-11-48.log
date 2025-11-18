@@ -1,0 +1,56 @@
+[2025-11-18 11:13:16] [ERROR] ❌ Error generating files for 83b177f1-283a-4402-ad76-783fa41d126d: ❌ File generation failed: one or more files could not be created.
+[2025-11-18 11:13:16] [ERROR] ❌ Error handling JSON input: ❌ Error generating files for 83b177f1-283a-4402-ad76-783fa41d126d: ❌ File generation failed: one or more files could not be created.
+[2025-11-18 11:13:16] [ERROR] ❌ Error generating files
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\parsers\base_handler.py", line 118, in _generate_files
+    raise RuntimeError("❌ File generation failed: one or more files could not be created.")
+RuntimeError: ❌ File generation failed: one or more files could not be created.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\file_routes.py", line 31, in generate_files_endpoint
+    generated = prepare_files(Settings.RUN_FROM, True, Settings.FILE_TYPES, unique_id)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 33, in prepare_files
+    return handler.handle(Settings.JSON_FILE_PATH, file_types)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\parsers\base_handler.py", line 171, in handle
+    return self._generate_files(data, Path(json_file).stem, file_types)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\parsers\base_handler.py", line 139, in _generate_files
+    raise RuntimeError(err_msg)
+RuntimeError: ❌ Error generating files for 83b177f1-283a-4402-ad76-783fa41d126d: ❌ File generation failed: one or more files could not be created.
+[2025-11-18 11:13:19] [ERROR] ❌ HTTP 500: {"detail":"❌ Error generating files for 83b177f1-283a-4402-ad76-783fa41d126d: ❌ File generation failed: one or more files could not be created."}
+[2025-11-18 11:13:20] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\video_routes.py", line 34, in generate_videos_endpoint
+    raise HTTPException(status_code=400, detail=f"No .py/.txt files in {input_path}")
+fastapi.exceptions.HTTPException: 400: No .py/.txt files in C:\ArkMalay\Framework_1\Video_data\20251118_111314_83b177f1-283a-4402-ad76-783fa41d126d
+[2025-11-18 11:13:20] [ERROR] ❌ HTTP 500: {"detail":"400: No .py/.txt files in C:\\ArkMalay\\Framework_1\\Video_data\\20251118_111314_83b177f1-283a-4402-ad76-783fa41d126d"}
+[2025-11-18 11:13:20] [ERROR] ❌ Video generation failed for 83b177f1-283a-4402-ad76-783fa41d126d: 500: {"detail":"400: No .py/.txt files in C:\\ArkMalay\\Framework_1\\Video_data\\20251118_111314_83b177f1-283a-4402-ad76-783fa41d126d"}
+[2025-11-18 11:13:20] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 101, in write_scripts
+    video_result = await async_post(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 31, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"400: No .py/.txt files in C:\\ArkMalay\\Framework_1\\Video_data\\20251118_111314_83b177f1-283a-4402-ad76-783fa41d126d"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 120, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Video generation failed for 83b177f1-283a-4402-ad76-783fa41d126d: 500: {"detail":"400: No .py/.txt files in C:\\ArkMalay\\Framework_1\\Video_data\\20251118_111314_83b177f1-283a-4402-ad76-783fa41d126d"}
+[2025-11-18 11:13:20] [ERROR] ❌ HTTP 500: {"detail":"500: ❌ Video generation failed for 83b177f1-283a-4402-ad76-783fa41d126d: 500: {\"detail\":\"400: No .py/.txt files in C:\\\\ArkMalay\\\\Framework_1\\\\Video_data\\\\20251118_111314_83b177f1-283a-4402-ad76-783fa41d126d\"}"}
+[2025-11-18 11:13:20] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\generator_routes.py", line 29, in generate_code_endpoint
+    write_result = await async_post(write_url, payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 31, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: ❌ Video generation failed for 83b177f1-283a-4402-ad76-783fa41d126d: 500: {\"detail\":\"400: No .py/.txt files in C:\\\\ArkMalay\\\\Framework_1\\\\Video_data\\\\20251118_111314_83b177f1-283a-4402-ad76-783fa41d126d\"}"}
+[2025-11-18 11:13:20] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: ❌ Video generation failed for 83b177f1-283a-4402-ad76-783fa41d126d: 500: {\\\"detail\\\":\\\"400: No .py/.txt files in C:\\\\\\\\ArkMalay\\\\\\\\Framework_1\\\\\\\\Video_data\\\\\\\\20251118_111314_83b177f1-283a-4402-ad76-783fa41d126d\\\"}\"}"}

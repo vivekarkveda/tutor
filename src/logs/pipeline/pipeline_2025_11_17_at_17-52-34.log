@@ -1,0 +1,27 @@
+[2025-11-17 17:54:30] [ERROR] ❌ Unexpected error in /search endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\LLM_Processor\script_factory.py", line 62, in generate_script
+    response = self.client.chat(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\cohere\client.py", line 103, in _wrapped
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\cohere\client.py", line 35, in _wrapped
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\cohere\v2\client.py", line 362, in chat
+    _response = self._raw_client.chat(
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\cohere\v2\raw_client.py", line 585, in chat
+    raise UnauthorizedError(
+cohere.errors.unauthorized_error.UnauthorizedError: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Mon, 17 Nov 2025 12:24:29 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '8debf148-2b03-4392-bc1b-94c96375f5ef', 'message': 'invalid api token'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\search_routes.py", line 51, in search
+    raw_script = generator.generate_script(full_prompt, unique_id)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\LLM_Processor\script_factory.py", line 83, in generate_script
+    transaction(
+TypeError: transaction() got an unexpected keyword argument 'exception_message'

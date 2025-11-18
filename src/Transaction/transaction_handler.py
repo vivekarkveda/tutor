@@ -56,6 +56,7 @@ class TransactionHandler:
                 script_gen_status TEXT,
                 filegenration TEXT,
                 code_gen TEXT,
+                manim_output_status TEXT,
                 script_written TEXT,
                 merge_status TEXT,
                 video_status TEXT,
@@ -74,6 +75,7 @@ class TransactionHandler:
                 "ALTER TABLE transaction ADD COLUMN IF NOT EXISTS script_gen_status TEXT;",
                 "ALTER TABLE transaction ADD COLUMN IF NOT EXISTS filegenration TEXT;",
                 "ALTER TABLE transaction ADD COLUMN IF NOT EXISTS code_gen TEXT;",
+                "ALTER TABLE transaction ADD COLUMN IF NOT EXISTS manim_output_status TEXT;",
                 "ALTER TABLE transaction ADD COLUMN IF NOT EXISTS script_written TEXT;",
                 "ALTER TABLE transaction ADD COLUMN IF NOT EXISTS merge_status TEXT;"
                 "ALTER TABLE transaction ADD COLUMN IF NOT EXISTS video_status TEXT;"
@@ -101,6 +103,7 @@ class TransactionHandler:
         script_gen_status=None,
         filegenration: str = None,
         code_gen: str = None,
+        manim_output_status: str = None,
         script_written: str = None,
         merge_status: str =None,
         video_status: str = None,
@@ -120,9 +123,9 @@ class TransactionHandler:
             query = """
                 INSERT INTO transaction (
                     transaction_id, topic, meta_prompt, cleaned_script,script_gen_status,
-                    filegenration, code_gen, script_written,merge_status,video_status, created_at, updated_at
+                    filegenration, code_gen, manim_output_status, script_written,merge_status,video_status, created_at, updated_at
                 )
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s,%s,%s,%s)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s,%s,%s,%s, %s)
                 ON CONFLICT (transaction_id)
                 DO UPDATE SET
                     topic = COALESCE(EXCLUDED.topic, transaction.topic),
@@ -131,6 +134,7 @@ class TransactionHandler:
                     script_gen_status = COALESCE(EXCLUDED.script_gen_status, transaction.script_gen_status),
                     filegenration = COALESCE(EXCLUDED.filegenration, transaction.filegenration),
                     code_gen = COALESCE(EXCLUDED.code_gen, transaction.code_gen),
+                    manim_output_status = COALESCE(EXCLUDED.manim_output_status, transaction.manim_output_status),
                     script_written = COALESCE(EXCLUDED.script_written, transaction.script_written),
                     merge_status = COALESCE(EXCLUDED.merge_status, transaction.merge_status),
                     video_status = COALESCE(EXCLUDED.video_status, transaction.video_status),
@@ -147,6 +151,7 @@ class TransactionHandler:
                     script_gen_status,
                     filegenration,
                     code_gen,
+                    manim_output_status,
                     script_written,
                     merge_status,
                     video_status,
@@ -173,6 +178,7 @@ def transaction(
     script_gen_status = None,
     filegenration: str = None,
     code_gen: str = None,
+    manim_output_status: str = None,
     script_written: str = None,
     merge_status :str = None,
     video_status :str =None,
@@ -194,7 +200,7 @@ def transaction(
         handler.connect_db()
         handler.create_table_if_not_exists()
         handler.upsert_transaction(
-            transaction_id, topic, meta_prompt, cleaned_script,script_gen_status, filegenration, code_gen, script_written,merge_status,video_status
+            transaction_id, topic, meta_prompt, cleaned_script,script_gen_status, filegenration, code_gen, manim_output_status, script_written,merge_status,video_status
         )
     except Exception as e:
         print(f"❌ Failed to log transaction {transaction_id}: {e}")

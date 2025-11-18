@@ -1,0 +1,32 @@
+[2025-11-17 12:37:23] [ERROR] ❌ Unexpected error in /search endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\LLM_Processor\script_factory.py", line 47, in generate_script
+    prompt = prompt_template.format(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'script_seq'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\search_routes.py", line 51, in search
+    raw_script = generator.generate_script(full_prompt, unique_id)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\LLM_Processor\script_factory.py", line 53, in generate_script
+    raise ValueError(f"Missing placeholder in prompt file: {e}")
+ValueError: Missing placeholder in prompt file: 'script_seq'
+[2025-11-17 12:43:47] [ERROR] ❌ Unexpected error in /search endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\LLM_Processor\script_factory.py", line 47, in generate_script
+    prompt = prompt_template.format(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'catalog'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\search_routes.py", line 51, in search
+    raw_script = generator.generate_script(full_prompt, unique_id)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\LLM_Processor\script_factory.py", line 53, in generate_script
+    raise ValueError(f"Missing placeholder in prompt file: {e}")
+ValueError: Missing placeholder in prompt file: 'catalog'

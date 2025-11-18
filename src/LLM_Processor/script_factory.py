@@ -30,27 +30,28 @@ class CohereScriptGenerator(ScriptGenerator):
 
         # === Load prompt from file ===
         try:
-            with open(Settings.TEST_JSON_PROMPT_PATH, "r", encoding="utf-8") as f:
-                prompt_template = f.read()
+            with open(Settings.JSON_PROMPT_PATH, "r", encoding="utf-8") as f:
+                raw_prompt = f.read()
+            transaction(unique_id, script_gen_status="script generation successfull")
         except Exception as e:
             error_trace = traceback.format_exc()
             transaction(
-                unique_id=unique_id,
+                unique_id,
                 script_gen_status="script generation failed",
-                exception_message=str(e),
-                trace=error_trace
             )
+            exception(unique_id, type="script" ,description="json script generation failed", module="CohereScriptGenerator")
             raise RuntimeError(f"Failed to load prompt template: {e}")
 
-        # === Fill placeholders dynamically ===
+      # === SAFE placeholder replacement (custom delimiters, no .format()) ===
         try:
-            prompt = prompt_template.format(
-                topic=topic,
-                scene_duration_range=scene_duration_range,
-                total_video_length_target=total_video_length_target
+            prompt = (
+                raw_prompt
+                    .replace("<<topic>>", topic)
+                    .replace("<<scene_duration_range>>", scene_duration_range)
+                    .replace("<<total_video_length_target>>", total_video_length_target)
             )
-        except KeyError as e:
-            raise ValueError(f"Missing placeholder in prompt file: {e}")
+        except Exception as e:
+            raise RuntimeError(f"Placeholder replacement failed: {e}")
 
         print(f":brain: Generating script for topic: {topic}")
         print(f":stopwatch: Scene duration range: {scene_duration_range}")
@@ -82,9 +83,9 @@ class CohereScriptGenerator(ScriptGenerator):
             transaction(
                 unique_id,
                 script_gen_status="script generation failed",
-                exception_message=str(e),
-                trace=error_trace
             )
+            exception(unique_id, type="script" ,description="json script generation failed", module="script_factory")
+            
 
             print(f":x: Script generation failed: {e}")
             raise RuntimeError(f"Script generation failed: {e}")
@@ -113,12 +114,12 @@ class MockScriptGenerator(ScriptGenerator):
             return mock_script
         except Exception as e:
             # :x: Log error
-            exception(
-                unique_id,
-                script_gen_status="Mock script generation failed",
-                exception_message=str(e),
-                trace=traceback.format_exc()
-            )
+            # exception(
+            #     unique_id,
+            #     script_gen_status="Mock script generation failed",
+            #     exception_message=str(e),
+            #     trace=traceback.format_exc()
+            # )
             raise
 # === Factory ===
 class ScriptGeneratorFactory:

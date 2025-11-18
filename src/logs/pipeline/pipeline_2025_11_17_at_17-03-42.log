@@ -1,0 +1,79 @@
+[2025-11-17 17:09:38] [ERROR] :x: Pipeline failed for UID 3a53f377-32a5-46b0-8158-a3483998f626: exception() got an unexpected keyword argument 'manim_output_status'
+[2025-11-17 17:09:38] [ERROR] Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\processor\Manim\video_factory.py", line 124, in run_manim_on_files
+    exception(unique_id, manim_output_status="At least one video failed")
+TypeError: exception() got an unexpected keyword argument 'manim_output_status'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 55, in process_pipeline
+    video_bytes_list, audio_bytes_list = await asyncio.gather(video_task, audio_task)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 23, in run_in_executor
+    return await loop.run_in_executor(executor, func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\malay\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\processor\process_factory.py", line 16, in <lambda>
+    return lambda: VideoFactory.run_manim_on_files(generated_files,unique_id)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\processor\Manim\video_factory.py", line 132, in run_manim_on_files
+    exception(unique_id, manim_output_status="Critical failure in video generation")
+TypeError: exception() got an unexpected keyword argument 'manim_output_status'
+
+[2025-11-17 17:09:38] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\processor\Manim\video_factory.py", line 124, in run_manim_on_files
+    exception(unique_id, manim_output_status="At least one video failed")
+TypeError: exception() got an unexpected keyword argument 'manim_output_status'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\video_routes.py", line 36, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 55, in process_pipeline
+    video_bytes_list, audio_bytes_list = await asyncio.gather(video_task, audio_task)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 23, in run_in_executor
+    return await loop.run_in_executor(executor, func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\malay\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\processor\process_factory.py", line 16, in <lambda>
+    return lambda: VideoFactory.run_manim_on_files(generated_files,unique_id)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\processor\Manim\video_factory.py", line 132, in run_manim_on_files
+    exception(unique_id, manim_output_status="Critical failure in video generation")
+TypeError: exception() got an unexpected keyword argument 'manim_output_status'
+[2025-11-17 17:09:38] [ERROR] ❌ HTTP 500: {"detail":"exception() got an unexpected keyword argument 'manim_output_status'"}
+[2025-11-17 17:09:38] [ERROR] ❌ Video generation failed for 3a53f377-32a5-46b0-8158-a3483998f626: 500: {"detail":"exception() got an unexpected keyword argument 'manim_output_status'"}
+[2025-11-17 17:09:38] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 101, in write_scripts
+    video_result = await async_post(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 31, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"exception() got an unexpected keyword argument 'manim_output_status'"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 120, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Video generation failed for 3a53f377-32a5-46b0-8158-a3483998f626: 500: {"detail":"exception() got an unexpected keyword argument 'manim_output_status'"}
+[2025-11-17 17:09:38] [ERROR] ❌ HTTP 500: {"detail":"500: ❌ Video generation failed for 3a53f377-32a5-46b0-8158-a3483998f626: 500: {\"detail\":\"exception() got an unexpected keyword argument 'manim_output_status'\"}"}
+[2025-11-17 17:09:38] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\generator_routes.py", line 29, in generate_code_endpoint
+    write_result = await async_post(write_url, payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 31, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: ❌ Video generation failed for 3a53f377-32a5-46b0-8158-a3483998f626: 500: {\"detail\":\"exception() got an unexpected keyword argument 'manim_output_status'\"}"}
+[2025-11-17 17:09:38] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: ❌ Video generation failed for 3a53f377-32a5-46b0-8158-a3483998f626: 500: {\\\"detail\\\":\\\"exception() got an unexpected keyword argument 'manim_output_status'\\\"}\"}"}

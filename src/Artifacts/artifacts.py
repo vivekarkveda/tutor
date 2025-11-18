@@ -177,13 +177,8 @@ class ScriptDataHandler:
 # ---------------- Main Execution ----------------
 def run_script_data_process(unique_id):
     """Main function to run the complete data extraction and DB insertion pipeline."""
-    db_config = {
-        "dbname": "airlines_flights_data",
-        "user": "vivek",
-        "password": "8811",
-        "host": "localhost",
-        "port": "5432"
-    }
+    
+    db_config = {k: v for k, v in Settings.POSTGRES.items() if k != "table"}
 
     try:
         print("\n🚀 Starting Script Data Pipeline...\n")

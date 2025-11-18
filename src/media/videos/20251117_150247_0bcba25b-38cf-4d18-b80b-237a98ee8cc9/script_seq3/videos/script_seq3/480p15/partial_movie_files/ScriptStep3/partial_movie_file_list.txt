@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/ArkMalay/Framework_1/tutor/src/media/videos/20251117_150247_0bcba25b-38cf-4d18-b80b-237a98ee8cc9/script_seq3/videos/script_seq3/480p15/partial_movie_files/ScriptStep3/1185818338_3157325073_4070611779.mp4'
+file 'file:C:/ArkMalay/Framework_1/tutor/src/media/videos/20251117_150247_0bcba25b-38cf-4d18-b80b-237a98ee8cc9/script_seq3/videos/script_seq3/480p15/partial_movie_files/ScriptStep3/624642324_4217992463_376362206.mp4'
+file 'file:C:/ArkMalay/Framework_1/tutor/src/media/videos/20251117_150247_0bcba25b-38cf-4d18-b80b-237a98ee8cc9/script_seq3/videos/script_seq3/480p15/partial_movie_files/ScriptStep3/624642324_408797999_182272031.mp4'
+file 'file:C:/ArkMalay/Framework_1/tutor/src/media/videos/20251117_150247_0bcba25b-38cf-4d18-b80b-237a98ee8cc9/script_seq3/videos/script_seq3/480p15/partial_movie_files/ScriptStep3/624642324_4217992463_1947145702.mp4'
+file 'file:C:/ArkMalay/Framework_1/tutor/src/media/videos/20251117_150247_0bcba25b-38cf-4d18-b80b-237a98ee8cc9/script_seq3/videos/script_seq3/480p15/partial_movie_files/ScriptStep3/624642324_35814711_1125892304.mp4'
+file 'file:C:/ArkMalay/Framework_1/tutor/src/media/videos/20251117_150247_0bcba25b-38cf-4d18-b80b-237a98ee8cc9/script_seq3/videos/script_seq3/480p15/partial_movie_files/ScriptStep3/624642324_1924409573_3427068084.mp4'
+file 'file:C:/ArkMalay/Framework_1/tutor/src/media/videos/20251117_150247_0bcba25b-38cf-4d18-b80b-237a98ee8cc9/script_seq3/videos/script_seq3/480p15/partial_movie_files/ScriptStep3/624642324_2844360058_719295958.mp4'

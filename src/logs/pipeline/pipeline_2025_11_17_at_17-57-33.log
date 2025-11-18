@@ -1,0 +1,27 @@
+[2025-11-17 17:58:26] [ERROR] ❌ Unexpected error in /search endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\LLM_Processor\script_factory.py", line 62, in generate_script
+    response = self.client.chat(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\cohere\client.py", line 103, in _wrapped
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\cohere\client.py", line 35, in _wrapped
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\cohere\v2\client.py", line 362, in chat
+    _response = self._raw_client.chat(
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\cohere\v2\raw_client.py", line 574, in chat
+    raise BadRequestError(
+cohere.errors.bad_request_error.BadRequestError: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'c7151b5a1654be1b36fdbbf6bf0d1eaf', 'x-endpoint-monthly-call-limit': '1000', 'x-trial-endpoint-call-limit': '40', 'x-trial-endpoint-call-remaining': '36', 'date': 'Mon, 17 Nov 2025 12:28:25 GMT', 'x-envoy-upstream-service-time': '9', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 400, body: {'id': '88a5550a-29cb-487a-9a78-72a38bee0849', 'message': "'text' field must not be empty: 'messages[0].content[0]'"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\search_routes.py", line 51, in search
+    raw_script = generator.generate_script(full_prompt, unique_id)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\LLM_Processor\script_factory.py", line 91, in generate_script
+    raise RuntimeError(f"Script generation failed: {e}")
+RuntimeError: Script generation failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'c7151b5a1654be1b36fdbbf6bf0d1eaf', 'x-endpoint-monthly-call-limit': '1000', 'x-trial-endpoint-call-limit': '40', 'x-trial-endpoint-call-remaining': '36', 'date': 'Mon, 17 Nov 2025 12:28:25 GMT', 'x-envoy-upstream-service-time': '9', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 400, body: {'id': '88a5550a-29cb-487a-9a78-72a38bee0849', 'message': "'text' field must not be empty: 'messages[0].content[0]'"}

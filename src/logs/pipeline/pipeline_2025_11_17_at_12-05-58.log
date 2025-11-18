@@ -1,0 +1,7 @@
+[2025-11-17 12:06:40] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\generator_routes.py", line 22, in generate_code_endpoint
+    result = {"result_data" :generator.generate_code(request.input_data) ,"unique_id" :request.unique_id  }
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: CodeGenerator.generate_code() missing 1 required positional argument: 'unique_id'
+[2025-11-17 12:06:41] [ERROR] ❌ HTTP 500: {"detail":"CodeGenerator.generate_code() missing 1 required positional argument: 'unique_id'"}

@@ -1,0 +1,43 @@
+[2025-11-14 16:47:59] [ERROR] :x: Pipeline failed for UID 5da8d094-2470-4f24-b60c-d1ab3790094c: ProcessFactory.get_processor() takes 2 positional arguments but 3 were given
+[2025-11-14 16:47:59] [ERROR] Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 49, in process_pipeline
+    video_callable = ProcessFactory.get_processor(video, generated_files[0], unique_id)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ProcessFactory.get_processor() takes 2 positional arguments but 3 were given
+
+[2025-11-14 16:47:59] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\video_routes.py", line 36, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 49, in process_pipeline
+    video_callable = ProcessFactory.get_processor(video, generated_files[0], unique_id)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ProcessFactory.get_processor() takes 2 positional arguments but 3 were given
+[2025-11-14 16:47:59] [ERROR] ❌ HTTP 500: {"detail":"ProcessFactory.get_processor() takes 2 positional arguments but 3 were given"}
+[2025-11-14 16:47:59] [ERROR] ❌ Video generation failed for 5da8d094-2470-4f24-b60c-d1ab3790094c: 500: {"detail":"ProcessFactory.get_processor() takes 2 positional arguments but 3 were given"}
+[2025-11-14 16:47:59] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 101, in write_scripts
+    video_result = await async_post(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"ProcessFactory.get_processor() takes 2 positional arguments but 3 were given"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 120, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Video generation failed for 5da8d094-2470-4f24-b60c-d1ab3790094c: 500: {"detail":"ProcessFactory.get_processor() takes 2 positional arguments but 3 were given"}
+[2025-11-14 16:47:59] [ERROR] ❌ HTTP 500: {"detail":"500: ❌ Video generation failed for 5da8d094-2470-4f24-b60c-d1ab3790094c: 500: {\"detail\":\"ProcessFactory.get_processor() takes 2 positional arguments but 3 were given\"}"}
+[2025-11-14 16:47:59] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\generator_routes.py", line 30, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: ❌ Video generation failed for 5da8d094-2470-4f24-b60c-d1ab3790094c: 500: {\"detail\":\"ProcessFactory.get_processor() takes 2 positional arguments but 3 were given\"}"}
+[2025-11-14 16:48:00] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: ❌ Video generation failed for 5da8d094-2470-4f24-b60c-d1ab3790094c: 500: {\\\"detail\\\":\\\"ProcessFactory.get_processor() takes 2 positional arguments but 3 were given\\\"}\"}"}

@@ -6,7 +6,9 @@ from config import Settings
 from logger import pipeline_logger, validation_logger
 from Transaction.transaction_handler import transaction
 from Transaction.excepetion import exception
+import traceback
 debugging = Settings.debugging 
+
 
 
 class MergerFactory:
@@ -127,7 +129,7 @@ class MergerFactory:
             pipeline_logger.error("❌ Video and audio list length mismatch", extra={"part_name": "MergerFactory"})
             print("uidHello3")
             print("unique_id_merge",unique_id)
-            exception(unique_id, merge_status="Final video merge failed", exception_message="FFmpeg error: missing audio stream")
+            exception(unique_id, type="Merge", description="Video and audio list length mismatch",module="MergerFactory")
             transaction(unique_id, merge_status="Final video merge failed (list mismatch)")
             raise ValueError("Video and audio lists must have the same length")
 

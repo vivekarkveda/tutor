@@ -31,10 +31,11 @@ class InputHandler(ABC):
 
     # ✅ Common folder/file generation logic (with try/except)
     def _generate_files(self, data: list[dict], base_name: str, file_types: list[str]):
-        """Helper for creating files dynamically from scripts. Logs both success and exceptions."""
         print("🔧 File generation started for:", self.unique_id)
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         base_path = self.BASE_INPUT_PATH / f"{timestamp}_{base_name}"
+
+        file_generation_failed = False  # ⬅️ NEW FLAG
 
         try:
             base_path.mkdir(parents=True, exist_ok=True)
@@ -47,7 +48,7 @@ class InputHandler(ABC):
 
             for item in data:
                 seq = item.get("script_seq")
-                script_for_manim = item.get("script_for_manim", "")
+                script_for_manim = item.get("script_for_remotion", "")
                 script_voice_over = item.get("script_voice_over", "")
 
                 folder_path = base_path / f"script_seq{seq}"
@@ -63,8 +64,9 @@ class InputHandler(ABC):
                     else:
                         content = f"{script_for_manim}\n\n{script_voice_over}"
 
-                    # Save file safely
                     try:
+
+                        # Write content safely
                         if isinstance(content, (dict, list)):
                             file_path.write_text(
                                 json.dumps(content, indent=2, ensure_ascii=False),
@@ -77,15 +79,17 @@ class InputHandler(ABC):
 
                     except Exception as file_error:
                         validation_logger.error(f"❌ Failed to write {file_path}: {file_error}")
-                        exception(
-                            self.unique_id,
-                            filegenration="File write failed",
-                            exception_message=str(file_error),
-                            trace=traceback.format_exc()
-                        )
-                        continue  # skip to next file
 
-                    # Count words/tokens safely
+                        # exception(
+                        #     self.unique_id,
+                        #     type="file_generation",
+                        #     description=f"File write failed → {file_path.name}",
+                        # )
+
+                        file_generation_failed = True  # ⬅️ CRITICAL FLAG SET
+                        continue  # Continue but pipeline will fail later
+
+                    # Count tokens
                     word_count, token_count = self.count_words_in_file(file_path)
                     total_words += word_count
                     total_tokens += token_count
@@ -100,13 +104,23 @@ class InputHandler(ABC):
 
                 pipeline_logger.info(created_files)
 
+            # 🎯 Final evaluation BEFORE success log
+            if file_generation_failed:
+                # ❌ Even one failure = overall failure
+                exception(
+                    self.unique_id,
+                    type="file_generation",
+                    description="One or more files failed to generate",
+                    module="InputHandler"
+                )
+                raise RuntimeError("❌ File generation failed: one or more files could not be created.")
+
+            # 🎉 All files succeeded → Log success
+            transaction(self.unique_id, filegenration="File generation successful")
+
             summary = f"🎯 Total Words: {total_words} | Approx. Total GPT Tokens: {total_tokens}"
             pipeline_logger.info(summary)
             pipeline_logger.info(f"🎉 All files generated inside: {base_path}")
-
-            # ✅ Success log
-            if self.unique_id:
-                transaction(self.unique_id, filegenration="File generation successful")
 
             return generated_files
 
@@ -115,15 +129,13 @@ class InputHandler(ABC):
             pipeline_logger.error(err_msg)
             validation_logger.error(traceback.format_exc())
 
-            # Save to exception table
-            if self.unique_id:
-                exception(
-                    self.unique_id,
-                    filegenration="File generation failed",
-                    exception_message=str(e),
-                    trace=traceback.format_exc()
-                )
+            # exception(
+            #     self.unique_id,
+            #     type="file_generation",
+            #     description="File generation failed with unhandled exception",
+            # )
             raise RuntimeError(err_msg)
+
 
     # 🧮 Helper to count words + estimate GPT tokens
     @staticmethod
@@ -157,12 +169,10 @@ class JsonHandler(InputHandler):
             return self._generate_files(data, Path(json_file).stem, file_types)
         except Exception as e:
             pipeline_logger.error(f"❌ Error handling JSON input: {e}")
-            exception(
-                self.unique_id,
-                filegenration="JSON read failed",
-                exception_message=str(e),
-                trace=traceback.format_exc()
-            )
+            # exception(
+            #     self.unique_id,
+            #     filegenration="JSON read failed",
+            # )
             raise
 
 

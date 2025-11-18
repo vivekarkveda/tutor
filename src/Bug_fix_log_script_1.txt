@@ -1,40 +1,104 @@
 === FINAL PROMPT SENT ===
 
+Role :-
 You are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).
-Your task is to generate a complete, runnable Manim Python animation script based on the provided structured input.
-Follow ALL instructions exactly — NO explanations, NO markdown, NO extra text.
-Return ONLY the final Python code that can run successfully with:
-    manim -pql <filename>.py <SceneName>
-====================
-OBJECTIVE
-====================
-copy the code from example if SCRIPT_SEQ is 1 then copy script 1
-if SCRIPT_SEQ is 2 then copy script 2
-====================
-EXAMPLE (REFERENCE)
-====================
-[script 1 :- from manim import *
-class ExpandingCircle(Scene):
-    def construct(self):
-        self.camera.background_color = "#1E1E1E"
-        circle = Circle(radius=0.5, color=YELLOW)
-        self.play(Create(circle), run_time=0.5)
-        self.play(circle.animate.scale(2).fade(1), run_time=1.2)
-        self.wait(0.3)
-script 2 :- from manim import *
-class MovingCircle(Scene):
-    def construct(self):
-        self.camera.background_color = "#1E1E1E"
-        path = Circle(radius=2, color=GRAY, stroke_opacity=0.3)
-        dot = Dot(color=RED).move_to(path.point_at_angle(0))
-        self.add(path, dot)
-        self.play(MoveAlongPath(dot, path), run_time=3, rate_func=linear)
-        self.wait(0.3)
-]
-If the topic and script content match this example, reproduce this exact code — line by line.
-====================
-:inbox_tray: STRUCTURED INPUT
-====================
+Your job is to convert a provided topic script into a visually clear, accurate, and fully executable Manim Python file that a beginner can run. Produce only the Python code as the final output (no explanations, no comments).
+Essential Guidelines :-
+Complete and runnable code
+Output must be self-contained, error-free, and executable by a beginner in Manim.
+Include all necessary imports, class definitions, and the construct method.
+Frame management and positioning :-
+CRITICAL: All objects must remain fully visible within the frame at all times.
+Keep objects inside safe bounds (X, Y ∈ [-5, 5]) to prevent clipping.
+Auto-scale objects where necessary to prevent any part from going off-screen.
+Use .scale() method to reduce size of oversized objects before positioning.
+Test all coordinates to ensure they stay within visible bounds.
+Use .get_center(), .get_edge_center(), or .get_boundary_point() methods for accurate positioning.
+ALWAYS use this layout for ALL content types (diagrams, tables, graphs, equations, etc.):
+- LEFT 60-65% of screen: Main content (diagram/table/graph/any mathematical figure)
+- RIGHT 35-40% of screen: Text explanations only
+Zone Definitions ;-
+Left Content Zone: For ALL visual content
+- X position range: -6.5 to 0
+- Y position range: -3.5 to 3.5
+- Takes 60-65% of screen width
+- Use for: diagrams, tables, graphs, equations, shapes, animations, data displays
+Right Text Zone: For necessary on-screen text explanations and annotations only
+X position range: 1.5 to 6.5
+Y position range: -3.5 to 3.5
+Takes: 35–40% of screen width
+Use for:
+Explanations of visual steps
+Key definitions or important mathematical notes
+Annotation of important objects or procedures
+Bullet points about steps in a process
+Conclusions or summary statements
+All other explanatory text essential for understanding the visual content
+Do NOT use for:
+Full voice-over/narration script (unless explicitly requested)
+Title Zone (Optional): Y = 3.8 using .to_edge(UP, buff=0.2) - spans full width if needed
+Layout and text overlap prevention :-
+MANDATORY: Text must NEVER overlap with diagrams, objects, or other text.
+Use .arrange(), .next_to(), or .shift() with adequate spacing (buff ≥ 0.8).
+Center objects by default unless specified otherwise.
+Place text labels at sufficient distance from objects (buff ≥ 1.0) to prevent overlap.
+If there is insufficient space for text labels, prioritize the most important labels and remove less critical text.
+Use strategic positioning: place labels above, below, left, or right of objects where space permits.
+For point labels or annotations near multiple objects, alternate sides (LEFT/RIGHT or UP/DOWN) to prevent clustering.
+For complex diagrams, use leader lines or arrows to connect distant labels to their objects.
+Do not include unnecessary background shapes.
+Text management and clarity:-
+Check text positioning after each object placement to ensure no overlaps.
+Text should appear near related objects without covering them or other text.
+If no figure exists, center the text.
+Use VGroup and .arrange() for alignment with proper spacing.
+When multiple text elements exist, arrange them in non-overlapping positions using .arrange(DOWN, buff=0.5) or similar.
+Consider using smaller font sizes (scale=0.8 or scale=0.6) if needed to fit text properly.
+For measurement labels (e.g., "10 cm", "5 units"), position them to the side (LEFT/RIGHT) of horizontal objects or above/below for vertical objects.
+Mathematical and geometric accuracy :-
+CRITICAL: When creating geometric shapes that must satisfy mathematical relationships (circles, triangles, polygons, etc.), calculate positions using proper mathematical formulas.
+For objects that must lie ON other objects (e.g., points on circles, vertices on curves), use the object's mathematical properties to calculate exact positions.
+Do not use arbitrary or estimated positions when mathematical precision is required.
+Verify that calculated positions satisfy the defining equations or constraints of the shapes.
+Use numpy functions (np.sqrt, np.sin, np.cos, etc.) for accurate calculations.
+Proportional relationships :-
+When dealing with measurements or sizes with specific values (e.g., "10 cm" vs "24 cm"), maintain their proportional relationships accurately.
+Scale all related objects proportionally to fit within the frame while preserving their relative sizes.
+Larger values should visually appear larger; smaller values should appear smaller in proportion.
+Animation behavior :-
+Animate appearances and transformations using self.play.
+Include smooth animations: FadeIn, FadeOut, Write, Transform, ReplacementTransform, Create, GrowFromCenter, etc.
+Include short pauses to emphasize points.
+Introduce one idea at a time.
+Automatically pace each animation so that the total video duration is between 30-45 seconds and aligns with the voice-over.
+Timing rules for exact duration (30-45 seconds) :-
+Count all animation actions in SCRIPT FOR MANIM (each FadeIn, Write, Create, Transform, etc.).
+Let n = number of animation actions.
+Target duration should be between 30-45 seconds per scene based on content complexity.
+Compute base_time_per_action = target_duration ÷ n.
+Apply run_time for each animation step = base_time_per_action × complexity_factor (1 for normal, >1 for multi-step animations).
+Add short .wait() pauses (0.3–0.7 sec) proportionally scaled so that the sum of all run_time + wait falls within 30-45 seconds.
+Ensure each step duration roughly matches the length of the corresponding narration in SCRIPT VOICE OVER
+Adjust all times automatically to fall within the 30-45 second range, allowing flexibility based on content complexity.
+Visual styling and screen boundaries :-
+Use colors (hex values), arrows, highlights, semi-transparent fills.
+Maintain consistent visual style throughout.
+Double-check that all visual elements fit within screen boundaries before finalizing positions.
+Use .get_boundary_point() or .get_edge_center() methods to position objects relative to screen edges safely.
+Coding conventions :-
+Name each class using SCRIPT SEQ (e.g., ScriptStep2).
+Use supported Manim primitives: Line, Dot, Circle, Polygon, Rectangle, Square, Arrow, Text, MathTex, NumberPlane, Triangle, VGroup.
+Avoid deprecated methods and out-of-bounds operations.
+Always include bounds checking in your positioning logic.
+Topic constraints and quality assurance:-
+Remove unnecessary background shapes.
+FINAL CHECK: Ensure all text labels are positioned clearly outside objects with no overlaps.
+FINAL CHECK: Ensure all objects and text remain within screen boundaries.
+FINAL CHECK: If there is not enough space for all text, remove less important text elements.
+FINAL CHECK: Verify mathematical accuracy - objects that should lie on other objects must be calculated to do so precisely.
+FINAL CHECK: Verify proportional relationships are maintained for all measurements and sizes.
+Write hex values for all colors used
+Placeholders :-
 catalog_placeholder: def construct(self):
         # Balloon body
         balloon = Circle(radius=0.3, color="#FF0000", fill_opacity=0.8)
@@ -156,22 +220,79 @@ SCRIPT_VOICE_OVER: [
   "This path forms the shape of a circle.",
   "And there we have it\u2014a perfect circle!"
 ]
-SCRIPT_LENGTH: 30 seconds
+SCRIPT_LENGTH: 30s
 Previous Code (for continuity):
 
-====================
-:gear: OUTPUT REQUIREMENTS
-====================
-just copy the code provided in EXAMPLE (REFERENCE)
+Procedure:-
+Read SCRIPT FOR MANIM carefully and identify the mathematical/geometric requirements.
+Calculate all positions mathematically where precision is required (don't estimate).
+Generate Manim code that is fully frame-safe and visually clear.
+Prioritize preventing overlaps: text-to-text, text-to-diagram, and object-to-object.
+Ensure all elements stay within screen boundaries through proper scaling and positioning.
+Verify proportional relationships are maintained for measurements and sizes.
+Animate step-by-step according to instructions.
+Set run_time and .wait() durations for total animation duration between 30-45 seconds, matching SCRIPT VOICE OVER pacing.
+Name classes using SCRIPT SEQ.
+Only include shapes necessary for the topic.
+Perform final quality checks for overlaps, boundary violations, and mathematical accuracy.
+Additional Instructions :-
+Generate only the Manim Python code.
+Do not include explanations, comments, or extra text outside the code.
+Code must be overlap-free, screen-boundary compliant, and mathematically accurate.
+All geometric relationships must be calculated, not approximated
+Common Errors to avoid :-
+TypeError: Mobject.__init__() got an unexpected keyword argument 'weight'
+IndexError: list index out of range
+ValueError: latex error converting to dvi. See log output above or the log file: media\Tex\b92e2d7f7f7a1052.log
+NameError: name 'run_time' is not defined
 
 === GENERATED CODE ===
 
+```python
+import numpy as np
+
 from manim import *
 
-class ExpandingCircle(Scene):
+class ScriptStep1(Scene):
     def construct(self):
-        self.camera.background_color = "#1E1E1E"
-        circle = Circle(radius=0.5, color=YELLOW)
-        self.play(Create(circle), run_time=0.5)
-        self.play(circle.animate.scale(2).fade(1), run_time=1.2)
-        self.wait(0.3)
+        # Canvas and grid background
+        canvas = Rectangle(width=14, height=8, color="#F0F0F0")
+        grid = NumberPlane(
+            x_range=[-7, 7, 1],
+            y_range=[-4, 4, 1],
+            color_coordinates=False,
+            background_line_style={
+                "stroke_color": "#D3D3D3",
+                "stroke_width": 1,
+                "stroke_opacity": 0.5
+            }
+        )
+        self.add(canvas, grid)
+
+        # Central circle
+        circle = Circle(radius=1, color="#007BFF")
+        circle.set_fill(color="#007BFF", opacity=0.5)
+        circle.move_to(ORIGIN)
+
+        # Smaller inner circle
+        inner_circle = Circle(radius=0.5, color="#007BFF")
+        inner_circle.set_fill(color="#007BFF", opacity=0.5)
+        inner_circle.move_to(ORIGIN)
+
+        # Arrow
+        arrow = Arrow(LEFT * 3, ORIGIN, color="#808080", buff=0.2)
+
+        # Animations
+        self.play(FadeIn(circle), run_time=1)
+        self.play(
+            ApplyMethod(circle.scale, 1.5),
+            FadeIn(grid),
+            run_time=1
+        )
+        self.play(
+            Transform(circle, inner_circle),
+            FadeIn(arrow),
+            run_time=1
+        )
+        self.wait(1)
+```

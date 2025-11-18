@@ -1,0 +1,20 @@
+[2025-11-18 11:13:14] [ERROR] ❌ Failed to write C:\ArkMalay\Framework_1\Video_data\20251118_111314_83b177f1-283a-4402-ad76-783fa41d126d\script_seq1\script_seq1.py: Forced file generation failure for testing
+[2025-11-18 11:13:14] [ERROR] ❌ Failed to write C:\ArkMalay\Framework_1\Video_data\20251118_111314_83b177f1-283a-4402-ad76-783fa41d126d\script_seq1\script_seq1.txt: Forced file generation failure for testing
+[2025-11-18 11:13:15] [ERROR] ❌ Failed to write C:\ArkMalay\Framework_1\Video_data\20251118_111314_83b177f1-283a-4402-ad76-783fa41d126d\script_seq2\script_seq2.py: Forced file generation failure for testing
+[2025-11-18 11:13:15] [ERROR] ❌ Failed to write C:\ArkMalay\Framework_1\Video_data\20251118_111314_83b177f1-283a-4402-ad76-783fa41d126d\script_seq2\script_seq2.txt: Forced file generation failure for testing
+[2025-11-18 11:13:15] [ERROR] ❌ Failed to write C:\ArkMalay\Framework_1\Video_data\20251118_111314_83b177f1-283a-4402-ad76-783fa41d126d\script_seq3\script_seq3.py: Forced file generation failure for testing
+[2025-11-18 11:13:15] [ERROR] ❌ Failed to write C:\ArkMalay\Framework_1\Video_data\20251118_111314_83b177f1-283a-4402-ad76-783fa41d126d\script_seq3\script_seq3.txt: Forced file generation failure for testing
+[2025-11-18 11:13:15] [ERROR] ❌ Failed to write C:\ArkMalay\Framework_1\Video_data\20251118_111314_83b177f1-283a-4402-ad76-783fa41d126d\script_seq4\script_seq4.py: Forced file generation failure for testing
+[2025-11-18 11:13:15] [ERROR] ❌ Failed to write C:\ArkMalay\Framework_1\Video_data\20251118_111314_83b177f1-283a-4402-ad76-783fa41d126d\script_seq4\script_seq4.txt: Forced file generation failure for testing
+[2025-11-18 11:13:16] [ERROR] ❌ Failed to write C:\ArkMalay\Framework_1\Video_data\20251118_111314_83b177f1-283a-4402-ad76-783fa41d126d\script_seq5\script_seq5.py: Forced file generation failure for testing
+[2025-11-18 11:13:16] [ERROR] ❌ Failed to write C:\ArkMalay\Framework_1\Video_data\20251118_111314_83b177f1-283a-4402-ad76-783fa41d126d\script_seq5\script_seq5.txt: Forced file generation failure for testing
+[2025-11-18 11:13:16] [ERROR] Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\parsers\base_handler.py", line 118, in _generate_files
+    raise RuntimeError("❌ File generation failed: one or more files could not be created.")
+RuntimeError: ❌ File generation failed: one or more files could not be created.
+
+[2025-11-18 11:13:18] [ERROR] ❌ Error generating code for 1: cannot access local variable 'Bug_fix_snippet' where it is not associated with a value
+[2025-11-18 11:13:18] [ERROR] ❌ Error generating code for 2: cannot access local variable 'Bug_fix_snippet' where it is not associated with a value
+[2025-11-18 11:13:18] [ERROR] ❌ Error generating code for 3: cannot access local variable 'Bug_fix_snippet' where it is not associated with a value
+[2025-11-18 11:13:18] [ERROR] ❌ Error generating code for 4: cannot access local variable 'Bug_fix_snippet' where it is not associated with a value
+[2025-11-18 11:13:19] [ERROR] ❌ Error generating code for 5: cannot access local variable 'Bug_fix_snippet' where it is not associated with a value

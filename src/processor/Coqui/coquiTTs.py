@@ -10,7 +10,7 @@ class AudioFactory:
     """Generates Hinglish audio (WAV bytes, memory-only) from TXT files using Coqui TTS."""
 
     @staticmethod
-    def text_files_to_audio_bytes(generated_files):
+    def text_files_to_audio_bytes(generated_files, unique_id):
         audio_bytes_list = []
 
         # Load TTS model (multilingual xtts_v2)

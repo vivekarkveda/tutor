@@ -1,0 +1,479 @@
+=== FINAL PROMPT SENT ===
+
+Role :-
+You are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).
+Your job is to convert a provided topic script into a visually clear, accurate, and fully executable Manim Python file that a beginner can run. Produce only the Python code as the final output (no explanations, no comments).
+Essential Guidelines :-
+Complete and runnable code
+Output must be self-contained, error-free, and executable by a beginner in Manim.
+Include all necessary imports, class definitions, and the construct method.
+Frame management and positioning :-
+CRITICAL: All objects must remain fully visible within the frame at all times.
+Keep objects inside safe bounds (X, Y ∈ [-5, 5]) to prevent clipping.
+Auto-scale objects where necessary to prevent any part from going off-screen.
+Use .scale() method to reduce size of oversized objects before positioning.
+Test all coordinates to ensure they stay within visible bounds.
+Use .get_center(), .get_edge_center(), or .get_boundary_point() methods for accurate positioning.
+ALWAYS use this layout for ALL content types (diagrams, tables, graphs, equations, etc.):
+- LEFT 60-65% of screen: Main content (diagram/table/graph/any mathematical figure)
+- RIGHT 35-40% of screen: Text explanations only
+Zone Definitions ;-
+Left Content Zone: For ALL visual content
+- X position range: -6.5 to 0
+- Y position range: -3.5 to 3.5
+- Takes 60-65% of screen width
+- Use for: diagrams, tables, graphs, equations, shapes, animations, data displays
+Right Text Zone: For necessary on-screen text explanations and annotations only
+X position range: 1.5 to 6.5
+Y position range: -3.5 to 3.5
+Takes: 35–40% of screen width
+Use for:
+Explanations of visual steps
+Key definitions or important mathematical notes
+Annotation of important objects or procedures
+Bullet points about steps in a process
+Conclusions or summary statements
+All other explanatory text essential for understanding the visual content
+Do NOT use for:
+Full voice-over/narration script (unless explicitly requested)
+Title Zone (Optional): Y = 3.8 using .to_edge(UP, buff=0.2) - spans full width if needed
+Layout and text overlap prevention :-
+MANDATORY: Text must NEVER overlap with diagrams, objects, or other text.
+Use .arrange(), .next_to(), or .shift() with adequate spacing (buff ≥ 0.8).
+Center objects by default unless specified otherwise.
+Place text labels at sufficient distance from objects (buff ≥ 1.0) to prevent overlap.
+If there is insufficient space for text labels, prioritize the most important labels and remove less critical text.
+Use strategic positioning: place labels above, below, left, or right of objects where space permits.
+For point labels or annotations near multiple objects, alternate sides (LEFT/RIGHT or UP/DOWN) to prevent clustering.
+For complex diagrams, use leader lines or arrows to connect distant labels to their objects.
+Do not include unnecessary background shapes.
+Text management and clarity:-
+Check text positioning after each object placement to ensure no overlaps.
+Text should appear near related objects without covering them or other text.
+If no figure exists, center the text.
+Use VGroup and .arrange() for alignment with proper spacing.
+When multiple text elements exist, arrange them in non-overlapping positions using .arrange(DOWN, buff=0.5) or similar.
+Consider using smaller font sizes (scale=0.8 or scale=0.6) if needed to fit text properly.
+For measurement labels (e.g., "10 cm", "5 units"), position them to the side (LEFT/RIGHT) of horizontal objects or above/below for vertical objects.
+Mathematical and geometric accuracy :-
+CRITICAL: When creating geometric shapes that must satisfy mathematical relationships (circles, triangles, polygons, etc.), calculate positions using proper mathematical formulas.
+For objects that must lie ON other objects (e.g., points on circles, vertices on curves), use the object's mathematical properties to calculate exact positions.
+Do not use arbitrary or estimated positions when mathematical precision is required.
+Verify that calculated positions satisfy the defining equations or constraints of the shapes.
+Use numpy functions (np.sqrt, np.sin, np.cos, etc.) for accurate calculations.
+Proportional relationships :-
+When dealing with measurements or sizes with specific values (e.g., "10 cm" vs "24 cm"), maintain their proportional relationships accurately.
+Scale all related objects proportionally to fit within the frame while preserving their relative sizes.
+Larger values should visually appear larger; smaller values should appear smaller in proportion.
+Animation behavior :-
+Animate appearances and transformations using self.play.
+Include smooth animations: FadeIn, FadeOut, Write, Transform, ReplacementTransform, Create, GrowFromCenter, etc.
+Include short pauses to emphasize points.
+Introduce one idea at a time.
+Automatically pace each animation so that the total video duration is between 30-45 seconds and aligns with the voice-over.
+Timing rules for exact duration (30-45 seconds) :-
+Count all animation actions in SCRIPT FOR MANIM (each FadeIn, Write, Create, Transform, etc.).
+Let n = number of animation actions.
+Target duration should be between 30-45 seconds per scene based on content complexity.
+Compute base_time_per_action = target_duration ÷ n.
+Apply run_time for each animation step = base_time_per_action × complexity_factor (1 for normal, >1 for multi-step animations).
+Add short .wait() pauses (0.3–0.7 sec) proportionally scaled so that the sum of all run_time + wait falls within 30-45 seconds.
+Ensure each step duration roughly matches the length of the corresponding narration in SCRIPT VOICE OVER
+Adjust all times automatically to fall within the 30-45 second range, allowing flexibility based on content complexity.
+Visual styling and screen boundaries :-
+Use colors (hex values), arrows, highlights, semi-transparent fills.
+Maintain consistent visual style throughout.
+Double-check that all visual elements fit within screen boundaries before finalizing positions.
+Use .get_boundary_point() or .get_edge_center() methods to position objects relative to screen edges safely.
+Coding conventions :-
+Name each class using SCRIPT SEQ (e.g., ScriptStep2).
+Use supported Manim primitives: Line, Dot, Circle, Polygon, Rectangle, Square, Arrow, Text, MathTex, NumberPlane, Triangle, VGroup.
+Avoid deprecated methods and out-of-bounds operations.
+Always include bounds checking in your positioning logic.
+Topic constraints and quality assurance:-
+Remove unnecessary background shapes.
+FINAL CHECK: Ensure all text labels are positioned clearly outside objects with no overlaps.
+FINAL CHECK: Ensure all objects and text remain within screen boundaries.
+FINAL CHECK: If there is not enough space for all text, remove less important text elements.
+FINAL CHECK: Verify mathematical accuracy - objects that should lie on other objects must be calculated to do so precisely.
+FINAL CHECK: Verify proportional relationships are maintained for all measurements and sizes.
+Write hex values for all colors used
+Placeholders :-
+catalog_placeholder: def construct(self):
+        # Balloon body
+        balloon = Circle(radius=0.3, color="#FF0000", fill_opacity=0.8)
+        
+        # Balloon string
+        balloon_string = Line(ORIGIN, DOWN * 0.5, color="#808080", stroke_width=1)
+        
+        # Position balloon and string
+        balloon.shift(RIGHT * 3 + UP * 1.5)
+        balloon_string.next_to(balloon, DOWN, buff=0)
+        
+        # Group balloon and string
+        balloon_group = VGroup(balloon, balloon_string)
+        
+        # Animate
+        self.play(GrowFromCenter(balloon_group), run_time=1)
+        self.wait(1)
+Bug_fix_placeholder: # Original Bug Snippet:
+```python
+angle_arc = Arc(
+    radius=0.8,
+    start_angle=0,
+    angle=PI/4,
+    color="#008000",
+    stroke_width=4
+)
+angle_arc.move_arc_center_to(head.get_center())
+
+angle_highlight = Arc(
+    radius=0.9,
+    start_angle=0,
+    angle=PI/4,
+    color="#FFFF00",
+    stroke_width=6,
+    stroke_opacity=0.7
+)
+angle_highlight.move_arc_center_to(head.get_center())
+```
+
+# Fixed Bug Snippet:
+```python
+# Calculate angle of sight line relative to horizontal
+sight_vec = balloon.get_center() - head.get_center()
+sight_angle = np.arctan2(sight_vec[1], sight_vec[0])  # in radians
+
+# Angle arcs aligned with sight line
+angle_arc = Arc(
+    radius=0.8,
+    start_angle=0,
+    angle=sight_angle,
+    color="#008000",
+    stroke_width=4
+)
+angle_arc.move_arc_center_to(head.get_center())
+
+angle_highlight = Arc(
+    radius=0.9,
+    start_angle=0,
+    angle=sight_angle,
+    color="#FFFF00",
+    stroke_width=6,
+    stroke_opacity=0.7
+)
+angle_highlight.move_arc_center_to(head.get_center())
+
+# Angle label dynamically placed
+angle_deg = int(np.degrees(sight_angle))
+angle_label = MathTex(f"{angle_deg}°", color="#008000", font_size=28)
+label_offset = 1.0
+angle_label.move_to(head.get_center() + label_offset * np.array([np.cos(sight_angle/2), np.sin(sight_angle/2), 0]))
+```
+SCRIPT_SEQ: 3
+SCRIPT_FOR_MANIM: [
+  "Return to the full-screen view of the target, with the successful arrow in place.",
+  "Introduce a series of smaller arrows, each with a slightly different trajectory, all aiming for the center.",
+  "Animate these arrows in slow motion, showing some hitting the inner circle, others the outer, and a few missing entirely.",
+  "Create a visual representation of a bell curve, with the x-axis representing accuracy and the y-axis showing frequency.",
+  "Map each arrow's accuracy to the bell curve, illustrating the distribution of outcomes."
+]
+SCRIPT_VOICE_OVER: [
+  "Back to our main scene, we see the arrow's triumph at the center. But what about other attempts?",
+  "Let's introduce some variability. Imagine multiple arrows, each with a unique path, all striving for perfection.",
+  "In slow motion, observe their journeys. Some find the inner circle, others the outer, and a few stray off course.",
+  "This variation in accuracy can be visualized as a bell curve, a statistical representation of outcomes.",
+  "Each arrow's precision is mapped, showing a range of results, from exceptional to average and below."
+]
+SCRIPT_LENGTH: 40s
+Previous Code (for continuity):
+import numpy as np
+
+from manim import *
+
+
+class ScriptStep2(Scene):
+    def construct(self):
+        # Colors
+        BLUE = "#007BFF"
+        GREEN = "#28A745"
+        RED = "#FF4500"
+        YELLOW = "#FFC107"
+
+        # Constants
+        SCREEN_WIDTH = 16
+        SCREEN_HEIGHT = 9
+        LEFT_ZONE_WIDTH = 0.65 * SCREEN_WIDTH
+        RIGHT_ZONE_WIDTH = 0.4 * SCREEN_WIDTH
+        TEXT_BUFFER = 0.8
+
+        # Title
+        title = Tex(
+            "Arrow Precision Challenge",
+            color=BLUE,
+            font_size=40
+        ).to_edge(UP)
+
+        # Step 1 Text
+        step1_text = Tex(
+            "Step 1: Arrow Enters Outer Circle",
+            color=GREEN,
+            font_size=24
+        ).next_to(title, DOWN, buff=TEXT_BUFFER)
+
+        # Step 2 Text
+        step2_text = Tex(
+            "Step 2: Slow Down in Inner Circle",
+            color=GREEN,
+            font_size=24
+        ).next_to(step1_text, DOWN, buff=TEXT_BUFFER)
+
+        # Step 3 Text
+        step3_text = Tex(
+            "Step 3: Compare Outcomes",
+            color=GREEN,
+            font_size=24
+        ).next_to(step2_text, DOWN, buff=TEXT_BUFFER)
+
+        # Step 4 Text
+        step4_text = Tex(
+            "Step 4: Stabilize at Center",
+            color=GREEN,
+            font_size=24
+        ).next_to(step3_text, DOWN, buff=TEXT_BUFFER)
+
+        # Outer circle
+        outer_radius = 2
+        outer_circle = Circle(radius=outer_radius, color=BLUE)
+        outer_circle.set_fill(color=BLUE, opacity=0.5)
+        outer_circle.move_to(LEFT * (LEFT_ZONE_WIDTH / 2))
+
+        # Inner circle
+        inner_radius = 1
+        inner_circle = Circle(radius=inner_radius, color=GREEN)
+        inner_circle.set_fill(color=GREEN, opacity=0.5)
+        inner_circle.move_to(outer_circle.get_center())
+
+        # Arrow
+        arrow_start = LEFT * (LEFT_ZONE_WIDTH / 2) + UP * (outer_radius + 1)
+        arrow_end = outer_circle.get_center()
+        arrow = Arrow(arrow_start, arrow_end, color=RED, buff=0.1)
+
+        # Animations
+        n = len(SCRIPT_FOR_MANIM)
+        base_time_per_action = 35 / n
+        complexity_factors = [1, 1, 2, 1, 1]  # Adjust based on complexity
+
+        self.add(title, step1_text)
+        self.play(
+            FadeIn(outer_circle),
+            FadeIn(arrow),
+            run_time=base_time_per_action * complexity_factors[0]
+        )
+        self.wait(0.3 * base_time_per_action)
+
+        self.add(step2_text)
+        self.play(
+            Transform(arrow, Arrow(arrow_start, inner_circle.get_center(), color=RED, buff=0.1)),
+            run_time=base_time_per_action * complexity_factors[1]
+        )
+        self.wait(0.5 * base_time_per_action)
+
+        self.add(step3_text)
+        self.play(
+            ReplacementTransform(
+                outer_circle.copy(),
+                outer_circle.copy().shift(RIGHT * (RIGHT_ZONE_WIDTH / 2))
+            ),
+            ReplacementTransform(
+                inner_circle.copy(),
+                inner_circle.copy().shift(RIGHT * (RIGHT_ZONE_WIDTH / 2))
+            ),
+            ReplacementTransform(
+                arrow.copy(),
+                arrow.copy().shift(RIGHT * (RIGHT_ZONE_WIDTH / 2))
+            ),
+            run_time=base_time_per_action * complexity_factors[2]
+        )
+        self.wait(0.7 * base_time_per_action)
+
+        self.add(step4_text)
+        self.play(
+            Transform(
+                arrow,
+                Arrow(
+                    arrow_start,
+                    inner_circle.get_center() + DOWN * (inner_radius + 0.5),
+                    color=RED,
+                    buff=0.1
+                )
+            ),
+            run_time=base_time_per_action * complexity_factors[3]
+        )
+        self.wait(0.5 * base_time_per_action)
+
+        # Final arrow position
+        final_arrow_end = inner_circle.get_center()
+        final_arrow = Arrow(arrow_start, final_arrow_end, color=RED, buff=0.1)
+
+        # Glow effect
+        glow = Circle(radius=0.2, color=YELLOW).move_to(final_arrow_end)
+
+        self.play(
+            Transform(arrow, final_arrow),
+            Create(glow),
+            run_time=base_time_per_action * complexity_factors[4]
+        )
+        self.wait(2)
+Procedure:-
+Read SCRIPT FOR MANIM carefully and identify the mathematical/geometric requirements.
+Calculate all positions mathematically where precision is required (don't estimate).
+Generate Manim code that is fully frame-safe and visually clear.
+Prioritize preventing overlaps: text-to-text, text-to-diagram, and object-to-object.
+Ensure all elements stay within screen boundaries through proper scaling and positioning.
+Verify proportional relationships are maintained for measurements and sizes.
+Animate step-by-step according to instructions.
+Set run_time and .wait() durations for total animation duration between 30-45 seconds, matching SCRIPT VOICE OVER pacing.
+Name classes using SCRIPT SEQ.
+Only include shapes necessary for the topic.
+Perform final quality checks for overlaps, boundary violations, and mathematical accuracy.
+Additional Instructions :-
+Generate only the Manim Python code.
+Do not include explanations, comments, or extra text outside the code.
+Code must be overlap-free, screen-boundary compliant, and mathematically accurate.
+All geometric relationships must be calculated, not approximated
+Common Errors to avoid :-
+TypeError: Mobject.__init__() got an unexpected keyword argument 'weight'
+IndexError: list index out of range
+ValueError: latex error converting to dvi. See log output above or the log file: media\Tex\b92e2d7f7f7a1052.log
+NameError: name 'run_time' is not defined
+
+=== GENERATED CODE ===
+
+```python
+import numpy as np
+
+from manim import *
+
+
+class ScriptStep3(Scene):
+    def construct(self):
+        # Colors
+        BLUE = "#007BFF"
+        GREEN = "#28A745"
+        RED = "#FF4500"
+        YELLOW = "#FFC107"
+        GRAY = "#808080"
+
+        # Constants
+        SCREEN_WIDTH = 16
+        SCREEN_HEIGHT = 9
+        LEFT_ZONE_WIDTH = 0.65 * SCREEN_WIDTH
+        RIGHT_ZONE_WIDTH = 0.4 * SCREEN_WIDTH
+        TEXT_BUFFER = 0.8
+        ARROW_SPEED = 0.5  # Adjust for slow motion
+
+        # Title
+        title = Tex(
+            "Arrow Precision Challenge",
+            color=BLUE,
+            font_size=40
+        ).to_edge(UP)
+
+        # Step 5 Text
+        step5_text = Tex(
+            "Step 5: Introducing Variability",
+            color=GREEN,
+            font_size=24
+        ).next_to(title, DOWN, buff=TEXT_BUFFER)
+
+        # Target circle
+        target_radius = 1
+        target_circle = Circle(radius=target_radius, color=BLUE)
+        target_circle.set_fill(color=BLUE, opacity=0.5)
+        target_circle.move_to(LEFT * (LEFT_ZONE_WIDTH / 2))
+
+        # Successful arrow
+        successful_arrow_start = LEFT * (LEFT_ZONE_WIDTH / 2) + UP * (target_radius + 1)
+        successful_arrow_end = target_circle.get_center()
+        successful_arrow = Arrow(
+            successful_arrow_start,
+            successful_arrow_end,
+            color=RED,
+            buff=0.1
+        )
+
+        # Group successful arrow and target circle
+        successful_group = VGroup(successful_arrow, target_circle)
+
+        # Add title and step 5 text
+        self.add(title, step5_text)
+
+        # Animate successful arrow
+        self.play(
+            GrowFromCenter(successful_group),
+            run_time=1
+        )
+        self.wait(1)
+
+        # Variable arrows
+        variable_arrows = VGroup()
+        for i in range(5):
+            arrow_start = LEFT * (LEFT_ZONE_WIDTH / 2) + UP * (target_radius + 1)
+            angle = np.pi / 6 * (i - 2)  # Varying angles
+            arrow_end = target_circle.get_center() + RIGHT * target_radius * np.sin(angle) + UP * target_radius * np.cos(angle)
+            arrow = Arrow(arrow_start, arrow_end, color=GRAY, buff=0.1)
+            variable_arrows.add(arrow)
+
+        # Animate variable arrows in slow motion
+        self.play(
+            LaggedStart(
+                *[GrowFromCenter(arrow) for arrow in variable_arrows],
+                lag_ratio=0.5,
+                run_time=5 * ARROW_SPEED
+            )
+        )
+        self.wait(1)
+
+        # Bell curve
+        bell_curve = VGroup()
+        bell_curve_x = np.linspace(-3, 3, 100)
+        bell_curve_y = np.exp(-bell_curve_x**2 / 2) / np.sqrt(2 * np.pi)
+        for x, y in zip(bell_curve_x, bell_curve_y):
+            dot = Dot(color=YELLOW, radius=0.05)
+            dot.move_to(RIGHT * x + UP * y)
+            bell_curve.add(dot)
+
+        # Bell curve labels
+        x_label = Tex("Accuracy", color=YELLOW, font_size=20).next_to(bell_curve, DOWN, buff=0.5)
+        y_label = Tex("Frequency", color=YELLOW, font_size=20).next_to(bell_curve, LEFT, buff=0.5)
+
+        # Map arrows to bell curve
+        mapped_dots = VGroup()
+        for arrow in variable_arrows:
+            distance = np.linalg.norm(arrow.get_end() - target_circle.get_center())
+            accuracy = 1 - distance / target_radius  # Normalize accuracy to [0, 1]
+            x_pos = np.clip(accuracy * 3, -3, 3)  # Map to bell curve x range
+            dot = Dot(color=GRAY, radius=0.1)
+            dot.move_to(RIGHT * x_pos + UP * bell_curve_y[np.abs(bell_curve_x - x_pos).argmin()])
+            mapped_dots.add(dot)
+
+        # Animate bell curve and mapped dots
+        self.play(
+            LaggedStart(
+                *[GrowFromCenter(dot) for dot in bell_curve],
+                *[GrowFromCenter(dot) for dot in mapped_dots],
+                lag_ratio=0.1,
+                run_time=3
+            )
+        )
+        self.play(
+            LaggedStart(
+                Write(x_label),
+                Write(y_label),
+                lag_ratio=0.5,
+                run_time=1
+            )
+        )
+        self.wait(2)
+```

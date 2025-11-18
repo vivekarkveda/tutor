@@ -9,11 +9,11 @@ class AudioFactory:
     """Generates audio bytes from TXT files (memory-only)."""
 
     @staticmethod
-    def text_files_to_audio_bytes(generated_files):
+    def text_files_to_audio_bytes(generated_files, unique_id):
         audio_bytes_list = []
 
         for txt_file in generated_files["txt_files"]:
-            txt_path = Path(txt_file)
+            txt_path = Path(txt_file) 
             with open(txt_file, "r", encoding="utf-8") as f:
                 text = f.read().strip()
             if not text:

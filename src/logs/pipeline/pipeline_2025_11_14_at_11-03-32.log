@@ -1,0 +1,320 @@
+[2025-11-14 11:09:10] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework_1/Video_data/20251114_110848_b706583a-3802-431e-bd5d-5bd2ecd9fc41/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+Animation 1: Write(Text('Creating a Circle')):   0%|          | 0/30 [00:00<?, ?it/s]
+Animation 1: Write(Text('Creating a Circle')):  23%|##3       | 7/30 [00:00<00:00, 60.52it/s]
+Animation 1: Write(Text('Creating a Circle')):  47%|####6     | 14/30 [00:00<00:00, 53.96it/s]
+Animation 1: Write(Text('Creating a Circle')):  67%|######6   | 20/30 [00:00<00:00, 51.10it/s]
+Animation 1: Write(Text('Creating a Circle')):  87%|########6 | 26/30 [00:00<00:00, 44.19it/s]
+                                                                                              
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\cli\render\comm |
+| ands.py:125 in render                                                       |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\scene\scene.py: |
+| 237 in render                                                               |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework_1\Video_data\20251114_110848_b706583a-3802-431e-bd5d- |
+| 5bd2ecd9fc41\script_seq1\script_seq1.py:16 in construct                     |
+|                                                                             |
+|   13         self.wait(2)                                                   |
+|   14                                                                        |
+|   15         # Zoom out                                                     |
+| > 16         self.camera.frame.save_state()                                 |
+|   17         self.play(self.camera.frame.animate.scale(0.8))                |
+|   18         self.wait(1)                                                   |
+|   19                                                                        |
++-----------------------------------------------------------------------------+
+AttributeError: 'Camera' object has no attribute 'frame'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/14/25 11:09:01] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework_1\                         
+                             tutor\src\media\videos\20                         
+                             251114_110848_b706583a-38                         
+                             02-431e-bd5d-5bd2ecd9fc41                         
+                             \script_seq1\videos\scrip                         
+                             t_seq1\480p15\partial_mov                         
+                             ie_files\CreatingACircle\                         
+                             1185818338_1432596116_631                         
+                             829896.mp4'                                       
+[11/14/25 11:09:08] INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework_1\                         
+                             tutor\src\media\videos\20                         
+                             251114_110848_b706583a-38                         
+                             02-431e-bd5d-5bd2ecd9fc41                         
+                             \script_seq1\videos\scrip                         
+                             t_seq1\480p15\partial_mov                         
+                             ie_files\CreatingACircle\                         
+                             1185818338_1719671532_166                         
+                             6280314.mp4'                                      
+[11/14/25 11:09:09] INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\ArkMalay\Framework_1\                         
+                             tutor\src\media\videos\20                         
+                             251114_110848_b706583a-38                         
+                             02-431e-bd5d-5bd2ecd9fc41                         
+                             \script_seq1\videos\scrip                         
+                             t_seq1\480p15\partial_mov                         
+                             ie_files\CreatingACircle\                         
+                             624642324_2844360058_7508                         
+                             43219.mp4'
+──────────────────────────────────────────────
+
+[2025-11-14 11:09:20] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework_1/Video_data/20251114_110848_b706583a-3802-431e-bd5d-5bd2ecd9fc41/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\cli\render\comm |
+| ands.py:125 in render                                                       |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\scene\scene.py: |
+| 237 in render                                                               |
+|                                                                             |
+|    234         """                                                          |
+|    235         self.setup()                                                 |
+|    236         try:                                                         |
+| >  237             self.construct()                                         |
+|    238         except EndSceneEarlyException:                               |
+|    239             pass                                                     |
+|    240         except RerunSceneException:                                  |
+|                                                                             |
+| C:\ArkMalay\Framework_1\Video_data\20251114_110848_b706583a-3802-431e-bd5d- |
+| 5bd2ecd9fc41\script_seq2\script_seq2.py:6 in construct                      |
+|                                                                             |
+|    3 class CircleConstruction(Scene):                                       |
+|    4     def construct(self):                                               |
+|    5         # Scene 1: Final Frame                                         |
+| >  6         circle_path = TracedPath(radius_line, stroke_color=GREEN, stro |
+|    7         circle = Circle(color=GREEN, fill_opacity=0.3)                 |
+|    8         radius_line_label = Text("Radius", color=YELLOW).scale(0.7)    |
+|    9         circle_text = Text("Circle Complete", color=RED).scale(0.8)    |
++-----------------------------------------------------------------------------+
+NameError: name 'radius_line' is not defined
+
+STDOUT:
+Manim Community v0.19.0
+──────────────────────────────────────────────
+
+[2025-11-14 11:09:31] [ERROR] ❌ Video and audio list length mismatch
+[2025-11-14 11:09:31] [ERROR] :x: Pipeline failed for UID b706583a-3802-431e-bd5d-5bd2ecd9fc41: Video and audio lists must have the same length
+[2025-11-14 11:09:31] [ERROR] Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 66, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list,unique_id)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 209, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list, unique_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 132, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+
+[2025-11-14 11:09:31] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\video_routes.py", line 36, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 66, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list,unique_id)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 209, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list, unique_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 132, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-14 11:09:31] [ERROR] ❌ HTTP 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-14 11:09:31] [ERROR] ❌ Video generation failed for b706583a-3802-431e-bd5d-5bd2ecd9fc41: 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-14 11:09:31] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 101, in write_scripts
+    video_result = await async_post(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"Video and audio lists must have the same length"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 120, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Video generation failed for b706583a-3802-431e-bd5d-5bd2ecd9fc41: 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-14 11:09:32] [ERROR] ❌ HTTP 500: {"detail":"500: ❌ Video generation failed for b706583a-3802-431e-bd5d-5bd2ecd9fc41: 500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-14 11:09:32] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\generator_routes.py", line 30, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: ❌ Video generation failed for b706583a-3802-431e-bd5d-5bd2ecd9fc41: 500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-14 11:09:32] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: ❌ Video generation failed for b706583a-3802-431e-bd5d-5bd2ecd9fc41: 500: {\\\"detail\\\":\\\"Video and audio lists must have the same length\\\"}\"}"}
+[2025-11-14 11:13:42] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework_1/Video_data/20251114_111333_66325630-31a1-4f9b-940a-ea5452987091/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Scripts\manim.exe\__main__.py", line 7, in <module>
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\click\core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\click\core.py", line 1082, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\click\core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\click\core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\click\core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\cli\render\commands.py", line 121, in render
+    for SceneClass in scene_classes_from_file(file):
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\utils\module_ops.py", line 167, in scene_classes_from_file
+    module = get_module(file_path)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\utils\module_ops.py", line 67, in get_module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 994, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\ArkMalay\Framework_1\Video_data\20251114_111333_66325630-31a1-4f9b-940a-ea5452987091\script_seq1\script_seq1.py", line 1, in <module>
+    class CreatingACircle(Scene):
+                          ^^^^^
+NameError: name 'Scene' is not defined
+
+STDOUT:
+Manim Community v0.19.0
+──────────────────────────────────────────────
+
+[2025-11-14 11:13:51] [ERROR] 
+❌ Error running Manim on C:/ArkMalay/Framework_1/Video_data/20251114_111333_66325630-31a1-4f9b-940a-ea5452987091/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Scripts\manim.exe\__main__.py", line 7, in <module>
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\click\core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\click\core.py", line 1082, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\click\core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\click\core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\click\core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\cli\render\commands.py", line 121, in render
+    for SceneClass in scene_classes_from_file(file):
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\utils\module_ops.py", line 167, in scene_classes_from_file
+    module = get_module(file_path)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\.venv\Lib\site-packages\manim\utils\module_ops.py", line 67, in get_module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 994, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\ArkMalay\Framework_1\Video_data\20251114_111333_66325630-31a1-4f9b-940a-ea5452987091\script_seq2\script_seq2.py", line 1, in <module>
+    class UnderstandingCircle(Scene):
+                              ^^^^^
+NameError: name 'Scene' is not defined
+
+STDOUT:
+Manim Community v0.19.0
+──────────────────────────────────────────────
+
+[2025-11-14 11:14:20] [ERROR] ❌ Video and audio list length mismatch
+[2025-11-14 11:14:21] [ERROR] :x: Pipeline failed for UID 66325630-31a1-4f9b-940a-ea5452987091: Video and audio lists must have the same length
+[2025-11-14 11:14:21] [ERROR] Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 66, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list,unique_id)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 209, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list, unique_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 132, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+
+[2025-11-14 11:14:21] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\video_routes.py", line 36, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\main.py", line 66, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(video_bytes_list, audio_bytes_list,unique_id)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 209, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list, unique_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\merger_factory.py", line 132, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-14 11:14:21] [ERROR] ❌ HTTP 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-14 11:14:21] [ERROR] ❌ Video generation failed for 66325630-31a1-4f9b-940a-ea5452987091: 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-14 11:14:21] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 101, in write_scripts
+    video_result = await async_post(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"Video and audio lists must have the same length"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\write_routes.py", line 120, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Video generation failed for 66325630-31a1-4f9b-940a-ea5452987091: 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-14 11:14:21] [ERROR] ❌ HTTP 500: {"detail":"500: ❌ Video generation failed for 66325630-31a1-4f9b-940a-ea5452987091: 500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-14 11:14:21] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\routes\generator_routes.py", line 30, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ArkMalay\Framework_1\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: ❌ Video generation failed for 66325630-31a1-4f9b-940a-ea5452987091: 500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-14 11:14:21] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: ❌ Video generation failed for 66325630-31a1-4f9b-940a-ea5452987091: 500: {\\\"detail\\\":\\\"Video and audio lists must have the same length\\\"}\"}"}

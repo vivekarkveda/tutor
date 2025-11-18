@@ -28,7 +28,7 @@ async def generate_files_endpoint(request: GenerateFilesRequest):
         Settings.JSON_FILE_PATH = str(json_path)
 
         try:
-            generated = prepare_files(Settings.RUN_FROM, True, Settings.FILE_TYPES, request.unique_id)
+            generated = prepare_files(Settings.RUN_FROM, True, Settings.FILE_TYPES, unique_id)
         finally:
             Settings.JSON_FILE_PATH = old_path
 
