@@ -1,0 +1,10 @@
+[2025-11-17 17:42:39] [ERROR] ❌ Unexpected error in /search endpoint
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\search_routes.py", line 73, in search
+    run_script_data_process(unique_id)
+TypeError: run_script_data_process() takes 0 positional arguments but 1 was given
+[2025-11-17 17:43:00] [ERROR] ❌ Unexpected error in /search endpoint
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\search_routes.py", line 73, in search
+    run_script_data_process(unique_id)
+TypeError: run_script_data_process() takes 0 positional arguments but 1 was given

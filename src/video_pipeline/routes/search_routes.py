@@ -9,6 +9,7 @@ from config import Settings
 from typing import Optional
 import uuid
 from Transaction.transaction_handler import transaction
+from Artifacts.artifacts import run_script_data_process
 
 router = APIRouter(prefix="", tags=["Script Generation"])
 
@@ -68,6 +69,8 @@ async def search(request: SearchRequest):
         except json.JSONDecodeError as je:
             pipeline_logger.error(f"⚠️ Invalid JSON output from Cohere: {je}")
             raise HTTPException(status_code=400, detail="Generated script is not valid JSON")
+        
+        run_script_data_process(unique_id)
         
 
         # === Step 4️⃣: Send data to internal APIs

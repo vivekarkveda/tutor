@@ -1,0 +1,114 @@
+[2025-11-17 17:26:23] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Temp_Data/20251117_172527_da55fef6-6148-48e7-97b5-a82782089d2c/script_seq2/script_seq2.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Scripts\manim.exe\__main__.py", line 4, in <module>
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\__init__.py", line 13, in <module>
+    from ._config import *
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\_config\__init__.py", line 12, in <module>
+    from .utils import ManimConfig, ManimFrame, make_config_parser
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\_config\utils.py", line 31, in <module>
+    from manim.utils.color import ManimColor
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\utils\color\__init__.py", line 55, in <module>
+    from . import AS2700, BS381, DVIPSNAMES, SVGNAMES, X11, XKCD
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\utils\color\AS2700.py", line 29, in <module>
+    from .core import ManimColor
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\utils\color\core.py", line 100, in <module>
+    from ...utils.space_ops import normalize
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\utils\space_ops.py", line 11, in <module>
+    from scipy.spatial.transform import Rotation
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\scipy\spatial\__init__.py", line 110, in <module>
+    from ._kdtree import *
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\scipy\spatial\_kdtree.py", line 4, in <module>
+    from ._ckdtree import cKDTree, cKDTreeNode  # type: ignore[import-not-found]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "scipy/spatial/_ckdtree.pyx", line 11, in init scipy.spatial._ckdtree
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\scipy\sparse\__init__.py", line 304, in <module>
+    from ._base import *
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\scipy\sparse\_base.py", line 8, in <module>
+    from ._sputils import (asmatrix, check_reshape_kwargs, check_shape,
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\scipy\sparse\_sputils.py", line 10, in <module>
+    from scipy._lib._util import np_long, np_ulong
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\scipy\_lib\_util.py", line 14, in <module>
+    from scipy._lib._array_api import (Array, array_namespace, is_lazy_array,
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\scipy\_lib\_array_api.py", line 25, in <module>
+    from scipy._lib.array_api_compat import (
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\scipy\_lib\array_api_compat\numpy\__init__.py", line 4, in <module>
+    from numpy import *  # noqa: F403  # pyright: ignore[reportWildcardImportFromLibrary]
+    ^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1410, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 1412, in _handle_fromlist
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\numpy\__init__.py", line 737, in __getattr__
+    import numpy.polynomial as polynomial
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\numpy\polynomial\__init__.py", line 122, in <module>
+    from .polynomial import Polynomial
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 990, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1086, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1186, in get_data
+KeyboardInterrupt
+^C
+
+STDOUT:
+(no stdout)
+──────────────────────────────────────────────
+
+[2025-11-17 17:26:49] [ERROR] ❌ Video and audio list length mismatch
+[2025-11-17 17:26:49] [ERROR] ❌ Pipeline failed for UID da55fef6-6148-48e7-97b5-a82782089d2c: Video and audio lists must have the same length
+[2025-11-17 17:26:49] [ERROR] Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\main.py", line 75, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\merger_factory.py", line 209, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list, unique_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\merger_factory.py", line 132, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+
+[2025-11-17 17:26:50] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\video_routes.py", line 36, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\main.py", line 75, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\merger_factory.py", line 209, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list, unique_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\merger_factory.py", line 132, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-17 17:26:50] [ERROR] ❌ HTTP 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-17 17:26:50] [ERROR] ❌ Video generation failed for da55fef6-6148-48e7-97b5-a82782089d2c: 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-17 17:26:50] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\write_routes.py", line 104, in write_scripts
+    video_result = await async_post(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"Video and audio lists must have the same length"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\write_routes.py", line 123, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Video generation failed for da55fef6-6148-48e7-97b5-a82782089d2c: 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-17 17:26:50] [ERROR] ❌ HTTP 500: {"detail":"500: ❌ Video generation failed for da55fef6-6148-48e7-97b5-a82782089d2c: 500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-17 17:26:50] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\generator_routes.py", line 30, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: ❌ Video generation failed for da55fef6-6148-48e7-97b5-a82782089d2c: 500: {\"detail\":\"Video and audio lists must have the same length\"}"}
+[2025-11-17 17:26:50] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: ❌ Video generation failed for da55fef6-6148-48e7-97b5-a82782089d2c: 500: {\\\"detail\\\":\\\"Video and audio lists must have the same length\\\"}\"}"}

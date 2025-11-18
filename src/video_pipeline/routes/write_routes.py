@@ -7,6 +7,9 @@ from logger import pipeline_logger, validation_logger
 from Transaction.transaction_handler import transaction
 from Transaction.excepetion import exception
 import traceback
+from config import Settings
+from Artifacts.artifacts import run_script_data_process
+
 
 router = APIRouter(prefix="", tags=["Write Scripts"])
 BASE_INPUT_ROOT = Path(r"C:\Vivek_Main\Manim_project\inputbox")
@@ -92,6 +95,8 @@ async def write_scripts(data: GenerateFilesRequest):
         # -------------------------------
         # 3️⃣  Trigger Video Generation
         # -------------------------------
+
+        run_script_data_process(unique_id)
         try:
             video_url = "http://127.0.0.1:8000/generate-videos-api"
             pipeline_logger.info(f"🎬 Triggering video generation for {unique_id}")

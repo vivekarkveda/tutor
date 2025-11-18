@@ -8,6 +8,7 @@ from pydantic import BaseModel
 from Transaction.transaction_handler import transaction
 from Transaction.excepetion import exception
 import traceback
+from Artifacts.artifacts import run_script_data_process
 
 router = APIRouter(prefix="", tags=["File Generation"])
 

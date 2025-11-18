@@ -3,9 +3,11 @@ from typing import List, Dict, Optional
 import cohere
 import json
 import requests
-from logger import pipeline_logger
-
-
+from typing import List, Dict, Optional
+from langchain_cohere import ChatCohere
+from langchain_core.prompts import PromptTemplate
+from config import Settings
+import os
 # === Utility: Qdrant Integration ===
 def merge_qdrant_snippets_into_prompt(
     prompt: str,
@@ -135,18 +137,31 @@ Generate the FULL Manim Python code that:
                 catalog_placeholder=catalog_placeholder,
                 debug_placeholder=debug_placeholder,
                 qdrant_api_url="http://127.0.0.1:8880/search",
-                min_score=0.70
+                min_score=0.20
             )
-
-            
-
-            print(f":brain: Sending prompt to Cohere for topic: {script_for_manim}")
-            response = self.client.chat(
-                model="command-a-03-2025",
-                messages=[{"role": "user", "content": final_prompt}]
-            )
-
-            manim_code = response.message.content[0].text.strip()
+            # === LangChain Integration ===
+            try:
+                chain = self.prompt_template | self.llm
+                output = chain.invoke({"final_prompt": final_prompt})
+                manim_code = output.content.strip() if output and hasattr(output, "content") else ""
+            except Exception as e:
+                print(f":x: LangChain generation failed: {e}")
+                manim_code = ""
+            # === Log the prompt and result ===
+            log_dir = "final_prompt"
+            os.makedirs(log_dir, exist_ok=True)
+            log_filename = f"Final_prompt_{script_seq}.txt"
+            log_path = os.path.join(log_dir, log_filename)
+            try:
+                with open(log_path, "w", encoding="utf-8") as log_file:
+                    log_file.write("=== FINAL PROMPT SENT ===\n\n")
+                    log_file.write(final_prompt)
+                    log_file.write("\n\n=== GENERATED CODE ===\n\n")
+                    log_file.write(manim_code if manim_code else "[No output generated]")
+                print(f":receipt: Log saved: {log_path}")
+            except Exception as e:
+                print(f":warning: Failed to save log file for {script_seq}: {e}")
+            # === Cleanup markdown formatting ===
             if manim_code.startswith("```"):
                 manim_code = (
                     manim_code.replace("```python", "")
@@ -163,9 +178,7 @@ Generate the FULL Manim Python code that:
             
 
             print(f":white_check_mark: Code generated for {script_seq}")
-            results.append({f"script_seq{script_seq}": manim_code})
-
-        pipeline_logger.info(f"prompt_data  {prompt_data}")
-        pipeline_logger.info(f"results {results}")
-
-        return results
+            result.append({
+                f"script_seq{script_seq}": manim_code
+            })
+        return result
