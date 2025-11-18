@@ -5,6 +5,7 @@ from typing import List, Dict, Optional
 from langchain_cohere import ChatCohere
 from langchain_core.prompts import PromptTemplate
 from config import Settings
+import os
 # === Utility: Qdrant Integration ===
 def merge_qdrant_snippets_into_prompt(
     prompt: str,
@@ -147,14 +148,17 @@ class CodeGenerator:
                 print(f":x: LangChain generation failed: {e}")
                 manim_code = ""
             # === Log the prompt and result ===
-            log_filename = f"Bug_fix_log_script_{script_seq}.txt"
+            log_dir = "final_prompt"
+            os.makedirs(log_dir, exist_ok=True)
+            log_filename = f"Final_prompt_{script_seq}.txt"
+            log_path = os.path.join(log_dir, log_filename)
             try:
-                with open(log_filename, "w", encoding="utf-8") as log_file:
+                with open(log_path, "w", encoding="utf-8") as log_file:
                     log_file.write("=== FINAL PROMPT SENT ===\n\n")
                     log_file.write(final_prompt)
                     log_file.write("\n\n=== GENERATED CODE ===\n\n")
                     log_file.write(manim_code if manim_code else "[No output generated]")
-                print(f":receipt: Log saved: {log_filename}")
+                print(f":receipt: Log saved: {log_path}")
             except Exception as e:
                 print(f":warning: Failed to save log file for {script_seq}: {e}")
             # === Cleanup markdown formatting ===
@@ -172,10 +176,4 @@ class CodeGenerator:
                 f"script_seq{script_seq}": manim_code
             })
         return result
-
-
-
-
-
-
 

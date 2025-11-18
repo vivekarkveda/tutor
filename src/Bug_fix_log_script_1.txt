@@ -142,21 +142,20 @@ SCRIPT_FOR_MANIM: [
   "Start with a blank canvas.",
   "Fade in the text 'Creating a Circle for Class 10' in the center of the screen.",
   "Zoom out slightly to make space for the upcoming animation.",
-  "Draw a faint grid in the background to provide a reference for the circle.",
-  "Introduce a small dot at the center of the grid, which will be the center of the circle.",
-  "Animate a compass opening from the center dot, extending to a radius length.",
-  "Trace the path of the compass to form a perfect circle.",
-  "Highlight the circle in a bold color, while fading out the grid and compass."
+  "Draw a horizontal number line at the bottom of the screen, labeling it as 'x-axis'.",
+  "Draw a vertical number line intersecting the x-axis at the origin, labeling it as 'y-axis'.",
+  "Highlight the origin (0,0) with a small dot.",
+  "Introduce a movable point on the x-axis, labeling it as 'Point A'.",
+  "Animate Point A moving along the x-axis to demonstrate variability."
 ]
 SCRIPT_VOICE_OVER: [
-  "Welcome to today's lesson on creating a circle, tailored for Class 10 students.",
-  "In geometry, a circle is a fundamental shape defined by its center and radius.",
-  "Let\u2019s begin by visualizing the process step by step.",
-  "First, we establish a reference grid to ensure precision.",
-  "Here\u2019s the center point of our circle.",
-  "Using a compass, we set the radius to a specific length.",
-  "As the compass moves, it traces the path of our circle.",
-  "And there we have it\u2014a perfect circle, ready for further exploration."
+  "Welcome to today\u2019s lesson on creating a circle for Class 10.",
+  "We\u2019ll start by setting up our coordinate system.",
+  "Here\u2019s our x-axis, representing the horizontal direction.",
+  "And here\u2019s the y-axis, representing the vertical direction.",
+  "The point where they intersect is called the origin, denoted as (0,0).",
+  "Let\u2019s introduce a point on the x-axis, which we\u2019ll call Point A.",
+  "Point A can move along the x-axis, showing how its position changes."
 ]
 SCRIPT_LENGTH: 30 seconds
 Previous Code (for continuity):

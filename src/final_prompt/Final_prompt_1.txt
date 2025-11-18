@@ -1,19 +1,41 @@
 === FINAL PROMPT SENT ===
 
-
 You are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).
-Your goal is to turn a provided topic script into a visually clear, accurate, and fully executable Python animation.
-
-Follow these CRITICAL INSTRUCTIONS exactly as described:
-- Maintain precise spatial geometry and proportions.
-- Use legible, non-overlapping text.
-- Include accurate math-based animation sequences.
-- Avoid redundant or commented-out code.
-
-Now, based on the following structured input:
-
-DEBUG: 
-CATALOG:     def construct(self):
+Your task is to generate a complete, runnable Manim Python animation script based on the provided structured input.
+Follow ALL instructions exactly — NO explanations, NO markdown, NO extra text.
+Return ONLY the final Python code that can run successfully with:
+    manim -pql <filename>.py <SceneName>
+====================
+OBJECTIVE
+====================
+copy the code from example if SCRIPT_SEQ is 1 then copy script 1
+if SCRIPT_SEQ is 2 then copy script 2
+====================
+EXAMPLE (REFERENCE)
+====================
+[script 1 :- from manim import *
+class ExpandingCircle(Scene):
+    def construct(self):
+        self.camera.background_color = "#1E1E1E"
+        circle = Circle(radius=0.5, color=YELLOW)
+        self.play(Create(circle), run_time=0.5)
+        self.play(circle.animate.scale(2).fade(1), run_time=1.2)
+        self.wait(0.3)
+script 2 :- from manim import *
+class MovingCircle(Scene):
+    def construct(self):
+        self.camera.background_color = "#1E1E1E"
+        path = Circle(radius=2, color=GRAY, stroke_opacity=0.3)
+        dot = Dot(color=RED).move_to(path.point_at_angle(0))
+        self.add(path, dot)
+        self.play(MoveAlongPath(dot, path), run_time=3, rate_func=linear)
+        self.wait(0.3)
+]
+If the topic and script content match this example, reproduce this exact code — line by line.
+====================
+:inbox_tray: STRUCTURED INPUT
+====================
+catalog_placeholder:     def construct(self):
         # Create circle
         circle = Circle(radius=2, color=BLUE)
         
@@ -35,30 +57,124 @@ CATALOG:     def construct(self):
 
         self.wait(2)
 
+Bug_fix_placeholder: # Original Bug Snippet:
+```python
+# -----------------------------
+# 1️⃣ Title
+# -----------------------------
+title = Tex("Constructing a Circumscribed Circle (Circumcircle)", color=BLUE).to_edge(UP)
+
+# -----------------------------
+# 2️⃣ Step 1 Text
+# -----------------------------
+step1_text = Tex("Step 1: Draw Perpendicular Bisectors", color=GREEN).next_to(title, DOWN, buff=0.5)
+
+# -----------------------------
+# 3️⃣ Step 2 Text
+# -----------------------------
+step2_text = Tex("Step 2: Intersection = Circumcenter O", color=GREEN).next_to(title, DOWN, buff=0.5)
+
+# -----------------------------
+# 4️⃣ Step 3 Text
+# -----------------------------
+step3_text = Tex("Step 3: Draw Circumcircle", color=GREEN).next_to(title, DOWN, buff=0.5)
+
+# -----------------------------
+# 5️⃣ O Label
+# -----------------------------
+O_label = Tex("O", color=WHITE).next_to(O_dot, RIGHT)
+
+# -----------------------------
+# 6️⃣ Final Explanation
+# -----------------------------
+final_text = Tex("The circle through A, B, C with center O is the Circumcircle", color=ORANGE).to_edge(DOWN)
+```
+
+# Fixed Bug Snippet:
+```python
+# -----------------------------
+# 1️⃣ Title
+# -----------------------------
+title = Tex(
+    "Constructing a Circumscribed Circle (Circumcircle)",
+    color=BLUE,
+    font_size=40
+).to_edge(UP)
+
+# -----------------------------
+# 2️⃣ Step 1 Text
+# -----------------------------
+step1_text = Tex(
+    "Step 1: Draw Perpendicular Bisectors",
+    color=GREEN,
+    font_size=20
+).to_edge(RIGHT, buff=1.2).shift(UP*1.2)
+
+# -----------------------------
+# 3️⃣ Step 2 Text
+# -----------------------------
+step2_text = Tex(
+    "Step 2: Intersection = Circumcenter O",
+    color=GREEN,
+    font_size=20
+).to_edge(RIGHT, buff=1.2).shift(UP*0.2)
+
+# -----------------------------
+# 4️⃣ Step 3 Text
+# -----------------------------
+step3_text = Tex(
+    "Step 3: Draw Circumcircle",
+    color=GREEN,
+    font_size=20
+).to_edge(RIGHT, buff=1.2).shift(DOWN*0.7)
+
+# -----------------------------
+# 5️⃣ O Label
+# -----------------------------
+O_label = Tex("O", color=WHITE, font_size=20).next_to(O_dot, RIGHT)
+
+# -----------------------------
+# 6️⃣ Final Explanation
+# -----------------------------
+final_text = Tex(
+    "The circle through A, B, C with center O is the Circumcircle",
+    color=ORANGE,
+    font_size=26
+).to_edge(DOWN)
+```
 SCRIPT_SEQ: 1
 SCRIPT_FOR_MANIM: [
-  "Start with a blank canvas.",
-  "Fade in the text 'Creating a Circle for Class 10' at the center.",
-  "Zoom out slightly to reveal a grid background.",
-  "Draw a faint horizontal line (x-axis) and a vertical line (y-axis) intersecting at the center.",
-  "Highlight the center point with a small dot.",
-  "Fade out the title text."
+  "Start with a blank screen.",
+  "Fade in the text 'Welcome to Class 10 English' in the center of the screen.",
+  "Zoom out slightly to make space for the next element.",
+  "Draw a small dot in the center of the screen, which will be the center of the circle.",
+  "Begin drawing a circle around the dot, starting from the right side and moving counterclockwise.",
+  "Complete the circle and hold the final frame."
 ]
 SCRIPT_VOICE_OVER: [
-  "Welcome to today's lesson on creating a circle for Class 10.",
-  "We'll start by understanding the basics of a circle's construction.",
-  "Imagine a grid where we'll plot our circle.",
-  "The center of the circle is where the x-axis and y-axis intersect.",
-  "This point is crucial as it defines the circle's position."
+  "Welcome to Class 10 English.",
+  "Today, we\u2019ll learn how to create a circle.",
+  "First, we start with a center point.",
+  "From this point, we draw a curved line around it.",
+  "This curved line forms a perfect circle.",
+  "And here we have our completed circle."
 ]
-SCRIPT_LENGTH: 30
+SCRIPT_LENGTH: 30 seconds
+Previous Code (for continuity):
 
-Generate the FULL Manim Python code that:
-- Follows all layout and animation rules.
-- Is executable and error-free.
-- Returns ONLY valid Python code (no Markdown or explanations).
-
+====================
+:gear: OUTPUT REQUIREMENTS
+====================
+just copy the code provided in EXAMPLE (REFERENCE)
 
 === GENERATED CODE ===
 
-[No output generated]
+from manim import *
+
+class ExpandingCircle(Scene):
+    def construct(self):
+        self.camera.background_color = "#1E1E1E"
+        circle = Circle(radius=0.5, color=YELLOW)
+        self.play(Create(circle), run_time=0.5)
+        self.play(circle.animate.scale(2).fade(1), run_time=1.2)
+        self.wait(0.3)

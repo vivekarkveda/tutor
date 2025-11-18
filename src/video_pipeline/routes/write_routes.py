@@ -46,7 +46,7 @@ async def write_scripts(data: GenerateFilesRequest):
             pipeline_logger.error(err_msg)
             exception(
                 unique_id,
-                script_written="Folder creation failed",
+                script_written="Script writing failed",
                 exception_message=str(e),
                 trace=traceback.format_exc()
             )

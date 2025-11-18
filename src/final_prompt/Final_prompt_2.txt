@@ -37,27 +37,30 @@ If the topic and script content match this example, reproduce this exact code â€
 ====================
 catalog_placeholder:     def construct(self):
         # Set radius
-        r = 2.5  # You can change this value
+        r = 2  # You can change this
+        d = 2 * r
 
         # Create circle
         circle = Circle(radius=r, color=BLUE)
         
         # Center dot
         center = Dot(circle.get_center(), color=RED)
-        center_label = MathTex("O", font_size=36).next_to(center, DOWN)
+        
+        # Move the center label slightly to the left
+        center_label = MathTex("O", font_size=36).next_to(center, LEFT*0.4)
 
-        # Draw a radius line
-        radius_line = Line(center.get_center(), circle.get_top(), color=YELLOW)
-        radius_label = MathTex("r", font_size=32).next_to(radius_line.get_center(), RIGHT*0.3)
+        # Draw a diameter line (top to bottom)
+        diameter_line = Line(circle.get_top(), circle.get_bottom(), color=YELLOW)
+        diameter_label = MathTex("d", font_size=32).next_to(diameter_line.get_center(), RIGHT*0.3)
 
         # Animate circle and center
         self.play(DrawBorderThenFill(circle), run_time=2)
         self.play(FadeIn(center, scale=0.6), Write(center_label))
 
-        # Animate radius line and label
-        self.play(Create(radius_line), Write(radius_label))
+        # Animate diameter line and label
+        self.play(Create(diameter_line), Write(diameter_label))
 
-        # Optional: subtle bounce for emphasis
+        # Optional subtle bounce for emphasis
         self.play(circle.animate.scale(1.03).scale(0.97), run_time=0.5)
 
         self.wait(2)
@@ -149,24 +152,22 @@ final_text = Tex(
 ```
 SCRIPT_SEQ: 2
 SCRIPT_FOR_MANIM: [
-  "Start with the final frame of Scene 1: the highlighted circle.",
-  "Zoom in slightly on the circle to focus attention.",
-  "Label the center of the circle with the letter 'O'.",
-  "Draw a radius from the center to the edge of the circle, labeling it 'r'.",
-  "Animate a point moving along the circumference of the circle, leaving a trail to emphasize the circular path.",
-  "Introduce the formula for the circumference of a circle, C = 2\u03c0r, appearing beside the circle.",
-  "Highlight the formula briefly, then fade it out while keeping the circle and labels visible.",
-  "End with a smooth zoom out, showing the entire circle with labels, ready for the next lesson."
+  "Start with the completed circle from Scene 1.",
+  "Highlight the center dot by increasing its size and changing its color to red.",
+  "Draw a radius from the center to the edge of the circle, extending it slightly beyond the circle.",
+  "Label the radius as 'Radius' with an arrow pointing to it.",
+  "Draw a diameter across the circle, passing through the center, and label it as 'Diameter'.",
+  "Fade out the labels and radius, leaving only the circle and center dot.",
+  "Shrink the circle slightly and move it to one side of the screen, making space for additional text.",
+  "Fade in the text 'Circle Created Successfully!' next to the circle."
 ]
 SCRIPT_VOICE_OVER: [
-  "Now that we\u2019ve created our circle, let\u2019s label its key components.",
-  "The center of the circle is denoted by the letter 'O'.",
-  "The radius, which is the distance from the center to any point on the circle, is labeled as 'r'.",
-  "Notice how any point on the circle\u2019s edge is always the same distance from the center.",
-  "The circumference of a circle, or the distance around it, can be calculated using the formula C = 2\u03c0r.",
-  "This formula is essential for solving problems related to circles.",
-  "With this foundation, you\u2019re well-equipped to explore more advanced concepts in geometry.",
-  "Stay tuned for our next lesson, where we\u2019ll dive deeper into the world of circles."
+  "This is the circle we\u2019ve created.",
+  "The center point is marked in red.",
+  "A radius is a line segment from the center to any point on the circle.",
+  "The diameter is twice the length of the radius, passing through the center.",
+  "With these elements, we understand the structure of a circle.",
+  "Congratulations! You\u2019ve successfully created a circle for Class 10 English."
 ]
 SCRIPT_LENGTH: 30 seconds
 Previous Code (for continuity):
