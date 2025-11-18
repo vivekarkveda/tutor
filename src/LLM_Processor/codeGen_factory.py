@@ -105,7 +105,7 @@ class CodeGenerator:
             Bug_fix_placeholder = "{Bug_fix}"
             # === Load prompt template file safely ===
             try:
-                with open(Settings.TEST_MANIM_PROMPT_PATH, "r", encoding="utf-8") as f:
+                with open(Settings.TEST_MANIM_PROMPT_PATH_2, "r", encoding="utf-8") as f:
                     prompt_template = f.read() or ""
             except Exception as e:
                 print(f":x: Failed to read prompt file: {e}")

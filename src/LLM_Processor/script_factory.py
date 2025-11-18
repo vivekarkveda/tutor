@@ -32,14 +32,13 @@ class CohereScriptGenerator(ScriptGenerator):
         try:
             with open(Settings.TEST_JSON_PROMPT_PATH, "r", encoding="utf-8") as f:
                 prompt_template = f.read()
+            transaction(unique_id, script_gen_status="script generation successfull")
         except Exception as e:
-            error_trace = traceback.format_exc()
             transaction(
                 unique_id=unique_id,
-                script_gen_status="script generation failed",
-                exception_message=str(e),
-                trace=error_trace
+                script_gen_status="script generation failed"
             )
+            exception(unique_id, type="script" ,description="json script generation failed", module="CohereScriptGenerator")
             raise RuntimeError(f"Failed to load prompt template: {e}")
 
         # === Fill placeholders dynamically ===
@@ -82,9 +81,8 @@ class CohereScriptGenerator(ScriptGenerator):
             transaction(
                 unique_id,
                 script_gen_status="script generation failed",
-                exception_message=str(e),
-                trace=error_trace
             )
+            exception(unique_id, type="script" ,description="json script generation failed", module="script_factory")
 
             print(f":x: Script generation failed: {e}")
             raise RuntimeError(f"Script generation failed: {e}")

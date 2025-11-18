@@ -1,0 +1,262 @@
+=== FINAL PROMPT SENT ===
+
+You are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).
+Your goal is to turn a provided topic script into a visually clear, accurate, and fully executable Python animation that communicates concepts step-by-step.
+Follow these CRITICAL INSTRUCTIONS exactly as described:
+...
+Now, based on the following structured input:
+CATALOG:     def construct(self):
+        # Set radius
+        r = 2  # You can change this
+        d = 2 * r
+
+        # Create circle
+        circle = Circle(radius=r, color=BLUE)
+        
+        # Center dot
+        center = Dot(circle.get_center(), color=RED)
+        
+        # Move the center label slightly to the left
+        center_label = MathTex("O", font_size=36).next_to(center, LEFT*0.4)
+
+        # Draw a diameter line (top to bottom)
+        diameter_line = Line(circle.get_top(), circle.get_bottom(), color=YELLOW)
+        diameter_label = MathTex("d", font_size=32).next_to(diameter_line.get_center(), RIGHT*0.3)
+
+        # Animate circle and center
+        self.play(DrawBorderThenFill(circle), run_time=2)
+        self.play(FadeIn(center, scale=0.6), Write(center_label))
+
+        # Animate diameter line and label
+        self.play(Create(diameter_line), Write(diameter_label))
+
+        # Optional subtle bounce for emphasis
+        self.play(circle.animate.scale(1.03).scale(0.97), run_time=0.5)
+
+        self.wait(2)
+
+SCRIPT_SEQ: 3
+SCRIPT_FOR_MANIM: [
+  "Start with a blank canvas.",
+  "Draw a coordinate plane with x and y axes.",
+  "Plot a point at (2, 3) and label it 'C'.",
+  "Draw a circle with center 'C' and radius 2.",
+  "Highlight a point on the circle, labeling it 'P'.",
+  "Draw a line from 'P' to 'C' to show the radius.",
+  "Show a right triangle formed by dropping a perpendicular from 'P' to the x-axis.",
+  "Label the triangle's sides as 'x', 'y', and 'r'.",
+  "Animate the triangle's sides changing to satisfy the equation 'x\u00b2 + y\u00b2 = r\u00b2'."
+]
+SCRIPT_VOICE_OVER: [
+  "Let's apply this to an example.",
+  "Consider a circle with center at (2, 3) and radius 2.",
+  "Any point 'P' on this circle will satisfy the equation (x - 2)\u00b2 + (y - 3)\u00b2 = 4.",
+  "For instance, if 'P' is (4, 3), the distance from the center is 2 units.",
+  "This demonstrates how the circle equation ensures all points are the correct distance from the center."
+]
+SCRIPT_LENGTH: 30
+Generate the FULL Manim Python code that:
+- Follows all layout, geometry, boundary, and animation rules.
+- Produces a step-by-step educational animation.
+- Uses correct scaling and non-overlapping text.
+- Is self-contained and executable without errors.
+- Returns ONLY valid Python code (no explanations or Markdown formatting).
+:pushpin: Previous Code (for continuity):
+import numpy as np
+
+from manim import *
+
+
+class CircleProperties(Scene):
+    def construct(self):
+        # Set up the circle and center
+        circle = Circle(radius=2.5, color=BLUE)
+        center = Dot(circle.get_center(), color=RED)
+        center_label = MathTex("O", font_size=36).next_to(center, DOWN)
+
+        # Label the radius
+        radius_line = Line(center.get_center(), circle.get_right(), color=YELLOW)
+        radius_label = MathTex("r", font_size=32).next_to(radius_line.get_center(), RIGHT * 0.3)
+
+        # Point A on the circle
+        point_a = Dot(circle.point_from_proportion(0.3), color=GREEN)
+        point_a_label = MathTex("A", font_size=32).next_to(point_a, RIGHT)
+
+        # Multiple radii
+        radius_lines = VGroup()
+        for angle in np.linspace(0, TAU, 6):
+            new_radius = Line(center.get_center(), circle.point_from_proportion(angle / TAU), color=YELLOW)
+            radius_lines.add(new_radius)
+
+        # Circle equation
+        circle_equation = MathTex(r"(x - h)^2 + (y - k)^2 = r^2", font_size=36)
+        circle_equation.to_edge(DOWN)
+
+        # Animate the scene
+        self.play(DrawBorderThenFill(circle), FadeIn(center, scale=0.6), Write(center_label))
+        self.play(Create(radius_line), Write(radius_label))
+        self.play(GrowFromCenter(point_a), Write(point_a_label))
+        self.play(Create(radius_lines), run_time=2)
+        self.play(circle.animate.scale(0.9).scale(1.1), run_time=1)
+        self.play(FadeIn(circle_equation))
+        self.play(Indicate(circle_equation[0][0]), Indicate(center_label), Indicate(radius_label))
+        self.wait()
+
+# Run the animation
+config.media_width = "80%"
+config.pixel_height = 720
+module = "circle_properties"
+CircleProperties().render()
+
+# Bug_fix Hint:
+```python
+# Original Bug Snippet:
+```python
+# OLD angle using Arc (before changes)
+old_angle_arc = Arc(
+    radius=0.8,
+    start_angle=0,
+    angle=PI/4,
+    color="#008000",
+    stroke_width=4
+)
+old_angle_arc.move_arc_center_to(head.get_center())
+
+old_angle_label = MathTex("45°", color="#008000", font_size=28)
+old_angle_label.move_to(head.get_center() + RIGHT * 1.2 + UP * 0.3)
+
+# NEW angle using Arc (before changes)
+new_angle_arc = Arc(
+    radius=0.8,
+    start_angle=0,
+    angle=PI/6,
+    color="#0000FF",
+    stroke_width=4
+)
+new_angle_arc.move_arc_center_to(head.get_center())
+
+angle_highlight = Arc(
+    radius=0.9,
+    start_angle=0,
+    angle=PI/6,
+    color="#87CEFA",
+    stroke_width=6,
+    stroke_opacity=0.7
+)
+angle_highlight.move_arc_center_to(head.get_center())
+
+new_angle_label = MathTex("30°", color="#0000FF", font_size=28)
+new_angle_label.move_to(head.get_center() + RIGHT * 1.0 + UP * 0.2)
+```
+
+# Fixed Bug Snippet:
+```python
+# OLD angle using Angle (after changes)
+old_angle_arc = Angle(
+    old_triangle_base,
+    old_sight_line,
+    radius=0.8,
+    color="#008000",
+    other_angle=False,
+    stroke_width=4
+)
+old_angle_label = MathTex("45°", color="#008000", font_size=28)
+old_angle_label.next_to(old_angle_arc, UP, buff=0.1)
+
+# NEW angle using Angle (after changes)
+new_angle_arc = Angle(
+    new_triangle_base,
+    new_sight_line,
+    radius=0.8,
+    color="#0000FF",
+    other_angle=False,
+    stroke_width=4
+)
+angle_highlight = Angle(
+    new_triangle_base,
+    new_sight_line,
+    radius=0.9,
+    color="#87CEFA",
+    other_angle=False,
+    stroke_width=6,
+    stroke_opacity=0.7
+)
+new_angle_label = MathTex("30°", color="#0000FF", font_size=28)
+new_angle_label.next_to(new_angle_arc, UP, buff=0.1)
+```
+```
+
+=== GENERATED CODE ===
+
+```python
+import numpy as np
+
+from manim import *
+
+
+class CircleExample(Scene):
+    def construct(self):
+        # Step 1: Set up the coordinate plane
+        axes = Axes(
+            x_range=[-5, 5, 1],
+            y_range=[-5, 5, 1],
+            axis_config={"color": GREY_BROWN},
+            x_length=10,
+            y_length=10,
+        )
+        self.add(axes)
+
+        # Step 2: Plot point C and label
+        point_c = Dot(np.array([2, 3, 0]), color=RED)
+        label_c = MathTex("C", color=RED).next_to(point_c, RIGHT)
+        self.play(GrowFromCenter(point_c), Write(label_c))
+
+        # Step 3: Draw the circle with center C and radius 2
+        circle = Circle(radius=2, color=BLUE)
+        circle.move_to(point_c.get_center())
+        self.play(DrawBorderThenFill(circle))
+
+        # Step 4: Highlight a point P on the circle
+        point_p = Dot(circle.point_from_proportion(0.6), color=GREEN)
+        label_p = MathTex("P", color=GREEN).next_to(point_p, LEFT)
+        self.play(GrowFromCenter(point_p), Write(label_p))
+
+        # Step 5: Draw the radius line from P to C
+        radius_line = Line(point_p.get_center(), point_c.get_center(), color=YELLOW)
+        self.play(Create(radius_line))
+
+        # Step 6: Show a right triangle
+        triangle = RegularPolygon(n=3, start_angle=np.pi / 2, color=MAROON_B)
+        triangle.scale(0.5)
+        triangle.move_to(point_p.get_center())
+        triangle.rotate(np.pi / 2, about_point=point_p.get_center())
+        self.play(Create(triangle))
+
+        # Step 7: Label the triangle sides
+        x_label = MathTex("x").next_to(triangle.get_vertices()[1], RIGHT)
+        y_label = MathTex("y").next_to(triangle.get_vertices()[2], DOWN)
+        r_label = MathTex("r").next_to(radius_line.get_center(), RIGHT)
+        self.play(Write(x_label), Write(y_label), Write(r_label))
+
+        # Step 8: Animate the triangle sides changing
+        new_triangle = triangle.copy()
+        new_triangle.stretch_to_fit_width(np.sqrt(5), about_edge=new_triangle.get_edges()[0])
+        new_triangle.stretch_to_fit_height(2, about_edge=new_triangle.get_edges()[1])
+        self.play(Transform(triangle, new_triangle), run_time=2)
+
+        # Step 9: Show the equation
+        equation = MathTex(r"x^2 + y^2 = r^2").to_edge(UP)
+        self.play(Write(equation))
+
+        # Optional: Add voice-over text
+        voice_over = Text(SCRIPT_VOICE_OVER, font_size=24).to_edge(DOWN)
+        self.add(voice_over)
+
+        self.wait(3)
+
+# Run the animation
+config.media_width = "80%"
+config.pixel_height = 720
+module = "circle_example"
+CircleExample().render()
+```

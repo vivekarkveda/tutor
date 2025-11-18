@@ -1,0 +1,461 @@
+[2025-11-18 14:21:25] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Temp_Data/20251118_141917_70b7b4dc-8d00-4459-a431-4379826a6c85/script_seq1/script_seq1.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Scripts\manim.exe\__main__.py", line 7, in <module>
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\click\core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\click\core.py", line 1082, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\click\core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\click\core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\click\core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\cli\render\commands.py", line 121, in render
+    for SceneClass in scene_classes_from_file(file):
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\utils\module_ops.py", line 167, in scene_classes_from_file
+    module = get_module(file_path)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\utils\module_ops.py", line 67, in get_module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 994, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Vivek_Main\Temp_Data\20251118_141917_70b7b4dc-8d00-4459-a431-4379826a6c85\script_seq1\script_seq1.py", line 54, in <module>
+    CircleCreation().render()
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\scene\scene.py", line 237, in render
+    self.construct()
+  File "C:\Vivek_Main\Temp_Data\20251118_141917_70b7b4dc-8d00-4459-a431-4379826a6c85\script_seq1\script_seq1.py", line 8, in construct
+    self.camera.frame.save_state()
+    ^^^^^^^^^^^^^^^^^
+AttributeError: 'Camera' object has no attribute 'frame'
+
+STDOUT:
+Manim Community v0.19.0
+──────────────────────────────────────────────
+
+[2025-11-18 14:22:17] [ERROR] ❌ Unexpected error in /search endpoint
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\search_routes.py", line 84, in search
+    file_resp, code_resp = await asyncio.gather(gen_task, code_task)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\utils.py", line 12, in async_post
+    resp = await client.post(url, json=payload, headers={"Content-Type": "application/json"})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+[2025-11-18 14:23:01] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Temp_Data/20251118_141917_70b7b4dc-8d00-4459-a431-4379826a6c85/script_seq3/script_seq3.py
+──────────────────────────────────────────────
+STDERR:
+Animation 0: GrowFromCenter(Dot), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: GrowFromCenter(Dot), etc.:  47%|####6     | 7/15 [00:00<00:00, 65.68it/s]
+Animation 0: GrowFromCenter(Dot), etc.: 100%|##########| 15/15 [00:00<00:00, 68.32it/s]
+                                                                                       
+
+Animation 1: DrawBorderThenFill(Circle):   0%|          | 0/30 [00:00<?, ?it/s]
+Animation 1: DrawBorderThenFill(Circle):  33%|###3      | 10/30 [00:00<00:00, 95.49it/s]
+Animation 1: DrawBorderThenFill(Circle):  67%|######6   | 20/30 [00:00<00:00, 88.29it/s]
+                                                                                        
+
+Animation 2: GrowFromCenter(Dot), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 2: GrowFromCenter(Dot), etc.:  33%|###3      | 5/15 [00:00<00:00, 43.66it/s]
+Animation 2: GrowFromCenter(Dot), etc.:  67%|######6   | 10/15 [00:00<00:00, 44.05it/s]
+                                                                                       
+
+Animation 3: Create(Line):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 3: Create(Line):  47%|####6     | 7/15 [00:00<00:00, 60.07it/s]
+                                                                         
+
+Animation 4: Create(RegularPolygon):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 4: Create(RegularPolygon):  53%|#####3    | 8/15 [00:00<00:00, 76.32it/s]
+                                                                                   
+
+Animation 5: Write(MathTex('x')), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 5: Write(MathTex('x')), etc.:  27%|##6       | 4/15 [00:00<00:00, 39.42it/s]
+Animation 5: Write(MathTex('x')), etc.:  53%|#####3    | 8/15 [00:00<00:00, 32.66it/s]
+Animation 5: Write(MathTex('x')), etc.:  80%|########  | 12/15 [00:00<00:00, 33.63it/s]
+                                                                                       
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Scripts\manim.exe\__main__.py", line 7, in <module>
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\click\core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\click\core.py", line 1082, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\click\core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\click\core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\click\core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\cli\render\commands.py", line 121, in render
+    for SceneClass in scene_classes_from_file(file):
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\utils\module_ops.py", line 167, in scene_classes_from_file
+    module = get_module(file_path)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\utils\module_ops.py", line 67, in get_module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 994, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Vivek_Main\Temp_Data\20251118_141917_70b7b4dc-8d00-4459-a431-4379826a6c85\script_seq3\script_seq3.py", line 70, in <module>
+    CircleExample().render()
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\scene\scene.py", line 237, in render
+    self.construct()
+  File "C:\Vivek_Main\Temp_Data\20251118_141917_70b7b4dc-8d00-4459-a431-4379826a6c85\script_seq3\script_seq3.py", line 52, in construct
+    new_triangle.stretch_to_fit_width(np.sqrt(5), about_edge=new_triangle.get_edges()[0])
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\mobject\mobject.py", line 698, in getter
+    return getattr(self, to_get)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\mobject\mobject.py", line 723, in __getattr__
+    raise AttributeError(f"{type(self).__name__} object has no attribute '{attr}'")
+AttributeError: RegularPolygon object has no attribute 'edges'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/18/25 14:22:34] INFO     Writing C to               tex_file_writing.py:111
+                             C:\Vivek_Main\feature_vive                        
+                             k\tutor\src\media\videos\2                        
+                             0251118_141917_70b7b4dc-8d                        
+                             00-4459-a431-4379826a6c85\                        
+                             script_seq3\Tex\86474863bf                        
+                             dee3e7.tex                                        
+[11/18/25 14:22:38] INFO     Animation 0 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\feature_vi                         
+                             vek\tutor\src\media\video                         
+                             s\20251118_141917_70b7b4d                         
+                             c-8d00-4459-a431-4379826a                         
+                             6c85\script_seq3\videos\s                         
+                             cript_seq3\720p15\partial                         
+                             _movie_files\CircleExampl                         
+                             e\4181155354_2386395477_3                         
+                             75351994.mp4'                                     
+[11/18/25 14:22:39] INFO     Animation 1 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\feature_vi                         
+                             vek\tutor\src\media\video                         
+                             s\20251118_141917_70b7b4d                         
+                             c-8d00-4459-a431-4379826a                         
+                             6c85\script_seq3\videos\s                         
+                             cript_seq3\720p15\partial                         
+                             _movie_files\CircleExampl                         
+                             e\2594612111_2567348959_3                         
+                             298863137.mp4'                                    
+                    INFO     Writing P to               tex_file_writing.py:111
+                             C:\Vivek_Main\feature_vive                        
+                             k\tutor\src\media\videos\2                        
+                             0251118_141917_70b7b4dc-8d                        
+                             00-4459-a431-4379826a6c85\                        
+                             script_seq3\Tex\5f4e4499e3                        
+                             3519cd.tex                                        
+[11/18/25 14:22:44] INFO     Animation 2 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\feature_vi                         
+                             vek\tutor\src\media\video                         
+                             s\20251118_141917_70b7b4d                         
+                             c-8d00-4459-a431-4379826a                         
+                             6c85\script_seq3\videos\s                         
+                             cript_seq3\720p15\partial                         
+                             _movie_files\CircleExampl                         
+                             e\2594612111_2052950440_3                         
+                             257758456.mp4'                                    
+                    INFO     Animation 3 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\feature_vi                         
+                             vek\tutor\src\media\video                         
+                             s\20251118_141917_70b7b4d                         
+                             c-8d00-4459-a431-4379826a                         
+                             6c85\script_seq3\videos\s                         
+                             cript_seq3\720p15\partial                         
+                             _movie_files\CircleExampl                         
+                             e\2594612111_2148827508_1                         
+                             153900650.mp4'                                    
+[11/18/25 14:22:45] INFO     Animation 4 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\feature_vi                         
+                             vek\tutor\src\media\video                         
+                             s\20251118_141917_70b7b4d                         
+                             c-8d00-4459-a431-4379826a                         
+                             6c85\script_seq3\videos\s                         
+                             cript_seq3\720p15\partial                         
+                             _movie_files\CircleExampl                         
+                             e\2594612111_1390517476_3                         
+                             192470915.mp4'                                    
+                    INFO     Writing x to               tex_file_writing.py:111
+                             C:\Vivek_Main\feature_vive                        
+                             k\tutor\src\media\videos\2                        
+                             0251118_141917_70b7b4dc-8d                        
+                             00-4459-a431-4379826a6c85\                        
+                             script_seq3\Tex\d3c1af651a                        
+                             272204.tex                                        
+[11/18/25 14:22:49] INFO     Writing y to               tex_file_writing.py:111
+                             C:\Vivek_Main\feature_vive                        
+                             k\tutor\src\media\videos\2                        
+                             0251118_141917_70b7b4dc-8d                        
+                             00-4459-a431-4379826a6c85\                        
+                             script_seq3\Tex\3ecdda5b14                        
+                             fcaacb.tex                                        
+[11/18/25 14:22:54] INFO     Writing r to               tex_file_writing.py:111
+                             C:\Vivek_Main\feature_vive                        
+                             k\tutor\src\media\videos\2                        
+                             0251118_141917_70b7b4dc-8d                        
+                             00-4459-a431-4379826a6c85\                        
+                             script_seq3\Tex\00ee79a792                        
+                             46dd15.tex                                        
+[11/18/25 14:23:00] INFO     Animation 5 : Partial     scene_file_writer.py:588
+                             movie file written in                             
+                             'C:\Vivek_Main\feature_vi                         
+                             vek\tutor\src\media\video                         
+                             s\20251118_141917_70b7b4d                         
+                             c-8d00-4459-a431-4379826a                         
+                             6c85\script_seq3\videos\s                         
+                             cript_seq3\720p15\partial                         
+                             _movie_files\CircleExampl                         
+                             e\2594612111_4098004697_3                         
+                             245457624.mp4'
+──────────────────────────────────────────────
+
+[2025-11-18 14:23:12] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\generator_routes.py", line 30, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\utils.py", line 12, in async_post
+    resp = await client.post(url, json=payload, headers={"Content-Type": "application/json"})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+[2025-11-18 14:23:25] [ERROR] 
+❌ Error running Manim on C:/Vivek_Main/Temp_Data/20251118_141917_70b7b4dc-8d00-4459-a431-4379826a6c85/script_seq4/script_seq4.py
+──────────────────────────────────────────────
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Scripts\manim.exe\__main__.py", line 7, in <module>
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\click\core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\click\core.py", line 1082, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\click\core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\click\core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\click\core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\cli\render\commands.py", line 121, in render
+    for SceneClass in scene_classes_from_file(file):
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\utils\module_ops.py", line 167, in scene_classes_from_file
+    module = get_module(file_path)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\utils\module_ops.py", line 67, in get_module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 994, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Vivek_Main\Temp_Data\20251118_141917_70b7b4dc-8d00-4459-a431-4379826a6c85\script_seq4\script_seq4.py", line 45, in <module>
+    CircleProperties().render()
+  File "C:\Vivek_Main\feature_vivek\tutor\.venv\Lib\site-packages\manim\scene\scene.py", line 237, in render
+    self.construct()
+  File "C:\Vivek_Main\Temp_Data\20251118_141917_70b7b4dc-8d00-4459-a431-4379826a6c85\script_seq4\script_seq4.py", line 15, in construct
+    frame = self.camera.frame
+            ^^^^^^^^^^^^^^^^^
+AttributeError: 'Camera' object has no attribute 'frame'
+
+STDOUT:
+Manim Community v0.19.0
+
+[11/18/25 14:23:19] INFO     Writing O to               tex_file_writing.py:111
+                             C:\Vivek_Main\feature_vive                        
+                             k\tutor\src\media\videos\2                        
+                             0251118_141917_70b7b4dc-8d                        
+                             00-4459-a431-4379826a6c85\                        
+                             script_seq4\Tex\54bd793acf                        
+                             b7026b.tex
+──────────────────────────────────────────────
+
+[2025-11-18 14:23:37] [ERROR] ❌ Video and audio list length mismatch
+[2025-11-18 14:23:37] [ERROR] ❌ Pipeline failed for UID 70b7b4dc-8d00-4459-a431-4379826a6c85: Video and audio lists must have the same length
+[2025-11-18 14:23:37] [ERROR] Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\main.py", line 75, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\merger_factory.py", line 209, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list, unique_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\merger_factory.py", line 132, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+
+[2025-11-18 14:23:37] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\video_routes.py", line 36, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\main.py", line 75, in process_pipeline
+    final_video_bytes = MergerFactory.merge_all_videos_with_audio(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\merger_factory.py", line 209, in merge_all_videos_with_audio
+    return MergerFactory.merge_video_with_audio(video_bytes_list, audio_bytes_list, unique_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\merger_factory.py", line 132, in merge_video_with_audio
+    raise ValueError("Video and audio lists must have the same length")
+ValueError: Video and audio lists must have the same length
+[2025-11-18 14:23:38] [ERROR] ❌ HTTP 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-18 14:23:38] [ERROR] ❌ Video generation failed for 70b7b4dc-8d00-4459-a431-4379826a6c85: 500: {"detail":"Video and audio lists must have the same length"}
+[2025-11-18 14:23:38] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\write_routes.py", line 104, in write_scripts
+    video_result = await async_post(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"Video and audio lists must have the same length"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\write_routes.py", line 123, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Video generation failed for 70b7b4dc-8d00-4459-a431-4379826a6c85: 500: {"detail":"Video and audio lists must have the same length"}

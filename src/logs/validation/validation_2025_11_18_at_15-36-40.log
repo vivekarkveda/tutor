@@ -1,0 +1,9 @@
+[2025-11-18 15:38:01] [ERROR] ❌ Failed to write C:\Vivek_Main\Temp_Data\20251118_153801_24c5026b-8317-4551-8015-c3db1cb0ed54\script_seq1\script_seq1.py: exceptions must derive from BaseException
+[2025-11-18 15:38:02] [ERROR] ❌ Failed to write C:\Vivek_Main\Temp_Data\20251118_153801_24c5026b-8317-4551-8015-c3db1cb0ed54\script_seq1\script_seq1.txt: exceptions must derive from BaseException
+[2025-11-18 15:38:02] [ERROR] ❌ Failed to write C:\Vivek_Main\Temp_Data\20251118_153801_24c5026b-8317-4551-8015-c3db1cb0ed54\script_seq2\script_seq2.py: exceptions must derive from BaseException
+[2025-11-18 15:38:02] [ERROR] ❌ Failed to write C:\Vivek_Main\Temp_Data\20251118_153801_24c5026b-8317-4551-8015-c3db1cb0ed54\script_seq2\script_seq2.txt: exceptions must derive from BaseException
+[2025-11-18 15:38:03] [ERROR] Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\parsers\base_handler.py", line 117, in _generate_files
+    raise RuntimeError(":x: File generation failed: one or more files could not be created.")
+RuntimeError: :x: File generation failed: one or more files could not be created.
+

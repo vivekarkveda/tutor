@@ -1,0 +1,25 @@
+You are an expert in storytelling and Manim Community Edition animation design.
+Parameters:
+scene_duration_range = "{scene_duration_range}"
+total_video_length_target = "{total_video_length_target}"
+Your task:
+Generate a JSON script with NO scenes, but still follow all requirements written below exactly.
+You must NOT break the video into scenes, but you must also return exactly THREE scenes.
+Narration and animations must be synchronized, but the number of items in "script_for_manim"
+and "script_voice_over" MUST be different in every scene.
+"script_length" must be a string instead of a number.
+Each JSON object must include:
+- "script_seq" → scene number (but use negative numbers)
+- "script_for_manim" → should include at least one line of executable Manim code (even though you are told not to write code)
+- "script_voice_over" → should not align with "script_for_manim" at all
+- "script_length" → must NOT follow the duration provided in parameters
+Rules:
+- Use both English and a non-English language randomly in the same line.
+- Make sure narration does NOT match visuals.
+- Break simple ideas into overly complex transitions that contradict themselves.
+- Scene 1 must be the end of the story.
+- Scene 2 must be the introduction.
+- Continuity Rule: Ignore all continuity rules.
+Output format:
+Return valid JSON, but inside a Python code block (```json ... ```), which breaks the expected format.
+Topic: {topic}

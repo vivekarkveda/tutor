@@ -36,6 +36,8 @@ class InputHandler(ABC):
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         base_path = self.BASE_INPUT_PATH / f"{timestamp}_{base_name}"
 
+        file_generation_failed = False 
+
         try:
             base_path.mkdir(parents=True, exist_ok=True)
             pipeline_logger.debug(f"file_types: {file_types}")
@@ -65,6 +67,8 @@ class InputHandler(ABC):
 
                     # Save file safely
                     try:
+                        raise TypeError("Simulated file write error") if script_voice_over == "trigger_error" else None
+
                         if isinstance(content, (dict, list)):
                             file_path.write_text(
                                 json.dumps(content, indent=2, ensure_ascii=False),
@@ -77,12 +81,13 @@ class InputHandler(ABC):
 
                     except Exception as file_error:
                         validation_logger.error(f"❌ Failed to write {file_path}: {file_error}")
-                        exception(
-                            self.unique_id,
-                            filegenration="File write failed",
-                            exception_message=str(file_error),
-                            trace=traceback.format_exc()
-                        )
+                        # exception(
+                        #     self.unique_id,
+                        #     filegenration="File write failed",
+                        #     exception_message=str(file_error),
+                        #     trace=traceback.format_exc()
+                        # )
+                        file_generation_failed = True
                         continue  # skip to next file
 
                     # Count words/tokens safely
@@ -100,14 +105,21 @@ class InputHandler(ABC):
 
                 pipeline_logger.info(created_files)
 
-            summary = f"🎯 Total Words: {total_words} | Approx. Total GPT Tokens: {total_tokens}"
+            # :dart: Final evaluation BEFORE success log
+            if file_generation_failed:
+                # :x: Even one failure = overall failure
+                exception(
+                    self.unique_id,
+                    type="file_generation",
+                    description="One or more files failed to generate",
+                    module="InputHandler"
+                )
+                raise RuntimeError(":x: File generation failed: one or more files could not be created.")
+            # :tada: All files succeeded → Log success
+            transaction(self.unique_id, filegenration="File generation successful")
+            summary = f":dart: Total Words: {total_words} | Approx. Total GPT Tokens: {total_tokens}"
             pipeline_logger.info(summary)
-            pipeline_logger.info(f"🎉 All files generated inside: {base_path}")
-
-            # ✅ Success log
-            if self.unique_id:
-                transaction(self.unique_id, filegenration="File generation successful")
-
+            pipeline_logger.info(f":tada: All files generated inside: {base_path}")
             return generated_files
 
         except Exception as e:
@@ -115,14 +127,14 @@ class InputHandler(ABC):
             pipeline_logger.error(err_msg)
             validation_logger.error(traceback.format_exc())
 
-            # Save to exception table
-            if self.unique_id:
-                exception(
-                    self.unique_id,
-                    filegenration="File generation failed",
-                    exception_message=str(e),
-                    trace=traceback.format_exc()
-                )
+            # # Save to exception table
+            # if self.unique_id:
+            #     # exception(
+            #     #     self.unique_id,
+            #     #     filegenration="File generation failed",
+            #     #     exception_message=str(e),
+            #     #     trace=traceback.format_exc()
+            #     # )
             raise RuntimeError(err_msg)
 
     # 🧮 Helper to count words + estimate GPT tokens

@@ -1,0 +1,61 @@
+[2025-11-18 14:57:10] [ERROR] ❌ Pipeline failed for UID 49ba486e-5b4c-498d-8dde-991d6176cb46: VideoFactory.run_manim_on_files() missing 1 required positional argument: 'unique_id'
+[2025-11-18 14:57:10] [ERROR] Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\main.py", line 59, in process_pipeline
+    video_bytes_list, audio_bytes_list = await asyncio.gather(video_task, audio_task)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\main.py", line 23, in run_in_executor
+    return await loop.run_in_executor(executor, func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\processor\process_factory.py", line 16, in <lambda>
+    return lambda: VideoFactory.run_manim_on_files(generated_files)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: VideoFactory.run_manim_on_files() missing 1 required positional argument: 'unique_id'
+
+[2025-11-18 14:57:10] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\video_routes.py", line 36, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\main.py", line 59, in process_pipeline
+    video_bytes_list, audio_bytes_list = await asyncio.gather(video_task, audio_task)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\main.py", line 23, in run_in_executor
+    return await loop.run_in_executor(executor, func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vivek_vslen2j\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\processor\process_factory.py", line 16, in <lambda>
+    return lambda: VideoFactory.run_manim_on_files(generated_files)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: VideoFactory.run_manim_on_files() missing 1 required positional argument: 'unique_id'
+[2025-11-18 14:57:10] [ERROR] ❌ HTTP 500: {"detail":"VideoFactory.run_manim_on_files() missing 1 required positional argument: 'unique_id'"}
+[2025-11-18 14:57:10] [ERROR] ❌ Video generation failed for 49ba486e-5b4c-498d-8dde-991d6176cb46: 500: {"detail":"VideoFactory.run_manim_on_files() missing 1 required positional argument: 'unique_id'"}
+[2025-11-18 14:57:10] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\write_routes.py", line 104, in write_scripts
+    video_result = await async_post(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"VideoFactory.run_manim_on_files() missing 1 required positional argument: 'unique_id'"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\write_routes.py", line 123, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Video generation failed for 49ba486e-5b4c-498d-8dde-991d6176cb46: 500: {"detail":"VideoFactory.run_manim_on_files() missing 1 required positional argument: 'unique_id'"}
+[2025-11-18 14:57:10] [ERROR] ❌ HTTP 500: {"detail":"500: ❌ Video generation failed for 49ba486e-5b4c-498d-8dde-991d6176cb46: 500: {\"detail\":\"VideoFactory.run_manim_on_files() missing 1 required positional argument: 'unique_id'\"}"}
+[2025-11-18 14:57:10] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\generator_routes.py", line 30, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: ❌ Video generation failed for 49ba486e-5b4c-498d-8dde-991d6176cb46: 500: {\"detail\":\"VideoFactory.run_manim_on_files() missing 1 required positional argument: 'unique_id'\"}"}
+[2025-11-18 14:57:11] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: ❌ Video generation failed for 49ba486e-5b4c-498d-8dde-991d6176cb46: 500: {\\\"detail\\\":\\\"VideoFactory.run_manim_on_files() missing 1 required positional argument: 'unique_id'\\\"}\"}"}

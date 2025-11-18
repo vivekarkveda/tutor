@@ -1,0 +1,63 @@
+[2025-11-18 15:38:02] [ERROR] ❌ Error generating files for 24c5026b-8317-4551-8015-c3db1cb0ed54: :x: File generation failed: one or more files could not be created.
+[2025-11-18 15:38:03] [ERROR] ❌ Error handling JSON input: ❌ Error generating files for 24c5026b-8317-4551-8015-c3db1cb0ed54: :x: File generation failed: one or more files could not be created.
+[2025-11-18 15:38:03] [ERROR] ❌ Error generating files
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\parsers\base_handler.py", line 117, in _generate_files
+    raise RuntimeError(":x: File generation failed: one or more files could not be created.")
+RuntimeError: :x: File generation failed: one or more files could not be created.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\parsers\base_handler.py", line 169, in handle
+    return self._generate_files(data, Path(json_file).stem, file_types)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\parsers\base_handler.py", line 138, in _generate_files
+    raise RuntimeError(err_msg)
+RuntimeError: ❌ Error generating files for 24c5026b-8317-4551-8015-c3db1cb0ed54: :x: File generation failed: one or more files could not be created.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\file_routes.py", line 32, in generate_files_endpoint
+    generated = prepare_files(Settings.RUN_FROM, True, Settings.FILE_TYPES, request.unique_id)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\main.py", line 33, in prepare_files
+    return handler.handle(Settings.JSON_FILE_PATH, file_types)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\parsers\base_handler.py", line 172, in handle
+    exception(
+TypeError: exception() got an unexpected keyword argument 'filegenration'
+[2025-11-18 15:38:48] [ERROR] ❌ HTTP 500: {"detail":"exception() got an unexpected keyword argument 'filegenration'"}
+[2025-11-18 15:38:51] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\video_routes.py", line 34, in generate_videos_endpoint
+    raise HTTPException(status_code=400, detail=f"No .py/.txt files in {input_path}")
+fastapi.exceptions.HTTPException: 400: No .py/.txt files in C:\Vivek_Main\Temp_Data\20251118_153801_24c5026b-8317-4551-8015-c3db1cb0ed54
+[2025-11-18 15:38:51] [ERROR] ❌ HTTP 500: {"detail":"400: No .py/.txt files in C:\\Vivek_Main\\Temp_Data\\20251118_153801_24c5026b-8317-4551-8015-c3db1cb0ed54"}
+[2025-11-18 15:38:52] [ERROR] ❌ Video generation failed for 24c5026b-8317-4551-8015-c3db1cb0ed54: 500: {"detail":"400: No .py/.txt files in C:\\Vivek_Main\\Temp_Data\\20251118_153801_24c5026b-8317-4551-8015-c3db1cb0ed54"}
+[2025-11-18 15:38:52] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\write_routes.py", line 104, in write_scripts
+    video_result = await async_post(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"400: No .py/.txt files in C:\\Vivek_Main\\Temp_Data\\20251118_153801_24c5026b-8317-4551-8015-c3db1cb0ed54"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\write_routes.py", line 123, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Video generation failed for 24c5026b-8317-4551-8015-c3db1cb0ed54: 500: {"detail":"400: No .py/.txt files in C:\\Vivek_Main\\Temp_Data\\20251118_153801_24c5026b-8317-4551-8015-c3db1cb0ed54"}
+[2025-11-18 15:38:52] [ERROR] ❌ HTTP 500: {"detail":"500: ❌ Video generation failed for 24c5026b-8317-4551-8015-c3db1cb0ed54: 500: {\"detail\":\"400: No .py/.txt files in C:\\\\Vivek_Main\\\\Temp_Data\\\\20251118_153801_24c5026b-8317-4551-8015-c3db1cb0ed54\"}"}
+[2025-11-18 15:38:52] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\generator_routes.py", line 30, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: ❌ Video generation failed for 24c5026b-8317-4551-8015-c3db1cb0ed54: 500: {\"detail\":\"400: No .py/.txt files in C:\\\\Vivek_Main\\\\Temp_Data\\\\20251118_153801_24c5026b-8317-4551-8015-c3db1cb0ed54\"}"}
+[2025-11-18 15:38:53] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: ❌ Video generation failed for 24c5026b-8317-4551-8015-c3db1cb0ed54: 500: {\\\"detail\\\":\\\"400: No .py/.txt files in C:\\\\\\\\Vivek_Main\\\\\\\\Temp_Data\\\\\\\\20251118_153801_24c5026b-8317-4551-8015-c3db1cb0ed54\\\"}\"}"}

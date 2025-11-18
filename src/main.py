@@ -47,10 +47,10 @@ async def process_pipeline(generated_files, video: str, audio: str, run_from: st
     try:
         # === VIDEO / AUDIO PROCESSING IN THREADS ===
         with ThreadPoolExecutor() as executor:
-            video_callable = ProcessFactory.get_processor(video, generated_files[0])
+            video_callable = ProcessFactory.get_processor(video, generated_files[0], unique_id)
             pipeline_logger.info(f"Video callable prepared for: {generated_files[1]}")
 
-            audio_callable = ProcessFactory.get_processor(audio, generated_files[0])
+            audio_callable = ProcessFactory.get_processor(audio, generated_files[0], unique_id)
 
             # Run video/audio tasks concurrently
             video_task = asyncio.create_task(run_in_executor(executor, video_callable))

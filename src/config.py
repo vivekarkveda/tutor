@@ -12,7 +12,9 @@ class Settings:
     JSON_FILE_PATH = Path(r"C:\Vivek_Main\Manim_project\jsonfiles\script1.json")
     TEMP_GENERATED_FOLDER = Path(r"C:\Vivek_Main\Temp_Data")
     TEST_JSON_PROMPT_PATH = Path(r"C:\Vivek_Main\feature_vivek\tutor\src\Prompt\test_json.txt")
+    TEST_JSON_PROMPT_PATH_2 = Path(r"C:\Vivek_Main\feature_vivek\tutor\src\Prompt\test_json_2.txt")
     TEST_MANIM_PROMPT_PATH = Path(r"C:\Vivek_Main\feature_vivek\tutor\src\Prompt\test_manim.txt")
+    TEST_MANIM_PROMPT_PATH_2 = Path(r"C:\Vivek_Main\feature_vivek\tutor\src\Prompt\test_manim_2.txt")
     JSON_PROMPT_PATH = Path(r"C:\Vivek_Main\Malay\tutor\src\Prompt\Prompt_Template1.txt")
     MANIM_CODE_PROMPT_PATH = Path(r"C:\Vivek_Main\Malay\tutor\src\Prompt\Prompt_Template2.txt")
 

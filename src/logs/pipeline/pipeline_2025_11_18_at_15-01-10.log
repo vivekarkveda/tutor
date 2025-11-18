@@ -1,0 +1,43 @@
+[2025-11-18 15:03:17] [ERROR] ❌ Pipeline failed for UID 9b23bf7a-2f31-42a5-83aa-9e4d58cc598f: ProcessFactory.get_processor() missing 1 required positional argument: 'unique_id'
+[2025-11-18 15:03:17] [ERROR] Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\main.py", line 50, in process_pipeline
+    video_callable = ProcessFactory.get_processor(video, generated_files[0])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ProcessFactory.get_processor() missing 1 required positional argument: 'unique_id'
+
+[2025-11-18 15:03:17] [ERROR] ❌ Video generation error
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\video_routes.py", line 36, in generate_videos_endpoint
+    output_path = await process_pipeline(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\main.py", line 50, in process_pipeline
+    video_callable = ProcessFactory.get_processor(video, generated_files[0])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ProcessFactory.get_processor() missing 1 required positional argument: 'unique_id'
+[2025-11-18 15:03:17] [ERROR] ❌ HTTP 500: {"detail":"ProcessFactory.get_processor() missing 1 required positional argument: 'unique_id'"}
+[2025-11-18 15:03:17] [ERROR] ❌ Video generation failed for 9b23bf7a-2f31-42a5-83aa-9e4d58cc598f: 500: {"detail":"ProcessFactory.get_processor() missing 1 required positional argument: 'unique_id'"}
+[2025-11-18 15:03:17] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\write_routes.py", line 104, in write_scripts
+    video_result = await async_post(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"ProcessFactory.get_processor() missing 1 required positional argument: 'unique_id'"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\write_routes.py", line 123, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Video generation failed for 9b23bf7a-2f31-42a5-83aa-9e4d58cc598f: 500: {"detail":"ProcessFactory.get_processor() missing 1 required positional argument: 'unique_id'"}
+[2025-11-18 15:03:17] [ERROR] ❌ HTTP 500: {"detail":"500: ❌ Video generation failed for 9b23bf7a-2f31-42a5-83aa-9e4d58cc598f: 500: {\"detail\":\"ProcessFactory.get_processor() missing 1 required positional argument: 'unique_id'\"}"}
+[2025-11-18 15:03:17] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\generator_routes.py", line 30, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: ❌ Video generation failed for 9b23bf7a-2f31-42a5-83aa-9e4d58cc598f: 500: {\"detail\":\"ProcessFactory.get_processor() missing 1 required positional argument: 'unique_id'\"}"}
+[2025-11-18 15:03:18] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: ❌ Video generation failed for 9b23bf7a-2f31-42a5-83aa-9e4d58cc598f: 500: {\\\"detail\\\":\\\"ProcessFactory.get_processor() missing 1 required positional argument: 'unique_id'\\\"}\"}"}
