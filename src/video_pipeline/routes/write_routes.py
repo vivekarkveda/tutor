@@ -12,7 +12,7 @@ from Artifacts.artifacts import run_script_data_process
 
 
 router = APIRouter(prefix="", tags=["Write Scripts"])
-BASE_INPUT_ROOT = Path(r"C:\Vivek_Main\Manim_project\inputbox")
+BASE_INPUT_ROOT = Path(Settings.TEMP_GENERATED_FOLDER)
 
 
 class GenerateFilesRequest(BaseModel):

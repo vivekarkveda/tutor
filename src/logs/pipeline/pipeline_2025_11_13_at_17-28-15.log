@@ -1,0 +1,9 @@
+[2025-11-13 17:28:48] [ERROR] ❌ Unexpected error in /search endpoint
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\search_routes.py", line 46, in search
+    generator = ScriptGeneratorFactory.get_generator("cohere", api_key=API_KEY )
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\LLM_Processor\script_factory.py", line 132, in get_generator
+    return CohereScriptGenerator(api_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: CohereScriptGenerator.__init__() missing 1 required positional argument: 'unique_id'

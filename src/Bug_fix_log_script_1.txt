@@ -140,22 +140,23 @@ final_text = Tex(
 SCRIPT_SEQ: 1
 SCRIPT_FOR_MANIM: [
   "Start with a blank canvas.",
-  "Fade in the text 'Creating a Circle' in the center of the screen.",
+  "Fade in the text 'Creating a Circle for Class 10' in the center of the screen.",
   "Zoom out slightly to make space for the upcoming animation.",
-  "Draw a small dot at the center of the screen, representing the center of the circle.",
-  "Animate a compass tool appearing and opening up from the dot.",
-  "Show the compass rotating 360 degrees, leaving a faint trace of a circle.",
-  "Thicken the trace to form a solid circle.",
-  "Fade out the compass tool, leaving only the circle and the text."
+  "Draw a faint grid in the background to provide a reference for the circle.",
+  "Introduce a small dot at the center of the grid, which will be the center of the circle.",
+  "Animate a compass opening from the center dot, extending to a radius length.",
+  "Trace the path of the compass to form a perfect circle.",
+  "Highlight the circle in a bold color, while fading out the grid and compass."
 ]
 SCRIPT_VOICE_OVER: [
-  "Welcome to today's lesson on creating a circle.",
-  "In geometry, a circle is a perfectly round shape.",
-  "To draw a circle, we start with a center point.",
-  "Imagine a compass tool placed at this center.",
-  "As the compass rotates, it traces a path around the center.",
-  "This path forms the circumference of the circle.",
-  "And there you have it\u2014a perfect circle!"
+  "Welcome to today's lesson on creating a circle, tailored for Class 10 students.",
+  "In geometry, a circle is a fundamental shape defined by its center and radius.",
+  "Let\u2019s begin by visualizing the process step by step.",
+  "First, we establish a reference grid to ensure precision.",
+  "Here\u2019s the center point of our circle.",
+  "Using a compass, we set the radius to a specific length.",
+  "As the compass moves, it traces the path of our circle.",
+  "And there we have it\u2014a perfect circle, ready for further exploration."
 ]
 SCRIPT_LENGTH: 30 seconds
 Previous Code (for continuity):

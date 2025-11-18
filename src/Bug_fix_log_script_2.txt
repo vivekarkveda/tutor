@@ -153,23 +153,23 @@ self.play(
 ```
 SCRIPT_SEQ: 2
 SCRIPT_FOR_MANIM: [
-  "Start with the circle from the previous scene.",
-  "Animate a label 'Center' appearing at the center dot.",
-  "Draw a radius line from the center to the circle's edge.",
-  "Label the radius line as 'Radius'.",
-  "Show multiple radius lines appearing at different angles, all equal in length.",
-  "Highlight the circumference of the circle.",
-  "Zoom in slightly to focus on the circle's properties.",
-  "Fade out all labels except the circle, leaving it as the final frame."
+  "Start with the final frame of Scene 1: the highlighted circle.",
+  "Zoom in slightly on the circle to focus attention.",
+  "Label the center of the circle as 'O'.",
+  "Draw a radius from the center to the edge of the circle, labeling it 'r'.",
+  "Animate a point moving along the circumference, leaving a trail to show the circle's boundary.",
+  "Label this moving point as 'P'.",
+  "Draw a line from 'O' to 'P', emphasizing the radius.",
+  "Fade in the equation 'Circumference = 2\u03c0r' below the circle, with each symbol animating in sequentially."
 ]
 SCRIPT_VOICE_OVER: [
-  "Let's explore the parts of a circle.",
-  "The center is the point from which all points on the circle are equidistant.",
-  "The radius is the distance from the center to any point on the circle.",
-  "Notice how all radii are of equal length.",
-  "The circumference is the distance around the circle.",
-  "Understanding these elements is key to mastering circles in geometry.",
-  "And that concludes our lesson on creating a circle."
+  "Now that we\u2019ve created our circle, let\u2019s break down its key components.",
+  "The center of the circle is labeled as 'O'.",
+  "The radius, extending from the center to any point on the edge, is denoted as 'r'.",
+  "Imagine a point 'P' moving along the circumference of the circle.",
+  "The distance from the center 'O' to any point 'P' on the circle is always equal to the radius 'r'.",
+  "One of the most important formulas related to circles is the circumference, calculated as 2 times \u03c0 times the radius.",
+  "This equation helps us determine the total distance around the circle."
 ]
 SCRIPT_LENGTH: 30 seconds
 Previous Code (for continuity):

@@ -1,0 +1,16 @@
+[2025-11-18 12:03:59] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\write_routes.py", line 98, in write_scripts
+    run_script_data_process(unique_id)
+    ^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'run_script_data_process' is not defined
+[2025-11-18 12:03:59] [ERROR] ❌ HTTP 500: {"detail":"name 'run_script_data_process' is not defined"}
+[2025-11-18 12:03:59] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\generator_routes.py", line 30, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"name 'run_script_data_process' is not defined"}
+[2025-11-18 12:03:59] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"name 'run_script_data_process' is not defined\"}"}

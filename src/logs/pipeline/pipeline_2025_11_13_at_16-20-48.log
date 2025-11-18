@@ -1,0 +1,52 @@
+[2025-11-13 16:21:58] [ERROR] ❌ Failed to locate input folder for 0bb48c50-3f83-4d7a-ae77-9778d86789d8: No 0bb48c50-3f83-4d7a-ae77-9778d86789d8 found in C:\Vivek_Main\Manim_project\inputbox
+[2025-11-13 16:21:58] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\write_routes.py", line 39, in write_scripts
+    folder = latest_input_folder(BASE_INPUT_ROOT, unique_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\utils.py", line 22, in latest_input_folder
+    raise FileNotFoundError(f"No {pattern} found in {base_dir}")
+FileNotFoundError: No 0bb48c50-3f83-4d7a-ae77-9778d86789d8 found in C:\Vivek_Main\Manim_project\inputbox
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\write_routes.py", line 50, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Failed to locate input folder for 0bb48c50-3f83-4d7a-ae77-9778d86789d8: No 0bb48c50-3f83-4d7a-ae77-9778d86789d8 found in C:\Vivek_Main\Manim_project\inputbox
+[2025-11-13 16:21:58] [ERROR] ❌ HTTP 500: {"detail":"500: ❌ Failed to locate input folder for 0bb48c50-3f83-4d7a-ae77-9778d86789d8: No 0bb48c50-3f83-4d7a-ae77-9778d86789d8 found in C:\\Vivek_Main\\Manim_project\\inputbox"}
+[2025-11-13 16:21:58] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\generator_routes.py", line 30, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: ❌ Failed to locate input folder for 0bb48c50-3f83-4d7a-ae77-9778d86789d8: No 0bb48c50-3f83-4d7a-ae77-9778d86789d8 found in C:\\Vivek_Main\\Manim_project\\inputbox"}
+[2025-11-13 16:21:58] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: ❌ Failed to locate input folder for 0bb48c50-3f83-4d7a-ae77-9778d86789d8: No 0bb48c50-3f83-4d7a-ae77-9778d86789d8 found in C:\\\\Vivek_Main\\\\Manim_project\\\\inputbox\"}"}
+[2025-11-13 16:23:49] [ERROR] ❌ Failed to locate input folder for af014970-f8b8-4d2c-8d3a-88fd2e7c802e: No af014970-f8b8-4d2c-8d3a-88fd2e7c802e found in C:\Vivek_Main\Manim_project\inputbox
+[2025-11-13 16:23:49] [ERROR] ❌ Unhandled error in write_scripts endpoint
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\write_routes.py", line 39, in write_scripts
+    folder = latest_input_folder(BASE_INPUT_ROOT, unique_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\utils.py", line 22, in latest_input_folder
+    raise FileNotFoundError(f"No {pattern} found in {base_dir}")
+FileNotFoundError: No af014970-f8b8-4d2c-8d3a-88fd2e7c802e found in C:\Vivek_Main\Manim_project\inputbox
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\write_routes.py", line 50, in write_scripts
+    raise HTTPException(status_code=500, detail=err_msg)
+fastapi.exceptions.HTTPException: 500: ❌ Failed to locate input folder for af014970-f8b8-4d2c-8d3a-88fd2e7c802e: No af014970-f8b8-4d2c-8d3a-88fd2e7c802e found in C:\Vivek_Main\Manim_project\inputbox
+[2025-11-13 16:23:49] [ERROR] ❌ HTTP 500: {"detail":"500: ❌ Failed to locate input folder for af014970-f8b8-4d2c-8d3a-88fd2e7c802e: No af014970-f8b8-4d2c-8d3a-88fd2e7c802e found in C:\\Vivek_Main\\Manim_project\\inputbox"}
+[2025-11-13 16:23:49] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\generator_routes.py", line 30, in generate_code_endpoint
+    write_result = await async_post(write_url, result, timeout=120)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\utils.py", line 15, in async_post
+    raise HTTPException(status_code=resp.status_code, detail=resp.text)
+fastapi.exceptions.HTTPException: 500: {"detail":"500: ❌ Failed to locate input folder for af014970-f8b8-4d2c-8d3a-88fd2e7c802e: No af014970-f8b8-4d2c-8d3a-88fd2e7c802e found in C:\\Vivek_Main\\Manim_project\\inputbox"}
+[2025-11-13 16:23:49] [ERROR] ❌ HTTP 500: {"detail":"500: {\"detail\":\"500: ❌ Failed to locate input folder for af014970-f8b8-4d2c-8d3a-88fd2e7c802e: No af014970-f8b8-4d2c-8d3a-88fd2e7c802e found in C:\\\\Vivek_Main\\\\Manim_project\\\\inputbox\"}"}

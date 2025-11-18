@@ -1,0 +1,30 @@
+You are an expert in storytelling and Manim Community Edition animation design.
+Parameters:
+scene_duration_range = "{scene_duration_range}"
+total_video_length_target = "{total_video_length_target}"
+Your task:
+Generate a JSON script that describes the full video in a step-by-step, highly detailed way.
+You can break the video into multiple sequences/scenes if needed to explain the concept clearly.
+Narration and animations must be tightly synchronized:
+Step i in "script_for_manim" must align exactly with step i in "script_voice_over".
+Ensure pacing: narration should match animation timing naturally.
+"script_length" should reflect the realistic duration of each scene.
+Each JSON object must include:
+- "script_seq" → scene number.
+- "script_for_manim" → array of detailed English animation steps (no Manim code).
+- "script_voice_over" → array of narration lines aligned step-by-step with visuals.
+- "script_length" → duration of the scene provided in Parameters
+Rules:
+- Use descriptive English for visuals (no code).
+- Narration must align with visuals.
+- Describe each animation step precisely.
+- Break complex ideas into smaller, smooth transitions.
+- Maintain consistent references between scenes.
+- Scene 1: Introduction
+- Scene 2: Concept Demonstration
+:pushpin: Continuity Rule: The last frame of a scene becomes the first frame of the next.
+:pushpin: Output must contain exactly TWO JSON objects — one for each scene.
+Output format:
+Return only a valid JSON array (no extra text).
+:pushpin: Topic: {topic}
+"""

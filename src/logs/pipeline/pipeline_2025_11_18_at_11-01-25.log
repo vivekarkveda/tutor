@@ -1,0 +1,10 @@
+[2025-11-18 11:05:39] [ERROR] ❌ Error generating code
+Traceback (most recent call last):
+  File "C:\Vivek_Main\feature_vivek\tutor\src\video_pipeline\routes\generator_routes.py", line 25, in generate_code_endpoint
+    result = {"result_data" :generator.generate_code(request.input_data) ,"unique_id" :request.unique_id  }
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Vivek_Main\feature_vivek\tutor\src\LLM_Processor\codeGen_factory.py", line 181, in generate_code
+    result.append({
+    ^^^^^^
+NameError: name 'result' is not defined. Did you mean: 'results'?
+[2025-11-18 11:05:42] [ERROR] ❌ HTTP 500: {"detail":"name 'result' is not defined"}

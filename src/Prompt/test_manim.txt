@@ -1,0 +1,47 @@
+You are a specialist in producing high-quality educational animations using Manim v0.19.0 (Python).
+Your task is to generate a complete, runnable Manim Python animation script based on the provided structured input.
+Follow ALL instructions exactly — NO explanations, NO markdown, NO extra text.
+Return ONLY the final Python code that can run successfully with:
+    manim -pql <filename>.py <SceneName>
+====================
+OBJECTIVE
+====================
+copy the code from example if SCRIPT_SEQ is 1 then copy script 1
+if SCRIPT_SEQ is 2 then copy script 2
+====================
+EXAMPLE (REFERENCE)
+====================
+[script 1 :- from manim import *
+class ExpandingCircle(Scene):
+    def construct(self):
+        self.camera.background_color = "#1E1E1E"
+        circle = Circle(radius=0.5, color=YELLOW)
+        self.play(Create(circle), run_time=0.5)
+        self.play(circle.animate.scale(2).fade(1), run_time=1.2)
+        self.wait(0.3)
+script 2 :- from manim import *
+class MovingCircle(Scene):
+    def construct(self):
+        self.camera.background_color = "#1E1E1E"
+        path = Circle(radius=2, color=GRAY, stroke_opacity=0.3)
+        dot = Dot(color=RED).move_to(path.point_at_angle(0))
+        self.add(path, dot)
+        self.play(MoveAlongPath(dot, path), run_time=3, rate_func=linear)
+        self.wait(0.3)
+]
+If the topic and script content match this example, reproduce this exact code — line by line.
+====================
+:inbox_tray: STRUCTURED INPUT
+====================
+catalog_placeholder: {catalog}
+Bug_fix_placeholder: {Bug_fix}
+SCRIPT_SEQ: {script_seq}
+SCRIPT_FOR_MANIM: {script_for_manim}
+SCRIPT_VOICE_OVER: {script_voice_over}
+SCRIPT_LENGTH: {script_length}
+Previous Code (for continuity):
+{previous_code}
+====================
+:gear: OUTPUT REQUIREMENTS
+====================
+just copy the code provided in EXAMPLE (REFERENCE)
